@@ -1,0 +1,15 @@
+{
+  "name": "renrendai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "errorhandler": "^1.1.1",
+    "express": "4.7.2",
+    "method-override": "^2.1.2",
+    "serve-static": "^1.4.3"
+  }
+}
