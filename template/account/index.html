@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  我的人人贷帐户中心 - 人人贷 - 中国最大最安全的P2P网络投资理财、网络贷款平台
+</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="content-type" content="text/html" charset="utf-8">
+<meta name="google-site-verification" content="oQXrGa_mTgxg7joO0himE0QuFeqOVmm-SDC1H2dzT4c">
+<meta name="keywords" content="人人贷|网络理财|个人理财|投资理财|P2P理财|互联网金融|投资理财|债权转让|理财计划|优选计划|网络贷款|工薪贷|生意贷|网商贷|网贷|小额贷款" />
+<meta name="description" content="人人贷(www.renrendai.com)是目前中国互联网金融中P2P信贷行业中最大、最安全的平台，为投资理财用户和贷款用户两端提供公平、透明、安全、高效的互联网金融服务。投资理财用户可以通过人人贷平台进行投标、加入优选理财计划、购买债权等方式进行投资获得高收益；贷款用户可以通过平台申请工薪贷、生意贷、网商贷等小额贷款。" />
+
+<script src="/static/js/seajs/2.1.0/sea.js?rrdversion=20140414"></script>
+<script src="/static/js/config.js?rrdversion=20140414"></script>
+
+
+<link rel="shortcut icon" href="/favicon.ico?icoversion=1">
+<link rel="stylesheet" href="/static/css/one.css?rrdversion=20140414">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="/static/css/ie8-and-lower.css?rrdversion=20140414" />
+<![endif]-->
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/static/css/ie6-and-lower.css?rrdversion=20140414" />
+<![endif]-->
+
+  <link rel="stylesheet" href="/static/css/pages/account/account.css?rrdversion=20140414">
+
+</head>
+
+<body>
+  <div class="pg-container  ">
+    
+
+
+<div class="ui-header" id="header">
+  <div class="ui-header-top ">
+    <div class="container_12 fn-clear">
+      <div class="grid_12 fn-clear">
+        <div class="ui-nav fn-right">
+          <a class="ui-nav-item fn-left" href="/">首页</a>
+          <a class="ui-nav-item fn-left" href="/event/app.action" target="_blank"><i class="icon icon-app mr5"></i>移动客户端</a>
+          <a class="ui-nav-item fn-left" href="/account/index.action">我的人人贷</a>
+          
+          <a class="ui-nav-item fn-left " id="header-msg" href="/account/comm!mail.action" target="_blank">
+            <span class="fn-left">消息</span>
+            <span class="ui-nav-msgcount ui-nav-msgcount-nomsg rrdcolor-lightblue-bg" id="header-msgcount">0</span>
+          </a>
+          
+          <a class="ui-nav-item fn-left" href="/help/index.action" target="_blank">帮助</a>
+          <a class="ui-nav-item fn-left" href="http://bbs.renrendai.com" target="_blank">论坛</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-header-main">
+    <div class="container_12 fn-clear">
+      <div class="grid_2 ui-header-grid">
+        <a class="ui-header-logo fn-left" href="/"></a>
+      </div>
+      <div class="grid_7 ui-header-grid">
+        <div class="fn-hide no-nav-text"></div>
+        <ul class="ui-nav ">
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray" href="/lend/index.action">
+              <span>我要理财</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
+            </ul>
+          </li>
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray" href="/borrow/index.action">
+              <span>我要借款</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-borrow" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
+            </ul>
+          </li>
+          <li class="ui-nav-item">
+            <a class="ui-nav-item-link rrd-dimgray" href="/guide/invest.action">新手指引</a>
+          </li>
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray" href="/about/about.action?flag=intro">
+              <span>关于我们</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="grid_3 ui-header-grid">
+        <ul class="ui-nav fn-right  ">
+          
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray ui-nav-username fn-text-overflow" href="/account/index.action">
+              <span>您好，yanni4night</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-account" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!recharge.action">充值</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!withdraw.action">提现</a></li>
+              <li class="ui-nav-dropdown-separator"></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital.action">资金管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/invest!loan.action">理财管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/borrow!toMyLoans.action">借款管理</a></li>
+              <li class="ui-nav-dropdown-separator"></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/j_spring_security_logout">退出</a></li>
+            </ul>
+          </li>
+          
+          
+        </ul>
+        <!--
+        <ul class="ui-nav fn-right fn-hide">
+          <li class="ui-nav-item">
+            <a class="ui-nav-item-link login-link" href="/loginPage.action">登录</a>
+          </li>
+        </ul>
+        <ul class="ui-nav fn-right fn-hide">
+          <li class="ui-nav-item">
+            <a class="ui-nav-item-link reg-link" href="/regPage.action">注册</a>
+          </li>
+        </ul>
+        -->
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <div id="header-helper" style="display: none;">
+    <span id="header-helper-authenticated">
+      true
+      
+    </span>
+  </div>
+</div>
+<script>
+seajs.use(['components/components'], function(Components) {
+  new Components.Header().init();
+});
+</script>
+    <div class="pg-container-content">
+      
+  <div id="pg-account-index" class="pg-account">
+    <div class="container_12 mt10">
+      <ul class="ui-breadcrumb grid_12 fn-clear">
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
+          <a href="/">首页</a>
+        </li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-current">
+          <a href="/account/index.action">我的人人贷</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container_12 mt10 fn-clear">
+      <div class="grid_2">
+        
+
+<div class="ui-side ui-side-withicon" id="sidebar">
+  <ul class="ui-side-list nav nav-list bs-docs-sidenav affix">
+    <li class="ui-side-item active">
+      <a class="ui-side-item-link" href="/account/index.action"><i class="fn-left ui-icon-mid index"></i>我的人人贷</a>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid capital"></i>资金管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/capital.action">交易记录</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/capital!recharge.action">充值</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/capital!withdraw.action">提现</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid invest"></i>理财管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!loan.action">我的债权</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!plan.action">优选理财计划</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!transfer.action">债权转让</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!statistics.action">理财统计</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/invest!tool.action">自动投标工具</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid borrow"></i>借款管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/borrow!toMyLoans.action">我的借款</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/borrow!applications.action">借款申请查询</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/borrow!statistics.action">借款统计</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid account"></i>账户管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/info!basicInfo.action">个人基础信息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/info!verification.action">认证信息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/info!security.action">安全信息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/info!bank.action">银行卡信息</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid comm"></i>互动管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a  class="ui-side-sub-item-link" href="/account/comm!mail.action">站内消息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a  class="ui-side-sub-item-link last" href="/account/comm!settings.action">通知设置</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item last ">
+          <a class="ui-side-item-link"><i class="fn-left ui-icon-mid coupons"></i>优惠券管理</a>
+          <ul class="ui-side-sub-list">
+              <li class="ui-side-sub-item ">
+                  <a  class="ui-side-sub-item-link" href="/account/ucode.action">U-code兑换</a>
+              </li>
+          </ul>
+     </li>
+  </ul>
+  <div class="ui-side-ad mt20">
+        <a style="display: block; width:140px;overflow:hidden;"><img style="width:140px;" src="http://www.renrendai.com/upload/cms/advertising/accountIndexRight/2960ccda-628c-42b4-addc-c4a391ba847d.jpg?20140401a" alt="微信扫描"></a>
+</div>
+</div>
+<script>
+seajs.use(['components/components'], function(Components) {
+  new Components.Sidebar({
+    name: 'account-sidebar'
+  }).init();
+});
+</script>
+      </div>
+
+      <div class="grid_10">
+        <div class="ui-poptip ui-poptip-orange fn-hide" id="tipCon_3">
+            <div class="">
+                <div class="ui-poptip-container">
+                    <div class="ui-poptip-arrow ui-poptip-arrow-7">
+                    <em></em>
+                    <span></span>
+                </div>
+                <div class="ui-poptip-content" data-role="content">
+
+                </div>
+            </div>
+        </div>
+      </div>
+
+        <div class="ad-section"><img src="/static/img/account/default-banner.png?rrdversion=20140414"></div>
+
+        <div class="box box-user-info">
+          <div class="user-avatar-container">
+            
+            <a href="/account/info!basicInfo.action"><img width="96" height="96" src="/static/img/account/default-avatar-96.png?rrdversion=20140414" /></a>
+            
+            
+          </div>
+          <div class="user-info-container">
+            <h3 title="yanni4night">yanni4night</h3>
+            <div class="fn-clear">
+              <div class="fn-left user-security-container mr10" id="info-box">
+                <div class="safe fn-clear">
+                  <span class="fn-left color-gray-text">安全等级</span>
+                  <div id="safe-progressbar" class="safe-progressbar fn-left"><div class="bar"></div></div>
+                </div>
+                <div class="icons fn-clear mt5">
+                  <div class="fn-left icon-box light">
+                    <a data-txt="为了您的账户更安全，请您绑定手机号。||立即绑定" title="绑定手机，已绑定" href="/account/info!security.action" class="fn-left safe-rank cellphone light"></a>
+                  </div>
+                  <div class="fn-left icon-box light">
+                    <a data-txt="进行实名认证后，您才可以进行投资、借款。||立即认证" title="实名认证，已设置" href="/account/info!security.action" class="fn-left safe-rank man light"></a>
+                  </div>
+                  <div class="fn-left icon-box ">
+                    <a data-txt="为了您的资金更加安全，请您设置提现密码。||立即设置" title="提现密码，未设置" href="/account/info!security.action" class="fn-left safe-rank lock "></a>
+                  </div>
+                  <div class="fn-left icon-box ">
+                    <a data-txt="为了使您的账户有更多的安全保障，请您绑定邮箱。||立即绑定" title="绑定邮箱，未绑定" href="/account/info!security.action" class="fn-left safe-rank mail "></a>
+                  </div>
+                </div>
+              </div>
+              <div class="fn-left last">
+                <div class="surplus fn-clear">
+                  <span class="fn-left text-l mr10">账户余额</span>
+                  <span class="fn-left num-xl color-orange-text">
+                    <em>0.00</em>元
+                  </span>
+                  <a class="fn-left ui-button ui-button-green ui-button-mid mr4" href="/account/capital!recharge.action">充值</a>
+                  <a class="fn-left ui-button ui-button-blue ui-button-mid last" href="/account/capital!withdraw.action">提现</a>
+                </div>
+                <div class="surplus-detail fn-clear">
+                  <div class="fn-left mr40">
+                    <span class="fn-left text mr10">冻结金额</span>
+                    <span class="fn-left num last">
+                      <em>0.00</em>元
+                    </span>
+                  </div>
+                  <div class="fn-left last">
+                    <span class="fn-left text mr10">可用金额</span>
+                    <span class="fn-left num last">
+                      <em>0.00</em>元
+                    </span>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ad start -->
+        
+        <!-- ad end -->
+
+        <div class="box mt20 p20">
+          <div class="fn-clear equation">
+            <div class="fn-left text-center">
+              <h5>账户净资产</h5>
+              <p class="num-l">
+                <em>0.00</em>元
+              </p>
+            </div>
+            <div class="fn-left symbol">=</div>
+            <div class="fn-left text-center">
+              <h5>理财资产<i id="tips_1" class="iconfont tips">&#xF046;</i></h5>
+              <p class="num-l">
+                <em>0.00</em>元
+              </p>
+            </div>
+            <div class="fn-left symbol">+</div>
+            <div class="fn-left text-center">
+              <h5>借款负债</h5>
+              <p class="num-l rrdcolor-red-text">
+                <em>-0.00</em>元
+              </p>
+            </div>
+            <div class="fn-left symbol">+</div>
+            <div class="fn-left text-center">
+              <h5>账户余额</h5>
+              <p class="num-l">
+                <em>0.00</em>元
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="fn-clear summary">
+              <a class="fn-left text mr30" href="/account/invest!loan.action">理财账户</a>
+              <p class="fn-left text mr10">已赚总金额</p>
+              <p class="fn-left num"><em>0.00</em>元</p>
+              <a class="fn-right text mr30" href="/account/invest!backAccount.action">回账查询</a>
+            </div>
+            <ul class="ui-list ui-list-s">
+              <li class="ui-list-header fn-clear">
+                <span class="ui-list-title fn-left color-gray-text w120">理财方式</span>
+                <span class="ui-list-title fn-left color-gray-text w160">账户资产</span>
+                <span class="ui-list-title fn-left color-gray-text w160">已赚金额<i id="tips_2" class="iconfont tips">&#xF046;</i></span>
+                <span class="ui-list-title fn-left color-gray-text w120">加权平均收益率</span>
+                <span class="ui-list-title fn-left color-gray-text w80">持有数量</span>
+                <span class="ui-list-title fn-left color-gray-text w80"></span>
+              </li>
+              <li class="ui-list-item fn-clear">
+                <span class="ui-list-field fn-left w100 ph10">债权投资</span>
+                <span class="ui-list-field fn-left num-s text-right w140 pr20"><em>0.00</em>元</span>
+                <span class="ui-list-field fn-left num-s text-right w140 pr20"><em>0.00</em>元</span>
+                <span class="ui-list-field fn-left num-s text-right w90 pr30"><em>0.0</em>%</span>
+                <span class="ui-list-field fn-left text-center w80"><em>0</em></span>
+                <span class="ui-list-field fn-left text-center w80 last"><a href="/account/invest!loan.action">查看</a></span>
+              </li>
+              <li class="ui-list-item fn-clear last">
+                <span class="ui-list-field fn-left w100 ph10">优选理财计划</span>
+                <span class="ui-list-field fn-left num-s text-right w140 pr20"><em>0.00</em>元</span>
+                <span class="ui-list-field fn-left num-s text-right w140 pr20"><em>0.00</em>元</span>
+                <span class="ui-list-field fn-left num-s text-right w90 pr30"><em>0.0</em>%</span>
+                <span class="ui-list-field fn-left text-center w80"><em>0</em></span>
+                <span class="ui-list-field fn-left text-center w80 last"><a href="/account/invest!plan.action">查看</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt20 mb20">
+            <div class="fn-clear summary">
+              <a class="fn-left text mr30" href="/account/borrow!toMyLoans.action">借款账户</a>
+              <p class="fn-left text mr10">待还总金额</p>
+              <p class="fn-left num"><em>0.00</em>元</p>
+              <a class="fn-right text mr30" href="/account/borrow!applications.action">申请查询</a>
+            </div>
+            <ul class="ui-list ui-list-s" id="borrowing"></ul>
+          </div>
+        </div>
+        <div class="box mt20 p20">
+          <h3>理财推荐</h3>
+          
+          <div class="plan mt10 ph10 fn-clear">
+            <div class="fn-left w230 mr20">
+              <h4 class="plan-title w250 fn-text-overflow">
+                <a href="/financeplan/listPlan!detailPlan.action?financePlanId=68" target="_blank">优选理财计划0068期</a>
+              </h4>
+              <p class="fn-clear">
+                <span class="fn-left mr10">加入条件</span>
+                <span class="fn-left num-s last"><em>10,000</em>元</span>
+              </p>
+            </div>
+            <div class="fn-left plan-conditions mr20">
+              <p class="fn-clear">
+                <span class="fn-left mr10">总体额度</span>
+                <span class="fn-left num-s last"><em>30,000,000</em>元</span>
+              </p>
+              <p class="fn-clear">
+                <span class="fn-left mr10">预期收益</span>
+                <span class="fn-left num-s last"><em>12%~14%</em>每年</span>
+              </p>
+            </div>
+            <div class="fn-left plan-conditions mr20">
+              <p class="fn-clear">
+                <span class="fn-left mr10">剩余额度</span>
+
+                <span class="fn-left num-s last"><em>0</em>元</span>
+              </p>
+              <p class="fn-clear">
+                <span class="fn-left mr10">申请进度</span>
+                <span class="fn-left num-s last"><em>100</em>%</span>
+              </p>
+            </div>
+            
+            <a class="ui-button ui-button-mid ui-button-disabled fn-right last" target="_blank">已满额</a>
+            
+            
+          </div>
+          
+          <ul class="ui-list ui-list-invest loan-s mt20 mb20" id="loan-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui-poptip fn-hide" id="tipCon_1">
+      <div class="ui-poptip-shadow">
+      <div class="ui-poptip-container">
+          <div class="ui-poptip-arrow ui-poptip-arrow-10">
+              <em></em>
+              <span></span>
+          </div>
+          <div class="ui-poptip-content" data-role="content">
+              理财账户内的资产，包括债权投资账户资产和优选理财计划账户资产，<br>其中债权投资账户资产等于持有债权的待回收本金。
+          </div>
+      </div>
+      </div>
+  </div>
+  <div class="ui-poptip fn-hide" id="tipCon_2">
+      <div class="ui-poptip-shadow">
+      <div class="ui-poptip-container">
+          <div class="ui-poptip-arrow ui-poptip-arrow-10">
+              <em></em>
+              <span></span>
+          </div>
+          <div class="ui-poptip-content" data-role="content">
+            已赚金额 = 已赚利息罚息及违约金 + 债权转让盈亏 - 债权转让应计利息支出<br>（由于购买转让的债权时可能需要先支付应计利息，所以此数值可能为负）
+          </div>
+      </div>
+      </div>
+  </div>
+
+    </div>
+    
+
+<div class="ui-footer" id="footer">
+  <div class="container_12">
+    <div class="grid_12">
+        <div class="ui-footer-section ui-footer-narrow-hide fn-clear">
+  <h4 class="color-gray-text text-big fn-left w85">友情链接</h4>
+  <ul class="ui-footer-links fn-left w850">
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://credit.hc360.com/dk_index/hc_dk.html">慧聪金融</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.enfodesk.com/">易观智库</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.haodai.com/">好贷网</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.yinhang.com/">银率网</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://bank.hexun.com/">和讯银行</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.gome.com.cn/">国美在线</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.cjdao.com/index.jsp">财经道</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.siilu.com/">电商服务</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.shopex.cn/">ShopEx</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://bj.58.com/danbaobaoxiantouzi/">58投资担保</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.wangdaizhijia.com/">网贷之家</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://bbs.wacai.com">挖财社区</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.feidee.com/money/">随手记</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.rong360.com/licai/">融360理财</a>
+    </li>
+  </ul>
+</div>
+
+      <div class="ui-footer-section ui-footer-narrow-hide fn-clear">
+        <div class="ui-footer-links grid_9 alpha">
+                <ul class="fn-clear">
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=intro">公司介绍</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/guide/investSecurity.action">安全保障</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=report">媒体报道</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=responsibility">社会责任</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=invite">招贤纳士</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/sitemap.action">网站地图</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/help/index.action">帮助中心</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=contact">联系我们</a>
+            </li>
+          </ul>
+          <ul class="fn-clear icons">
+            <li class="fn-left">
+              <h4 class="color-gray-text text-big">客户服务</h4>
+            </li>
+            <li class="fn-left"><a class="ui-footer-img-link weibo" target="_blank" href="http://e.weibo.com/renrendai?ref=http%3A%2F%2Fwww.renrendai.com%2F">人人贷新浪微博</a></li>
+            <li class="fn-left"><a class="ui-footer-img-link qq-weibo" target="_blank" href="http://t.qq.com/renrendai">人人贷腾讯微博</a></li>
+            <li class="fn-left"><a class="ui-footer-img-link we-chat" tabindex="-1" href="#">人人贷微信</a></li>
+            <li class="fn-left"><a class="ui-footer-img-link online-customer-service cursor-pointer" target="_blank" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4000278080&eid=218808P8z8p8R8y8q8y8Q&o=www.renrendai.com&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">人人贷在线客服</a></li>
+          </ul>
+        </div>
+            <div class="grid_3 omega">
+          <p class="color-gray-text text-right">客服电话</p>
+          <h4 class="color-gray-text text-right ui-footer-phone-number">400-027-8080</h4>
+          <p class="color-gray-text text-right">9:00 - 21:00</p>
+        </div>
+        </div>
+      <div class="ui-footer-section last">
+        <div class="ui-footer-copyright">
+          <span class="ui-footer-contact-link color-gray-text">© 2014 人人贷 All rights reserved</span>
+          <span class="ui-footer-contact-link color-gray-text has-separator">人人贷商务顾问(北京)有限公司</span>
+          <span class="ui-footer-contact-link color-gray-text has-separator last"><a class="gray" target="_blank" href="/icp/icp.html">京ICP证 100953号</a></span>
+        </div>
+        <div class="ui-footer-verification ui-footer-narrow-hide fn-clear">
+          <a class="ui-footer-verification-item fn-left credibility" title="人人贷荣获中国电子商务协会“诚信网站”认证殊荣" href="https://search.szfw.org/cert/l/CX20140315003612003651" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left trust" title="人人贷已通过中网权威数据库对比，获得“可信网站”身份验证，您可放心使用。" href="https://ss.knet.cn/verifyseal.dll?sn=e13042311010040288j4wq000000&ct=df&a=1&pa=931969" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left itrust" title="人人贷已经成为中国互联网信用评价中心网络诚信联盟成员，并且完成企业信用评级 " href="http://www.itrust.org.cn/yz/pjwx.asp?wm=2554879344" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left norton" title="人人贷已引入VeriSign SSL加密技术，您的隐私及个人资料安全已受最高级别的保护。" href="https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=www.renrendai.com&lang=zh_cn" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left police" title="人人贷已经完成在公安机关的信息备案，您可了解网站相关备案信息。" href="http://gawa.bjchy.gov.cn/websearch/" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left gongshang" title="人人贷已经完成在北京市工商局网站备案，您可了解网站相关备案信息。" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202013052900002" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fn-hide">
+  <div id="weixin-content" class="p20 text-center">
+    <img src="/static/img/weixin_l.jpg?rrdversion=20140414" />
+    <p>微信“发现”扫一扫，人人贷里动态全知道！</p>
+  </div>
+</div>
+<script>
+seajs.use(['components/components'], function(Components) {
+  new Components.Footer().init();
+});
+</script>
+    <div id="pg-server-message" data-status="" data-message="" style="display: none;"></div>
+  </div>
+  
+<script id="dialog-message" type="text/x-handlebars-template">
+<div class="ui-message-content">
+  <div class="fn-clear">
+    <div class="ui-message-icon fn-left">
+      {{# if info }}
+      <i class="iconfont fn-left info" title="提示">&#xF046;</i>
+      {{/ if }}
+      {{# if success }}
+      <i class="iconfont fn-left success" title="成功">&#xF049;</i>
+      {{/ if }}
+      {{# if warning }}
+      <i class="iconfont fn-left warning" title="警告">&#xF047;</i>
+      {{/ if }}
+      {{# if error }}
+      <i class="iconfont fn-left error" title="错误">&#xF045;</i>
+      {{/ if }}
+    </div>
+    <div class="ui-message-text fn-left">
+      {{# if title }}
+      <h3>{{ title }}</h3>
+      {{/ if }}
+      <p class="text-big">{{{ message }}}</p>
+      {{# if link }}
+      <p><a href="{{ link }}">{{ linkText }}</a></p>
+      {{/ if }}
+    </div>
+  </div>
+  <div class="ui-message-operation text-center mt20">
+    <a class="ui-button ui-button-blue ui-button-mid ui-message-close-button" {{# if button }}href="{{ button.link }}"{{/ if }}>{{# if button }}{{ button.text }}{{ else }}关闭{{/ if }}</a>
+  </div>
+</div>
+</script>
+  <script>seajs.use(['page']);</script>
+  
+   
+
+  <script id="loan-list-rsp" type="text/x-json">{"status":0,"message":"okey","data":{"loans":[]}}</script>
+  <script id="borrowing-rsp" type="text/x-json">{"status":0,"message":"okey","data":{"loans":[]}}</script>
+  <script id="loan-list-template" type="text/x-handlebars-template">
+  {{# if _hasHeader }}
+  <li class="ui-list-header fn-clear">
+    <span class="ui-list-title fn-left color-gray-text w260">借款标题</span>
+    <span class="ui-list-title fn-left color-gray-text w60">信用等级</span>
+    <span class="ui-list-title fn-left color-gray-text w90">年利率</span>
+    <span class="ui-list-title fn-left color-gray-text w120">金额</span>
+    <span class="ui-list-title fn-left color-gray-text w80">期限</span>
+    <span class="ui-list-title fn-left color-gray-text w50">进度</span>
+    <span class="ui-list-title fn-left color-gray-text w75 last"></span>
+  </li>
+  {{/ if }}
+  {{# each loans }}
+  <li class="ui-list-item fn-clear">
+    <span class="ui-list-field fn-left w260">
+      <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w210 rrd-dimgray fn-text-overflow" href="{{ link }}">{{ title }}</a>
+    </span>
+    <span class="ui-list-field fn-left w60"><a class="ui-creditlevel {{ creditLevel }} snow">{{ creditLevel }}</a></span>
+    <span class="ui-list-field fn-left num-s text-right w70 pr20"><em>{{ interest }}</em>%</span>
+    <span class="ui-list-field fn-left num-s text-right w110 pr10"><em>{{ amount }}</em>元</span>
+    <span class="ui-list-field fn-left num-s text-right w60 pr20"><em>{{ term }}</em>个月</span>
+    <span class="ui-list-field fn-left num text-right w40 pr10"><em>{{ progress }}</em>%</span>
+    <span class="ui-list-field fn-left w75 last"><a class="ui-button ui-button-small ui-button-blue" href="{{ link }}">投标</a></span>
+  </li>
+  {{ else }}
+  <li class="ui-list-status">
+    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}暂时没有可推荐的理财产品{{/ if }}</p>
+  </li>
+  {{/ each }}
+  </script>
+  <script id="borrowing-template" type="text/x-handlebars-template">
+  <li class="ui-list-header fn-clear">
+    <span class="ui-list-title fn-left color-gray-text w200">借款标题</span>
+    <span class="ui-list-title fn-left color-gray-text w160">待还本金</span>
+    <span class="ui-list-title fn-left color-gray-text w160">待还利息/管理费</span>
+    <span class="ui-list-title fn-left color-gray-text w100">逾期费用</span>
+    <span class="ui-list-title fn-left color-gray-text w110 last"></span>
+  </li>
+  {{# each loans }}
+  <li class="ui-list-item fn-clear">
+    <span class="ui-list-field fn-left w180 ph10 fn-text-overflow">{{ title }}</span>
+    <span class="ui-list-field fn-left num-s text-right w140 pr20"><em>{{ notPayPrincipal }}</em>元</span>
+    <span class="ui-list-field fn-left num-s text-right w120 pr40"><em>{{ notPayInterestAndMgmtFee }}</em>元</span>
+    <span class="ui-list-field fn-left num-s text-right w80 pr20"><em>{{ overdueAmount }}</em>元</span>
+    <span class="ui-list-field fn-left text-center w110 last"><a href="/account/borrow!toMyLoans.action">去还款</a></span>
+  {{ else }}
+  <li class="ui-list-status">
+    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有借款记录{{/ if }}</p>
+  </li>
+  {{/ each }}
+  </script>
+  <script>seajs.use(['pages/account/index']);</script>
+  
+  
+
+
+<textarea style="display:none" id="J_stat_js_1">
+
+
+  var _agt=_agt||[];
+      _agt.push(['_atscu','AG_148085_IKDD']);
+      _agt.push(['_atsdomain','renrendai.com']);
+  (function(){
+    var ag=document.createElement('script'); 
+        ag.type='text/javascript'; 
+        ag.async = true;
+        ag.src=(document.location.protocol=='https:'?'https':'http')+'://'+'t.agrantsem.com/js/ag.js';
+    var s=document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ag,s);})();
+</textarea>
+
+<script type='text/javascript'>
+window.onload= function(){
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    var bduidArr = ['71ce3105a964d0c3748e04584e5af0b9','efa929f55e0b175f5657fd1d1d809be6','2547238860b5ae69d69cae60a725236c','b7b6d41754885a6ae7f79431068d7b57'];
+    
+    for(i = 0; i<bduidArr.length; i++){
+        var scriptbd = document.createElement("script"); 
+        scriptbd.type = "text/javascript";
+        scriptbd.async = true;
+        scriptbd.src = _bdhmProtocol +"hm.baidu.com/h.js?"+bduidArr[i];
+        document.body.appendChild(scriptbd);
+    }
+    
+    for(i = 1; i<=1; i++){
+           var sid = 'J_stat_js_'+i.toString();
+           var element = document.getElementById(sid);
+           var scrObj = document.createElement("script"); 
+           scrObj.type = "text/javascript";
+           scrObj.async = true;
+           scrObj.text = element.innerHTML;
+           document.body.appendChild(scrObj);
+           element.parentNode.removeChild(element);
+    }
+};
+</script>
+</body>
+</html>

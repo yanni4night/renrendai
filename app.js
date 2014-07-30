@@ -44,6 +44,10 @@ app.get('/image.jsp', function(req, res, next) {
   return res.redirect('/static/img/captcha.png');
 });
 
+app.all('/getUnreadMailsCount.action',function(req,res){
+  return res.json({"totalCount":0});
+});
+
 app.get(/(.+)\.action$/i, function(req, res) {
   var stub = String(RegExp.$1);
   var file = path.join('template', stub + '.html');

@@ -1,0 +1,2 @@
+- /account/index.action 
+    - /getUnreadMailsCount.action
