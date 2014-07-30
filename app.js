@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.get('/', function(req, res, next) {
-    return res.send('use .action');
+    return res.redirect('index.action');
 });
 
 //验证码
