@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  交易记录 - 资金管理 - 我的人人贷帐户中心 - 人人贷 - 中国最大最安全的P2P网络投资理财、网络贷款平台
+</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="content-type" content="text/html" charset="utf-8">
+<meta name="google-site-verification" content="oQXrGa_mTgxg7joO0himE0QuFeqOVmm-SDC1H2dzT4c">
+<meta name="keywords" content="人人贷|网络理财|个人理财|投资理财|P2P理财|互联网金融|投资理财|债权转让|理财计划|优选计划|网络贷款|工薪贷|生意贷|网商贷|网贷|小额贷款" />
+<meta name="description" content="人人贷(www.renrendai.com)是目前中国互联网金融中P2P信贷行业中最大、最安全的平台，为投资理财用户和贷款用户两端提供公平、透明、安全、高效的互联网金融服务。投资理财用户可以通过人人贷平台进行投标、加入优选理财计划、购买债权等方式进行投资获得高收益；贷款用户可以通过平台申请工薪贷、生意贷、网商贷等小额贷款。" />
+
+<script src="/static/js/seajs/2.1.0/sea.js?rrdversion=20140414"></script>
+<script src="/static/js/config.js?rrdversion=20140414"></script>
+
+
+<link rel="shortcut icon" href="/favicon.ico?icoversion=1">
+<link rel="stylesheet" href="/static/css/one.css?rrdversion=20140414">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="/static/css/ie8-and-lower.css?rrdversion=20140414" />
+<![endif]-->
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/static/css/ie6-and-lower.css?rrdversion=20140414" />
+<![endif]-->
+
+    <link rel="stylesheet" href="/static/css/pages/account/account.css?rrdversion=20140414">
+  
+</head>
+
+<body>
+  <div class="pg-container  ">
+    
+
+
+<div class="ui-header" id="header">
+  <div class="ui-header-top ">
+    <div class="container_12 fn-clear">
+      <div class="grid_12 fn-clear">
+        <div class="ui-nav fn-right">
+          <a class="ui-nav-item fn-left" href="/">首页</a>
+          <a class="ui-nav-item fn-left" href="/event/app.action" target="_blank"><i class="icon icon-app mr5"></i>移动客户端</a>
+          <a class="ui-nav-item fn-left" href="/account/index.action">我的人人贷</a>
+          
+          <a class="ui-nav-item fn-left " id="header-msg" href="/account/comm!mail.action" target="_blank">
+            <span class="fn-left">消息</span>
+            <span class="ui-nav-msgcount ui-nav-msgcount-nomsg rrdcolor-lightblue-bg" id="header-msgcount">0</span>
+          </a>
+          
+          <a class="ui-nav-item fn-left" href="/help/index.action" target="_blank">帮助</a>
+          <a class="ui-nav-item fn-left" href="http://bbs.renrendai.com" target="_blank">论坛</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-header-main">
+    <div class="container_12 fn-clear">
+      <div class="grid_2 ui-header-grid">
+        <a class="ui-header-logo fn-left" href="/"></a>
+      </div>
+      <div class="grid_7 ui-header-grid">
+        <div class="fn-hide no-nav-text"></div>
+        <ul class="ui-nav ">
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray" href="/lend/index.action">
+              <span>我要理财</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
+            </ul>
+          </li>
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray" href="/borrow/index.action">
+              <span>我要借款</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-borrow" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
+            </ul>
+          </li>
+          <li class="ui-nav-item">
+            <a class="ui-nav-item-link rrd-dimgray" href="/guide/invest.action">新手指引</a>
+          </li>
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray" href="/about/about.action?flag=intro">
+              <span>关于我们</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="grid_3 ui-header-grid">
+        <ul class="ui-nav fn-right  ">
+          
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray ui-nav-username fn-text-overflow" href="/account/index.action">
+              <span>您好，yanni4night</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-account" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!recharge.action">充值</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!withdraw.action">提现</a></li>
+              <li class="ui-nav-dropdown-separator"></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital.action">资金管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/invest!loan.action">理财管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/borrow!toMyLoans.action">借款管理</a></li>
+              <li class="ui-nav-dropdown-separator"></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/j_spring_security_logout">退出</a></li>
+            </ul>
+          </li>
+          
+          
+        </ul>
+        <!--
+        <ul class="ui-nav fn-right fn-hide">
+          <li class="ui-nav-item">
+            <a class="ui-nav-item-link login-link" href="/loginPage.action">登录</a>
+          </li>
+        </ul>
+        <ul class="ui-nav fn-right fn-hide">
+          <li class="ui-nav-item">
+            <a class="ui-nav-item-link reg-link" href="/regPage.action">注册</a>
+          </li>
+        </ul>
+        -->
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <div id="header-helper" style="display: none;">
+    <span id="header-helper-authenticated">
+      true
+      
+    </span>
+  </div>
+</div>
+<script>
+seajs.use(['components/components'], function(Components) {
+  new Components.Header().init();
+});
+</script>
+    <div class="pg-container-content">
+      
+  <div id="pg-account-transactions" class="pg-account">
+    <div class="container_12 mt10">
+      <ul class="fn-clear ui-breadcrumb grid_12">
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
+          <a href="/account/index.action">我的人人贷</a>
+        </li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text">
+          <a href="/account/capital.action">资金管理</a>
+        </li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-current">
+          <a>交易记录</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container_12 mt10 fn-clear">
+      <div class="grid_2">
+        
+
+<div class="ui-side ui-side-withicon" id="sidebar">
+  <ul class="ui-side-list nav nav-list bs-docs-sidenav affix">
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link" href="/account/index.action"><i class="fn-left ui-icon-mid index"></i>我的人人贷</a>
+    </li>
+    <li class="ui-side-item active">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid capital"></i>资金管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item active">
+          <a class="ui-side-sub-item-link" href="/account/capital.action">交易记录</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/capital!recharge.action">充值</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/capital!withdraw.action">提现</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid invest"></i>理财管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!loan.action">我的债权</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!plan.action">优选理财计划</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!transfer.action">债权转让</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!statistics.action">理财统计</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/invest!tool.action">自动投标工具</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid borrow"></i>借款管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/borrow!toMyLoans.action">我的借款</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/borrow!applications.action">借款申请查询</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/borrow!statistics.action">借款统计</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid account"></i>账户管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/info!basicInfo.action">个人基础信息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/info!verification.action">认证信息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/info!security.action">安全信息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/info!bank.action">银行卡信息</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid comm"></i>互动管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a  class="ui-side-sub-item-link" href="/account/comm!mail.action">站内消息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a  class="ui-side-sub-item-link last" href="/account/comm!settings.action">通知设置</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item last ">
+          <a class="ui-side-item-link"><i class="fn-left ui-icon-mid coupons"></i>优惠券管理</a>
+          <ul class="ui-side-sub-list">
+              <li class="ui-side-sub-item ">
+                  <a  class="ui-side-sub-item-link" href="/account/ucode.action">U-code兑换</a>
+              </li>
+          </ul>
+     </li>
+  </ul>
+  <div class="ui-side-ad mt20">
+        <a  style="display: block; width:140px;overflow:hidden;"><img style="width:140px;" src="http://www.renrendai.com/upload/cms/advertising/accountIndexRight/2960ccda-628c-42b4-addc-c4a391ba847d.jpg?20140401a" alt="微信扫描"></a>
+</div>
+</div>
+<script>
+seajs.use(['components/components'], function(Components) {
+  new Components.Sidebar({
+    name: 'account-sidebar'
+  }).init();
+});
+</script>
+      </div>
+      <div class="grid_10">
+        <div class="fn-clear p20bs color-orange-bg">
+          <div class="fn-left box-summary-left">
+            <h3 class="text-xl">账户余额</h3>
+            <p class="num color-orange-text"><em>0.00</em>元</p>
+          </div>
+          <div class="fn-left box-summary-right last">
+            <div class="fn-clear color-dimgray-text">
+              <div class="grid_2 alpha">
+                <h5 class="text-big">可用资金</h5>
+                <p class="num-s"><em>0.00</em>元</p>
+              </div>
+              <div class="grid_2">
+                <h5 class="text-big">已充值总额</h5>
+                <p class="num-s"><em>0.00</em>元</p>
+              </div>
+              <div class="grid_2 omega">
+                <a class="summary-button ui-button ui-button-small ui-button-green" href="/account/capital!recharge.action">充值</a>
+              </div>
+            </div>
+            <hr class="mt10">
+            <div class="fn-clear color-dimgray-text mt10">
+              <div class="grid_2 alpha">
+                <h5 class="text-big">冻结资金</h5>
+                <p class="num-s"><em>0.00</em>元</p>
+              </div>
+              <div class="grid_2">
+                <h5 class="text-big">已提现总额</h5>
+                <p class="num-s"><em>0.00</em>元</p>
+              </div>
+              <div class="grid_2 omega">
+                <a class="summary-button ui-button ui-button-small ui-button-blue" href="/account/capital!withdraw.action">提现</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt20 p20bs color-white-bg">
+          <div class="fn-clear" id="query-form">
+            <div class="fn-left">
+              <div class="fn-left pr10">查询类型</div>
+              <select class="fn-left mr20" name="type" autocomplete="off">
+                <option value="ALL">所有</option>
+                <option value="RECHARGE">充值</option>
+                <option value="CHECKOUT">投标成功</option>
+                <option value="CHECKIN">招标成功</option>
+                <option value="REPAY">偿还本息</option>
+                <option value="REPAID">回收本息</option>
+                <option value="IN_REPAY">提前还款</option>
+                <option value="IN_REPAID">提前回收</option>
+                <option value="CASH_DRAW">成功提现</option>
+                <option value="ID_VALIDATE">身份验证手续费</option>
+                <option value="CASH_DRAW_FEE">提现手续费</option>
+                <option value="CHECKIN_MGMT_FEE">借款管理费</option>
+                <option value="OVER_DUE_MGMT_FEE">逾期管理费</option>
+                <option value="GUARANTEE_RECHARGE">担保费用</option>
+                <option value="FIELDAUDIT_RECHARGE">实地审核费用</option>
+                <option value="ENTURST_RECHARGE">委托待查费用</option>
+                <option value="MANUAL_RECHARGE">人工充值</option>
+                <option value="RETURN_FEE_FROM_RENRENDAI">返还服务费</option>
+                <option value="REGISTER_FINANCE_PLAN">加入优选理财计划</option>
+                <option value="FINANCEPLAN_CASHDRAW">优选理财计划提现</option>
+                <option value="SALE_DEBT">出售债权</option>
+                <option value="BUY_DEBT">购买债权</option>
+                <option value="LOAN_TRANSFER_FEE">债权转让管理费</option>
+              </select>
+              <div class="fn-left pr10">查询时间</div>
+              <div class="fn-left mr20" id="query-normal">
+                <select name="time" autocomplete="off">
+                  <option value="THREE_DAYS">三天以内</option>
+                  <option value="ONE_WEEK">一周以内</option>
+                  <option value="ONE_MONTH" selected="selected">一个月以内</option>
+                  <option value="THREE_MONTH">三个月以内</option>
+                  <option value="ONE_YEAR">一年以内</option>
+                </select>
+              </div>
+              <div class="fn-left mr20" id="query-advanced" style="display: none;">
+                <select name="year" autocomplete="off">
+                  <option value="2014" selected="selected">2014</option>
+                </select>
+                <span class="text">年</span>
+                <select name="startMonth" autocomplete="off"></select>
+                <span class="text">月 到 </span>
+                <select name="endMonth" autocomplete="off"></select>
+                <span class="text">月</span>
+              </div>
+              <a class="fn-left ui-button ui-button-small ui-button-blue" id="query-submit">查询</a>
+            </div>
+            <div class="fn-right">
+              <a id="query-switch" data-current="normal">切换到高级查询</a>
+            </div>
+          </div>
+          <hr class="mt20">
+          <div class="mt10 fn-clear">
+            <p class="text-right"><a id="export" href="/account/capital!transactionExport.action" target="_blank">导出查询结果</a></p>
+            <ul class="ui-list ui-list-s mt10" id="transactions"></ul>
+            <div class="fn-right mt10 ui-pagination" id="transactions-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="pg-helper" style="display: none;">
+    <span id="pg-helper-year">2014</span>
+    <span id="pg-helper-month">7</span>
+  </div>
+  
+    </div>
+    
+
+<div class="ui-footer" id="footer">
+  <div class="container_12">
+    <div class="grid_12">
+        <div class="ui-footer-section ui-footer-narrow-hide fn-clear">
+  <h4 class="color-gray-text text-big fn-left w85">友情链接</h4>
+  <ul class="ui-footer-links fn-left w850">
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://credit.hc360.com/dk_index/hc_dk.html">慧聪金融</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.enfodesk.com/">易观智库</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.haodai.com/">好贷网</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.yinhang.com/">银率网</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://bank.hexun.com/">和讯银行</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.gome.com.cn/">国美在线</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.cjdao.com/index.jsp">财经道</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.siilu.com/">电商服务</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.shopex.cn/">ShopEx</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://bj.58.com/danbaobaoxiantouzi/">58投资担保</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.wangdaizhijia.com/">网贷之家</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://bbs.wacai.com">挖财社区</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.feidee.com/money/">随手记</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.rong360.com/licai/">融360理财</a>
+    </li>
+  </ul>
+</div>
+
+      <div class="ui-footer-section ui-footer-narrow-hide fn-clear">
+        <div class="ui-footer-links grid_9 alpha">
+                <ul class="fn-clear">
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=intro">公司介绍</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/guide/investSecurity.action">安全保障</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=report">媒体报道</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=responsibility">社会责任</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=invite">招贤纳士</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/sitemap.action">网站地图</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/help/index.action">帮助中心</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=contact">联系我们</a>
+            </li>
+          </ul>
+          <ul class="fn-clear icons">
+            <li class="fn-left">
+              <h4 class="color-gray-text text-big">客户服务</h4>
+            </li>
+            <li class="fn-left"><a class="ui-footer-img-link weibo" target="_blank" href="http://e.weibo.com/renrendai?ref=http%3A%2F%2Fwww.renrendai.com%2F">人人贷新浪微博</a></li>
+            <li class="fn-left"><a class="ui-footer-img-link qq-weibo" target="_blank" href="http://t.qq.com/renrendai">人人贷腾讯微博</a></li>
+            <li class="fn-left"><a class="ui-footer-img-link we-chat" tabindex="-1" href="#">人人贷微信</a></li>
+            <li class="fn-left"><a class="ui-footer-img-link online-customer-service cursor-pointer" target="_blank" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4000278080&eid=218808P8z8p8R8y8q8y8Q&o=www.renrendai.com&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">人人贷在线客服</a></li>
+          </ul>
+        </div>
+            <div class="grid_3 omega">
+          <p class="color-gray-text text-right">客服电话</p>
+          <h4 class="color-gray-text text-right ui-footer-phone-number">400-027-8080</h4>
+          <p class="color-gray-text text-right">9:00 - 21:00</p>
+        </div>
+        </div>
+      <div class="ui-footer-section last">
+        <div class="ui-footer-copyright">
+          <span class="ui-footer-contact-link color-gray-text">© 2014 人人贷 All rights reserved</span>
+          <span class="ui-footer-contact-link color-gray-text has-separator">人人贷商务顾问(北京)有限公司</span>
+          <span class="ui-footer-contact-link color-gray-text has-separator last"><a class="gray" target="_blank" href="/icp/icp.html">京ICP证 100953号</a></span>
+        </div>
+        <div class="ui-footer-verification ui-footer-narrow-hide fn-clear">
+          <a class="ui-footer-verification-item fn-left credibility" title="人人贷荣获中国电子商务协会“诚信网站”认证殊荣" href="https://search.szfw.org/cert/l/CX20140315003612003651" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left trust" title="人人贷已通过中网权威数据库对比，获得“可信网站”身份验证，您可放心使用。" href="https://ss.knet.cn/verifyseal.dll?sn=e13042311010040288j4wq000000&ct=df&a=1&pa=931969" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left itrust" title="人人贷已经成为中国互联网信用评价中心网络诚信联盟成员，并且完成企业信用评级 " href="http://www.itrust.org.cn/yz/pjwx.asp?wm=2554879344" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left norton" title="人人贷已引入VeriSign SSL加密技术，您的隐私及个人资料安全已受最高级别的保护。" href="https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=www.renrendai.com&lang=zh_cn" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left police" title="人人贷已经完成在公安机关的信息备案，您可了解网站相关备案信息。" href="http://gawa.bjchy.gov.cn/websearch/" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left gongshang" title="人人贷已经完成在北京市工商局网站备案，您可了解网站相关备案信息。" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202013052900002" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fn-hide">
+  <div id="weixin-content" class="p20 text-center">
+    <img src="/static/img/weixin_l.jpg?rrdversion=20140414" />
+    <p>微信“发现”扫一扫，人人贷里动态全知道！</p>
+  </div>
+</div>
+<script>
+seajs.use(['components/components'], function(Components) {
+  new Components.Footer().init();
+});
+</script>
+    <div id="pg-server-message" data-status="" data-message="" style="display: none;"></div>
+  </div>
+  
+<script id="dialog-message" type="text/x-handlebars-template">
+<div class="ui-message-content">
+  <div class="fn-clear">
+    <div class="ui-message-icon fn-left">
+      {{# if info }}
+      <i class="iconfont fn-left info" title="提示">&#xF046;</i>
+      {{/ if }}
+      {{# if success }}
+      <i class="iconfont fn-left success" title="成功">&#xF049;</i>
+      {{/ if }}
+      {{# if warning }}
+      <i class="iconfont fn-left warning" title="警告">&#xF047;</i>
+      {{/ if }}
+      {{# if error }}
+      <i class="iconfont fn-left error" title="错误">&#xF045;</i>
+      {{/ if }}
+    </div>
+    <div class="ui-message-text fn-left">
+      {{# if title }}
+      <h3>{{ title }}</h3>
+      {{/ if }}
+      <p class="text-big">{{{ message }}}</p>
+      {{# if link }}
+      <p><a href="{{ link }}">{{ linkText }}</a></p>
+      {{/ if }}
+    </div>
+  </div>
+  <div class="ui-message-operation text-center mt20">
+    <a class="ui-button ui-button-blue ui-button-mid ui-message-close-button" {{# if button }}href="{{ button.link }}"{{/ if }}>{{# if button }}{{ button.text }}{{ else }}关闭{{/ if }}</a>
+  </div>
+</div>
+</script>
+  <script>seajs.use(['page']);</script>
+  
+  <script id="transactions-template" type="text/x-handlebars-template">
+  <li class="ui-list-header text fn-clear">
+    <span class="ui-list-title w100 fn-left time">时间</span>
+    <span class="ui-list-title w170 fn-left type">类型明细</span>
+    <span class="ui-list-title w90 fn-left credit">收入</span>
+    <span class="ui-list-title w90 fn-left debit">支出</span>
+    <span class="ui-list-title w110 fn-left balance">结余</span>
+    <span class="ui-list-title w180 fn-left note last">备注</span>
+  </li>
+  {{# each pointLogs }}
+  <li class="ui-list-item fn-clear {{ itemStyle }}">
+    <span class="ui-list-field text-center w100 fn-left">{{ time }}</span>
+    <span class="ui-list-field w160 ph5 fn-left fn-text-overflow">{{ type }}{{# if loanId }}<em class="text-small">（<a href="{{ loanLink }}" target="_blank">{{ loanId }}</a>）</em>{{/ if }}</span>
+    <span class="ui-list-field text-right num-s w80 pr10 fn-left">{{# if credit }}<em class="value-small">{{ credit }}</em>{{/ if }}</span>
+    <span class="ui-list-field text-right num-s w80 pr10 fn-left">{{# if debit }}<em class="value-small">{{ debit }}</em>{{/ if }}</span>
+    <span class="ui-list-field text-right num-s w100 pr10 fn-left"><em class="value-small">{{ balance }}</em></span>
+    <span class="ui-list-field text-small w160 ph10 fn-left fn-text-overflow last" title="{{ note }}">{{ note }}</span>
+  </li>
+  {{ else }}
+  <li class="ui-list-status">
+    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
+  </li>
+  {{/ each }}
+  </script>
+  <script id="transactions-rsp" type="text/x-json">{"status":0,"data":{"totalPage":0,"pageIndex":1,"pointLogs":[]}}</script>
+  <script>seajs.use(['pages/account/capital/transactions']);</script>
+  
+  
+
+
+<textarea style="display:none" id="J_stat_js_1">
+
+
+  var _agt=_agt||[];
+      _agt.push(['_atscu','AG_148085_IKDD']);
+      _agt.push(['_atsdomain','renrendai.com']);
+  (function(){
+    var ag=document.createElement('script'); 
+        ag.type='text/javascript'; 
+        ag.async = true;
+        ag.src=(document.location.protocol=='https:'?'https':'http')+'://'+'t.agrantsem.com/js/ag.js';
+    var s=document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ag,s);})();
+</textarea>
+
+<script type='text/javascript'>
+window.onload= function(){
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    var bduidArr = ['71ce3105a964d0c3748e04584e5af0b9','efa929f55e0b175f5657fd1d1d809be6','2547238860b5ae69d69cae60a725236c','b7b6d41754885a6ae7f79431068d7b57'];
+    
+    for(i = 0; i<bduidArr.length; i++){
+        var scriptbd = document.createElement("script"); 
+        scriptbd.type = "text/javascript";
+        scriptbd.async = true;
+        scriptbd.src = _bdhmProtocol +"hm.baidu.com/h.js?"+bduidArr[i];
+        document.body.appendChild(scriptbd);
+    }
+    
+    for(i = 1; i<=1; i++){
+           var sid = 'J_stat_js_'+i.toString();
+           var element = document.getElementById(sid);
+           var scrObj = document.createElement("script"); 
+           scrObj.type = "text/javascript";
+           scrObj.async = true;
+           scrObj.text = element.innerHTML;
+           document.body.appendChild(scrObj);
+           element.parentNode.removeChild(element);
+    }
+};
+</script>
+</body>
+</html>
