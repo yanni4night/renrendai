@@ -32,6 +32,11 @@ app.get('/', function(req, res, next) {
     return res.send('use .action');
 });
 
+//验证码
+app.get('/image.jsp', function(req, res, next) {
+    return res.redirect('/static/img/captcha.png');
+});
+
 app.get(/(.+)\.action$/, function(req, res) {
     var stub = RegExp.$1;
     return fs.readFile(path.join('template', stub + '.html'), {
