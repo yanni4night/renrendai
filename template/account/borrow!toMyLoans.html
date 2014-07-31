@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  我的借款 - 借款管理 - 我的人人贷帐户中心 - 人人贷 - 中国最大最安全的P2P网络投资理财、网络贷款平台
+</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="content-type" content="text/html" charset="utf-8">
+<meta name="google-site-verification" content="oQXrGa_mTgxg7joO0himE0QuFeqOVmm-SDC1H2dzT4c">
+<meta name="keywords" content="人人贷|网络理财|个人理财|投资理财|P2P理财|互联网金融|投资理财|债权转让|理财计划|优选计划|网络贷款|工薪贷|生意贷|网商贷|网贷|小额贷款" />
+<meta name="description" content="人人贷(www.renrendai.com)是目前中国互联网金融中P2P信贷行业中最大、最安全的平台，为投资理财用户和贷款用户两端提供公平、透明、安全、高效的互联网金融服务。投资理财用户可以通过人人贷平台进行投标、加入优选理财计划、购买债权等方式进行投资获得高收益；贷款用户可以通过平台申请工薪贷、生意贷、网商贷等小额贷款。" />
+
+<script src="/static/js/seajs/2.1.0/sea.js?rrdversion=20140414"></script>
+<script src="/static/js/config.js?rrdversion=20140414"></script>
+
+
+<link rel="shortcut icon" href="/favicon.ico?icoversion=1">
+<link rel="stylesheet" href="/static/css/one.css?rrdversion=20140414">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="/static/css/ie8-and-lower.css?rrdversion=20140414" />
+<![endif]-->
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/static/css/ie6-and-lower.css?rrdversion=20140414" />
+<![endif]-->
+
+    <link rel="stylesheet" href="/static/css/pages/account/account.css?rrdversion=20140414">
+  
+</head>
+
+<body>
+  <div class="pg-container  ">
+    
+
+
+<div class="ui-header" id="header">
+  <div class="ui-header-top ">
+    <div class="container_12 fn-clear">
+      <div class="grid_12 fn-clear">
+        <div class="ui-nav fn-right">
+          <a class="ui-nav-item fn-left" href="/">首页</a>
+          <a class="ui-nav-item fn-left" href="/event/app.action" target="_blank"><i class="icon icon-app mr5"></i>移动客户端</a>
+          <a class="ui-nav-item fn-left" href="/account/index.action">我的人人贷</a>
+          
+          <a class="ui-nav-item fn-left " id="header-msg" href="/account/comm!mail.action" target="_blank">
+            <span class="fn-left">消息</span>
+            <span class="ui-nav-msgcount ui-nav-msgcount-nomsg rrdcolor-lightblue-bg" id="header-msgcount">0</span>
+          </a>
+          
+          <a class="ui-nav-item fn-left" href="/help/index.action" target="_blank">帮助</a>
+          <a class="ui-nav-item fn-left" href="http://bbs.renrendai.com" target="_blank">论坛</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-header-main">
+    <div class="container_12 fn-clear">
+      <div class="grid_2 ui-header-grid">
+        <a class="ui-header-logo fn-left" href="/"></a>
+      </div>
+      <div class="grid_7 ui-header-grid">
+        <div class="fn-hide no-nav-text"></div>
+        <ul class="ui-nav ">
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray" href="/lend/index.action">
+              <span>我要理财</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
+            </ul>
+          </li>
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray" href="/borrow/index.action">
+              <span>我要借款</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-borrow" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
+            </ul>
+          </li>
+          <li class="ui-nav-item">
+            <a class="ui-nav-item-link rrd-dimgray" href="/guide/invest.action">新手指引</a>
+          </li>
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray" href="/about/about.action?flag=intro">
+              <span>关于我们</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="grid_3 ui-header-grid">
+        <ul class="ui-nav fn-right  ">
+          
+          <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray ui-nav-username fn-text-overflow" href="/account/index.action">
+              <span>您好，yanni4night</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-account" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!recharge.action">充值</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!withdraw.action">提现</a></li>
+              <li class="ui-nav-dropdown-separator"></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital.action">资金管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/invest!loan.action">理财管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/borrow!toMyLoans.action">借款管理</a></li>
+              <li class="ui-nav-dropdown-separator"></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/j_spring_security_logout">退出</a></li>
+            </ul>
+          </li>
+          
+          
+        </ul>
+        <!--
+        <ul class="ui-nav fn-right fn-hide">
+          <li class="ui-nav-item">
+            <a class="ui-nav-item-link login-link" href="/loginPage.action">登录</a>
+          </li>
+        </ul>
+        <ul class="ui-nav fn-right fn-hide">
+          <li class="ui-nav-item">
+            <a class="ui-nav-item-link reg-link" href="/regPage.action">注册</a>
+          </li>
+        </ul>
+        -->
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <div id="header-helper" style="display: none;">
+    <span id="header-helper-authenticated">
+      true
+      
+    </span>
+  </div>
+</div>
+<script>
+seajs.use(['components/components'], function(Components) {
+  new Components.Header().init();
+});
+</script>
+    <div class="pg-container-content">
+      
+  <div id="pg-account-repayments" class="pg-account">
+    <div class="container_12 mt10">
+      <ul class="ui-breadcrumb grid_12 fn-clear">
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
+          <a href="/account/index.action">我的人人贷</a>
+        </li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text">
+          <a href="/account/borrow!toMyLoans.action">借款管理</a>
+        </li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+        <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-current">
+          <a>我的借款</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container_12 mt10">
+      <div class="grid_2">
+        
+
+<div class="ui-side ui-side-withicon" id="sidebar">
+  <ul class="ui-side-list nav nav-list bs-docs-sidenav affix">
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link" href="/account/index.action"><i class="fn-left ui-icon-mid index"></i>我的人人贷</a>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid capital"></i>资金管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/capital.action">交易记录</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/capital!recharge.action">充值</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/capital!withdraw.action">提现</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid invest"></i>理财管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!loan.action">我的债权</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!plan.action">优选理财计划</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!transfer.action">债权转让</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/invest!statistics.action">理财统计</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/invest!tool.action">自动投标工具</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item active">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid borrow"></i>借款管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item active">
+          <a class="ui-side-sub-item-link" href="/account/borrow!toMyLoans.action">我的借款</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/borrow!applications.action">借款申请查询</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/borrow!statistics.action">借款统计</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid account"></i>账户管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/info!basicInfo.action">个人基础信息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/info!verification.action">认证信息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link" href="/account/info!security.action">安全信息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a class="ui-side-sub-item-link last" href="/account/info!bank.action">银行卡信息</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item ">
+      <a class="ui-side-item-link"><i class="fn-left ui-icon-mid comm"></i>互动管理</a>
+      <ul class="ui-side-sub-list">
+        <li class="ui-side-sub-item ">
+          <a  class="ui-side-sub-item-link" href="/account/comm!mail.action">站内消息</a>
+        </li>
+        <li class="ui-side-sub-item ">
+          <a  class="ui-side-sub-item-link last" href="/account/comm!settings.action">通知设置</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ui-side-item last ">
+          <a class="ui-side-item-link"><i class="fn-left ui-icon-mid coupons"></i>优惠券管理</a>
+          <ul class="ui-side-sub-list">
+              <li class="ui-side-sub-item ">
+                  <a  class="ui-side-sub-item-link" href="/account/ucode.action">U-code兑换</a>
+              </li>
+          </ul>
+     </li>
+  </ul>
+  <div class="ui-side-ad mt20">
+        <a  style="display: block; width:140px;overflow:hidden;"><img style="width:140px;" src="http://www.renrendai.com/upload/cms/advertising/accountIndexRight/2960ccda-628c-42b4-addc-c4a391ba847d.jpg?20140401a" alt="微信扫描"></a>
+</div>
+</div>
+<script>
+seajs.use(['components/components'], function(Components) {
+  new Components.Sidebar({
+    name: 'account-sidebar'
+  }).init();
+});
+</script>
+      </div>
+      <div class="grid_10">
+        <div class="fn-clear p20bs color-orange-bg">
+          <div class="fn-left box-summary-left">
+            <h3 class="text-xl">借款总金额</h3>
+            <p class="num color-orange-text"><em>0.00</em>元</p>
+          </div>
+          <div class="fn-left box-summary-right last">
+            <div class="fn-clear color-dimgray-text">
+              <div class="grid_2 alpha">
+                <h5 class="text-big">逾期金额</h5>
+                <p class="num-s"><em>0.00</em>元</p>
+              </div>
+              <div class="grid_2">
+                <h5 class="text-big">待还金额</h5>
+                <p class="num-s"><em>0.00</em>元</p>
+              </div>
+              <div class="grid_2 omega">
+                <h5 class="text-big">近30天应还金额</h5>
+                <p class="num-s"><em>0.00</em>元</p>
+              </div>
+            </div>
+            <div class="mt10 fn-clear color-dimgray-text">
+              <p class="em-box">您最近10天内有 <em>0</em>笔 借款须归还，总额 <em>0.00</em>元</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt20">
+          <div class="ui-tab ui-tab-transparent" id="repayments-tab">
+            <ul class="ui-tab-items">
+              <li class="ui-tab-item ui-tab-item-current" data-name="repaying">
+                <a class="ui-tab-item-link">还款中借款</a>
+              </li>
+              <li class="ui-tab-item" data-name="repaid">
+                <a class="ui-tab-item-link">已还清借款</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p20bs color-white-bg">
+            <div id="repayments-tab-content">
+              <div class="ui-tab-content ui-tab-content-current fn-clear" data-name="repaying">
+                <ul class="ui-list ui-list-s repaying" id="repaying-list"></ul>
+                <div class="fn-right mt10" id="repaying-list-pagination"></div>
+              </div>
+              <div class="ui-tab-content fn-clear" data-name="repaid">
+                <ul class="ui-list ui-list-s repaid" id="repaid-list"></ul>
+                <div class="fn-right mt10" id="repaid-list-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    </div>
+    
+
+<div class="ui-footer" id="footer">
+  <div class="container_12">
+    <div class="grid_12">
+        <div class="ui-footer-section ui-footer-narrow-hide fn-clear">
+  <h4 class="color-gray-text text-big fn-left w85">友情链接</h4>
+  <ul class="ui-footer-links fn-left w850">
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://credit.hc360.com/dk_index/hc_dk.html">慧聪金融</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.enfodesk.com/">易观智库</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.haodai.com/">好贷网</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.yinhang.com/">银率网</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://bank.hexun.com/">和讯银行</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.gome.com.cn/">国美在线</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.cjdao.com/index.jsp">财经道</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.siilu.com/">电商服务</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.shopex.cn/">ShopEx</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://bj.58.com/danbaobaoxiantouzi/">58投资担保</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.wangdaizhijia.com/">网贷之家</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://bbs.wacai.com">挖财社区</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.feidee.com/money/">随手记</a>
+    </li>
+    <li class="fn-left">
+      <a class="gray" target="_blank" href="http://www.rong360.com/licai/">融360理财</a>
+    </li>
+  </ul>
+</div>
+
+      <div class="ui-footer-section ui-footer-narrow-hide fn-clear">
+        <div class="ui-footer-links grid_9 alpha">
+                <ul class="fn-clear">
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=intro">公司介绍</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/guide/investSecurity.action">安全保障</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=report">媒体报道</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=responsibility">社会责任</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=invite">招贤纳士</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/sitemap.action">网站地图</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/help/index.action">帮助中心</a>
+            </li>
+            <li class="fn-left">
+              <a class="gray" target="_blank" href="/about/about.action?flag=contact">联系我们</a>
+            </li>
+          </ul>
+          <ul class="fn-clear icons">
+            <li class="fn-left">
+              <h4 class="color-gray-text text-big">客户服务</h4>
+            </li>
+            <li class="fn-left"><a class="ui-footer-img-link weibo" target="_blank" href="http://e.weibo.com/renrendai?ref=http%3A%2F%2Fwww.renrendai.com%2F">人人贷新浪微博</a></li>
+            <li class="fn-left"><a class="ui-footer-img-link qq-weibo" target="_blank" href="http://t.qq.com/renrendai">人人贷腾讯微博</a></li>
+            <li class="fn-left"><a class="ui-footer-img-link we-chat" tabindex="-1" href="#">人人贷微信</a></li>
+            <li class="fn-left"><a class="ui-footer-img-link online-customer-service cursor-pointer" target="_blank" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4000278080&eid=218808P8z8p8R8y8q8y8Q&o=www.renrendai.com&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">人人贷在线客服</a></li>
+          </ul>
+        </div>
+            <div class="grid_3 omega">
+          <p class="color-gray-text text-right">客服电话</p>
+          <h4 class="color-gray-text text-right ui-footer-phone-number">400-027-8080</h4>
+          <p class="color-gray-text text-right">9:00 - 21:00</p>
+        </div>
+        </div>
+      <div class="ui-footer-section last">
+        <div class="ui-footer-copyright">
+          <span class="ui-footer-contact-link color-gray-text">© 2014 人人贷 All rights reserved</span>
+          <span class="ui-footer-contact-link color-gray-text has-separator">人人贷商务顾问(北京)有限公司</span>
+          <span class="ui-footer-contact-link color-gray-text has-separator last"><a class="gray" target="_blank" href="/icp/icp.html">京ICP证 100953号</a></span>
+        </div>
+        <div class="ui-footer-verification ui-footer-narrow-hide fn-clear">
+          <a class="ui-footer-verification-item fn-left credibility" title="人人贷荣获中国电子商务协会“诚信网站”认证殊荣" href="https://search.szfw.org/cert/l/CX20140315003612003651" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left trust" title="人人贷已通过中网权威数据库对比，获得“可信网站”身份验证，您可放心使用。" href="https://ss.knet.cn/verifyseal.dll?sn=e13042311010040288j4wq000000&ct=df&a=1&pa=931969" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left itrust" title="人人贷已经成为中国互联网信用评价中心网络诚信联盟成员，并且完成企业信用评级 " href="http://www.itrust.org.cn/yz/pjwx.asp?wm=2554879344" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left norton" title="人人贷已引入VeriSign SSL加密技术，您的隐私及个人资料安全已受最高级别的保护。" href="https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=www.renrendai.com&lang=zh_cn" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left police" title="人人贷已经完成在公安机关的信息备案，您可了解网站相关备案信息。" href="http://gawa.bjchy.gov.cn/websearch/" target="_blank"></a>
+          <a class="ui-footer-verification-item fn-left gongshang" title="人人贷已经完成在北京市工商局网站备案，您可了解网站相关备案信息。" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202013052900002" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fn-hide">
+  <div id="weixin-content" class="p20 text-center">
+    <img src="/static/img/weixin_l.jpg?rrdversion=20140414" />
+    <p>微信“发现”扫一扫，人人贷里动态全知道！</p>
+  </div>
+</div>
+<script>
+seajs.use(['components/components'], function(Components) {
+  new Components.Footer().init();
+});
+</script>
+    <div id="pg-server-message" data-status="" data-message="" style="display: none;"></div>
+  </div>
+  
+<script id="dialog-message" type="text/x-handlebars-template">
+<div class="ui-message-content">
+  <div class="fn-clear">
+    <div class="ui-message-icon fn-left">
+      {{# if info }}
+      <i class="iconfont fn-left info" title="提示">&#xF046;</i>
+      {{/ if }}
+      {{# if success }}
+      <i class="iconfont fn-left success" title="成功">&#xF049;</i>
+      {{/ if }}
+      {{# if warning }}
+      <i class="iconfont fn-left warning" title="警告">&#xF047;</i>
+      {{/ if }}
+      {{# if error }}
+      <i class="iconfont fn-left error" title="错误">&#xF045;</i>
+      {{/ if }}
+    </div>
+    <div class="ui-message-text fn-left">
+      {{# if title }}
+      <h3>{{ title }}</h3>
+      {{/ if }}
+      <p class="text-big">{{{ message }}}</p>
+      {{# if link }}
+      <p><a href="{{ link }}">{{ linkText }}</a></p>
+      {{/ if }}
+    </div>
+  </div>
+  <div class="ui-message-operation text-center mt20">
+    <a class="ui-button ui-button-blue ui-button-mid ui-message-close-button" {{# if button }}href="{{ button.link }}"{{/ if }}>{{# if button }}{{ button.text }}{{ else }}关闭{{/ if }}</a>
+  </div>
+</div>
+</script>
+  <script>seajs.use(['page']);</script>
+  
+  <script id="repaying-list-template" type="text/x-handlebars-template">
+  {{# each data }}
+  <li class="ui-list-item {{ itemLast }}" data-name="repaying-item" data-loan-id="{{ loanId }}">
+    <div class="p10">
+      <div class="fn-clear">
+        <h4 class="fn-left text-big">
+          <a class="fn-left mr20" href="{{ loanLink }}" target="_blank">{{ title }}</a>
+          <a class="text-small" href="javascript:void(0)" onclick="window.showModalDialog('../account/borrowContract.action?loanId={{ loanId }}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">查看合同</a>
+        </h4>
+        <a class="fn-right ui-button ui-button-small ui-button-green switch {{ repayAllDisabled }}" data-name="repay-all-switch" data-text="提前还清">提前还清</a>
+        <a class="fn-right ui-button ui-button-small ui-button-blue mr10 switch" data-name="repay-switch" data-text="还款">还款</a></span>
+      </div>
+      <hr class="mt10">
+      <div class="mt10 color-gray-text fn-clear">
+        <span class="fn-left w100">借款金额</span>
+        <span class="fn-left w120 num-s"><em>{{ amount }}</em>元</span>
+        <span class="fn-left w100">年利率</span>
+        <span class="fn-left w120 num-s"><em>{{ interest }}</em>%</span>
+        <span class="fn-left w100">剩余期数</span>
+        <span class="fn-left w120 num-s last"><em>{{ termsLeft }}/</em>{{ termsInTotal }}个月</span>
+      </div>
+      <div class="mt10 color-gray-text fn-clear">
+        <span class="fn-left w100">下个还款日</span>
+        <span class="fn-left w120">{{ nextDueDate }}</span>
+        <span class="fn-left w100">还款金额</span>
+        <span class="fn-left w120 num-s"><em>{{ toRepayAmount }}</em>元</span>
+        <span class="fn-left w100">状态</span>
+        <span class="fn-left w120 last">{{ status }}</span>
+      </div>
+    </div>
+    <div class="ui-list-item-box fn-clear" data-name="repay-box" data-status="" style="display: none;">
+      <div class="p10 fn-clear">
+        <hr>
+        <h5 class="text-big mt10 ph10">还款记录</h5>
+        <ul class="ui-list ui-list-s repayment-records" data-name="repayment-records" id="repayment-records-{{ loanId }}"></ul>
+        <ul class="ph10">
+          <li class="fn-clear mt20">
+            <span class="fn-left w100">已还总额</span>
+            <span class="fn-left w120" data-name="repaid-summary"><em>-</em>元</span>
+          </li>
+          <li class="fn-clear">
+            <span class="fn-left w100">待还总额</span>
+            <span class="fn-left w120" data-name="to-repay-summary"><em>-</em>元</span>
+          </li>
+          <li class="fn-clear mt10">
+            <span class="fn-left w100">本次还款金额</span>
+            <span class="fn-left w120 num" data-name="repay-amount"><em>0.00</em>元</span>
+          </li>
+          <li class="fn-clear mt10">
+            <span class="fn-left w100">我的可用余额</span>
+            <span class="fn-left w120" data-name="repay-available-amount" data-amount="0.0"><em>0.00</em>元</span>
+            <span class="fn-left"><a href="/account/capital!recharge.action">充值</a></span>
+          </li>
+          <li class="rrdcolor-red-text" data-name="repay-hint"></li>
+        </ul>
+        <form class="ph10 mt10" action="/my/refundAction.action" method="post" data-name="repay-form">
+          <input type="hidden" data-name="repay-input-loan-id" name="loanId" value="{{ loanId }}" />
+          <input type="hidden" data-name="repay-input-start" name="startNumber" value="" />
+          <input type="hidden" data-name="repay-input-end" name="endNumber" value="" />
+          <input type="hidden" data-name="repay-input-count" name="payNumberCount" value="" />
+          <input type="hidden" data-name="repay-input-type" name="refundType" value="current" />
+          <button class="ui-button ui-button-mid ui-button-blue disabled" data-name="repay-submit" type="submit">确认还款</button>
+        </form>
+        <div class="mt10"></div>
+      </div>
+    </div>
+    <div class="ui-list-item-box fn-clear" data-name="repay-all-box" data-status="" style="display: none;">
+      <div class="p10 fn-clear">
+        <hr>
+        <div class="ph10 mt10">
+          <h4 class="text-big">提前还清借款</h4>
+          <ul>
+            <li class="fn-clear">
+              <span class="fn-left w100">待还本金</span>
+              <span class="fn-left w120"><em>{{ toRepayPrincipal }}</em>元</span>
+            </li>
+            <li class="fn-clear">
+              <span class="fn-left w100">当期利息</span>
+              <span class="fn-left w120"><em>{{ interestForTerm }}</em>元</span>
+            </li>
+            <li class="fn-clear">
+              <span class="fn-left w100">当期借款管理费</span>
+              <span class="fn-left w120"><em>{{ mgmtFee }}</em>元</span>
+            </li>
+            <li class="fn-clear">
+              <span class="fn-left w100">违约金</span>
+              <span class="fn-left w120"><em>{{ overdueFee }}</em>元</span>
+            </li>
+            <li><span class="text-small color-gray-text">违约金 = （总待还本金 - 当期待还本金） * {{ ratio }}%</span></li>
+            <li class="fn-clear mt10">
+              <span class="fn-left w100">总计还款金额</span>
+              <span class="fn-left w120 num" data-name="repay-all-amount" data-amount="{{ toRepayInTotal }}"><em>{{ toRepayInTotal }}</em>元</span>
+            </li>
+            <li class="fn-clear mt10">
+              <span class="fn-left w100">我的可用余额</span>
+              <span class="fn-left w120" data-name="repay-all-available-amount" data-amount="0.0"><em>0.00</em>元</span>
+              <span class="fn-left"><a href="/account/capital!recharge.action">充值</a></span>
+            </li>
+            <li class="rrdcolor-red-text" data-name="repay-all-hint"></li>
+          </ul>
+          <form class="mt10" action="/my/inrepayAction.action" method="post" data-name="repay-all-form">
+            <input type="hidden" data-name="repay-input-loan-id" name="loanId" value="{{ loanId }}" />
+            <button class="ui-button ui-button-mid ui-button-blue" data-name="repay-all-submit" type="submit">确认还款</button>
+          </form>
+          <div class="mt10"></div>
+        </div>
+      </div>
+    </div>
+  </li>
+  {{ else }}
+  <li class="ui-list-status">
+    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
+  </li>
+  {{/ each }}
+  </script>
+  <script id="repaid-list-template" type="text/x-handlebars-template">
+  <li class="ui-list-header color-gray-text fn-clear">
+    <span class="ui-list-title w160 ph10 fn-left title">借款标题</span>
+    <span class="ui-list-title w110 fn-left amount">金额</span>
+    <span class="ui-list-title w70 fn-left interest">年利率</span>
+    <span class="ui-list-title w70 fn-left terms">期限</span>
+    <span class="ui-list-title w110 fn-left repaid-amount">还款总额</span>
+    <span class="ui-list-title w120 fn-left date">还清日期</span>
+    <span class="ui-list-title w40 fn-left contract">合同</span>
+  </li>
+  {{# each data }}
+  <li class="ui-list-item fn-clear {{ itemStyle }}">
+    <span class="ui-list-field w160 ph10 fn-left fn-text-overflow"><a href="{{ loanLink }}" target="_blank">{{ title }}</a></span>
+    <span class="ui-list-field num-s text-right w100 pr10 fn-left"><em>{{ amount }}</em></span>
+    <span class="ui-list-field num-s text-right w60 pr10 fn-left"><em>{{ interest }}</em>%</span>
+    <span class="ui-list-field num-s text-right w60 pr10 fn-left"><em>{{ termsInTotal }}</em>个月</span>
+    <span class="ui-list-field num-s text-right w100 pr10 fn-left"><em>{{ repaidInTotal }}</em></span>
+    <span class="ui-list-field text-center w120 fn-left">{{ endDate }}</span>
+    <span class="ui-list-field text-center w40 fn-left last">
+    <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('../account/borrowContract.action?loanId={{ loanId }}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">合同</a>
+  </span>
+  </li>
+  {{ else }}
+  <li class="ui-list-status">
+    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
+  </li>
+  {{/ each }}
+  </script>
+  <script id="repayment-records-template" type="text/x-handlebars-template">
+  <li class="ui-list-header text-small fn-clear">
+    <span class="ui-list-title w40 fn-left"></span>
+    <span class="ui-list-title w100 fn-left">还款日</span>
+    <span class="ui-list-title w100 fn-left">应还金额</span>
+    <span class="ui-list-title w100 fn-left">应还本金</span>
+    <span class="ui-list-title w100 fn-left">应还利息</span>
+    <span class="ui-list-title w90 fn-left">借款管理费</span>
+    <span class="ui-list-title w90 fn-left">逾期费用</span>
+    <span class="ui-list-title w90 fn-left last">状态</span>
+  </li>
+  {{# each data }}
+  <li class="ui-list-item fn-clear {{ itemStyle }} {{ itemLast }} repayment-record">
+    <span class="ui-list-field text-center w40 fn-left">{{# if shouldRepay }}<input type="checkbox" value="{{ termId }}" data-name="repay-term-checking" />{{/ if }}</span>
+    <span class="ui-list-field text-center w100 fn-left">{{ repaymentDate }}</span>
+    <span class="ui-list-field num-s text-right w90 pr10 fn-left to-repay-amount"><em>{{ toRepayAmount }}</em></span>
+    <span class="ui-list-field num-s text-right w90 pr10 fn-left"><em>{{ toRepayPrincipal }}</em></span>
+    <span class="ui-list-field num-s text-right w90 pr10 fn-left"><em>{{ toRepayInterest }}</em></span>
+    <span class="ui-list-field num-s text-right w80 pr10 fn-left"><em>{{ mgmtFee }}</em></span>
+    <span class="ui-list-field num-s text-right w80 pr10 fn-left"><em>{{ overdueFee }}</em></span>
+    <span class="ui-list-field text-center w90 fn-left last">{{ status }}</span>
+  </li>
+  {{ else }}
+  <li class="ui-list-status">
+    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
+  </li>
+  {{/ each }}
+  </script>
+  <script id="repaying-list-rsp" type="text/x-json">{"status":0,"data":{"data":[],"totalPage":0,"pageIndex":1}}</script>
+  <script>seajs.use(['pages/account/borrow/repayments']);</script>
+  
+  
+
+
+<textarea style="display:none" id="J_stat_js_1">
+
+
+  var _agt=_agt||[];
+      _agt.push(['_atscu','AG_148085_IKDD']);
+      _agt.push(['_atsdomain','renrendai.com']);
+  (function(){
+    var ag=document.createElement('script'); 
+        ag.type='text/javascript'; 
+        ag.async = true;
+        ag.src=(document.location.protocol=='https:'?'https':'http')+'://'+'t.agrantsem.com/js/ag.js';
+    var s=document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ag,s);})();
+</textarea>
+
+<script type='text/javascript'>
+window.onload= function(){
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    var bduidArr = ['71ce3105a964d0c3748e04584e5af0b9','efa929f55e0b175f5657fd1d1d809be6','2547238860b5ae69d69cae60a725236c','b7b6d41754885a6ae7f79431068d7b57'];
+    
+    for(i = 0; i<bduidArr.length; i++){
+        var scriptbd = document.createElement("script"); 
+        scriptbd.type = "text/javascript";
+        scriptbd.async = true;
+        scriptbd.src = _bdhmProtocol +"hm.baidu.com/h.js?"+bduidArr[i];
+        document.body.appendChild(scriptbd);
+    }
+    
+    for(i = 1; i<=1; i++){
+           var sid = 'J_stat_js_'+i.toString();
+           var element = document.getElementById(sid);
+           var scrObj = document.createElement("script"); 
+           scrObj.type = "text/javascript";
+           scrObj.async = true;
+           scrObj.text = element.innerHTML;
+           document.body.appendChild(scrObj);
+           element.parentNode.removeChild(element);
+    }
+};
+</script>
+</body>
+</html>
