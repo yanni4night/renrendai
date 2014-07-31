@@ -1,7 +1,7 @@
 renrendai
 =========
 
-A copy of renrendai
+A copy of renrendai,but with *compressed* javascript codes.
 
 usage
 =========
