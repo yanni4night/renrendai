@@ -39,8 +39,8 @@ app.get('/', function(req, res, next) {
   return res.redirect('index.action');
 });
 
-//验证码
-app.get('/image.jsp', function(req, res, next) {
+//验证码/image_https.jsp
+app.get(/\/image(_https)?\.jsp$/, function(req, res, next) {
   return res.redirect('/static/img/captcha.png');
 });
 
