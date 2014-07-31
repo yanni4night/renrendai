@@ -47,7 +47,20 @@ app.get('/image.jsp', function(req, res, next) {
 app.all('/getUnreadMailsCount.action',function(req,res){
   return res.json({"totalCount":0});
 });
+app.get('/about/about.action',function(req,res){
+  var flag = req.param('flag');
+  if(!flag){
+    return res.redirect('/about/intro.action');
+  }
 
+  return fs.readFile('template/about/'+flag+'.html',{encoding:'utf-8'},function(err,content){
+    if(err){
+      return res.redirect('/about/intro.action');
+    }
+    res.send(content);
+  });
+
+});
 app.get(/(.+)\.action$/i, function(req, res) {
   var stub = String(RegExp.$1);
   var file = path.join('template', stub + '.html');
