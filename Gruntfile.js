@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         stamp: {
             options:{
                 baseDir:BUILD,
-                ignoreMissing:true
+                ignoreMissing:false
             },
             html:{
                 expand:true,
