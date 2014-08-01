@@ -1,0 +1,332 @@
+{%extends "parent.tpl"%}
+
+{%block title%}
+散标投资列表 -
+{%endblock%}
+
+{%block script%}{%endblock%}
+
+{%block link%}
+ <link rel="stylesheet" href="/static/css/pages/invest/list.css">
+{%endblock%}
+
+{%block content%}
+<div class="pg-invest-list" id="pg-loan-list">
+  <div class="container_12 mt10">
+    <ul class="fn-clear ui-breadcrumb grid_8">
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
+        <a href="/lend/index.action">我要理财</a>
+      </li>
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-current">
+        <a>散标投资列表</a>
+      </li>
+    </ul>
+    <div class="shortcut grid_4 fn-clear">
+      <a class="shortcut-link fn-right mr10" href="/transfer/transferList.action">债权转让列表</a>
+      <a class="shortcut-link fn-right mr10" href="/financeplan/listPlan.action">优选理财计划</a>
+    </div>
+  </div>
+
+  <div class="container_12 mt10">
+    <div class="p20bs color-white-bg fn-clear">
+      <div class="filter fn-left">
+        
+
+
+<div class="ui-filter" id="loan-list-filter">
+  <div class="fn-clear ui-filter-header mb10">
+    <h4 class="fn-left color-outerspace-text">筛选投资项目</h4>
+    <a class="fn-left ui-filter-switcher">多选</a>
+  </div>
+  <ul>
+    <li>
+      <ul class="ui-filter-category category fn-clear" data-category="loanType">
+        <li class="ui-filter-title color-gray-text">
+          标的类型
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag all active">
+          <input type="checkbox" name="loanType" value="all" checked="checked" />
+          <span>不限</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="loanType" value="LOANTYPE_XYRZ" />
+          <span>信用认证标</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="loanType" value="LOANTYPE_SDRZ" />
+          <span>实地认证标</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="loanType" value="LOANTYPE_JGDB" />
+          <span>机构担保标</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="loanType" value="LOANTYPE_ZNLC" />
+          <span>智能理财标</span>
+        </li>
+      </ul>
+    </li>
+    <li class="mt4">
+      
+      <ul class="ui-filter-category category fn-clear" data-category="term">
+        <li class="ui-filter-title color-gray-text">
+          借款期限
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag all active">
+          <input type="checkbox" name="term" value="all" checked="checked" />
+          <span>不限</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="term" value="TERM_3_6" />
+          <span>3-6个月</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="term" value="TERM_9_15" />
+          <span>9-15个月</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="term" value="TERM_18_24" />
+          <span>18-24个月</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="term" value="TERM_24" />
+          <span>24个月以上</span>
+        </li>
+      </ul>
+      
+      
+    </li>
+    <li class="mt4">
+      <ul class="ui-filter-category category fn-clear" data-category="creditLevel">
+        <li class="ui-filter-title color-gray-text">
+          认证等级
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag all active">
+          <input type="checkbox" name="creditLevel" value="all" checked="checked" />
+          <span>不限</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_AA" />
+          <span>AA</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_A" />
+          <span>A</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_B" />
+          <span>B</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_C" />
+          <span>C</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_D" />
+          <span>D</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_E" />
+          <span>E</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_HR" />
+          <span>HR</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+      </div>
+      <div class="guide fn-left last">
+        <div class="guide-box">
+          <h4 class="mb10">新手引导</h4>
+          <ul>
+            <li><a class="guide-question rrd-dimgray" href="/help/borrow/borrow!creditrating.action#what-is-credit-level" target="_blank">什么是信用等级？</a></li>
+            <li><a class="guide-question rrd-dimgray" href="/help/invest/invest!investProduct.action#what-is-credit-loan" target="_blank">什么是信用认证标？</a></li>
+            <li><a class="guide-question rrd-dimgray" href="/help/invest/invest!investProduct.action#fieldStandard" target="_blank">什么是实地认证标？</a></li>
+            <li><a class="guide-question rrd-dimgray" href="/help/invest/invest!investProduct.action#what-is-organization-loan" target="_blank">什么是机构担保标？</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 散标页黄条 -->
+  <div class="container_12 mt20">
+    <div class="ui-info-box">
+      <i class="icon icon-info mr10"></i>
+        温馨提示：近期工作日固定发标时间在11:00、13:30、17:00，其余时间与周末随机发标。
+    </div>
+</div>
+
+
+  <div class="container_12 mt20 color-white-bg">
+    <div class="p20bs w920 fn-clear">
+      <div class="fn-clear mb20">
+        <h3 class="fn-left mr10">投资列表</h3>
+        <a class="fn-left ui-button ui-button-small ui-button-green mt10" target="_blank" href="/lend/calculator.action">理财计算器</a>
+        <div class="fn-right">
+        
+          <div class="fn-clear">
+            <dl class="fn-left w170 text-center">
+              <dt>累计成交总金额</dt>
+              <dd class="num"><em class="value mr10">33.97</em>亿元</dd>
+            </dl>
+            <dl class="fn-left w170 border-lt text-center">
+              <dt>累计成交总笔数</dt>
+              <dd class="num"><em class="value mr10">63861</em>笔</dd>
+            </dl>
+            <dl class="fn-left w170 border-lt text-center">
+              <dt>为用户累计赚取</dt>
+              <dd class="num"><em class="value mr10">21957.43</em>万元</dd>
+            </dl>
+          </div>
+          
+        </div>
+      </div>
+      <ul class="ui-list ui-list-m ui-list-invest" id="loan-list"></ul>
+      <div class="mt10 mb10 pagination-box" id="loan-list-pagination"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 提示信息条 -->
+<div class="ui-alert alert-point">
+  <div class="ui-alert-bg"></div>
+  <p>招商银行正式托管人人贷风险备用金账户，投资理财更放心。<a href="/about/about.action?flag=supervise" target="_blank">查看《资金托管报告》</a></p>
+</div>
+{%endblock%}
+
+{%block after%}
+<script id="plan-list-template" type="text/x-handlebars-template">
+{{# if _hasHeader }}
+<li class="ui-list-header fn-clear">
+  <span class="ui-list-title fn-left color-gray-text w200">计划名称</span>
+  <span class="ui-list-title fn-left color-gray-text w150">计划金额</span>
+  <span class="ui-list-title fn-left color-gray-text w70">加入人数</span>
+  <span class="ui-list-title fn-left color-gray-text w70">人均投标</span>
+  <span class="ui-list-title fn-left color-gray-text w100">资金利用率</span>
+  <span class="ui-list-title fn-left color-gray-text w90">平均收益率</span>
+  <span class="ui-list-title fn-left color-gray-text w140">累计赚取</span>
+  <span class="ui-list-title fn-left color-gray-text w100 last">发布时间</span>
+</li>
+{{/ if }}
+{{# each plans }}
+<li class="ui-list-item fn-clear {{ itemLast }}">
+  <span class="ui-list-field fn-left text-big w200">
+    <a class="fn-left w210 fn-text-overflow" href="{{ link }}" target="_blank">{{ name }}</a>
+  </span>
+  <span class="ui-list-field fn-left num text-right w130 pr20"><em>{{ amount }}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w60 pr10"><em>{{ headCount }}</em>人</span>
+  <span class="ui-list-field fn-left num text-right w60 pr10"><em>{{ averageBidCount }}</em>笔</span>
+  <span class="ui-list-field fn-left num text-right w90 pr10"><em>{{ fundsUseRate }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w80 pr10"><em>{{ averageBidInterest }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w130 pr20"><em>{{ earnInterest }}</em>元</span>
+  <span class="ui-list-field fn-left text-center last">{{ createDate }}</span>
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有往期优选理财计划{{/ if }}</p>
+</li>
+{{/ each }}
+</script>
+<script id="loan-list-template" type="text/x-handlebars-template">
+{{# if _hasHeader }}
+<li class="ui-list-header fn-clear" id="loan-list-header">
+  <span class="ui-list-title fn-left color-gray-text w260">借款标题</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w80" title="借款人在人人贷的个人信用评级">信用等级</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w120">年利率</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w160">金额</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w100">期限</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w110">进度</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w80"></span>
+</li>
+{{/ if }}
+{{# each loans }}
+<li class="ui-list-item fn-clear {{ itemLast }}">
+  <span class="ui-list-field fn-left text-big w260">
+    <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w210 rrd-dimgray fn-text-overflow" href="{{ link }}" target="_blank" title="{{ title }}">{{ title }}</a>
+  </span>
+  <span class="ui-list-field fn-left w80"><a class="ui-creditlevel {{ creditLevel }} snow">{{ creditLevel }}</a></span>
+  <span class="ui-list-field fn-left num text-right w90 pr30"><em class="value">{{ interest }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w130 pr30"><em class="value">{{ amount }}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w70 pr30"><em class="value">{{ term }}</em>个月</span>
+  <span class="ui-list-field fn-left w110">
+    <strong class="ui-progressbar-mid ui-progressbar-mid-{{ progress }}"><em>{{ progress }}</em>%</strong>
+  </span>
+  <span class="ui-list-field fn-left w80">
+    <a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-{{ status }}" {{# if buttonLink }}href="{{ buttonLink }}" target="_blank"{{/ if }}>
+      <span class="OPEN">投标</span>
+      <span class="READY FIRST_READY">已满标</span>
+      <span class="IN_PROGRESS">还款中</span>
+    </a>
+  </span>
+  <!-- <div class="ui-poptip ui-poptip-white" style="display: none;" data-ui-name="ui-poptip">
+    <div class="ui-poptip-container">
+      <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+      <div class="ui-poptip-content">{{ loanTypeText }}</div>
+    </div>
+  </div> -->
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有可投资项目{{/ if }}</p>
+</li>
+{{/ each }}
+{{# if _hasMore }}
+{{# if loans }}
+<li class="ui-list-more">
+  <a class="darkgray" href="/lend/loanList.action" target="_blank">查看更多投资理财项目</a>
+</li>
+{{/ if }}
+{{/ if }}
+</script>
+<script id="transfer-list-template" type="text/x-handlebars-template">
+{{# if _hasHeader }}
+<li class="ui-list-header fn-clear" id="transfer-list-header">
+  <span class="ui-list-title fn-left color-gray-text w240">借款标题</span>
+  <span class="ui-list-title fn-left color-gray-text w80">信用等级</span>
+  <span class="ui-list-title fn-left color-gray-text w80">年利率</span>
+  <span class="ui-list-title fn-left color-gray-text w80">剩余期限</span>
+  <span class="ui-list-title fn-left color-gray-text w80">每份价值</span>
+  <span class="ui-list-title fn-left color-gray-text w80">剩余份额</span>
+  <span class="ui-list-title fn-left color-gray-text w80">转让系数</span>
+  <span class="ui-list-title fn-left color-gray-text w100">转出价格</span>
+</li>
+{{/ if }}
+{{# each transferList }}
+<li class="ui-list-item fn-clear {{ itemLast }}">
+  <span class="ui-list-field fn-left text-big w240">
+    <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w190 rrd-dimgray fn-text-overflow" href="{{ link }}" target="_blank" title={{ title }}>{{ title }}</a>
+  </span>
+  <span class="ui-list-field fn-left w80"><a class="ui-creditlevel {{ creditLevel }} snow">{{ creditLevel }}</a></span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ interest }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ term }}</em>个月</span>
+  <span class="ui-list-field fn-left num text-right w75 pr5"><em>{{ cost }}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ share }}</em>份</span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ discount }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w90 pr10"><em>{{ price }}</em>元/份</span>
+  <span class="ui-list-field fn-left "><a class="ui-button ui-button-mid ui-button-blue" href="{{ link }}" target="_blank"><span>购买</span></a></span>
+  <!-- <div class="ui-poptip ui-poptip-white" style="display: none;" data-ui-name="ui-poptip">
+    <div class="ui-poptip-container">
+      <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+      <div class="ui-poptip-content">{{ loanTypeText }}</div>
+    </div>
+  </div> -->
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有转让中的债权{{/ if }}</p>
+</li>
+{{/ each }}
+{{# if _hasMore }}
+<li class="ui-list-more">
+  <a class="darkgray" href="/">查看更多可转让债权</a>
+</li>
+{{/ if }}
+</script>
+<script id="loan-list-rsp" type="text/x-json">{"status":0,"data":{"loans":[{"loanId":244771,"title":"资金周转","picture":"../images/loanType/dqzz.png","amount":93400.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:29:19 PM","startTime":"Aug 8, 2014 5:38:07 PM","surplusAmount":50100.0,"finishedRatio":46.359743040685224,"repaidByGuarantor":false,"borrowerId":876199,"forbidComment":false,"nickName":"LiHY_2410283997.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:07 PM","productId":26},{"loanId":244773,"title":"资金周转","picture":"../images/loanType/dqzz.png","amount":46700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:29:25 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":13100.0,"finishedRatio":71.94860813704497,"repaidByGuarantor":false,"borrowerId":876201,"forbidComment":false,"nickName":"YangGH_065X284650.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244776,"title":"装修","picture":"../images/loanType/grxf.png","amount":60700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:29:33 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":40600.0,"finishedRatio":33.113673805601316,"repaidByGuarantor":false,"borrowerId":876204,"forbidComment":false,"nickName":"ChaN_0035285340.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244778,"title":"扩大生产/经营","picture":"../images/loanType/dqzz.png","amount":46700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:29:39 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":19700.0,"finishedRatio":57.815845824411134,"repaidByGuarantor":false,"borrowerId":876206,"forbidComment":false,"nickName":"JiangT_0053285361.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244780,"title":"购买货物/原材/设备","picture":"../images/loanType/tzcy.png","amount":49400.0,"interest":12.0,"months":18,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:29:44 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":550.0,"finishedRatio":98.88663967611336,"repaidByGuarantor":false,"borrowerId":876208,"forbidComment":false,"nickName":"GaoHL_3214284974.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":18,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244781,"title":"资金周转","picture":"../images/loanType/dqzz.png","amount":93400.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:29:47 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":83700.0,"finishedRatio":10.38543897216274,"repaidByGuarantor":false,"borrowerId":876209,"forbidComment":false,"nickName":"HuM_0769284935.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244782,"title":"装修","picture":"../images/loanType/grxf.png","amount":46700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:29:50 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":32100.0,"finishedRatio":31.26338329764454,"repaidByGuarantor":false,"borrowerId":876210,"forbidComment":false,"nickName":"LiangZT_3639285797.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244784,"title":"扩大生产/经营","picture":"../images/loanType/dqzz.png","amount":40000.0,"interest":12.0,"months":18,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:31:03 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":38750.0,"finishedRatio":3.125,"repaidByGuarantor":false,"borrowerId":876212,"forbidComment":false,"nickName":"QinCT_3813281646.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":18,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244785,"title":"日常生活消费","picture":"../images/loanType/grxf.png","amount":60700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:31:09 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":52400.0,"finishedRatio":13.673805601317957,"repaidByGuarantor":false,"borrowerId":876213,"forbidComment":false,"nickName":"JiangZM_0030285844.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244795,"title":"资金周转","picture":"../images/loanType/dqzz.png","amount":46700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:27 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":36100.0,"finishedRatio":22.698072805139187,"repaidByGuarantor":false,"borrowerId":876240,"forbidComment":false,"nickName":"LinQ_4531284548.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244796,"title":"日常生活消费","picture":"../images/loanType/grxf.png","amount":40500.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:30 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":34800.0,"finishedRatio":14.074074074074074,"repaidByGuarantor":false,"borrowerId":876241,"forbidComment":false,"nickName":"HuangYD_6524283200.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244797,"title":"装修","picture":"../images/loanType/grxf.png","amount":46700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:33 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":30900.0,"finishedRatio":33.83297644539615,"repaidByGuarantor":false,"borrowerId":876243,"forbidComment":false,"nickName":"HeSJ_0561283688.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244798,"title":"装修","picture":"../images/loanType/grxf.png","amount":93400.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:36 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":85550.0,"finishedRatio":8.404710920770878,"repaidByGuarantor":false,"borrowerId":876245,"forbidComment":false,"nickName":"ZhengGM_486X281030.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244799,"title":"日常生活消费","picture":"../images/loanType/grxf.png","amount":46700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:39 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":39400.0,"finishedRatio":15.63169164882227,"repaidByGuarantor":false,"borrowerId":876246,"forbidComment":false,"nickName":"MaLH_6208283486.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244800,"title":"装修","picture":"../images/loanType/grxf.png","amount":93400.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:42 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":84750.0,"finishedRatio":9.261241970021413,"repaidByGuarantor":false,"borrowerId":253752,"forbidComment":false,"nickName":"DingY_302821504.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244801,"title":"资金周转","picture":"../images/loanType/dqzz.png","amount":46700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:45 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":32950.0,"finishedRatio":29.443254817987153,"repaidByGuarantor":false,"borrowerId":876247,"forbidComment":false,"nickName":"ZhouBJ_1053285829.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244802,"title":"购车","picture":"../images/loanType/grxf.png","amount":41500.0,"interest":12.6,"months":24,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:48 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":39750.0,"finishedRatio":4.216867469879518,"repaidByGuarantor":false,"borrowerId":876248,"forbidComment":false,"nickName":"JiangQ_1013284877.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":24,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244803,"title":"装修","picture":"../images/loanType/grxf.png","amount":46700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:51 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":34950.0,"finishedRatio":25.160599571734476,"repaidByGuarantor":false,"borrowerId":876249,"forbidComment":false,"nickName":"JieSR_0817284200.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244804,"title":"日常生活消费","picture":"../images/loanType/grxf.png","amount":41500.0,"interest":12.6,"months":24,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:54 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":41050.0,"finishedRatio":1.0843373493975903,"repaidByGuarantor":false,"borrowerId":876250,"forbidComment":false,"nickName":"WangN_3557285423.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":24,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26},{"loanId":244805,"title":"装修","picture":"../images/loanType/grxf.png","amount":93400.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"OPEN","allowAccess":false,"utmSource":"debx-yx","openTime":"Aug 1, 2014 1:40:57 PM","startTime":"Aug 8, 2014 5:38:12 PM","surplusAmount":89100.0,"finishedRatio":4.6038543897216275,"repaidByGuarantor":false,"borrowerId":876251,"forbidComment":false,"nickName":"XieJ_0328286601.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Aug 1, 2014 5:38:12 PM","productId":26}],"totalPage":41,"pageIndex":1}}</script>
+<script>seajs.use(['pages/invest/list']);</script>
+{%endblock%}
