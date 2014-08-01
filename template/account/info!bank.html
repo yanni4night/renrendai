@@ -148,12 +148,12 @@ seajs.use(['components/components'], function(Components) {
 <ul class="fn-clear">
 {{#each userBanks}}
 <li data-bank="{{userBankId}}">
-<img  alt="{{bankType}}" title="{{bankType}}" src="../../../../static/img/banks/code_{{bankCode}}.jpg?rrdversion=20140414"/>
+<img  alt="{{bankType}}" title="{{bankType}}" src="/static/img/banks/code_{{bankCode}}.jpg?rrdversion=20140414"/>
 <div>{{dealCardId}}</div> 
 <div class="card"><a href="/account/userBank!toModify.action?userBankId={{userBankId}}" class="link mod openLink">修改</a><a href="/account/userBank!del.action?userBankId={{userBankId}}" class="link del">删除</a></div>
 </li>
 {{/each}}
-<li><a href="/account/userBank!toAdd.action" class="openLink"><img src="../../../../static/img/banks/add.jpg?rrdversion=20140414"/></a><div class="card"><a href="/account/userBank!toAdd.action" class="openLink addBank" id="addBank">新增银行卡</a></div></li>
+<li><a href="/account/userBank!toAdd.action" class="openLink"><img src="/static/img/banks/add.jpg?rrdversion=20140414"/></a><div class="card"><a href="/account/userBank!toAdd.action" class="openLink addBank" id="addBank">新增银行卡</a></div></li>
 </ul>
 </script> 
  <script id="bank-list-rsp" type="text/x-json">

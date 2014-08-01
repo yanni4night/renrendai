@@ -78,7 +78,7 @@ margin-left:20px
 
 #pg-login .loginbox .bottom a.partner {
 height:20px;
-background-image:url(/static/img/login/login_partner.png?rrdversion=20140414);
+background-image:url(/static/img/login/login_partner.png);
 background-repeat:no-repeat;
 position:absolute;
 text-indent:-9999px
@@ -231,7 +231,7 @@ background:#0697da
 #pg-login .ui-form-item .validCode {
 width:12px;
 height:13px;
-background:url(/static/img/hook-blue.png?rrdversion=20140414) no-repeat;
+background:url(/static/img/hook-blue.png) no-repeat;
 position:absolute;
 left:113px;
 top:15px

@@ -1,1 +1,320 @@
-a.ui-side-sub-item-link{padding-left:20px}.pg-help-main .ui-box-white-bg{min-height:500px}.pg-help-list-box{min-height:338px;padding:25px 35px}.pg-help-list-box h4{padding:0 10px 4px}.pg-help-list-box h4 a{color:#222}.pg-help-list-box h5{margin:0 12px;padding:5px 0 5px 18px;*padding:3px 0 3px 18px;background:url(/static/img/ie-disc-listbg.png?rrdversion=20140414) no-repeat scroll left center;cursor:pointer}.pg-help-list-box ul li.hover{background:#edfaff}.pg-help-list-box .help-list-item{display:none;margin:0 0 10px;padding:12px 30px}.pg-help-list-box dl dt{color:#222}.pg-help-list-box dl dt,.pg-help-list-box dl dd{padding-bottom:10px}.pg-help-list-box dd img{max-width:100%}.pg-help-list-box dl dd:last-child{padding-bottom:0}.pg-help-list-box h5 .title{width:90%}.help-list-box{width:396px;min-height:170px;padding:10px 24px}.help-list-box h4{width:400px}.help-list-box ul{width:440px}.help-list-box ul li{float:left;width:128px;margin-right:10px;padding:5px 0}.terms-list-content dl dt{margin-bottom:8px}.terms-list-content dl dt span{padding:1px 11px;background:#cdeaf8;border-radius:3px;color:#18a6e8}.terms-list-content dl dd{padding-left:24px}.terms-list-content dl dd a{display:inline-block;width:130px;margin:0 10px 10px 0;color:#636363}.terms-list-content dl dd a:hover,.terms-list-content dl dd a:focus{color:#08c}.terms-list-box{padding:25px 20px 6px}.pg-help-index-info{padding:22px 34px}.pg-help-index-info dt{width:7%}.pg-help-index-info dd{width:93%;line-height:30px}.pg-help-index-info dd a{display:inline-block;padding:0 20px}.pg-help-table th,.pg-help-table td{padding:6px 15px;text-indent:0;text-align:left}.pg-help-table tfoot td{padding:10px 20px 0;text-align:center}.pg-help-main dl dd.text-small i{display:inline-block;width:40px;margin-right:5px;vertical-align:middle;background-position:center center}.ui-blue-table-help tbody td{line-height:46px}.ui-blue-table-help td .ui-td-bg{height:auto}.ui-blue-table-help tbody tr.dark:hover{background:#f5f5f5}.ui-blue-table-help tbody tr:hover{background:#fcfcfc}.ui-blue-table-help tbody tr.dark,.ui-table-blue tbody tr.dark .ui-td-bg{background:#f5f5f5}.ui-blue-table-help tbody tr,.ui-table-blue td .ui-td-bg{background:#fcfcfc}.ui-green-table-help thead th span{background:#5cad22}.ui-orange-table-help thead th span{background:#fb5a00}.icon-help{width:57px;height:57px;background:url(/static/img/help/icon-help.png?rrdversion=20140414) no-repeat}.icon-lend{background-position:0 0}.icon-account{background-position:0 -68px}.icon-borrow{background-position:0 -135px}.icon-security{background-position:0 -203px}.icon-P{height:12px;background:url(/static/img/help/formula/P.png?rrdversion=20140414) no-repeat}.icon-A{height:12px;background:url(/static/img/help/formula/A.png?rrdversion=20140414) no-repeat}.icon-b{height:12px;background:url(/static/img/help/formula/b.png?rrdversion=20140414) no-repeat}.icon-n{height:12px;background:url(/static/img/help/formula/n.png?rrdversion=20140414) no-repeat}.icon-Ai{height:12px;background:url(/static/img/help/formula/Ai.png?rrdversion=20140414) no-repeat}.icon-Ci{height:12px;background:url(/static/img/help/formula/Ci.png?rrdversion=20140414) no-repeat}.icon-F{height:12px;background:url(/static/img/help/formula/F.png?rrdversion=20140414) no-repeat}.icon-Ar{height:12px;background:url(/static/img/help/formula/Ar.png?rrdversion=20140414) no-repeat}.icon-D{height:12px;background:url(/static/img/help/formula/D.png?rrdversion=20140414) no-repeat}.icon-x{height:12px;background:url(/static/img/help/formula/x.png?rrdversion=20140414) no-repeat}.icon-d-now{height:12px;background:url(/static/img/help/formula/d-now.png?rrdversion=20140414) no-repeat}.icon-d-due{height:12px;background:url(/static/img/help/formula/d-due.png?rrdversion=20140414) no-repeat}.icon-DD{height:12px;background:url(/static/img/help/formula/DD.png?rrdversion=20140414) no-repeat}.icon-P-over{height:12px;background:url(/static/img/help/formula/P-over.png?rrdversion=20140414) no-repeat}.icon-A-over{height:12px;background:url(/static/img/help/formula/A-over.png?rrdversion=20140414) no-repeat}.icon-R-p{height:12px;background:url(/static/img/help/formula/R-p.png?rrdversion=20140414) no-repeat}.icon-D-over{height:12px;background:url(/static/img/help/formula/D-over.png?rrdversion=20140414) no-repeat}.icon-P-mgmt{height:13px;background:url(/static/img/help/formula/P-mgmt.png?rrdversion=20140414) no-repeat}.icon-R-m{height:12px;background:url(/static/img/help/formula/R-m.png?rrdversion=20140414) no-repeat}.icon-P-inrepay{height:13px;background:url(/static/img/help/formula/P-inrepay.png?rrdversion=20140414) no-repeat}.icon-M-1{height:12px;background:url(/static/img/help/formula/M-1.png?rrdversion=20140414) no-repeat}.icon-M-2{height:12px;background:url(/static/img/help/formula/M-2.png?rrdversion=20140414) no-repeat}.icon-t{height:12px;background:url(/static/img/help/formula/t.png?rrdversion=20140414) no-repeat}.icon-R{height:10px;background:url(/static/img/help/formula/R.png?rrdversion=20140414) no-repeat}
+a.ui-side-sub-item-link {
+padding-left:20px
+}
+
+.pg-help-main .ui-box-white-bg {
+min-height:500px
+}
+
+.pg-help-list-box {
+min-height:338px;
+padding:25px 35px
+}
+
+.pg-help-list-box h4 {
+padding:0 10px 4px
+}
+
+.pg-help-list-box h4 a {
+color:#222
+}
+
+.pg-help-list-box h5 {
+margin:0 12px;
+padding:5px 0 5px 18px;
+*padding:3px 0 3px 18px;
+background:url(/static/img/ie-disc-listbg.png) no-repeat scroll left center;
+cursor:pointer
+}
+
+.pg-help-list-box ul li.hover {
+background:#edfaff
+}
+
+.pg-help-list-box .help-list-item {
+display:none;
+margin:0 0 10px;
+padding:12px 30px
+}
+
+.pg-help-list-box dl dt {
+color:#222
+}
+
+.pg-help-list-box dl dt,.pg-help-list-box dl dd {
+padding-bottom:10px
+}
+
+.pg-help-list-box dd img {
+max-width:100%
+}
+
+.pg-help-list-box dl dd:last-child {
+padding-bottom:0
+}
+
+.pg-help-list-box h5 .title {
+width:90%
+}
+
+.help-list-box {
+width:396px;
+min-height:170px;
+padding:10px 24px
+}
+
+.help-list-box h4 {
+width:400px
+}
+
+.help-list-box ul {
+width:440px
+}
+
+.help-list-box ul li {
+float:left;
+width:128px;
+margin-right:10px;
+padding:5px 0
+}
+
+.terms-list-content dl dt {
+margin-bottom:8px
+}
+
+.terms-list-content dl dt span {
+padding:1px 11px;
+background:#cdeaf8;
+border-radius:3px;
+color:#18a6e8
+}
+
+.terms-list-content dl dd {
+padding-left:24px
+}
+
+.terms-list-content dl dd a {
+display:inline-block;
+width:130px;
+margin:0 10px 10px 0;
+color:#636363
+}
+
+.terms-list-content dl dd a:hover,.terms-list-content dl dd a:focus {
+color:#08c
+}
+
+.terms-list-box {
+padding:25px 20px 6px
+}
+
+.pg-help-index-info {
+padding:22px 34px
+}
+
+.pg-help-index-info dt {
+width:7%
+}
+
+.pg-help-index-info dd {
+width:93%;
+line-height:30px
+}
+
+.pg-help-index-info dd a {
+display:inline-block;
+padding:0 20px
+}
+
+.pg-help-table th,.pg-help-table td {
+padding:6px 15px;
+text-indent:0;
+text-align:left
+}
+
+.pg-help-table tfoot td {
+padding:10px 20px 0;
+text-align:center
+}
+
+.pg-help-main dl dd.text-small i {
+display:inline-block;
+width:40px;
+margin-right:5px;
+vertical-align:middle;
+background-position:center center
+}
+
+.ui-blue-table-help tbody td {
+line-height:46px
+}
+
+.ui-blue-table-help td .ui-td-bg {
+height:auto
+}
+
+.ui-blue-table-help tbody tr.dark:hover {
+background:#f5f5f5
+}
+
+.ui-blue-table-help tbody tr:hover {
+background:#fcfcfc
+}
+
+.ui-blue-table-help tbody tr.dark,.ui-table-blue tbody tr.dark .ui-td-bg {
+background:#f5f5f5
+}
+
+.ui-blue-table-help tbody tr,.ui-table-blue td .ui-td-bg {
+background:#fcfcfc
+}
+
+.ui-green-table-help thead th span {
+background:#5cad22
+}
+
+.ui-orange-table-help thead th span {
+background:#fb5a00
+}
+
+.icon-help {
+width:57px;
+height:57px;
+background:url(/static/img/help/icon-help.png) no-repeat
+}
+
+.icon-lend {
+background-position:0 0
+}
+
+.icon-account {
+background-position:0 -68px
+}
+
+.icon-borrow {
+background-position:0 -135px
+}
+
+.icon-security {
+background-position:0 -203px
+}
+
+.icon-P {
+height:12px;
+background:url(/static/img/help/formula/P.png) no-repeat
+}
+
+.icon-A {
+height:12px;
+background:url(/static/img/help/formula/A.png) no-repeat
+}
+
+.icon-b {
+height:12px;
+background:url(/static/img/help/formula/b.png) no-repeat
+}
+
+.icon-n {
+height:12px;
+background:url(/static/img/help/formula/n.png) no-repeat
+}
+
+.icon-Ai {
+height:12px;
+background:url(/static/img/help/formula/Ai.png) no-repeat
+}
+
+.icon-Ci {
+height:12px;
+background:url(/static/img/help/formula/Ci.png) no-repeat
+}
+
+.icon-F {
+height:12px;
+background:url(/static/img/help/formula/F.png) no-repeat
+}
+
+.icon-Ar {
+height:12px;
+background:url(/static/img/help/formula/Ar.png) no-repeat
+}
+
+.icon-D {
+height:12px;
+background:url(/static/img/help/formula/D.png) no-repeat
+}
+
+.icon-x {
+height:12px;
+background:url(/static/img/help/formula/x.png) no-repeat
+}
+
+.icon-d-now {
+height:12px;
+background:url(/static/img/help/formula/d-now.png) no-repeat
+}
+
+.icon-d-due {
+height:12px;
+background:url(/static/img/help/formula/d-due.png) no-repeat
+}
+
+.icon-DD {
+height:12px;
+background:url(/static/img/help/formula/DD.png) no-repeat
+}
+
+.icon-P-over {
+height:12px;
+background:url(/static/img/help/formula/P-over.png) no-repeat
+}
+
+.icon-A-over {
+height:12px;
+background:url(/static/img/help/formula/A-over.png) no-repeat
+}
+
+.icon-R-p {
+height:12px;
+background:url(/static/img/help/formula/R-p.png) no-repeat
+}
+
+.icon-D-over {
+height:12px;
+background:url(/static/img/help/formula/D-over.png) no-repeat
+}
+
+.icon-P-mgmt {
+height:13px;
+background:url(/static/img/help/formula/P-mgmt.png) no-repeat
+}
+
+.icon-R-m {
+height:12px;
+background:url(/static/img/help/formula/R-m.png) no-repeat
+}
+
+.icon-P-inrepay {
+height:13px;
+background:url(/static/img/help/formula/P-inrepay.png) no-repeat
+}
+
+.icon-M-1 {
+height:12px;
+background:url(/static/img/help/formula/M-1.png) no-repeat
+}
+
+.icon-M-2 {
+height:12px;
+background:url(/static/img/help/formula/M-2.png) no-repeat
+}
+
+.icon-t {
+height:12px;
+background:url(/static/img/help/formula/t.png) no-repeat
+}
+
+.icon-R {
+height:10px;
+background:url(/static/img/help/formula/R.png) no-repeat
+}

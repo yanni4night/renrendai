@@ -23,7 +23,7 @@ display:inline-block;
 }
 
 body,button,input,select,textarea {
-font:14px/1.5 微软雅黑,YaHei,tahoma,arial,"Hiragino Sans GB",\5b8b\4f53
+font:14px/1.5 "微软雅黑",YaHei,tahoma,arial,"Hiragino Sans GB",\5b8b\4f53
 }
 
 input,select,textarea {
@@ -1565,7 +1565,7 @@ width:53px;
 height:53px;
 display:none;
 cursor:pointer;
-background:url(/static/img/backtop.png?rrdversion=20140414) no-repeat;
+background:url(/static/img/backtop.png) no-repeat;
 z-index:999
 }
 
@@ -1574,7 +1574,7 @@ display:inline-block;
 width:14px;
 height:14px;
 margin-left:6px;
-background:url(/static/img/icon-box.png?rrdversion=20140414) no-repeat;
+background:url(/static/img/icon-box.png) no-repeat;
 vertical-align:middle
 }
 
@@ -1913,7 +1913,7 @@ width:200px;
 height:200px;
 color:#fff;
 background-color:rgba(255,255,255,.7);
-background-image:url(/static/img/loading.gif?rrdversion=20140414);
+background-image:url(/static/img/loading.gif);
 background-repeat:no-repeat;
 background-position:center center;
 border-radius:5px;
@@ -1927,7 +1927,7 @@ left:0;
 color:#000;
 background:rgba(255,255,255,.9);
 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#DFFFFFFF,endColorstr=#DFFFFFFF);
--ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#DFFFFFFF,endColorstr=#DFFFFFFF)";
+-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#DFFFFFFF,endColorstr=#DFFFFFFF);
 text-align:center;
 z-index:100
 }
@@ -1938,7 +1938,7 @@ margin-top:100px
 
 .ui-confirm-loading-text p.loading {
 height:50px;
-background:url(/static/img/loading.gif?rrdversion=20140414) no-repeat center center
+background:url(/static/img/loading.gif) no-repeat center center
 }
 
 .w80 {
@@ -1969,7 +1969,7 @@ width:100px
 }
 
 .list-u-code {
-background:url(/static/img/ucode.gif?rrdversion=20140414) no-repeat;
+background:url(/static/img/ucode.gif) no-repeat;
 display:inline-block;
 height:28px;
 height:25px \9;
@@ -1994,7 +1994,7 @@ width:778px
 }
 
 .worm-tips .icon {
-background:url(/static/img/input-icon/borrow-icon.gif?rrdversion=20140414) no-repeat;
+background:url(/static/img/input-icon/borrow-icon.gif) no-repeat;
 background-position:-3px -75px;
 display:inline-block;
 height:20px;
@@ -2187,7 +2187,7 @@ vertical-align:middle
 
 .ui-form-item textarea {
 border:1px solid #c5c5c5;
-background:url(/static/img/input_inner.png?rrdversion=20140414) repeat-x
+background:url(/static/img/input_inner.png) repeat-x
 }
 
 .ui-form-item .placeholder {
@@ -2201,18 +2201,18 @@ color:#ababab
 .ui-form-item .icon {
 width:25px;
 height:21px;
-background:url(/static/img/input-icon/input-icon-all.png?rrdversion=20140414) no-repeat;
+background:url(/static/img/input-icon/input-icon-all.png) no-repeat;
 position:absolute;
 top:12px;
 left:9px
 }
 
 .ui-form-item .input-bg-gray {
-background:url(/static/img/input-icon/input-bg-all.png?rrdversion=20140414) 0 0 no-repeat
+background:url(/static/img/input-icon/input-bg-all.png) 0 0 no-repeat
 }
 
 .ui-form-item .input-bg-red {
-background:url(/static/img/input-icon/input-bg-all.png?rrdversion=20140414) 0 -94px no-repeat
+background:url(/static/img/input-icon/input-bg-all.png) 0 -94px no-repeat
 }
 
 .ui-form-item .input-icon-id-gray {
@@ -2298,7 +2298,7 @@ line-height:22px;
 color:#595959;
 font-size:14px;
 border-radius:2px;
-background:url(/static/img/input_inner.png?rrdversion=20140414) repeat-x;
+background:url(/static/img/input_inner.png) repeat-x;
 border:1px solid #c5c5c5
 }
 
@@ -2335,7 +2335,7 @@ cursor:pointer;
 margin-top:2px;
 vertical-align:middle;
 padding-right:5px;
-background-image:url(/static/img/ui-select.png?rrdversion=20140414);
+background-image:url(/static/img/ui-select.png);
 background-repeat:no-repeat
 }
 
@@ -2458,8 +2458,8 @@ box-shadow:inset 0 0 5px #666
 
 @font-face {
 font-family:rei;
-src:url(/static/fonts/rei.eot?rrdversion=20140414);
-src:url(/static/fonts/rei.eot?#iefix?rrdversion=20140414) format("embedded-opentype"),url(/static/fonts/rei.woff?rrdversion=20140414) format("woff"),url(/static/fonts/rei.ttf?rrdversion=20140414) format("truetype"),url(/static/fonts/rei.svg#rei?rrdversion=20140414) format("svg");
+src:url(/static/fonts/rei.eot);
+src:url(/static/fonts/rei.eot?#iefix) format("embedded-opentype"),url(/static/fonts/rei.woff) format("woff"),url(/static/fonts/rei.ttf) format("truetype"),url(/static/fonts/rei.svg#rei) format("svg");
 font-weight:400;
 font-style:normal
 }
@@ -2535,7 +2535,7 @@ width:200px;
 height:200px;
 color:#fff;
 background-color:rgba(255,255,255,.7);
-background-image:url(/static/img/loading.gif?rrdversion=20140414);
+background-image:url(/static/img/loading.gif);
 background-repeat:no-repeat;
 background-position:center center;
 border-radius:5px;
@@ -2719,19 +2719,19 @@ height:20px
 }
 
 .ui-icon-check-checked {
-background:url(/static/img/icon-checked-blue-small.png?rrdversion=20140414) no-repeat center center
+background:url(/static/img/icon-checked-blue-small.png) no-repeat center center
 }
 
 .ui-icon-check-unchecked,.ui-icon-check- {
-background:url(/static/img/icon-unchecked-small.png?rrdversion=20140414) no-repeat center center
+background:url(/static/img/icon-unchecked-small.png) no-repeat center center
 }
 
 .ui-icon-gender-male {
-background:url(/static/img/icon-male.png?rrdversion=20140414) no-repeat center center
+background:url(/static/img/icon-male.png) no-repeat center center
 }
 
 .ui-icon-gender-female {
-background:url(/static/img/icon-female.png?rrdversion=20140414) no-repeat center center
+background:url(/static/img/icon-female.png) no-repeat center center
 }
 
 .ui-loantype {
@@ -2739,7 +2739,7 @@ display:block;
 width:30px;
 height:30px;
 line-height:30px;
-background:url(/static/img/loantypes.png?rrdversion=20140414) no-repeat scroll left top transparent
+background:url(/static/img/loantypes.png) no-repeat scroll left top transparent
 }
 
 .ui-loantype.XYRZ {
@@ -2764,7 +2764,7 @@ width:18px;
 height:18px;
 line-height:18px;
 margin-right:3px;
-background:url(/static/img/loantypes-s.png?rrdversion=20140414) no-repeat scroll left top transparent;
+background:url(/static/img/loantypes-s.png) no-repeat scroll left top transparent;
 vertical-align:middle
 }
 
@@ -2867,7 +2867,7 @@ cursor:default
 margin:6px 12px 2px;
 width:9px;
 height:14px;
-background:url(/static/img/breadcrumb-angle-right.png?rrdversion=20140414) no-repeat center center
+background:url(/static/img/breadcrumb-angle-right.png) no-repeat center center
 }
 
 .ui-progressbar-mid {
@@ -2877,7 +2877,7 @@ height:44px;
 line-height:44px;
 font-size:8px;
 text-align:center;
-background:url(/static/img/progressbar_mid.png?rrdversion=20140414)
+background:url(/static/img/progressbar_mid.png)
 }
 
 .ui-progressbar-mid em {
@@ -3297,7 +3297,7 @@ height:34px;
 line-height:34px;
 text-align:center;
 font-size:8px;
-background:url(/static/img/progressbar_small.png?rrdversion=20140414)
+background:url(/static/img/progressbar_small.png)
 }
 
 .ui-progressbar-small em {
@@ -3779,7 +3779,7 @@ height:96px;
 line-height:96px;
 text-align:center;
 font-size:16px;
-background:url(/static/img/progressbar_large.png?rrdversion=20140414)
+background:url(/static/img/progressbar_large.png)
 }
 
 .ui-progressbar-large em {
@@ -4197,7 +4197,7 @@ left:20px;
 display:block;
 width:24px;
 height:24px;
-background:url(/static/img/icon-performace.png?rrdversion=20140414) no-repeat scroll 0 0
+background:url(/static/img/icon-performace.png) no-repeat scroll 0 0
 }
 
 .ui-icon-performace.sum {
@@ -4226,7 +4226,7 @@ background-position:0 -137px
 display:inline-block;
 width:18px;
 height:18px;
-background:url(/static/img/icon-content.png?rrdversion=20140414) no-repeat;
+background:url(/static/img/icon-content.png) no-repeat;
 vertical-align:middle
 }
 
@@ -4306,7 +4306,7 @@ background-position:0 -148px
 display:inline-block;
 width:26px;
 height:26px;
-background:url(/static/img/loantypes.png?rrdversion=20140414) no-repeat scroll left top transparent;
+background:url(/static/img/loantypes.png) no-repeat scroll left top transparent;
 vertical-align:middle
 }
 
@@ -4332,7 +4332,7 @@ width:18px;
 height:18px;
 line-height:18px;
 margin-right:3px;
-background:url(/static/img/loantypes-s.png?rrdversion=20140414) no-repeat scroll left top transparent;
+background:url(/static/img/loantypes-s.png) no-repeat scroll left top transparent;
 vertical-align:middle
 }
 
@@ -4444,25 +4444,25 @@ background-color:#e5e4e2
 }
 
 .ui-pagination li a.page-link.prev {
-background-image:url(/static/img/prev-gray.png?rrdversion=20140414);
+background-image:url(/static/img/prev-gray.png);
 background-position:center center;
 background-repeat:no-repeat
 }
 
 .ui-pagination li a.page-link.next {
-background-image:url(/static/img/next-gray.png?rrdversion=20140414);
+background-image:url(/static/img/next-gray.png);
 background-position:center center;
 background-repeat:no-repeat
 }
 
 .ui-pagination li span.prev,.ui-pagination li a.page-link.prev:hover {
-background-image:url(/static/img/prev-white.png?rrdversion=20140414);
+background-image:url(/static/img/prev-white.png);
 background-position:center center;
 background-repeat:no-repeat
 }
 
 .ui-pagination li span.next,.ui-pagination li a.page-link.next:hover {
-background-image:url(/static/img/next-white.png?rrdversion=20140414);
+background-image:url(/static/img/next-white.png);
 background-position:center center;
 background-repeat:no-repeat
 }
@@ -4485,14 +4485,14 @@ cursor:default
 
 .slides {
 position:relative;
-background:url(/static/img/loading.gif?rrdversion=20140414) no-repeat center
+background:url(/static/img/loading.gif) no-repeat center
 }
 
 .ui-slides {
 height:376px;
 margin:0 auto;
 width:100%;
-background:url(/static/img/slide-intro/slides-bg.png?rrdversion=20140414) no-repeat center bottom;
+background:url(/static/img/slide-intro/slides-bg.png) no-repeat center bottom;
 position:relative
 }
 
@@ -4560,22 +4560,22 @@ width:115px
 .ui-slides .ui-slide01-icons-item-img01 {
 width:110px;
 height:81px;
-background:url(/static/img/slide-intro/slide01-icons-item-img01.png?rrdversion=20140414);
-_background:url(/static/img/slide-intro/slide01-icons-item-img01.gif?rrdversion=20140414)
+background:url(/static/img/slide-intro/slide01-icons-item-img01.png);
+_background:url(/static/img/slide-intro/slide01-icons-item-img01.gif)
 }
 
 .ui-slides .ui-slide01-icons-item-img02 {
 width:110px;
 height:81px;
-background:url(/static/img/slide-intro/slide01-icons-item-img02.png?rrdversion=20140414);
-_background:url(/static/img/slide-intro/slide01-icons-item-img02.gif?rrdversion=20140414)
+background:url(/static/img/slide-intro/slide01-icons-item-img02.png);
+_background:url(/static/img/slide-intro/slide01-icons-item-img02.gif)
 }
 
 .ui-slides .ui-slide01-icons-item-img03 {
 width:110px;
 height:81px;
-background:url(/static/img/slide-intro/slide01-icons-item-img03.png?rrdversion=20140414);
-_background:url(/static/img/slide-intro/slide01-icons-item-img03.gif?rrdversion=20140414)
+background:url(/static/img/slide-intro/slide01-icons-item-img03.png);
+_background:url(/static/img/slide-intro/slide01-icons-item-img03.gif)
 }
 
 .ui-slides .ui-slide01-icons-item-b {
@@ -4589,7 +4589,7 @@ margin-right:5px
 }
 
 .ui-slides .ui-slide01-button {
-background:url(/static/img/slide-intro/ui-slide01-button.png?rrdversion=20140414) no-repeat scroll 111px 3px #83A700;
+background:url(/static/img/slide-intro/ui-slide01-button.png) no-repeat scroll 111px 3px #83A700;
 border-radius:20px;
 border:medium none;
 color:#FFF;
@@ -5004,7 +5004,7 @@ background:#fff
 display:block;
 height:72px;
 width:160px;
-background:url(/static/img/logo.png?rrdversion=20140414) no-repeat 0 center
+background:url(/static/img/logo.png) no-repeat 0 center
 }
 
 .ui-header-grid {
@@ -5074,7 +5074,7 @@ left:46px
 display:block;
 width:9px;
 height:5px;
-background:url(/static/img/nav-angle-up.png?rrdversion=20140414) no-repeat center center
+background:url(/static/img/nav-angle-up.png) no-repeat center center
 }
 
 .ui-header-main .ui-nav-dropdown .ui-nav-dropdown-separator {
@@ -5161,7 +5161,7 @@ margin-right:20px;
 height:30px;
 font-size:0;
 line-height:0;
-background:url(/static/img/footer-icons.png?rrdversion=20140414) no-repeat 0 0
+background:url(/static/img/footer-icons.png) no-repeat 0 0
 }
 
 .ui-footer-img-link.weibo {
@@ -5216,13 +5216,13 @@ border-left:1px solid gray
 }
 
 .ui-footer-contact-link.qq {
-background:url(/static/img/logos/weibo-qq.png?rrdversion=20140414) no-repeat center center;
+background:url(/static/img/logos/weibo-qq.png) no-repeat center center;
 height:25px;
 width:25px
 }
 
 .ui-footer-contact-link.sina {
-background:url(/static/img/logos/weibo-sina.png?rrdversion=20140414) no-repeat center center;
+background:url(/static/img/logos/weibo-sina.png) no-repeat center center;
 height:25px;
 width:25px
 }
@@ -5259,7 +5259,7 @@ width:485px
 display:block;
 height:50px;
 margin:0 10px;
-background:url(/static/img/footer-icons.png?rrdversion=20140414) no-repeat 0 0
+background:url(/static/img/footer-icons.png) no-repeat 0 0
 }
 
 .ui-footer-verification .trust {
@@ -5362,59 +5362,59 @@ margin-right:8px
 }
 
 .ui-side-item-link .ui-icon-mid.index {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat 0 0
+background:url(/static/img/sidebar-icons.png) no-repeat 0 0
 }
 
 .ui-side-item-link .ui-icon-mid.capital {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat 0 -20px
+background:url(/static/img/sidebar-icons.png) no-repeat 0 -20px
 }
 
 .ui-side-item-link .ui-icon-mid.invest {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat 0 -40px
+background:url(/static/img/sidebar-icons.png) no-repeat 0 -40px
 }
 
 .ui-side-item-link .ui-icon-mid.borrow {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat 0 -60px
+background:url(/static/img/sidebar-icons.png) no-repeat 0 -60px
 }
 
 .ui-side-item-link .ui-icon-mid.account {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat 0 -80px
+background:url(/static/img/sidebar-icons.png) no-repeat 0 -80px
 }
 
 .ui-side-item-link .ui-icon-mid.comm {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat 0 -100px
+background:url(/static/img/sidebar-icons.png) no-repeat 0 -100px
 }
 
 .ui-side-item-link .ui-icon-mid.coupons {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat 0 -118px
+background:url(/static/img/sidebar-icons.png) no-repeat 0 -118px
 }
 
 .ui-side-item-link:hover .ui-icon-mid.index,.ui-side-item.active .ui-icon-mid.index {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat -20px 0
+background:url(/static/img/sidebar-icons.png) no-repeat -20px 0
 }
 
 .ui-side-item-link:hover .ui-icon-mid.capital,.ui-side-item.active .ui-icon-mid.capital {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat -20px -20px
+background:url(/static/img/sidebar-icons.png) no-repeat -20px -20px
 }
 
 .ui-side-item-link:hover .ui-icon-mid.invest,.ui-side-item.active .ui-icon-mid.invest {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat -20px -40px
+background:url(/static/img/sidebar-icons.png) no-repeat -20px -40px
 }
 
 .ui-side-item-link:hover .ui-icon-mid.borrow,.ui-side-item.active .ui-icon-mid.borrow {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat -20px -60px
+background:url(/static/img/sidebar-icons.png) no-repeat -20px -60px
 }
 
 .ui-side-item-link:hover .ui-icon-mid.account,.ui-side-item.active .ui-icon-mid.account {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat -20px -80px
+background:url(/static/img/sidebar-icons.png) no-repeat -20px -80px
 }
 
 .ui-side-item-link:hover .ui-icon-mid.comm,.ui-side-item.active .ui-icon-mid.comm {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat -20px -100px
+background:url(/static/img/sidebar-icons.png) no-repeat -20px -100px
 }
 
 .ui-side-item-link:hover .ui-icon-mid.coupons,.ui-side-item.active .ui-icon-mid.coupons {
-background:url(/static/img/sidebar-icons.png?rrdversion=20140414) no-repeat -20px -118px
+background:url(/static/img/sidebar-icons.png) no-repeat -20px -118px
 }
 
 .ui-side-item.active .ui-side-item-link,.ui-side-item.active .ui-side-item-link:hover {
@@ -5567,7 +5567,7 @@ right:15px;
 display:none;
 width:10px;
 height:18px;
-background:url(/static/img/angle-right-xlargebutton.png?rrdversion=20140414) no-repeat center center
+background:url(/static/img/angle-right-xlargebutton.png) no-repeat center center
 }
 
 .ui-term-button.OPEN .ui-button-icon.OPEN,.ui-term-button.OPEN_MORE .ui-button-icon.OPEN_MORE {
@@ -5590,12 +5590,12 @@ display:block
 .ui-plan-latest {
 padding-top:30px;
 height:170px;
-background:url(/static/img/plan/plan-bg.jpg?rrdversion=20140414) center center no-repeat
+background:url(/static/img/plan/plan-bg.jpg) center center no-repeat
 }
 
 .ui-plan-latest.gray {
 padding-bottom:15px;
-background:url(/static/img/plan/plan-bg-gray.png?rrdversion=20140414) center center no-repeat
+background:url(/static/img/plan/plan-bg-gray.png) center center no-repeat
 }
 
 .ui-plan-latest .plan-title {
