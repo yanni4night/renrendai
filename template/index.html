@@ -1,173 +1,36 @@
+{%extends "./parent.tpl"%}
 
+{%block title%}
+{%endblock%}
 
+{%block script%}
+{%endblock%}
 
+{%block link%}
+ <link rel="stylesheet" href="/static/css/pages/index.css">
+{%endblock%}
 
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>
-  人人贷 - 中国最大最安全的P2P网络投资理财、网络贷款平台
-</title>
-<meta name="renderer" content="webkit">
-<meta http-equiv="content-type" content="text/html" charset="utf-8">
-<meta name="google-site-verification" content="oQXrGa_mTgxg7joO0himE0QuFeqOVmm-SDC1H2dzT4c">
-<meta name="keywords" content="人人贷|网络理财|个人理财|投资理财|P2P理财|互联网金融|投资理财|债权转让|理财计划|优选计划|网络贷款|工薪贷|生意贷|网商贷|网贷|小额贷款" />
-<meta name="description" content="人人贷(www.renrendai.com)是目前中国互联网金融中P2P信贷行业中最大、最安全的平台，为投资理财用户和贷款用户两端提供公平、透明、安全、高效的互联网金融服务。投资理财用户可以通过人人贷平台进行投标、加入优选理财计划、购买债权等方式进行投资获得高收益；贷款用户可以通过平台申请工薪贷、生意贷、网商贷等小额贷款。" />
-
-<script src="/static/js/seajs/2.1.0/sea.js?rrdversion=20140414"></script>
-<script src="/static/js/config.js?rrdversion=20140414"></script>
-
-
-<link rel="shortcut icon" href="/favicon.ico?icoversion=1">
-<link rel="stylesheet" href="/static/css/one.css?rrdversion=20140414">
-<!--[if lt IE 9]>
-<link rel="stylesheet" type="text/css" href="/static/css/ie8-and-lower.css?rrdversion=20140414" />
-<![endif]-->
-<!--[if lt IE 7]>
-<link rel="stylesheet" type="text/css" href="/static/css/ie6-and-lower.css?rrdversion=20140414" />
-<![endif]-->
-
-  <link rel="stylesheet" href="/static/css/pages/index.css?rrdversion=20140414">
-
-</head>
-
-<body>
-  <div class="pg-container  pgopacity">
-    
-
-
-<div class="ui-header" id="header">
-  <div class="ui-header-top ">
-    <div class="container_12 fn-clear">
-      <div class="grid_12 fn-clear">
-        <div class="ui-nav fn-right">
-          <a class="ui-nav-item fn-left" href="/">首页</a>
-          <a class="ui-nav-item fn-left" href="/event/app.action" target="_blank"><i class="icon icon-app mr5"></i>移动客户端</a>
-          <a class="ui-nav-item fn-left" href="/account/index.action">我的人人贷</a>
-          
-          <a class="ui-nav-item fn-left" href="/help/index.action" target="_blank">帮助</a>
-          <a class="ui-nav-item fn-left" href="http://bbs.renrendai.com" target="_blank">论坛</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ui-header-main">
-    <div class="container_12 fn-clear">
-      <div class="grid_2 ui-header-grid">
-        <a class="ui-header-logo fn-left" href="/"></a>
-      </div>
-      <div class="grid_7 ui-header-grid">
-        <div class="fn-hide no-nav-text"></div>
-        <ul class="ui-nav ">
-          <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray" href="/lend/index.action">
-              <span>我要理财</span>
-              <span class="arrow-down"></span>
-            </a>
-            <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
-              <li class="ui-nav-dropdown-angle"><span></span></li>
-              
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
-            </ul>
-          </li>
-          <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray" href="/borrow/index.action">
-              <span>我要借款</span>
-              <span class="arrow-down"></span>
-            </a>
-            <ul class="ui-nav-dropdown ui-nav-dropdown-borrow" style="display: none;">
-              <li class="ui-nav-dropdown-angle"><span></span></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
-            </ul>
-          </li>
-          <li class="ui-nav-item">
-            <a class="ui-nav-item-link rrd-dimgray" href="/guide/invest.action">新手指引</a>
-          </li>
-          <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray" href="/about/about.action?flag=intro">
-              <span>关于我们</span>
-              <span class="arrow-down"></span>
-            </a>
-            <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
-              <li class="ui-nav-dropdown-angle"><span></span></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="grid_3 ui-header-grid">
-        <ul class="ui-nav fn-right  ">
-          
-          
-          <li class="ui-nav-item ">
-            <a class="ui-nav-item-link reg-link" href="/regPage.action">注册</a>
-          </li>
-          <li class="ui-nav-item ">
-            <a class="ui-nav-item-link gray login-link" href="/loginPage.action">登录</a>
-          </li>
-          
-        </ul>
-        <!--
-        <ul class="ui-nav fn-right fn-hide">
-          <li class="ui-nav-item">
-            <a class="ui-nav-item-link login-link" href="/loginPage.action">登录</a>
-          </li>
-        </ul>
-        <ul class="ui-nav fn-right fn-hide">
-          <li class="ui-nav-item">
-            <a class="ui-nav-item-link reg-link" href="/regPage.action">注册</a>
-          </li>
-        </ul>
-        -->
-      </div>
-    </div>
-  </div>
-  
-  
-
-  <div id="header-helper" style="display: none;">
-    <span id="header-helper-authenticated">
-      
-      false
-    </span>
-  </div>
-</div>
-<script>
-seajs.use(['components/components'], function(Components) {
-  new Components.Header().init();
-});
-</script>
-    <div class="pg-container-content">
-      
+{%block content%}
   <div id="pg-index">
     <!-- Slide -->
     <div class="slides" id="slidebox">
   <ul id="slides" class="ui-slides">
-    	<li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/d31ef729-11cf-4e5f-b794-909ac9cd5b1a.jpg?20140401a) no-repeat 50% 50%">
+      <li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/d31ef729-11cf-4e5f-b794-909ac9cd5b1a.jpg?20140401a) no-repeat 50% 50%">
           <a  href="http://www.renrendai.com/event/jibao/20140716/index.html"  target="_blank"></a>
         </li>
-	<li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/97528986-9580-4a16-96de-1311e019e971.jpg?20140401a) no-repeat 50% 50%">
+  <li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/97528986-9580-4a16-96de-1311e019e971.jpg?20140401a) no-repeat 50% 50%">
           <a  href="http://www.renrendai.com/event/app.action"  target="_blank"></a>
         </li>
-	<li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/27bfdef4-e902-419c-a97c-bb68251d1748.jpg?20140401a) no-repeat 50% 50%">
+  <li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/27bfdef4-e902-419c-a97c-bb68251d1748.jpg?20140401a) no-repeat 50% 50%">
           <a  href="http://www.renrendai.com/about/detail.action?news_id=news_320"  target="_blank"></a>
         </li>
-	<li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/c68bc8d2-f752-495d-bc0c-2adde8d855e3.jpg?20140401a) no-repeat 50% 50%">
+  <li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/c68bc8d2-f752-495d-bc0c-2adde8d855e3.jpg?20140401a) no-repeat 50% 50%">
           <a  href="http://www.renrendai.com/about/detail.action?news_id=news_323"  target="_blank"></a>
         </li>
-	<li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/01c4e395-8f0a-4960-b8ce-130317d429df.jpg?20140401a) no-repeat 50% 50%">
+  <li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/01c4e395-8f0a-4960-b8ce-130317d429df.jpg?20140401a) no-repeat 50% 50%">
           <a  href="http://www.renrendai.com/event/planProcess/index.html"  target="_blank"></a>
         </li>
-	<li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/e73ffd24-bf15-4d1d-bba6-a5c1831fffab.jpg?20140401a) no-repeat 50% 50%" style="background-image: url(http://www.renrendai.com/upload/cms/banner/indexBanner/e73ffd24-bf15-4d1d-bba6-a5c1831fffab.jpg?20140401a); display: none; background-position: 50% 50%; background-repeat: no-repeat no-repeat;">
+  <li class="ui-slide01 fn-hide" data-background="url(http://www.renrendai.com/upload/cms/banner/indexBanner/e73ffd24-bf15-4d1d-bba6-a5c1831fffab.jpg?20140401a) no-repeat 50% 50%" style="background-image: url(http://www.renrendai.com/upload/cms/banner/indexBanner/e73ffd24-bf15-4d1d-bba6-a5c1831fffab.jpg?20140401a); display: none; background-position: 50% 50%; background-repeat: no-repeat no-repeat;">
           <a id="openweixin" tabindex="-1"></a>
         </li>
   </ul>
@@ -182,7 +45,7 @@ seajs.use(['components/components'], function(Components) {
   </div>
 </div>
 
-  	<div class="container_12">
+    <div class="container_12">
       <!-- Intro -->
       <ul class="intro mb fn-clear">
         <li class="grid_4">
@@ -217,34 +80,34 @@ seajs.use(['components/components'], function(Components) {
         <a class="notice-more fn-right ui-button ui-button-transparent ui-button-small darkgray" href="/about/about.action?flag=notices" target="_blank">更多公告</a>
       </div>
       <div class="notice-content color-dimgray-text" id="notice-content"><p>
-	<span style="font-size:10.5pt;font-family:">尊敬的人人贷用户：</span><span lang="EN-US" style="font-family:"><o:p></o:p></span></p>
+  <span style="font-size:10.5pt;font-family:">尊敬的人人贷用户：</span><span lang="EN-US" style="font-family:"><o:p></o:p></span></p>
 <p>
-	<span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:10.5pt;
+  <span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:10.5pt;
 font-family:">您好！</span><span lang="EN-US" style="font-family:"><o:p></o:p></span></p>
 <p>
-	<span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:10.5pt;
+  <span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:10.5pt;
 font-family:">人人贷将于<span lang="EN-US">2014</span>年<span lang="EN-US">7</span>月<span lang="EN-US">28</span>日对系统进行升级维护，具体安排如下：</span><span lang="EN-US" style="font-family:"><o:p></o:p></span></p>
 <p>
-	<span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;1</span><span style="font-size:10.5pt;
+  <span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;1</span><span style="font-size:10.5pt;
 font-family:">、维护时间：<span style="color:#ff0000;">2014年</span></span><span style="color:#ff0000;"><span style="font-size: 10.5pt; font-family: 微软雅黑, sans-serif;"><span lang="EN-US">7</span>月<span lang="EN-US">28</span>日&nbsp;<span lang="EN-US">0:00-7:00</span></span></span><span style="font-size:10.5pt;
 font-family:">；<span lang="EN-US"><o:p></o:p></span></span></p>
 <p>
-	<span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;2</span><span style="font-size:10.5pt;
+  <span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;2</span><span style="font-size:10.5pt;
 font-family:">、升级维护预计持续<span lang="EN-US">7</span>小时，在此期间网站将暂停访问；</span><span lang="EN-US" style="font-family:"><o:p></o:p></span></p>
 <p>
-	<span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:10.5pt;
+  <span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:10.5pt;
 font-family:">升级维护结束后系统将恢复正常使用。对于此次维护给广大用户带来的不便我们深表歉意，如您有任何疑问请联系在线客服或拨打客服热线：<span lang="EN-US">400-027-8080</span>。</span><span lang="EN-US" style="font-family:"><o:p></o:p></span></p>
 <p>
-	<span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:10.5pt;
+  <span lang="EN-US" style="font-size:10.5pt;font-family:">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-size:10.5pt;
 font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</span></p>
 <p align="right" style="margin-left:20.9pt;text-align:right">
-	&nbsp;</p>
+  &nbsp;</p>
 <p align="right" style="margin-left:20.9pt;text-align:right">
-	<span style="font-size:10.5pt;font-family:">人人贷团队</span></p>
+  <span style="font-size:10.5pt;font-family:">人人贷团队</span></p>
 <p align="right" style="margin-left:20.9pt;text-align:right">
-	<span lang="EN-US" style="font-size:10.5pt;font-family:">2014</span><span style="font-size:10.5pt;font-family:">年<span lang="EN-US">7</span>月25日<span lang="EN-US"><o:p></o:p></span></span></p>
+  <span lang="EN-US" style="font-size:10.5pt;font-family:">2014</span><span style="font-size:10.5pt;font-family:">年<span lang="EN-US">7</span>月25日<span lang="EN-US"><o:p></o:p></span></span></p>
 <p>
-	<span lang="EN-US" style="font-family:"><o:p></o:p></span></p>
+  <span lang="EN-US" style="font-family:"><o:p></o:p></span></p>
 </div>
     </div>
   </div>
@@ -390,171 +253,9 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
 
     </div>
   </div>
+{%endblock%}
 
-    </div>
-    
-
-<div class="ui-footer" id="footer">
-  <div class="container_12">
-    <div class="grid_12">
-    	<div class="ui-footer-section ui-footer-narrow-hide fn-clear">
-  <h4 class="color-gray-text text-big fn-left w85">友情链接</h4>
-  <ul class="ui-footer-links fn-left w850">
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://credit.hc360.com/dk_index/hc_dk.html">慧聪金融</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.enfodesk.com/">易观智库</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.haodai.com/">好贷网</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.yinhang.com/">银率网</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://bank.hexun.com/">和讯银行</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.gome.com.cn/">国美在线</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.cjdao.com/index.jsp">财经道</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.siilu.com/">电商服务</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.shopex.cn/">ShopEx</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://bj.58.com/danbaobaoxiantouzi/">58投资担保</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.wangdaizhijia.com/">网贷之家</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://bbs.wacai.com">挖财社区</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.feidee.com/money/">随手记</a>
-    </li>
-    <li class="fn-left">
-      <a class="gray" target="_blank" href="http://www.rong360.com/licai/">融360理财</a>
-    </li>
-  </ul>
-</div>
-
-      <div class="ui-footer-section ui-footer-narrow-hide fn-clear">
-        <div class="ui-footer-links grid_9 alpha">
-    			<ul class="fn-clear">
-            <li class="fn-left">
-              <a class="gray" target="_blank" href="/about/about.action?flag=intro">公司介绍</a>
-            </li>
-            <li class="fn-left">
-              <a class="gray" target="_blank" href="/guide/investSecurity.action">安全保障</a>
-            </li>
-            <li class="fn-left">
-              <a class="gray" target="_blank" href="/about/about.action?flag=report">媒体报道</a>
-            </li>
-            <li class="fn-left">
-              <a class="gray" target="_blank" href="/about/about.action?flag=responsibility">社会责任</a>
-            </li>
-            <li class="fn-left">
-              <a class="gray" target="_blank" href="/about/about.action?flag=invite">招贤纳士</a>
-            </li>
-            <li class="fn-left">
-              <a class="gray" target="_blank" href="/sitemap.action">网站地图</a>
-            </li>
-            <li class="fn-left">
-              <a class="gray" target="_blank" href="/help/index.action">帮助中心</a>
-            </li>
-            <li class="fn-left">
-              <a class="gray" target="_blank" href="/about/about.action?flag=contact">联系我们</a>
-            </li>
-          </ul>
-          <ul class="fn-clear icons">
-            <li class="fn-left">
-              <h4 class="color-gray-text text-big">客户服务</h4>
-            </li>
-            <li class="fn-left"><a class="ui-footer-img-link weibo" target="_blank" href="http://e.weibo.com/renrendai?ref=http%3A%2F%2Fwww.renrendai.com%2F">人人贷新浪微博</a></li>
-            <li class="fn-left"><a class="ui-footer-img-link qq-weibo" target="_blank" href="http://t.qq.com/renrendai">人人贷腾讯微博</a></li>
-            <li class="fn-left"><a class="ui-footer-img-link we-chat" tabindex="-1" href="#">人人贷微信</a></li>
-            <li class="fn-left"><a class="ui-footer-img-link online-customer-service cursor-pointer" target="_blank" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4000278080&eid=218808P8z8p8R8y8q8y8Q&o=www.renrendai.com&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">人人贷在线客服</a></li>
-          </ul>
-        </div>
-    		<div class="grid_3 omega">
-          <p class="color-gray-text text-right">客服电话</p>
-          <h4 class="color-gray-text text-right ui-footer-phone-number">400-027-8080</h4>
-          <p class="color-gray-text text-right">9:00 - 21:00</p>
-        </div>
-    	</div>
-      <div class="ui-footer-section last">
-      	<div class="ui-footer-copyright">
-          <span class="ui-footer-contact-link color-gray-text">© 2014 人人贷 All rights reserved</span>
-          <span class="ui-footer-contact-link color-gray-text has-separator">人人贷商务顾问(北京)有限公司</span>
-          <span class="ui-footer-contact-link color-gray-text has-separator last"><a class="gray" target="_blank" href="/icp/icp.html">京ICP证 100953号</a></span>
-      	</div>
-        <div class="ui-footer-verification ui-footer-narrow-hide fn-clear">
-          <a class="ui-footer-verification-item fn-left credibility" title="人人贷荣获中国电子商务协会“诚信网站”认证殊荣" href="https://search.szfw.org/cert/l/CX20140315003612003651" target="_blank"></a>
-          <a class="ui-footer-verification-item fn-left trust" title="人人贷已通过中网权威数据库对比，获得“可信网站”身份验证，您可放心使用。" href="https://ss.knet.cn/verifyseal.dll?sn=e13042311010040288j4wq000000&ct=df&a=1&pa=931969" target="_blank"></a>
-          <a class="ui-footer-verification-item fn-left itrust" title="人人贷已经成为中国互联网信用评价中心网络诚信联盟成员，并且完成企业信用评级 " href="http://www.itrust.org.cn/yz/pjwx.asp?wm=2554879344" target="_blank"></a>
-          <a class="ui-footer-verification-item fn-left norton" title="人人贷已引入VeriSign SSL加密技术，您的隐私及个人资料安全已受最高级别的保护。" href="https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=www.renrendai.com&lang=zh_cn" target="_blank"></a>
-          <a class="ui-footer-verification-item fn-left police" title="人人贷已经完成在公安机关的信息备案，您可了解网站相关备案信息。" href="http://gawa.bjchy.gov.cn/websearch/" target="_blank"></a>
-          <a class="ui-footer-verification-item fn-left gongshang" title="人人贷已经完成在北京市工商局网站备案，您可了解网站相关备案信息。" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202013052900002" target="_blank"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="fn-hide">
-  <div id="weixin-content" class="p20 text-center">
-    <img src="/static/img/weixin_l.jpg?rrdversion=20140414" />
-    <p>微信“发现”扫一扫，人人贷里动态全知道！</p>
-  </div>
-</div>
-<script>
-seajs.use(['components/components'], function(Components) {
-  new Components.Footer().init();
-});
-</script>
-    <div id="pg-server-message" data-status="" data-message="" style="display: none;"></div>
-  </div>
-  
-<script id="dialog-message" type="text/x-handlebars-template">
-<div class="ui-message-content">
-  <div class="fn-clear">
-    <div class="ui-message-icon fn-left">
-      {{# if info }}
-      <i class="iconfont fn-left info" title="提示">&#xF046;</i>
-      {{/ if }}
-      {{# if success }}
-      <i class="iconfont fn-left success" title="成功">&#xF049;</i>
-      {{/ if }}
-      {{# if warning }}
-      <i class="iconfont fn-left warning" title="警告">&#xF047;</i>
-      {{/ if }}
-      {{# if error }}
-      <i class="iconfont fn-left error" title="错误">&#xF045;</i>
-      {{/ if }}
-    </div>
-    <div class="ui-message-text fn-left">
-      {{# if title }}
-      <h3>{{ title }}</h3>
-      {{/ if }}
-      <p class="text-big">{{{ message }}}</p>
-      {{# if link }}
-      <p><a href="{{ link }}">{{ linkText }}</a></p>
-      {{/ if }}
-    </div>
-  </div>
-  <div class="ui-message-operation text-center mt20">
-    <a class="ui-button ui-button-blue ui-button-mid ui-message-close-button" {{# if button }}href="{{ button.link }}"{{/ if }}>{{# if button }}{{ button.text }}{{ else }}关闭{{/ if }}</a>
-  </div>
-</div>
-</script>
-  <script>seajs.use(['page']);</script>
-  
+{%block after%}
   
 <script id="plan-list-template" type="text/x-handlebars-template">
 {{# if _hasHeader }}
@@ -686,78 +387,31 @@ seajs.use(['components/components'], function(Components) {
   <script id="loan-list-rsp" type="text/x-json">{"status":0,"message":"okey","data":{"loans":[{"loanId":234938,"title":"装修尾款支付","picture":"","amount":4500.0,"interest":13.0,"months":12,"loanType":"DEBX","status":"FIRST_READY","allowAccess":false,"utmSource":"baidutuiguang","openTime":"Jul 17, 2014 4:16:13 PM","startTime":"Aug 6, 2014 11:02:21 AM","readyTime":"Jul 30, 2014 11:02:45 AM","surplusAmount":0.0,"finishedRatio":100.0,"repaidByGuarantor":false,"borrowerId":781274,"forbidComment":false,"nickName":"张绪帮","borrowerLevel":"HR","displayLoanType":"XYRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":12,"overDued":false,"beginBidTime":"Jul 30, 2014 11:02:21 AM","productId":7},{"loanId":241480,"title":"资金周转","picture":"","amount":6000.0,"interest":13.0,"months":18,"loanType":"DEBX","status":"IN_PROGRESS","allowAccess":false,"utmSource":"","openTime":"Jul 28, 2014 9:25:05 AM","startTime":"Aug 6, 2014 9:49:21 AM","readyTime":"Jul 30, 2014 9:50:18 AM","passTime":"Jul 30, 2014 10:18:12 AM","surplusAmount":0.0,"finishedRatio":100.0,"repaidByGuarantor":false,"borrowerId":855842,"forbidComment":false,"nickName":"caironaldo","borrowerLevel":"HR","displayLoanType":"XYRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":18,"overDued":false,"beginBidTime":"Jul 30, 2014 9:49:21 AM","productId":7},{"loanId":242291,"title":"资金周转","picture":"../images/loanType/dqzz.png","amount":50000.0,"interest":13.0,"months":36,"loanType":"DEBX","status":"IN_PROGRESS","allowAccess":false,"utmSource":"debx-zdsd","openTime":"Jul 29, 2014 10:25:02 AM","startTime":"Aug 5, 2014 1:29:59 PM","readyTime":"Jul 29, 2014 1:31:22 PM","passTime":"Jul 29, 2014 1:44:02 PM","surplusAmount":0.0,"finishedRatio":100.0,"repaidByGuarantor":false,"borrowerId":868740,"forbidComment":false,"nickName":"ZD0210010001488","borrowerLevel":"A","displayLoanType":"JGDB","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Jul 29, 2014 1:29:59 PM","productId":30},{"loanId":242602,"title":"资金周转","picture":"../images/loanType/dqzz.png","amount":46700.0,"interest":13.2,"months":36,"loanType":"DEBX","status":"IN_PROGRESS","allowAccess":false,"utmSource":"debx-yx","openTime":"Jul 29, 2014 4:14:14 PM","startTime":"Aug 5, 2014 5:31:40 PM","readyTime":"Jul 29, 2014 5:31:57 PM","passTime":"Jul 29, 2014 5:39:45 PM","surplusAmount":0.0,"finishedRatio":100.0,"repaidByGuarantor":false,"borrowerId":869590,"forbidComment":false,"nickName":"LiFM_698X284898.yx","borrowerLevel":"A","displayLoanType":"SDRZ","currentIsRepaid":false,"amountPerShare":0.0,"oldLoan":false,"interestPerShare":0.0,"principal":0.0,"leftMonths":36,"overDued":false,"beginBidTime":"Jul 29, 2014 5:31:40 PM","productId":26}]}}</script>
   <script>seajs.use(['pages/index']);</script>
   <script>
-  	/*function callResult(){
-  		//flash显示完调用函数，位置只能在此页面中
-  		var flash = document.getElementById("flash");
-  		document.getElementById("pg-container").style.visibility="visible"
-  		var a = 100;
-  		var b = 0;
-  		var t = setInterval(function(){
-  			a -= 5;
-  			b += 5;
-  			setOpacity(flash,a);
-  			setOpacity("pg-container",b);
-  			if(a<=0) {
-  				clearInterval(t);
-  		  		flash.parentNode.removeChild(flash);
-  			}
-  		},50);
+    /*function callResult(){
+      //flash显示完调用函数，位置只能在此页面中
+      var flash = document.getElementById("flash");
+      document.getElementById("pg-container").style.visibility="visible"
+      var a = 100;
+      var b = 0;
+      var t = setInterval(function(){
+        a -= 5;
+        b += 5;
+        setOpacity(flash,a);
+        setOpacity("pg-container",b);
+        if(a<=0) {
+          clearInterval(t);
+            flash.parentNode.removeChild(flash);
+        }
+      },50);
 
-  		function setOpacity(node,level){
-  			node =typeof node=="string" ? document.getElementById(node) : node;
-  			if(document.all){
-  				node.style.filter='alpha(opacity='+level+')';
-  			}else{
-  				node.style.opacity=level/100;
-  			}
-  		}
-  	}*/
+      function setOpacity(node,level){
+        node =typeof node=="string" ? document.getElementById(node) : node;
+        if(document.all){
+          node.style.filter='alpha(opacity='+level+')';
+        }else{
+          node.style.opacity=level/100;
+        }
+      }
+    }*/
   </script>
-
-  
-  
-
-
-<textarea style="display:none" id="J_stat_js_1">
-
-
-  var _agt=_agt||[];
-      _agt.push(['_atscu','AG_148085_IKDD']);
-      _agt.push(['_atsdomain','renrendai.com']);
-  (function(){
-    var ag=document.createElement('script'); 
-        ag.type='text/javascript'; 
-        ag.async = true;
-        ag.src=(document.location.protocol=='https:'?'https':'http')+'://'+'t.agrantsem.com/js/ag.js';
-    var s=document.getElementsByTagName('script')[0]; 
-        s.parentNode.insertBefore(ag,s);})();
-</textarea>
-
-<script type='text/javascript'>
-window.onload= function(){
-	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-	var bduidArr = ['71ce3105a964d0c3748e04584e5af0b9','efa929f55e0b175f5657fd1d1d809be6','2547238860b5ae69d69cae60a725236c','b7b6d41754885a6ae7f79431068d7b57'];
-	
-	for(i = 0; i<bduidArr.length; i++){
-		var scriptbd = document.createElement("script"); 
-		scriptbd.type = "text/javascript";
-		scriptbd.async = true;
-		scriptbd.src = _bdhmProtocol +"hm.baidu.com/h.js?"+bduidArr[i];
-		document.body.appendChild(scriptbd);
-	}
-	
-	for(i = 1; i<=1; i++){
-		   var sid = 'J_stat_js_'+i.toString();
-		   var element = document.getElementById(sid);
-		   var scrObj = document.createElement("script"); 
-		   scrObj.type = "text/javascript";
-		   scrObj.async = true;
-		   scrObj.text = element.innerHTML;
-		   document.body.appendChild(scrObj);
-		   element.parentNode.removeChild(element);
-	}
-};
-</script>
-
-</body>
-</html>
+{%endblock%}

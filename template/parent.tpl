@@ -293,7 +293,8 @@
     </div>
     </script>
     <script>seajs.use(['page']);</script>
-    
+    {%block after%}
+    {%endblock%}
     
     <textarea style="display:none" id="J_stat_js_1">
     var _agt=_agt||[];
