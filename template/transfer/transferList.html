@@ -1,0 +1,325 @@
+
+{%extends "parent.tpl"%}
+
+{%block title%}
+债权转让列表 -
+{%endblock%}
+
+{%block script%}{%endblock%}
+
+{%block link%}
+ <link rel="stylesheet" href="/static/css/pages/invest/list.css">
+{%endblock%}
+
+{%block content%}
+<div class="pg-invest-list" id="pg-loan-list-transfer">
+    <div class="container_12 mt10">
+        <ul class="fn-clear ui-breadcrumb grid_8">
+            <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
+                <a href="/lend/index.action">我要理财</a>
+            </li>
+            <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+            <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-current">
+        <a>债权转让列表</a>
+            </li>
+        </ul>
+        <div class="shortcut grid_4 fn-clear">
+            <a class="shortcut-link fn-right mr10" href="/lend/loanList.action">散标投资列表</a>
+      <a class="shortcut-link fn-right mr10" href="/financeplan/listPlan.action">优选理财计划</a>
+        </div>
+    </div>
+
+    <div class="container_12 mt10">
+    <div class="p20bs color-white-bg fn-clear">
+        <div class="filter fn-left">
+        
+
+
+<div class="ui-filter" id="transfer-list-filter">
+  <div class="fn-clear ui-filter-header mb10">
+    <h4 class="fn-left color-outerspace-text">筛选债权转让项目</h4>
+    <a class="fn-left ui-filter-switcher">多选</a>
+  </div>
+  <ul>
+    <li>
+      <ul class="ui-filter-category category fn-clear" data-category="loanType">
+        <li class="ui-filter-title color-gray-text">
+          标的类型
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag all active">
+          <input type="checkbox" name="loanType" value="all" checked="checked" />
+          <span>不限</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="loanType" value="LOANTYPE_XYRZ" />
+          <span>信用认证标</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="loanType" value="LOANTYPE_SDRZ" />
+          <span>实地认证标</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="loanType" value="LOANTYPE_JGDB" />
+          <span>机构担保标</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="loanType" value="LOANTYPE_ZNLC" />
+          <span>智能理财标</span>
+        </li>
+      </ul>
+    </li>
+    <li class="mt4">
+      
+      
+      <ul class="ui-filter-category category fn-clear" data-category="left">
+        <li class="ui-filter-title color-gray-text">
+          剩余期限
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag all active">
+          <input type="checkbox" name="left" value="all" checked="checked" />
+          <span>不限</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="left" value="LEFT_6" />
+          <span>6个月以下</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="left" value="LEFT_6_12" />
+          <span>6-12个月</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="left" value="LEFT_12_24" />
+          <span>12-24个月</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="left" value="LEFT_24" />
+          <span>24个月以上</span>
+        </li>
+      </ul>
+      
+    </li>
+    <li class="mt4">
+      <ul class="ui-filter-category category fn-clear" data-category="creditLevel">
+        <li class="ui-filter-title color-gray-text">
+          认证等级
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag all active">
+          <input type="checkbox" name="creditLevel" value="all" checked="checked" />
+          <span>不限</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_AA" />
+          <span>AA</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_A" />
+          <span>A</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_B" />
+          <span>B</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_C" />
+          <span>C</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_D" />
+          <span>D</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_E" />
+          <span>E</span>
+        </li>
+        <li class="ui-filter-tag rrdcolor-dimgray-text category-tag condition">
+          <input type="checkbox" name="creditLevel" value="CREDITLEVEL_HR" />
+          <span>HR</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+      </div>
+        <div class="guide fn-left last">
+        <div class="guide-box">
+                <h4 class="mb10">新手引导</h4>
+                <ul>
+                    <li><a class="guide-question rrd-dimgray" href="/help/invest/invest!detail.action?flag=zqzr" target="_blank">什么是债权转让？</a></li>
+            <li><a class="guide-question rrd-dimgray" href="/help/invest/invest!transfer.action#transferValue" target="_blank">债权的价值是如何计算的？</a></li>
+                    <li><a class="guide-question rrd-dimgray" href="/help/invest/invest!transfer.action#what-is-loan-price" target="_blank">债权的转让价格是如何确定的？</a></li>
+            <li><a class="guide-question rrd-dimgray" href="/static/misc/loan-transfer-intro.pdf?rrdversion=20140414" target="_blank">债权转让说明书</a></li>
+                </ul>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 债权页黄条 -->
+    
+
+    <div class="container_12 mt20 color-white-bg">
+        <div class="p20bs w920 fn-clear">
+      <div class="fn-clear mb20">
+        <h3 class="fn-left">债权转让列表</h3>
+        <div class="fn-right">
+         
+          <div class="fn-clear">
+            <dl class="fn-left w170 text-center">
+              <dt>累计成交总金额</dt>
+              <dd class="num"><em class="value mr10">23452.12</em>万元</dd>
+            </dl>
+            <dl class="fn-left w170 border-lt text-center">
+              <dt>累计转让总笔数</dt>
+              <dd class="num"><em class="value mr10">340655</em>笔</dd>
+            </dl>
+            <dl class="fn-left w170 border-lt text-center">
+              <dt>单笔转让平均耗时</dt>
+              <dd class="num"><em class="value mr10">7分6秒</em></dd>
+            </dl>
+          </div>
+          
+        </div>
+      </div>
+            <ul class="ui-list ui-list-m ui-list-invest" id="transfer-list"></ul>
+      <div class="mt10 mb10 pagination-box" id="transfer-list-pagination"></div>
+        </div>
+    </div>
+</div>
+<!-- 提示信息条 -->
+<div class="ui-alert alert-point">
+  <div class="ui-alert-bg"></div>
+  <p>招商银行正式托管人人贷风险备用金账户，投资理财更放心。<a href="/about/about.action?flag=supervise" target="_blank">查看《资金托管报告》</a></p>
+</div>
+{%endblock%}
+
+{%block after%}
+<script id="plan-list-template" type="text/x-handlebars-template">
+{{# if _hasHeader }}
+<li class="ui-list-header fn-clear">
+  <span class="ui-list-title fn-left color-gray-text w200">计划名称</span>
+  <span class="ui-list-title fn-left color-gray-text w150">计划金额</span>
+  <span class="ui-list-title fn-left color-gray-text w70">加入人数</span>
+  <span class="ui-list-title fn-left color-gray-text w70">人均投标</span>
+  <span class="ui-list-title fn-left color-gray-text w100">资金利用率</span>
+  <span class="ui-list-title fn-left color-gray-text w90">平均收益率</span>
+  <span class="ui-list-title fn-left color-gray-text w140">累计赚取</span>
+  <span class="ui-list-title fn-left color-gray-text w100 last">发布时间</span>
+</li>
+{{/ if }}
+{{# each plans }}
+<li class="ui-list-item fn-clear {{ itemLast }}">
+  <span class="ui-list-field fn-left text-big w200">
+    <a class="fn-left w210 fn-text-overflow" href="{{ link }}" target="_blank">{{ name }}</a>
+  </span>
+  <span class="ui-list-field fn-left num text-right w130 pr20"><em>{{ amount }}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w60 pr10"><em>{{ headCount }}</em>人</span>
+  <span class="ui-list-field fn-left num text-right w60 pr10"><em>{{ averageBidCount }}</em>笔</span>
+  <span class="ui-list-field fn-left num text-right w90 pr10"><em>{{ fundsUseRate }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w80 pr10"><em>{{ averageBidInterest }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w130 pr20"><em>{{ earnInterest }}</em>元</span>
+  <span class="ui-list-field fn-left text-center last">{{ createDate }}</span>
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有往期优选理财计划{{/ if }}</p>
+</li>
+{{/ each }}
+</script>
+<script id="loan-list-template" type="text/x-handlebars-template">
+{{# if _hasHeader }}
+<li class="ui-list-header fn-clear" id="loan-list-header">
+  <span class="ui-list-title fn-left color-gray-text w260">借款标题</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w80" title="借款人在人人贷的个人信用评级">信用等级</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w120">年利率</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w160">金额</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w100">期限</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w110">进度</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w80"></span>
+</li>
+{{/ if }}
+{{# each loans }}
+<li class="ui-list-item fn-clear {{ itemLast }}">
+  <span class="ui-list-field fn-left text-big w260">
+    <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w210 rrd-dimgray fn-text-overflow" href="{{ link }}" target="_blank" title="{{ title }}">{{ title }}</a>
+  </span>
+  <span class="ui-list-field fn-left w80"><a class="ui-creditlevel {{ creditLevel }} snow">{{ creditLevel }}</a></span>
+  <span class="ui-list-field fn-left num text-right w90 pr30"><em class="value">{{ interest }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w130 pr30"><em class="value">{{ amount }}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w70 pr30"><em class="value">{{ term }}</em>个月</span>
+  <span class="ui-list-field fn-left w110">
+    <strong class="ui-progressbar-mid ui-progressbar-mid-{{ progress }}"><em>{{ progress }}</em>%</strong>
+  </span>
+  <span class="ui-list-field fn-left w80">
+    <a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-{{ status }}" {{# if buttonLink }}href="{{ buttonLink }}" target="_blank"{{/ if }}>
+      <span class="OPEN">投标</span>
+      <span class="READY FIRST_READY">已满标</span>
+      <span class="IN_PROGRESS">还款中</span>
+    </a>
+  </span>
+  <!-- <div class="ui-poptip ui-poptip-white" style="display: none;" data-ui-name="ui-poptip">
+    <div class="ui-poptip-container">
+      <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+      <div class="ui-poptip-content">{{ loanTypeText }}</div>
+    </div>
+  </div> -->
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有可投资项目{{/ if }}</p>
+</li>
+{{/ each }}
+{{# if _hasMore }}
+{{# if loans }}
+<li class="ui-list-more">
+  <a class="darkgray" href="/lend/loanList.action" target="_blank">查看更多投资理财项目</a>
+</li>
+{{/ if }}
+{{/ if }}
+</script>
+<script id="transfer-list-template" type="text/x-handlebars-template">
+{{# if _hasHeader }}
+<li class="ui-list-header fn-clear" id="transfer-list-header">
+  <span class="ui-list-title fn-left color-gray-text w240">借款标题</span>
+  <span class="ui-list-title fn-left color-gray-text w80">信用等级</span>
+  <span class="ui-list-title fn-left color-gray-text w80">年利率</span>
+  <span class="ui-list-title fn-left color-gray-text w80">剩余期限</span>
+  <span class="ui-list-title fn-left color-gray-text w80">每份价值</span>
+  <span class="ui-list-title fn-left color-gray-text w80">剩余份额</span>
+  <span class="ui-list-title fn-left color-gray-text w80">转让系数</span>
+  <span class="ui-list-title fn-left color-gray-text w100">转出价格</span>
+</li>
+{{/ if }}
+{{# each transferList }}
+<li class="ui-list-item fn-clear {{ itemLast }}">
+  <span class="ui-list-field fn-left text-big w240">
+    <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w190 rrd-dimgray fn-text-overflow" href="{{ link }}" target="_blank" title={{ title }}>{{ title }}</a>
+  </span>
+  <span class="ui-list-field fn-left w80"><a class="ui-creditlevel {{ creditLevel }} snow">{{ creditLevel }}</a></span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ interest }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ term }}</em>个月</span>
+  <span class="ui-list-field fn-left num text-right w75 pr5"><em>{{ cost }}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ share }}</em>份</span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ discount }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w90 pr10"><em>{{ price }}</em>元/份</span>
+  <span class="ui-list-field fn-left "><a class="ui-button ui-button-mid ui-button-blue" href="{{ link }}" target="_blank"><span>购买</span></a></span>
+  <!-- <div class="ui-poptip ui-poptip-white" style="display: none;" data-ui-name="ui-poptip">
+    <div class="ui-poptip-container">
+      <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+      <div class="ui-poptip-content">{{ loanTypeText }}</div>
+    </div>
+  </div> -->
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有转让中的债权{{/ if }}</p>
+</li>
+{{/ each }}
+{{# if _hasMore }}
+<li class="ui-list-more">
+  <a class="darkgray" href="/">查看更多可转让债权</a>
+</li>
+{{/ if }}
+</script>
+<script id="transfer-list-rsp" type="text/x-json">{"status":0,"message":"okay","data":{"transferList":[{"id":"360645","title":"扩大生产/经营","interest":"12.00","leftPhaseCount":"15","pricePerShare":"42.41","share":"241","discountRatio":"1.000","resultPice":"42.41","borrowerLevel":"A","displayLoanType":"SDRZ"},{"id":"360646","title":"资金周转","interest":"12.00","leftPhaseCount":"15","pricePerShare":"42.47","share":"4","discountRatio":"1.000","resultPice":"42.47","borrowerLevel":"A","displayLoanType":"SDRZ"},{"id":"360647","title":"投资创业","interest":"12.00","leftPhaseCount":"14","pricePerShare":"39.80","share":"179","discountRatio":"1.000","resultPice":"39.8","borrowerLevel":"A","displayLoanType":"JGDB"},{"id":"360649","title":"资金周转","interest":"12.00","leftPhaseCount":"12","pricePerShare":"34.48","share":"12","discountRatio":"1.000","resultPice":"34.48","borrowerLevel":"A","displayLoanType":"JGDB"},{"id":"360650","title":"投资创业","interest":"12.00","leftPhaseCount":"12","pricePerShare":"34.49","share":"20","discountRatio":"1.000","resultPice":"34.49","borrowerLevel":"A","displayLoanType":"JGDB"},{"id":"360652","title":"资金周转","interest":"11.00","leftPhaseCount":"6","pricePerShare":"25.74","share":"14","discountRatio":"1.000","resultPice":"25.74","borrowerLevel":"A","displayLoanType":"JGDB"}],"totalPage":1.0,"pageIndex":1.0}}</script>
+<script>seajs.use(['pages/invest/list']);</script>
+{%endblock%}
