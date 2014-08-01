@@ -23,7 +23,8 @@ var errorhandler = require('errorhandler');
 //handlebars
 swig.setDefaults({
   varControls: ['<{', '}>'],
-  cache:false
+  cache: false,
+  loader: swig.loaders.fs(__dirname + '/template')
 });
 
 
@@ -42,7 +43,6 @@ app.use(bodyParser.urlencoded({
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(serveStatic('.'));
 app.use(errorhandler())
-
 
 
 
