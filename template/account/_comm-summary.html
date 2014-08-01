@@ -1,0 +1,198 @@
+
+
+
+
+
+    <div id="system_info_content">
+       
+        <div id="notif">
+            <ul>
+                
+                    
+                    <li onclick="getSystemMailByType('MATERIAL_SUC',1)" id="6293648"   style="cursor:pointer;">
+                        <div class="clearfix">
+                             <div class="photo"><img src="http://www.renrendai.com/static/img/notifi/MATERIAL_SUC.png?rrdversion=20140414" width="60" height="60"/></div>
+                             <div class="title"><h3>材料通过</h3><p>2014-07-28 09:50:43</p></div>
+                             <div class="colorgray detail" >&nbsp;   尊敬的用户yanni4night：  您好，您于2014年07月28日在人人贷提交的身份证绑定信息已经成功通过审核。  您...<img src="http://www.renrendai.com/static/img/openmore.png?rrdversion=20140414" /></div>
+                        </div>
+                      </li>  
+                                    
+                
+            </ul>
+            <!-- 意见反馈begin --> 
+            <div class="sendDigSX fn-hide" id="sendDigSX">
+                <div class="closeBt" onclick="document.getElementById('sendDigSX').style.display='none'">X</div>
+                <form action=""  id="sendBoxForm" method="post">
+                    <div class="fn-clear item">
+                        <div class="label">发送给：</div>
+                        <div class="inputs">
+                            <select id="favourateReceiver" onclick="getOther(this)" name="receiver">
+                                <option id="otherOption" value="人人贷客服">人人贷客服</option>
+                            </select>
+                            <input id="otherReceiver" class="fn-hide" value="人人贷客服" disabled="disabled">
+                        </div>
+                    </div>
+
+                    <div class="fn-clear item">
+                        <div class="label">内容：</div>
+                        <div class="inputs">
+                            <textarea name="comment" id="sendMail"></textarea>
+                        </div>
+
+                        <div class="bts">
+                            <input type="button" onclick="sendZnxSubmit(this,'system')" value="发送站内信" class="ui-button ui-button-small ui-button-green"><span id="send_tip"></span>
+                        </div>
+                    </div>
+                </form>
+            </div> 
+            <!-- 意见反馈end --> 
+        </div>
+        <div id="notif-pagination" class="mt10 mb10 pagination-box ui-pagination simple-pagination fn-right"></div>
+        
+        
+        
+    </div>
+    <script>
+    function getSysInnerMails(p){
+        $.ajax({
+            url:"/account/comm.action?type=system_info&sysPageIndex="+p,
+            type:"POST",
+            dataType: "html",
+            timeout: 100000,
+            success: function(data){
+                $("#loading").hide();
+                $("#inbox_content").html(data);
+            },
+            beforeSend: function(){
+                $("#loading").show();
+            }
+        });
+    }
+    $(function(){
+        /* $.fn.jpagebar({ //content holder(Object || css Selector)
+            renderTo: $("#systemPageList"),
+            //总数
+            totalNum: 1,
+            //总页码
+            totalpage: 1,
+            //当前页码
+            currentPage: 1,
+            //分页条样式
+            pagebarCssName: 'pagelist',
+            //首页、上一页、下一页、尾页样式
+            pageNameCssName: 'disabled',
+            //当前选中页码样式
+            currentPageNumberCssName: 'current',
+            //点击页码action
+            onClickPage: function(sysPageIndex){
+                $.fn.setCurrentPage(this, sysPageIndex);
+                getSysInnerMails(sysPageIndex);
+            }
+        }); */
+        
+        $('#notif-pagination').pagination({
+            pages: 1,
+            currentPage:1,
+            onPageClick: function(sysPageIndex){
+                //$.fn.setCurrentPage(this, sysPageIndex);
+                document.body.scrollTop = 0;
+                getSysInnerMails(sysPageIndex);
+            }
+        });
+    });
+    txtAmount("sendMail","send_tip",300);
+    </script>
+
+
+
+
+
+                
+<script type="text/javascript">
+    function getSystemMailByType(innerMailType,p){
+         $("#user_inbox_info").after("<li id='user_inbox_type_info'  class='ui-tab-item'><a class='ui-tab-item-link'>详细</a></li>");
+         clearTab('user_inbox_type_info');
+         $("#user_inbox_type_info").removeClass();
+         $("#user_inbox_type_info").addClass("ui-tab-item ui-tab-item-current");
+         showInnerMailsByType(innerMailType,p);
+    }
+    function showInnerMailsByType(innerMailType,p){
+        $.ajax({
+            url: "/account/comm.action?type=user_detail_system_mail_bytype&systemTypePageIndex="+p+"&innerMailType="+innerMailType,
+            type: "POST",
+            dataType: 'html',
+            timeout: 100000,
+            success: function(response){
+                $("#loading").hide();
+                $("#inbox_content").html(response);
+            },
+            beforeSend: function(){
+                $("#loading").show();
+            }
+        });
+    }
+
+    function getInboxInnerMails(p){
+        var queryContent = $('#searchDetailContent').val();
+        $.ajax({
+            url:"/account/comm.action?",
+            type:"POST",
+            data:"type=user_inbox_info&queryContent="+queryContent+"&inboxPageIndex="+p,
+            timeout: 100000,
+            success: function(data){
+                $("#loading").hide();
+                $("#inbox_content").html(data);
+            },
+            beforeSend: function(){
+                $("#loading").show();
+            }
+        });
+    }
+
+
+    function getSenderMail(senderId,p,obj){
+        
+        $.ajax({
+            url: "/account/comm.action?privateSender.userId="+senderId+"&type=user_detail_private_mail&userDetailMessagePageIndex="+p,
+            type: "POST",
+            dataType: 'html',
+            timeout: 100000,
+            success: function(response){
+               // $("#sxconDetail").html(response).show();
+               // $("#inbox_content").html(response);
+               if(obj!=undefined&&obj!=null){
+                   obj.innerHTML="未读0条";
+               }
+               $("#user_inbox_info_content").hide();
+               $("#loadDataSXconDetail").html(response);
+            },
+            beforeSend: function(){
+               // $("#inbox_content").html($("#loading").html());
+            }
+        });
+    }
+
+    function delPrivateMailBySender(obj,senderId,type){
+        var self=$(obj);
+        var r = window.confirm("此操作将删除本次对话，确认要提交吗?");
+        if(r){
+             $.ajax({
+                 url:"/account/comm!delInnerMailForUser.action?senderId="+senderId+"&type="+type,
+                 timeout: 100000,
+                 error: function(){
+                     alert('删除失败，请重试');
+                 },
+                 success: function(data){
+                     if(data.result=="success"){
+                         self.parent("li").remove();
+                     }else{
+                         alert("删除失败！");
+                     }
+                     //getInboxInnerMails(1);//不用再去服务器取数据
+                    
+                 }
+             });
+        }
+    }
+
+</script>

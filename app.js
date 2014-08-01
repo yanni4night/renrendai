@@ -60,6 +60,16 @@ app.all('/getUnreadMailsCount.action', function(req, res) {
     "totalCount": 0
   });
 });
+
+app.all('/account/comm.action', function(req, res) {
+  var type = req.param('type');
+  if ('user_detail_system_mail_bytype' === type) {
+    return res.render('account/_comm-detail', {});
+  } else {
+    return res.render('account/_comm-summary', {});
+  }
+});
+
 app.get('/about/about.action', function(req, res) {
   var flag = req.param('flag');
   if (!flag) {
