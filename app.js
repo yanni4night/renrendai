@@ -22,8 +22,10 @@ var errorhandler = require('errorhandler');
 
 //handlebars
 swig.setDefaults({
-  varControls: ['<{', '}>']
+  varControls: ['<{', '}>'],
+  cache:false
 });
+
 
 var app = express();
 // all environments
@@ -31,6 +33,7 @@ app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('port', process.env.PORT || 3030);
 app.set('views', path.join(__dirname, 'template'));
+app.set('view cache', false);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
