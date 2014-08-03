@@ -70,6 +70,23 @@ app.all('/account/comm.action', function(req, res) {
   }
 });
 
+/*app.all('/help/account/account!detail.action', function(req, res) {
+  var flag = req.param('flag');
+  return res.render('help/account/account!detail-'+flag, {});
+
+});
+*/
+app.all(/\/(help\/\w+\/\w+!detail)\.action/, function(req, res) {
+  var flag = req.param('flag');
+  return res.render(RegExp.$1+'-'+flag, {});
+
+});
+app.all('/account/emptyContract.action', function(req, res) {
+  var type = req.param('type');
+  return res.render('account/emptyContract-'+type, {});
+
+});
+
 app.get('/about/about.action', function(req, res) {
   var flag = req.param('flag');
   if (!flag) {
