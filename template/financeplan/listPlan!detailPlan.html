@@ -1,0 +1,543 @@
+{%extends "parent.tpl"%}
+
+{%block title%}
+优选理财计划0067期 -
+{%endblock%}
+
+{%block script%}{%endblock%}
+
+{%block link%}
+ <link rel="stylesheet" href="/static/css/pages/invest/details.css">
+<div id="surplus-amount-helper" data-overplusAmount="" data-buyInRate="0.0" data-alreadyDepositAmount="" style="display:none"></div>
+<script id="dialog2-message" type="text/x-handlebars-template">
+<div class="ui-message-content-new">
+    {{# if title }}
+    <h3>{{ title }}</h3>
+    {{/ if}}
+    
+    <div class="ui-message-button text-center">
+        <a class="ui-button ui-button-blue ui-button-mid ui-message-close-button" {{# if button }}href="{{ button.link }}"{{/ if }}>{{# if button }}{{ button.text }}{{ else }}关闭{{/ if }}</a>
+    </div>
+</div>
+</script>
+
+<script id="reserve-template" type="text/x-handlebars-template">
+<li class="ui-list-header fn-clear">
+  <span class="ui-list-title fn-left color-gray-text w80 text-left-imp">&nbsp;&nbsp;序号</span>
+  <span class="ui-list-title fn-left color-gray-text w160 text-left-imp">投资人</span>
+  <span class="ui-list-title fn-left color-gray-text w120 text-left-imp">加入金额</span>
+  <span class="ui-list-title fn-left color-gray-text w150 text-left-imp">预定时间</span>
+  <span class="ui-list-title fn-left color-gray-text w80 last text-left-imp">状态</span>
+</li>
+{{# each rsvList }}
+<li class="ui-list-item fn-clear {{ itemStyle }}">
+  <span class="ui-list-field fn-left color-gray-text w80 fn-text-overflow">&nbsp;&nbsp;{{ id }}</span>
+  <span class="ui-list-field fn-left color-gray-text w160 text-left-imp fn-text-overflow"><span class="list-ul-name" style="width:100%">{{ investor }}{{#if ucodeUsed }}<a title="U-code预定" target="_blank" href="/help/terms/terms!terms.action#ucode"><i class="list-u-code"></i></a>{{/ if }}{{#if mobileUsed }}<a title="手机预定" target="_blank" href="http://www.renrendai.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span></span>
+  <span class="ui-list-field fn-left color-gray-text w120 num-s text-left-imp fn-text-overflow"><em>{{ planAmount }}</em>元</span>
+  <span class="ui-list-field fn-left color-gray-text w150 text-left-imp fn-text-overflow">{{ date }}</span>
+  <span class="ui-list-field fn-left color-gray-text w80 last text-left-imp fn-text-overflow">{{ status }}</span>
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}无预定记录{{/ if }}</p>
+</li>
+{{/ each }}
+</script>
+<script id="joined-template" type="text/x-handlebars-template">
+<li class="ui-list-header fn-clear">
+  <span class="ui-list-title fn-left color-gray-text w80 text-left">&nbsp;&nbsp;序号</span>
+  <span class="ui-list-title fn-left color-gray-text w170 text-left">&nbsp;&nbsp;投资人</span>
+  <span class="ui-list-title fn-left color-gray-text w200 text-left">加入金额</span>
+  <span class="ui-list-title fn-left color-gray-text w150 last text-left">加入时间</span>
+</li>
+{{# each jsonList }}
+<li class="ui-list-item fn-clear {{ itemStyle }}">
+  <span class="ui-list-field fn-left w80 color-gray-text fn-text-overflow">&nbsp;&nbsp;{{ id }}</span>
+  <span class="ui-list-field fn-left w150 ph10 color-gray-text fn-text-overflow">{{ investor }}{{#if mobileUsed }}<a title="手机加入" target="_blank" href="http://www.renrendai.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span>
+  <span class="ui-list-field fn-left color-gray-text num-s  w150 pr50"><em>{{ amount }}</em>元</span>
+  <span class="ui-list-field fn-left color-gray-text w150 last">{{ date }}</span>
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}无加入记录{{/ if }}</p>
+</li>
+{{/ each }}
+</script>
+<script id="confirm-plan-reserve-template" type="text/x-handlebars-template">
+<div class="ui-confirm conform_pay_div" style="height:600px">
+  <span class="title">请确认预定信息</span>
+  <div class="ui-confirm-content">
+    <form id="reserveForm" data-name="confirmReserve" class="ui-form" action="/financeplan/financeplan/applyFinancePlanRsv{{ append }}.action" autocomplete="off">
+      <ul>
+        <li><span>计划名称</span>优选理财计划0067期</li>
+        <li><span>预期收益</span><em data-value="12%~14%">12%~14%</em>每年</li>
+        <li><span>锁定期限</span>12</em>个月</li>
+        <li><span>加入费用</span>{{ fee }}</em>元</li>
+        <li><span>加入金额</span>{{ amount }}</em>元</li>
+        {{# if isAppend }}
+        <li class="fn-clear">
+          <span class="fn-left">验证码&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span class="fn-left ui-confirm-value last" id="captcha">
+            <input id="captcha-input" type="text" name="randCode" value="" />
+            <img class="cursor-pointer" id="captcha-img" src="/image_https.jsp" />
+            <label for="captcha-input" class="error" style="display: none;margin-top: -16px">验证码不能为空</label>
+          </span>
+        </li>
+        {{/ if }}
+      </ul>
+
+          <div class="money-div">
+            <p><span>应付定金</span><em>{{ deposit }}</em>元</p>
+        </div>
+
+      <p style="line-height: normal"><input type="checkbox" checked="checked" name="joinContract" id="joinContract">我已阅读 <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('/financeplan/getDemoFinancePlanContract.action?financePlanId=67','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">《优选理财计划0067期协议》</a><label for="joinContract" class="error"></label></p>
+
+      <p style="line-height: normal"><input type="checkbox" checked="checked" name="reserveContract" id="reserveContract">我已阅读并同意签署 <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('/financeplan/getFinancePlanContract!getPlanRsvContract.action?financePlanId=67','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">《优选理财计划0067期预定协议》</a><label for="reserveContract" class="error" style="display: none"></label></p>
+
+      <div class="ui-info-box ml10 mr10 mt20">
+        <div class="mb10"><i class="icon icon-info mr10"></i>温馨提示：</div>
+        <div>若您预定成功后，请于<strong class="color-orange-text font-normal">2014-07-16 14:00</strong>前支付剩余金额{{ restAmount }}元。超过时限未完成支付，视为您主动放弃加入本计划，加入资格将作废，定金不予返还。</div>
+      </div>
+
+
+      <div class="mt10 text-center">
+        <input type="hidden" name="financePlanIdStr" value="67" />
+        <input type="hidden" name="amountStr" value="{{ amount }}" />
+        <input type="hidden" name="ucodeId" value="" />
+        <input type="hidden" name="ucodeSerial" value="" />
+        <div class="fn-clear ui-confirm-submit-box">
+          <input type="submit" value="确认" class=" ui-button-blue ui-button-mid btn-savecon" />
+          <input type="buttton"  value="取消" id="closeRsvDialog" class=" ui-button-gray ui-button-mid btn-savecon" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</script>
+<script id="confirm-plan-join-template" type="text/x-handlebars-template">
+<div class="ui-confirm conform_pay_div">
+  <span class="title">确认加入</span>
+  <div class="ui-confirm-content">
+    <form class="ui-confirm-form" action="/financeplan/applyFinancePlan.action" method="post">
+      <ul>
+        <li><span>计划名称</span>优选理财计划0067期</li>
+        <li><span>预期收益</span>12%~14%每年</li>
+        <li><span>锁定期限</span>12个月</li>
+        <li><span>加入费用</span>{{ fee }}元</li>
+        <li><span>加入金额</span>{{ amount }}元</li>
+        <li><span>收益处理方式</span>{{ gainText }} {{# if intoBank }}<em>{{ bankText }}</em>{{/ if }}</li>
+        {{# if intoBank }}
+        <li class="fn-clear">
+          <span class="fn-left">提现密码</span>
+          <span class="fn-left ui-confirm-value last ui-form-item ui-form-item-nolabel">
+            <input type="hidden" name="bankIdStr" value="{{ bankVal }}"/>
+            <input class="ui-input ui-input-text" name="cashPassword" type="password" value="" />
+          </span>
+        </li>
+        {{/ if }}
+      </ul>
+        <div class="money-div">
+            <p><span>应付金额</span><em>{{ amountAndFee }}</em>元</p>
+        </div>
+      <div class="mt10 text-small">
+   
+        <p style="line-height: normal"><input type="checkbox" checked="checked" id="agree-contract" name="agree-contract">我已阅读并同意签署 <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('/financeplan/getDemoFinancePlanContract.action?financePlanId=67','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">《优选理财计划0067期协议》</a></p>
+        <p class="ui-confirm-hint rrdcolor-red-text text-small" style="display: none;"></p>
+      </div>
+
+ <div class="worm-tips">
+          <span class="icon"></span>
+          <span class="txt">温馨提示：</span>
+          <p>1. 该优选理财计划每月25日提取利息，银行卡提现方式的实际到账日期以银行账单为准。</p>
+          <p>2. 每月可提现的金额为该计划在本月收到的利息部分，本金部分将滚动投标，直至您选择退出本计划。</p>
+      </div>
+ <div class="mt10 text-center">
+        <input type="hidden" name="financePlanIdStr" value="67" />
+        <input type="hidden" name="cashTypeStr" value="{{ gain }}" />
+        <input type="hidden" name="amountStr" value="{{ amount }}" />
+        <div class="fn-clear ui-confirm-submit-box">
+          <input class="ui-button-blue ui-button-mid btn-savecon" type="submit" value="确定"/>
+          <input type="button" data-role="close" class=" ui-button-gray ui-button-mid btn-savecon" value="取消"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</script>
+  <script id="account-info-rsp" type="text/x-json"></script>
+  <script>seajs.use(['pages/invest/details']);</script>
+
+{%endblock%}
+
+{%block content%}
+  <div id="pg-plan-join" class="pg-details">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+  
+
+
+
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="plan-basic">
+  <div id="plan-status" style="display: none;">CLOSED</div>
+  <div class="container_12 mt10">
+    <ul class="ui-breadcrumb grid_8 fn-clear">
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
+        <a href="/lend/index.action">我要理财</a>
+      </li>
+      
+      
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text">
+        <a href="/financeplan/listPlan.action">优选理财计划</a>
+      </li>
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-current">
+        <a>优选理财计划详情</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <div class="container_12 mt10" id="plan-basic-panel">
+    <div class="p20bs color-white-bg fn-clear">
+      
+      
+      <div class="fn-left basic-box">
+        
+        
+        <h3 class="basic-header">优选理财计划<span class='text'>（0067期）</span></h3>
+        
+        <ul>
+          <li class="fn-clear basic-row">
+            <span class="fn-left basic-label">计划金额</span>
+            <span class="fn-left basic-value num"><em>35,000,000</em>元</span>
+            <span class="fn-left basic-label">预期收益</span>
+            <span class="fn-left basic-value num last" id="expected-rate" data-value="12%~14%"><em>12%~14%</em> 每年</span>
+          </li>
+          <li class="fn-clear basic-row">
+            <span class="fn-left basic-label">投标范围</span>
+            <span class="fn-left basic-value" id="plan-basic-products" data-products="机构担保标,实地认证标"></span>
+            <span class="fn-left basic-label">保障方式</span>
+            <span class="fn-left basic-value last">参见 <a href="/help/security/security!detail.action?flag=bjbz" target="_blank">本金保障计划</a></span>
+          </li>
+          <li class="fn-clear basic-row">
+            
+            
+            
+            
+            
+             
+            <span class="fn-left basic-label">计划状态</span>
+            <span class="fn-left basic-value">已截止</span>
+            <span class="fn-left basic-label">满额用时</span>
+            <span class="fn-left basic-value last">2天5时0分5秒</span>
+            
+          </li>
+          <li class="fn-clear basic-row">
+            <span class="fn-left basic-label">锁定期限</span>
+            <span class="fn-left basic-value num"><em class="value">12</em>个月</span>
+            <span class="fn-left basic-label">锁定结束</span>
+            <span class="fn-left basic-value last">2015年07月19日</span>
+          </li>
+          <li class="fn-clear basic-row last">
+            <span class="fn-left basic-label">收益处理</span>
+            <span class="fn-left basic-value">本期计划支持以下方式</span>
+            <span class="fn-left basic-label">费率说明</span>
+            <span class="fn-left basic-value last">本期计划费用如下</span>
+          </li>
+          <li class="fn-clear">
+            <div class="fn-left basic-extra plan-profit-handling">
+              <div class="basic-extra-row color-dimgray-text text-small option"><em class="fn-left ui-icon ui-icon-small ui-icon-check-checked"></em>收益再投资</div>
+              <div class="basic-extra-row color-dimgray-text text-small option"><em class="fn-left ui-icon ui-icon-small ui-icon-check-checked"></em>提至人人贷账户</div>
+              <div class="basic-extra-row color-dimgray-text text-small option"><em class="fn-left ui-icon ui-icon-small ui-icon-check-checked"></em>每月25日提至银行卡（提现费用 <a class="iconfont text" id="tips" target="_blank">&#xF046;</a>）</div>
+              <div class="ui-poptip ui-poptip-blue fn-hide" id="tipCon">
+                <div class="ui-poptip-shadow">
+                  <div class="ui-poptip-container">
+                    <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+                    <div class="ui-poptip-content" data-role="content">
+                      <p>第三方收取提现手续费：</p>
+                      <table class="tiptable">
+                        <tr><th>2万元以下</th><th>2万元(含)-5万元</th><th>5万元(含)-100万元</th></tr>
+                        <tr><td>1元/笔</td><td>3元/笔</td><td>5元/笔</td></tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fn-left basic-extra plan-fee">
+              <div class="basic-extra-row color-dimgray-text text-small" id="buy-in-rate" data-br="0.0">
+                <span>加入费率 0.00% <a class="iconfont text" data-ui-name="ui-poptip-trigger" data-ui-poptip-ancestor=".basic-extra-row" href="/help/invest/invest!income.action#financialPlanCosts" target="_blank">&#xF046;</a></span>
+                <div class="ui-poptip ui-poptip-blue" data-ui-name="ui-poptip" style="display: none;">
+                  <div class="ui-poptip-shadow">
+                    <div class="ui-poptip-container">        
+                      <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+                      <div class="ui-poptip-content">期初额外收取加入计划金额的0.00%作为加入费用归人人贷所有</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basic-extra-row color-dimgray-text text-small" id="interest-rate" data-ir="0.0">
+                <span>服务费率 0.00% <a class="iconfont text" data-ui-name="ui-poptip-trigger" data-ui-poptip-ancestor=".basic-extra-row" href="/help/invest/invest!income.action#financialPlanCosts" target="_blank">&#xF046;</a></span>
+                <div class="ui-poptip ui-poptip-blue" data-ui-name="ui-poptip" style="display: none;">
+                  <div class="ui-poptip-shadow">
+                    <div class="ui-poptip-container">        
+                      <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+                      <div class="ui-poptip-content">计划中收取投标所得利息收入的0.00%作为服务费用归人人贷所有</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basic-extra-row color-dimgray-text text-small" id="quit-rate" data-qr="0.0">
+                <span>退出费率 0.00% <a class="iconfont text" data-ui-name="ui-poptip-trigger" data-ui-poptip-ancestor=".basic-extra-row" href="/help/invest/invest!income.action#financialPlanCosts" target="_blank">&#xF046;</a></span>
+                <div class="ui-poptip ui-poptip-blue" data-ui-name="ui-poptip" style="display: none;">
+                  <div class="ui-poptip-shadow">
+                    <div class="ui-poptip-container">        
+                      <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+                      <div class="ui-poptip-content">退出计划时收取退出计划金额的0.00%作为退出费用归人人贷所有</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      
+      <div class="fn-left basic-term last" id="investment-terminal">
+        <div class="basic-header text-right">
+            <a id="plan-basic-contract" href="javascript:void(0)" onclick="javascript:window.showModalDialog('../financeplan/getDemoFinancePlanContract.action?financePlanId=67','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">优选理财计划0067期协议（范本）</a>
+
+        </div>
+        <div>
+          <p class="text-small">剩余金额</p>
+          <p class="num-xxl"><em id="max-amount-1" data-amount="0">0</em>元</p>
+        </div>
+        <div class="fn-clear">
+          <div class="fn-left">
+            <p class="text-small">每人可加入金额上限</p>
+            <p class="num-s"><em id="max-amount-2" data-amount="2000000">2,000,000</em>元</p>
+              
+          </div>
+          <div class="fn-right">
+            <p class="text-small">账户余额</p>
+            
+            
+            <p><a href="/loginPage.action">登录</a>后可见</p>
+            
+            <p class="text-small mt20" id="fee-rate" data-fee-rate="0.0">加入费用 <em id="fee">0</em>元</p>
+          </div>
+        </div>
+        <div class="ui-term">
+            
+            
+            <form class="ui-term-form ui-form" data-maxdepositamount="20000.0" autocomplete="off">
+            
+            <div class="ui-term-field mb20">
+              
+              
+                <div class="ui-term-input ui-input ui-input-text"></div>
+                <p class="ui-term-placeholder">输入加入金额，为10,000元的整数倍</p>
+                <p class="ui-term-inputunit">元 <span class="share"></span></p>
+                <p class="ui-term-hint">此计划已不能加入</p>
+              
+            </div>
+            <button disabled="disabled" class="ui-term-button ui-button ui-button-rect-mid ui-button-blue disabled plan-button ui-button-gray" style="background: #e5e4e2;" type="submit">
+              <span class="ui-button-text">已截止</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script id="plan-basic-products-template" type="text/x-handlebars-template">
+  {{# each products }}<span class="fn-left ui-loantype {{ product }}" title="{{ productName }}"></span>{{/ each }}
+  </script>
+  <script id="select-bank-accounts-template" type="text/x-handlebars-template">
+  {{# each accounts }}<option value="{{ userBankId }}">{{ bankType }} {{ dealCardId }}</option>{{ else }}<option value="">请先添加银行卡</option>{{/ each }}
+  </script>
+<div id="buyType"></div>
+</div>
+
+
+    
+
+
+
+<div id="plan-details" class="mt20">
+  <div class="container_12">
+    <div class="ui-tab ui-tab-transparent" id="plan-tab">
+      <ul class="ui-tab-items">
+        <li class="ui-tab-item ui-tab-item-current" data-name="intro">
+          <a class="ui-tab-item-link">计划介绍</a>
+        </li>
+           
+          <li class="ui-tab-item" data-name="reserve">
+            <a class="ui-tab-item-link">预定记录</a>
+          </li>
+           
+        <li class="ui-tab-item" data-name="joined">
+          <a class="ui-tab-item-link">加入记录</a>
+        </li>
+        <li class="ui-tab-item" data-name="performance">
+          <a class="ui-tab-item-link">计划表现</a>
+        </li>
+      </ul>
+      <a class="plan-list-link" href="/financeplan/listPlan!listPlan.action" target="_blank">查看往期优选理财计划</a>
+    </div>
+  </div>
+  <div class="container_12" id="plan-tab-content">
+    <div class="p20bs color-white-bg">
+      <div class="ui-tab-content ui-tab-content-current" data-name="intro">
+        <p class="mt10">优选理财计划是人人贷推出的，以投资人人贷平台现有信贷产品（机构担保标、实地认证标等）为基础的稳健、安全、便捷性好，透明度高的投标计划。加入理财计划的资金将优先于平台普通用户的资金，根据计划设定的分散投资原则对人人贷平台产品进行优先投资。投资标的所产生的收益可以选择自动提取或随每月回款的本金部分用于再投资，资金利用率高。</p>
+        <p class="text-right"><a href="/static/misc/financial-plan-intro.pdf?rrdversion=20140414" target="_blank">查看计划说明书</a></p>
+
+          
+            
+          <div class="mt20">
+                  <h4>加入流程</h4>
+                  <div class="text-center">
+                      <img class="color-gray-text" src="/static/img/plan-progress.gif?rrdversion=20140414" alt="加入流程" />
+                      <p class="text-right"><a href="/event/planProcess/index.html" target="_blank">了解更多</a></p>
+                  </div>
+          </div>
+          
+          
+          
+        <div class="mt20">
+          <h4>优选理财计划原理</h4>
+         <p class="text-center"> <img class="color-gray-text" src="/static/img/plan-figure.png?rrdversion=20140414" alt="优选理财计划原理" /></p>
+        </div>
+      </div>
+      
+         
+      <div class="ui-tab-content fn-clear" data-name="reserve">
+          <div class="fn-left box-left">
+              <ul class="ui-list ui-list-s" id="reserve-records"></ul>
+          </div>
+          <div class="fn-left box-right last">
+              <h5>预定总人次</h5>
+              <p class="num-xl"><em id="reserve-count"></em>人次</p>
+              <br>
+              <h5>已支付金额</h5>
+              <p class="num-xl"><em id="reserve-had-pay-amount"></em>元</p>
+              <br>
+              <h5>未支付金额</h5>
+              <p class="num-xl"><em id="reserve-not-pay-amount"></em>元</p>
+          </div>
+      </div>
+      
+      
+      <div class="ui-tab-content fn-clear" data-name="joined">
+        <div class="fn-left box-left">
+          <ul class="ui-list ui-list-s" id="joined-records"></ul>
+        </div>
+        <div class="fn-left box-right last">
+          <h5>加入总人次</h5>
+          <p class="num-xl"><em id="joined-count"></em>人次</p>
+        </div>
+      </div>
+      <div class="ui-tab-content" data-name="performance">
+        <div class="plan-performance-loading"></div>
+        <div id="performance" class="plan-performance" style="display: none;">
+          <div class="fn-clear">
+            <div class="fn-left">
+              <div class="fn-clear cash-box" data-name="input-cash"></div>
+              <div data-name="input-text">
+                <p class="num-xl">优选理财计划总额<em data-name="total-amount"></em>元</p>
+                <p class="num-xl">资金利用率达<em data-name="usage"></em>%</p>
+              </div>
+            </div>
+            <div class="fn-left big-arrow" data-name="arrow">
+              <p class="p1 num-l">自动投标<em data-name="bid-count"></em>次</p>
+              <p class="p2 num-xl">平均年利率<em data-name="avg-interest-rate"></em>%</p>
+            </div>
+            <div class="fn-left last">
+              <div class="fn-clear cash-box" data-name="output-cash"></div>
+              <div data-name="output-text">
+                <p class="num-xl">为用户赚取<em data-name="total-interest"></em>元</p>
+              </div>
+            </div>
+          </div>
+          <hr class="mt10">
+          <div class="mt10 fn-clear">
+            <div class="fn-left ppl-box">
+              <div class="fn-clear" data-name="investors"></div>
+              <div data-name="investors-text">
+                <p class="num-xl">加入了本期优选理财计划的用户有<em data-name="investor-count"></em>位</p>
+              </div>
+              <div class="fn-clear" data-name="borrowers"></div>
+              <div data-name="borrowers-text">
+                <p class="num-xl">得到帮助的借款者有<em data-name="borrower-count"></em>位</p>
+              </div>
+            </div>
+            <div class="fn-left last ppl-dist-box" data-name="borrowers-dist"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 提示信息条 -->
+<div class="ui-alert alert-point">
+  <div class="ui-alert-bg"></div>
+  <p>招商银行正式托管人人贷风险备用金账户，投资理财更放心。<a href="/about/about.action?flag=supervise" target="_blank">查看《资金托管报告》</a></p>
+</div>
+
+    <div id="pg-helper" style="display: none;">
+      <span id="pg-helper-plan-id">67</span>
+      <span id="pg-helper-is-investor">false</span>
+      <span id="pg-helper-be-investor-message"></span>
+      <span id="pg-helper-has-withdraw-password">true</span>
+      <span id="pg-helper-success-hint"></span>
+      <span id="authenticated">false</span>
+    </div>
+  </div>
+{%endblock%}
