@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         copy: {
             fonts: {
-                src: ['static/fonts/*.woff'],
+                src: ['static/fonts/*.woff','static/misc/*'],
                 dest: BUILD
             },
             img: {
@@ -84,7 +84,7 @@ module.exports = function(grunt) {
             js: {
                 expand: true,
                 cwd: '.',
-                src: ['static/js/**/*.js'],
+                src: ['static/**/*.js'],
                 dest: BUILD
             }
         },

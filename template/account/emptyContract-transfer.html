@@ -4,12 +4,12 @@
 <html>
   <head>
   <style type="text/css">body {font-family: SimSun;}</style>
-  <script type="text/javascript" src="../theme/default/js/jquery-1.4.2.min.js"></script>
-  <script type="text/javascript" src="../theme/default/pdfDownload/download.js"></script>
+  <script type="text/javascript" src="/static/theme/default/js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="/static/theme/default/pdfDownload/download.js"></script>
  </head>
  <body>
   <div style="font-size:12px">
-    <img style="margin-right:10px;margin-bottom:10px;cursor:pointer;" src="../theme/default/pdfDownload/xydownload.jpg" align="right" onclick="downloadPdf()"/>
+    <img style="margin-right:10px;margin-bottom:10px;cursor:pointer;" src="/static/theme/default/pdfDownload/xydownload.jpg" align="right" onclick="downloadPdf()"/>
    <br><br><br><br>
     <div style="background-color: #FFFFFF; border-color: #dfe6ea; border-style: solid; border-width: 0 1px; padding: 5px 12px;" id="content">
      <h2 align="center">债权转让及受让协议</h2>
@@ -155,7 +155,7 @@
       <form action="/account/downloadContract.action" method="POST" id="downloadForm">
       <input type="hidden" value="" name="loanId">
      <input type="hidden" value="" name="content" id="htmlContent"> 
-     <img style="margin-right:10px;margin-bottom:10px;cursor:pointer;" src="../theme/default/pdfDownload/xydownload.jpg" align="right" onclick="downloadPdf()"/>
+     <img style="margin-right:10px;margin-bottom:10px;cursor:pointer;" src="/static/theme/default/pdfDownload/xydownload.jpg" align="right" onclick="downloadPdf()"/>
      </form>
      <input type="button" value="关 闭" align="center" onclick="javascript:window.close()">
     </div>

@@ -347,7 +347,7 @@ seajs.use(['components/components'], function(Components) {
             $.ajax({
                 data : $("#sendBoxForm").serialize(),
                 type : "POST",
-                url : "../account/comm!sendInnerMail.action",
+                url : "/account/comm!sendInnerMail.action",
                 dataType : 'json',
                 beforeSend : function() {
                     $("#send_tip").empty();

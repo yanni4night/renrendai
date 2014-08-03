@@ -196,7 +196,7 @@ seajs.use(['components/components'], function(Components) {
       <div class="fn-clear">
         <h4 class="fn-left text-big">
           <a class="fn-left mr20" href="{{ loanLink }}" target="_blank">{{ title }}</a>
-          <a class="text-small" href="javascript:void(0)" onclick="window.showModalDialog('../account/borrowContract.action?loanId={{ loanId }}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">查看合同</a>
+          <a class="text-small" href="javascript:void(0)" onclick="window.showModalDialog('/account/borrowContract.action?loanId={{ loanId }}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">查看合同</a>
         </h4>
         <a class="fn-right ui-button ui-button-small ui-button-green switch {{ repayAllDisabled }}" data-name="repay-all-switch" data-text="提前还清">提前还清</a>
         <a class="fn-right ui-button ui-button-small ui-button-blue mr10 switch" data-name="repay-switch" data-text="还款">还款</a></span>
@@ -323,7 +323,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-field num-s text-right w100 pr10 fn-left"><em>{{ repaidInTotal }}</em></span>
     <span class="ui-list-field text-center w120 fn-left">{{ endDate }}</span>
     <span class="ui-list-field text-center w40 fn-left last">
-    <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('../account/borrowContract.action?loanId={{ loanId }}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">合同</a>
+    <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('/account/borrowContract.action?loanId={{ loanId }}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">合同</a>
   </span>
   </li>
   {{ else }}

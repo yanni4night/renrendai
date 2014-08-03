@@ -10,12 +10,12 @@
     font-family: SimSun;
     }
     </style>
-    <script type="text/javascript" src="../theme/default/js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="../theme/default/pdfDownload/download.js"></script>
+    <script type="text/javascript" src="/static/theme/default/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/static/theme/default/pdfDownload/download.js"></script>
   </head>
   <body>
     <div style="margin-right:10px;margin-bottom:60px;text-align: right;cursor:pointer;">
-      <img src="../theme/default/pdfDownload/xydownload.jpg" onclick="downloadPdf()"/>
+      <img src="/static/theme/default/pdfDownload/xydownload.jpg" onclick="downloadPdf()"/>
     </div>
     <div style="padding: 5px 12px;background-color: #FFFFFF;border: 1px solid #dfe6ea;border-top: none;border-bottom: none;" id="content">
       <div style="width: 98%;text-align: right;">编号：<span></span></div>
@@ -318,7 +318,7 @@
       <form action="/account/downloadContract.action" method="POST" id="downloadForm">
         <input type="hidden" value="" name="loanId">
         <input type="hidden" value="" name="content" id="htmlContent"> 
-        <img style="margin-right:10px;margin-bottom:10px;cursor:pointer;" src="../theme/default/pdfDownload/xydownload.jpg" align="right" onclick="downloadPdf()"/>
+        <img style="margin-right:10px;margin-bottom:10px;cursor:pointer;" src="/static/theme/default/pdfDownload/xydownload.jpg" align="right" onclick="downloadPdf()"/>
        </form>
       <input type="button" value="关 闭" align="center" onclick="javascript:window.close()">
     </div>
