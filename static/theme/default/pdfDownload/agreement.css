@@ -1,0 +1,9 @@
+html,body{ margin:0; padding:0;}
+.clearfix::after { height: 0px; clear: both; display: block; visibility: hidden; content: ""; }
+.clearfix { zoom: 1; }
+.xywarp{ width:960px; margin:0 auto;}
+.xywarp .info{ font-weight:bold; background:#edf7fd; line-height:1.5; padding:10px 40px; font-size:14px;}
+.xywarp .info img{ text-align:right;}
+.info p{ text-indent:30px;}
+.xywarp .xycon{background:url("xywater.png"); border-color: #dfe6ea; border-style: solid; border-width: 0 1px;}
+.xywarp .xyfooter{ height:32px; background:url("xyfooter.jpg") no-repeat 0 0 #1361a0;}

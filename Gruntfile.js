@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             img: {
                 expand: true,
                 cwd: '.',
-                src: ['static/img/**/*.{gif,png,jpg,jpeg}'],
+                src: ['static/**/*.{gif,png,jpg,jpeg}'],
                 dest: BUILD
             },
             pub_static: {
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
             html: {
                 expand: true,
                 cwd: BUILD,
-                src: ['static/css/**/*.css'],
+                src: ['static/**/*.css'],
                 dest: BUILD
             },
             css: {
