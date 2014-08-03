@@ -20,7 +20,7 @@ swig.setDefaults({
 
 module.exports = function(grunt) {
     var SVN = "../duonet/p2p-duonet-web/src/main/webapp/";
-    var SVN_STATIC = SVN + "assets/";
+    var SVN_STATIC = SVN ;
     var SVN_VM = SVN + "WEB-INF/vm/";
     var BUILD = "build/";
     var TPL = "template/";
