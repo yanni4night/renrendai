@@ -1,0 +1,294 @@
+{%extends "parent.tpl"%}
+
+{%block title%}
+往期优选理财计划列表 -
+{%endblock%}
+
+{%block link%}
+ <link rel="stylesheet" href="/static/css/pages/invest/list.css">
+{%endblock%}
+
+{%block script%}{%endblock%}
+
+{%block link%}
+<div class="pg-invest-list" id="pg-plan-list">
+  <div class="container_12 mt10">
+    <ul class="ui-breadcrumb grid_8 fn-clear">
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
+        <a href="/lend/index.action">我要理财</a>
+      </li>
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text">
+        <a href="/financeplan/listPlan.action">优选理财计划</a>
+      </li>
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
+      <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-current">
+        <a>往期优选理财计划列表</a>
+      </li>
+    </ul>
+    <div class="shortcut grid_4 fn-clear">
+      <a class="shortcut-link fn-right mr10" href="/transfer/transferList.action">债权转让列表</a>
+      <a class="shortcut-link fn-right mr10" href="/lend/loanList.action">散标投资列表</a>
+    </div>
+  </div>
+  
+  <div class="container_12" id="plan-latest-container">
+    <div class="grid_12">
+      
+      
+
+
+  <div class="ui-plan-latest gray" data-status="0">
+    <h3 class="plan-title">
+      <a class="plan-title-link" href="/financeplan/listPlan!detailPlan.action?financePlanId=69">优选理财计划<span class='h4'>(0069期)</span></a>
+      <a class="text" target="_blank" href="/event/planProcess/index.html">了解加入规则</a>
+    </h3>
+    <div class="plan-status" id="plan-status-presale" > 
+      <div class="ui-counter" id="counter" data-end="2014-08-04-10-00-00" data-now="2014-08-03-17-33-26"></div>
+      <div class="ui-counter-text color-dimgray-text fn-clear">
+        <span class="prefix">还有</span><span class="suffix">天 开始预定</span>
+      </div>
+    </div>
+    <div class="plan-status" id="plan-status-in-progress" style="display: none;"> 
+      <div class="plan-progress-container">
+        <div class="plan-progress color-dimgray-text ui-progressbar-large ui-progressbar-large-0">
+          <em>0</em>%
+        </div>
+        <a class="ui-progressbar-circle ui-progressbar-circle-join" style="display: none;" href="/financeplan/listPlan!detailPlan.action?financePlanId=69" target="_blank">预定</a>
+      </div>
+    </div>
+    <div class="plan-status" id="plan-status-rsv-complete" style="display: none;"> 
+      <div class="plan-progress-container">
+        <a class="ui-progressbar-circle ui-progressbar-circle-ready">预定满额</a>
+      </div>
+    </div>
+    <div class="plan-status" id="plan-status-rsv-end" style="display: none;"> 
+      <div class="plan-progress-container">
+        <div style="line-height: normal;" class="plan-progress color-dimgray-text ui-progressbar-large ui-progressbar-large-0">
+          <em style="display: none">0</em>
+          <p style="line-height: 93px;">等待加入</p>
+        </div>
+      </div>
+    </div>
+    <div class="plan-status" id="plan-status-open" style="display: none;"> 
+      <div class="plan-progress-container">
+        <div class="plan-progress color-dimgray-text ui-progressbar-large ui-progressbar-large-0">
+          <em>0</em>%
+        </div>
+        <a class="ui-progressbar-circle ui-progressbar-circle-join" style="display: none;" href="/financeplan/listPlan!detailPlan.action?financePlanId=69" target="_blank">申请加入</a>
+      </div>
+    </div>
+    <div class="plan-status" id="plan-status-complete" style="display: none;"> 
+      <div class="plan-progress-container">
+        <a class="ui-progressbar-circle ui-progressbar-circle-ready">已满额</a>
+      </div>
+    </div>
+    <div class="plan-reserve-date reserveDate fn-left">
+      
+      <p class="color-gray-text">预定时间</p>
+      <p class="field-number"><em class="value">2014-08-04 10:00:00</em></p>
+      
+      
+      
+      
+    </div>
+    <table class="plan-preview fn-right">
+      <tr>
+        <td class="color-gray-text">加入条件</td>
+        <td class="color-gray-text">计划总额</td>
+        <td class="color-gray-text">预期收益</td>
+      </tr>
+      <tr>
+        <td class="plan-preview-value"><span class="field-number"><em class="value">10,000</em>元</span></td>
+        <td class="plan-preview-value"><span class="field-number"><em class="value">32,000,000</em>元</span></td>
+        <td class="plan-preview-value"><span class="field-number"><em class='value'>12</em>%~<em class='value'>14</em>%</span></td>
+      </tr>
+    </table>
+  </div>
+  <script>
+  seajs.use(['components/components'], function(Components) {
+    new Components.LatestPlan().init();
+  });
+  </script>
+
+    </div>
+  </div>
+
+  <div class="container_12 mt10">
+    <div class="p20bs color-white-bg">
+      
+
+<div class="ui-plan-statistics">
+  <h3>投资效果</h3>
+  <ul class="fn-clear plan-performace mt10">
+    <li class="fn-left">
+      <h5 class="color-gray-text"><i class="ui-icon-performace sum"></i>累计总金额</h5>
+      <p class="field-number field"><em class="value">141,400</em>万元</p>
+    </li>
+    <li class="fn-left">
+      <h5 class="color-gray-text"><i class="ui-icon-performace count"></i>加入总人次</h5>
+      <p class="field-number field"><em class="value">32,025</em>次</p>
+    </li>
+    <li class="fn-left">
+      <h5 class="color-gray-text"><i class="ui-icon-performace rate"></i>资金利用率</h5>
+      <p class="field-number field"><em class="value">99.44</em>%</p>
+    </li>
+    <li class="fn-left">
+      <h5 class="color-gray-text"><i class="ui-icon-performace bidcount"></i>为用户自动投标</h5>
+      <p class="field-number field"><em class="value">1,677,348</em>次</p>
+    </li>
+    <li class="fn-left" style="border-right:none">
+      <h5 class="color-gray-text"><i class="ui-icon-performace interest"></i>为用户累计赚取</h5>
+      <p class="field-number field"><em class="value">132,945,523</em>元</p>
+    </li>
+  </ul>
+</div>
+    </div>
+  </div>
+
+  <div class="container_12 mt10">  
+    <div class="p20bs color-white-bg fn-clear">
+      <h3>往期计划列表</h3>
+      <ul class="ui-list ui-list-m ui-list-invest" id="plan-list"></ul>
+      <div class="mt10 mb10 pagination-box" id="plan-list-pagination"></div>
+    </div>
+  </div>
+</div>
+<!-- 提示信息条 -->
+<div class="ui-alert alert-point">
+  <div class="ui-alert-bg"></div>
+  <p>招商银行正式托管人人贷风险备用金账户，投资理财更放心。<a href="/about/about.action?flag=supervise" target="_blank">查看《资金托管报告》</a></p>
+</div>
+{%endblock%}
+
+{%block after%}
+<script id="plan-list-template" type="text/x-handlebars-template">
+{{# if _hasHeader }}
+<li class="ui-list-header fn-clear">
+  <span class="ui-list-title fn-left color-gray-text w200">计划名称</span>
+  <span class="ui-list-title fn-left color-gray-text w150">计划金额</span>
+  <span class="ui-list-title fn-left color-gray-text w70">加入人数</span>
+  <span class="ui-list-title fn-left color-gray-text w70">人均投标</span>
+  <span class="ui-list-title fn-left color-gray-text w100">资金利用率</span>
+  <span class="ui-list-title fn-left color-gray-text w90">平均收益率</span>
+  <span class="ui-list-title fn-left color-gray-text w140">累计赚取</span>
+  <span class="ui-list-title fn-left color-gray-text w100 last">发布时间</span>
+</li>
+{{/ if }}
+{{# each plans }}
+<li class="ui-list-item fn-clear {{ itemLast }}">
+  <span class="ui-list-field fn-left text-big w200">
+    <a class="fn-left w210 fn-text-overflow" href="{{ link }}" target="_blank">{{ name }}</a>
+  </span>
+  <span class="ui-list-field fn-left num text-right w130 pr20"><em>{{ amount }}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w60 pr10"><em>{{ headCount }}</em>人</span>
+  <span class="ui-list-field fn-left num text-right w60 pr10"><em>{{ averageBidCount }}</em>笔</span>
+  <span class="ui-list-field fn-left num text-right w90 pr10"><em>{{ fundsUseRate }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w80 pr10"><em>{{ averageBidInterest }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w130 pr20"><em>{{ earnInterest }}</em>元</span>
+  <span class="ui-list-field fn-left text-center last">{{ createDate }}</span>
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有往期优选理财计划{{/ if }}</p>
+</li>
+{{/ each }}
+</script>
+<script id="loan-list-template" type="text/x-handlebars-template">
+{{# if _hasHeader }}
+<li class="ui-list-header fn-clear" id="loan-list-header">
+  <span class="ui-list-title fn-left color-gray-text w260">借款标题</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w80" title="借款人在人人贷的个人信用评级">信用等级</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w120">年利率</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w160">金额</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w100">期限</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w110">进度</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w80"></span>
+</li>
+{{/ if }}
+{{# each loans }}
+<li class="ui-list-item fn-clear {{ itemLast }}">
+  <span class="ui-list-field fn-left text-big w260">
+    <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w210 rrd-dimgray fn-text-overflow" href="{{ link }}" target="_blank" title="{{ title }}">{{ title }}</a>
+  </span>
+  <span class="ui-list-field fn-left w80"><a class="ui-creditlevel {{ creditLevel }} snow">{{ creditLevel }}</a></span>
+  <span class="ui-list-field fn-left num text-right w90 pr30"><em class="value">{{ interest }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w130 pr30"><em class="value">{{ amount }}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w70 pr30"><em class="value">{{ term }}</em>个月</span>
+  <span class="ui-list-field fn-left w110">
+    <strong class="ui-progressbar-mid ui-progressbar-mid-{{ progress }}"><em>{{ progress }}</em>%</strong>
+  </span>
+  <span class="ui-list-field fn-left w80">
+    <a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-{{ status }}" {{# if buttonLink }}href="{{ buttonLink }}" target="_blank"{{/ if }}>
+      <span class="OPEN">投标</span>
+      <span class="READY FIRST_READY">已满标</span>
+      <span class="IN_PROGRESS">还款中</span>
+    </a>
+  </span>
+  <!-- <div class="ui-poptip ui-poptip-white" style="display: none;" data-ui-name="ui-poptip">
+    <div class="ui-poptip-container">
+      <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+      <div class="ui-poptip-content">{{ loanTypeText }}</div>
+    </div>
+  </div> -->
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有可投资项目{{/ if }}</p>
+</li>
+{{/ each }}
+{{# if _hasMore }}
+{{# if loans }}
+<li class="ui-list-more">
+  <a class="darkgray" href="/lend/loanList.action" target="_blank">查看更多投资理财项目</a>
+</li>
+{{/ if }}
+{{/ if }}
+</script>
+<script id="transfer-list-template" type="text/x-handlebars-template">
+{{# if _hasHeader }}
+<li class="ui-list-header fn-clear" id="transfer-list-header">
+  <span class="ui-list-title fn-left color-gray-text w240">借款标题</span>
+  <span class="ui-list-title fn-left color-gray-text w80">信用等级</span>
+  <span class="ui-list-title fn-left color-gray-text w80">年利率</span>
+  <span class="ui-list-title fn-left color-gray-text w80">剩余期限</span>
+  <span class="ui-list-title fn-left color-gray-text w80">每份价值</span>
+  <span class="ui-list-title fn-left color-gray-text w80">剩余份额</span>
+  <span class="ui-list-title fn-left color-gray-text w80">转让系数</span>
+  <span class="ui-list-title fn-left color-gray-text w100">转出价格</span>
+</li>
+{{/ if }}
+{{# each transferList }}
+<li class="ui-list-item fn-clear {{ itemLast }}">
+  <span class="ui-list-field fn-left text-big w240">
+    <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w190 rrd-dimgray fn-text-overflow" href="{{ link }}" target="_blank" title={{ title }}>{{ title }}</a>
+  </span>
+  <span class="ui-list-field fn-left w80"><a class="ui-creditlevel {{ creditLevel }} snow">{{ creditLevel }}</a></span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ interest }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ term }}</em>个月</span>
+  <span class="ui-list-field fn-left num text-right w75 pr5"><em>{{ cost }}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ share }}</em>份</span>
+  <span class="ui-list-field fn-left num text-right w70 pr10"><em>{{ discount }}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w90 pr10"><em>{{ price }}</em>元/份</span>
+  <span class="ui-list-field fn-left "><a class="ui-button ui-button-mid ui-button-blue" href="{{ link }}" target="_blank"><span>购买</span></a></span>
+  <!-- <div class="ui-poptip ui-poptip-white" style="display: none;" data-ui-name="ui-poptip">
+    <div class="ui-poptip-container">
+      <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
+      <div class="ui-poptip-content">{{ loanTypeText }}</div>
+    </div>
+  </div> -->
+</li>
+{{ else }}
+<li class="ui-list-status">
+  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有转让中的债权{{/ if }}</p>
+</li>
+{{/ each }}
+{{# if _hasMore }}
+<li class="ui-list-more">
+  <a class="darkgray" href="/">查看更多可转让债权</a>
+</li>
+{{/ if }}
+</script>
+<script id="plan-list-rsp" type="text/x-json">{"status":0,"data":{"plans":[{"id":68,"name":"优选理财计划0068期","amount":3.0E7,"picture":"/upload/admin/financeplan/8aa1bbbf-58cc-49ed-8def-018404e47f81.jpg","subPointCount":490,"averageBidInterest":12.91,"earnInterest":1027.4,"fundsUseRate":100.0,"averageBidCount":20,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-07-21","joined":false},{"id":67,"name":"优选理财计划0067期","amount":3.5E7,"picture":"/upload/admin/financeplan/7d254222-4712-4579-8e70-7601a9a7e7e2.jpg","subPointCount":617,"averageBidInterest":12.92,"earnInterest":781.34,"fundsUseRate":99.99,"averageBidCount":22,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-07-14","joined":false},{"id":66,"name":"优选理财计划0066期","amount":3.0E7,"picture":"/upload/admin/financeplan/4b7e5a54-dd36-49c8-b774-0f66e1faaabd.jpg","subPointCount":3000,"averageBidInterest":12.87,"earnInterest":2362.74,"fundsUseRate":99.96,"averageBidCount":20,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-07-07","joined":false},{"id":65,"name":"优选理财计划0065期","amount":3.2E7,"picture":"/upload/admin/financeplan/f0381fb8-d4a0-4e88-b654-cb43b2e207af.jpg","subPointCount":656,"averageBidInterest":12.73,"earnInterest":278956.56,"fundsUseRate":98.15,"averageBidCount":22,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-06-30","joined":false},{"id":64,"name":"优选理财计划0064期","amount":3.0E7,"picture":"/upload/admin/financeplan/325640ad-6f6e-45eb-8de8-bae4a36e4bb5.jpg","subPointCount":608,"averageBidInterest":12.84,"earnInterest":319016.57,"fundsUseRate":99.95,"averageBidCount":25,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-06-23","joined":false},{"id":63,"name":"优选理财计划0063期","amount":2.8E7,"picture":"/upload/admin/financeplan/768c01ab-aab8-4ab7-9176-6ac982ad70e5.jpg","subPointCount":560,"averageBidInterest":12.85,"earnInterest":297771.91,"fundsUseRate":99.95,"averageBidCount":25,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-06-16","joined":false},{"id":62,"name":"优选理财计划0062期","amount":3.0E7,"picture":"/upload/admin/financeplan/e2a71f97-96f9-4142-97bf-0355831829db.jpg","subPointCount":628,"averageBidInterest":12.89,"earnInterest":337126.72,"fundsUseRate":99.93,"averageBidCount":29,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-06-09","joined":false},{"id":61,"name":"优选理财计划0061期","amount":2.0E7,"picture":"/upload/admin/financeplan/d8c2a049-4d2b-4481-9e98-1e7f495b6ba5.jpg","subPointCount":411,"averageBidInterest":12.9,"earnInterest":270575.18,"fundsUseRate":98.89,"averageBidCount":23,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-06-03","joined":false},{"id":60,"name":"优选理财计划0060期","amount":2.0E7,"picture":"/upload/admin/financeplan/88093d0f-dd41-4bbf-acec-2946866d19b8.jpg","subPointCount":403,"averageBidInterest":12.87,"earnInterest":429792.1,"fundsUseRate":99.94,"averageBidCount":28,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-05-19","joined":false},{"id":59,"name":"优选理财计划0059期","amount":2.5E7,"picture":"/upload/admin/financeplan/3c8e7261-4e62-4719-bd7f-4b3eb4399681.jpg","subPointCount":374,"averageBidInterest":12.78,"earnInterest":534871.91,"fundsUseRate":99.89,"averageBidCount":35,"avalibleAmount":0.0,"borrowCount":0,"bidCount":0,"provinces":0,"saleAmount":0.0,"createTime":"2014-05-12","joined":false}],"totalPage":7,"pageIndex":1}}</script>
+<script>seajs.use(['pages/invest/list']);</script>
+{%endblock%}
