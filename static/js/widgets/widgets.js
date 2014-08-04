@@ -16,7 +16,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 b = this._ui;
             return b.img.click(function() {
                 var c = (new Date).getTime();
-                b.img.attr("src", "/image.jsp?ts=" + c), b.input.val(""), a.clean()
+                b.img.attr("src", "/captcha?ts=" + c), b.input.val(""), a.clean()
             }), b.input.focusin(function() {
                 a.clean()
             }), this
@@ -1602,7 +1602,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
     }, e.randImage = function(a) {
         var b = d("undefined" == typeof a ? "#randImage" : a);
         b.length > 0 && b.click(function() {
-            d(this).attr("src", "/image.jsp?" + Math.random())
+            d(this).attr("src", "/captcha?" + Math.random())
         })
     }, e.tipfocus = function(a, b) {
         var c = a[0].offsetWidth + a.parent().children(".ui-label").width() + 10,

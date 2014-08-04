@@ -20,7 +20,7 @@ swig.setDefaults({
 
 module.exports = function(grunt) {
     var SVN = "../duonet/p2p-duonet-web/src/main/webapp/";
-    var SVN_STATIC = SVN ;
+    var SVN_STATIC = SVN;
     var SVN_VM = SVN + "WEB-INF/vm/";
     var BUILD = "build/";
     var TPL = "template/";
@@ -29,13 +29,19 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         copy: {
             fonts: {
-                src: ['static/fonts/*.woff','static/misc/*'],
+                src: ['static/fonts/*.woff', 'static/misc/*'],
                 dest: BUILD
             },
             img: {
                 expand: true,
                 cwd: '.',
                 src: ['static/**/*.{gif,png,jpg,jpeg}'],
+                dest: BUILD
+            },
+            js: {
+                expand: true,
+                cwd: '.',
+                src: ['static/**/*.js'],
                 dest: BUILD
             },
             pub_static: {
@@ -96,6 +102,25 @@ module.exports = function(grunt) {
                 dest: BUILD + TPL,
                 ext: '.vm'
             }
+        },
+        "regex-replace": {
+            action: {
+                src: [BUILD + '**/*.{vm,js}'],
+                actions: [{
+                    name: 'action',
+                    search: /\.\baction\b/img,
+                    replace: '',
+                    flags: 'img'
+                }]
+            }
+        },
+        shell: {
+            vm: {
+                command: "sshpass -p 'be41191c' scp -rq build/template/* root@182.92.72.195:/export/App/www.duonet.cn/WEB-INF/vm/"
+            },
+            static: {
+                command: "sshpass -p 'be41191c' scp -r build/static/* root@182.92.72.195:/export/App/www.duonet.cn/static/"
+            }
         }
     });
 
@@ -112,7 +137,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-yui-compressor'); //cssmin cannot handle csshack
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-web-stamp');
+    grunt.loadNpmTasks('grunt-regex-replace');
+    grunt.loadNpmTasks('grunt-shell');
 
-    grunt.registerTask('default', ['clean', 'copy:fonts', 'copy:img', 'cssmin', 'uglify', 'swig', 'stamp']);
+    grunt.registerTask('default', ['clean', 'copy:fonts', 'copy:img', 'copy:js', 'cssmin', /*'uglify',*/ 'swig', 'stamp', "regex-replace"]);
     grunt.registerTask('pub', ['default', 'copy:pub_static', 'copy:pub_vm']);
 };
