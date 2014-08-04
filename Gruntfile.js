@@ -141,5 +141,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
 
     grunt.registerTask('default', ['clean', 'copy:fonts', 'copy:img', 'copy:js', 'cssmin', /*'uglify',*/ 'swig', 'stamp', "regex-replace"]);
+    grunt.registerTask('test', ['default', 'shell']);
     grunt.registerTask('pub', ['default', 'copy:pub_static', 'copy:pub_vm']);
 };

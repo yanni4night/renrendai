@@ -6,9 +6,8 @@
     </title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="content-type" content="text/html" charset="utf-8">
-    <meta name="google-site-verification" content="oQXrGa_mTgxg7joO0himE0QuFeqOVmm-SDC1H2dzT4c">
-    <meta name="keywords" content="人人贷|网络理财|个人理财|投资理财|P2P理财|互联网金融|投资理财|债权转让|理财计划|优选计划|网络贷款|工薪贷|生意贷|网商贷|网贷|小额贷款" />
-    <meta name="description" content="人人贷(www.renrendai.com)是目前中国互联网金融中P2P信贷行业中最大、最安全的平台，为投资理财用户和贷款用户两端提供公平、透明、安全、高效的互联网金融服务。投资理财用户可以通过人人贷平台进行投标、加入优选理财计划、购买债权等方式进行投资获得高收益；贷款用户可以通过平台申请工薪贷、生意贷、网商贷等小额贷款。" />
+    <meta name="keywords" content="多网|网络理财|个人理财|投资理财|P2P理财|互联网金融|投资理财|债权转让|理财计划|优选计划|网络贷款|工薪贷|生意贷|网商贷|网贷|小额贷款" />
+    <meta name="description" content="多网(www.duonet.cn)是目前中国互联网金融中P2P信贷行业中最大、最安全的平台，为投资理财用户和贷款用户两端提供公平、透明、安全、高效的互联网金融服务。投资理财用户可以通过人人贷平台进行投标、加入优选理财计划、购买债权等方式进行投资获得高收益；贷款用户可以通过平台申请工薪贷、生意贷、网商贷等小额贷款。" />
     <script src="/static/js/seajs/2.1.0/sea.js"></script>
     <script src="/static/js/config.js"></script>
     {%block script%}{%endblock%}
@@ -248,7 +247,7 @@
       </div>
       <div class="fn-hide">
         <div id="weixin-content" class="p20 text-center">
-          <img src="/static/img/weixin_l.jpg?rrdversion=20140414" />
+          <img src="/static/img/weixin_l.jpg" />
           <p>微信“发现”扫一扫，人人贷里动态全知道！</p>
         </div>
       </div>

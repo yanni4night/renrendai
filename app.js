@@ -51,7 +51,7 @@ app.get('/', function(req, res, next) {
 });
 
 //验证码/image_https.jsp
-app.get(/\/image(_https)?\.jsp$/, function(req, res, next) {
+app.get(/\/captcha|image(_https)?\.jsp$/, function(req, res, next) {
   return res.redirect('/static/img/captcha.png');
 });
 
