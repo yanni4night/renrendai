@@ -362,7 +362,7 @@ seajs.use(['components/components'], function(Components) {
   <script id="loan-list-rsp" type="text/x-json">{"status":0,"message":"okey","data":{"loans":[]}}</script>
   <script id="borrowing-rsp" type="text/x-json">{"status":0,"message":"okey","data":{"loans":[]}}</script>
   <script id="loan-list-template" type="text/x-handlebars-template">
-  {{# if _hasHeader }}
+  {{@ if _hasHeader }}
   <li class="ui-list-header fn-clear">
     <span class="ui-list-title fn-left color-gray-text w260">借款标题</span>
     <span class="ui-list-title fn-left color-gray-text w60">信用等级</span>
@@ -373,7 +373,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title fn-left color-gray-text w75 last"></span>
   </li>
   {{/ if }}
-  {{# each loans }}
+  {{@ each loans }}
   <li class="ui-list-item fn-clear">
     <span class="ui-list-field fn-left w260">
       <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w210 rrd-dimgray fn-text-overflow" href="{{ link }}">{{ title }}</a>
@@ -387,7 +387,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}暂时没有可推荐的理财产品{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}暂时没有可推荐的理财产品{{/ if }}</p>
   </li>
   {{/ each }}
   </script>
@@ -399,7 +399,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title fn-left color-gray-text w100">逾期费用</span>
     <span class="ui-list-title fn-left color-gray-text w110 last"></span>
   </li>
-  {{# each loans }}
+  {{@ each loans }}
   <li class="ui-list-item fn-clear">
     <span class="ui-list-field fn-left w180 ph10 fn-text-overflow">{{ title }}</span>
     <span class="ui-list-field fn-left num-s text-right w140 pr20"><em>{{ notPayPrincipal }}</em>元</span>
@@ -408,7 +408,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-field fn-left text-center w110 last"><a href="/account/borrow!toMyLoans.action">去还款</a></span>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有借款记录{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有借款记录{{/ if }}</p>
   </li>
   {{/ each }}
   </script>

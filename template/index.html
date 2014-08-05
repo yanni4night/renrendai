@@ -258,7 +258,7 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
 {%block after%}
   
 <script id="plan-list-template" type="text/x-handlebars-template">
-{{# if _hasHeader }}
+{{@ if _hasHeader }}
 <li class="ui-list-header fn-clear">
   <span class="ui-list-title fn-left color-gray-text w200">计划名称</span>
   <span class="ui-list-title fn-left color-gray-text w150">计划金额</span>
@@ -270,7 +270,7 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
   <span class="ui-list-title fn-left color-gray-text w100 last">发布时间</span>
 </li>
 {{/ if }}
-{{# each plans }}
+{{@ each plans }}
 <li class="ui-list-item fn-clear {{ itemLast }}">
   <span class="ui-list-field fn-left text-big w200">
     <a class="fn-left w210 fn-text-overflow" href="{{ link }}" target="_blank">{{ name }}</a>
@@ -285,12 +285,12 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
 </li>
 {{ else }}
 <li class="ui-list-status">
-  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有往期优选理财计划{{/ if }}</p>
+  <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有往期优选理财计划{{/ if }}</p>
 </li>
 {{/ each }}
 </script>
 <script id="loan-list-template" type="text/x-handlebars-template">
-{{# if _hasHeader }}
+{{@ if _hasHeader }}
 <li class="ui-list-header fn-clear" id="loan-list-header">
   <span class="ui-list-title fn-left color-gray-text w260">借款标题</span>
   <span class="ui-list-title fn-left color-gray-text text-center w80" title="借款人在人人贷的个人信用评级">信用等级</span>
@@ -301,7 +301,7 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
   <span class="ui-list-title fn-left color-gray-text text-center w80"></span>
 </li>
 {{/ if }}
-{{# each loans }}
+{{@ each loans }}
 <li class="ui-list-item fn-clear {{ itemLast }}">
   <span class="ui-list-field fn-left text-big w260">
     <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w210 rrd-dimgray fn-text-overflow" href="{{ link }}" target="_blank" title="{{ title }}">{{ title }}</a>
@@ -314,7 +314,7 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
     <strong class="ui-progressbar-mid ui-progressbar-mid-{{ progress }}"><em>{{ progress }}</em>%</strong>
   </span>
   <span class="ui-list-field fn-left w80">
-    <a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-{{ status }}" {{# if buttonLink }}href="{{ buttonLink }}" target="_blank"{{/ if }}>
+    <a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-{{ status }}" {{@ if buttonLink }}href="{{ buttonLink }}" target="_blank"{{/ if }}>
       <span class="OPEN">投标</span>
       <span class="READY FIRST_READY">已满标</span>
       <span class="IN_PROGRESS">还款中</span>
@@ -329,11 +329,11 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
 </li>
 {{ else }}
 <li class="ui-list-status">
-  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有可投资项目{{/ if }}</p>
+  <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有可投资项目{{/ if }}</p>
 </li>
 {{/ each }}
-{{# if _hasMore }}
-{{# if loans }}
+{{@ if _hasMore }}
+{{@ if loans }}
 <li class="ui-list-more">
   <a class="darkgray" href="/lend/loanList.action" target="_blank">查看更多投资理财项目</a>
 </li>
@@ -341,7 +341,7 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
 {{/ if }}
 </script>
 <script id="transfer-list-template" type="text/x-handlebars-template">
-{{# if _hasHeader }}
+{{@ if _hasHeader }}
 <li class="ui-list-header fn-clear" id="transfer-list-header">
   <span class="ui-list-title fn-left color-gray-text w240">借款标题</span>
   <span class="ui-list-title fn-left color-gray-text w80">信用等级</span>
@@ -353,7 +353,7 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
   <span class="ui-list-title fn-left color-gray-text w100">转出价格</span>
 </li>
 {{/ if }}
-{{# each transferList }}
+{{@ each transferList }}
 <li class="ui-list-item fn-clear {{ itemLast }}">
   <span class="ui-list-field fn-left text-big w240">
     <em class="ui-loantype {{ loanType }}" title="{{ loanTypeText }}"></em><a class="fn-left w190 rrd-dimgray fn-text-overflow" href="{{ link }}" target="_blank" title={{ title }}>{{ title }}</a>
@@ -375,10 +375,10 @@ font-family:">感谢您对人人贷的支持与理解，祝您生活愉快！</s
 </li>
 {{ else }}
 <li class="ui-list-status">
-  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有转让中的债权{{/ if }}</p>
+  <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有转让中的债权{{/ if }}</p>
 </li>
 {{/ each }}
-{{# if _hasMore }}
+{{@ if _hasMore }}
 <li class="ui-list-more">
   <a class="darkgray" href="/">查看更多可转让债权</a>
 </li>

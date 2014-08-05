@@ -697,31 +697,31 @@ seajs.use(['components/components'], function(Components) {
 <div class="ui-message-content">
   <div class="fn-clear">
     <div class="ui-message-icon fn-left">
-      {{# if info }}
+      {{@ if info }}
       <i class="iconfont fn-left info" title="提示">&#xF046;</i>
       {{/ if }}
-      {{# if success }}
+      {{@ if success }}
       <i class="iconfont fn-left success" title="成功">&#xF049;</i>
       {{/ if }}
-      {{# if warning }}
+      {{@ if warning }}
       <i class="iconfont fn-left warning" title="警告">&#xF047;</i>
       {{/ if }}
-      {{# if error }}
+      {{@ if error }}
       <i class="iconfont fn-left error" title="错误">&#xF045;</i>
       {{/ if }}
     </div>
     <div class="ui-message-text fn-left">
-      {{# if title }}
+      {{@ if title }}
       <h3>{{ title }}</h3>
       {{/ if }}
       <p class="text-big">{{{ message }}}</p>
-      {{# if link }}
+      {{@ if link }}
       <p><a href="{{ link }}">{{ linkText }}</a></p>
       {{/ if }}
     </div>
   </div>
   <div class="ui-message-operation text-center mt20">
-    <a class="ui-button ui-button-blue ui-button-mid ui-message-close-button" {{# if button }}href="{{ button.link }}"{{/ if }}>{{# if button }}{{ button.text }}{{ else }}关闭{{/ if }}</a>
+    <a class="ui-button ui-button-blue ui-button-mid ui-message-close-button" {{@ if button }}href="{{ button.link }}"{{/ if }}>{{@ if button }}{{ button.text }}{{ else }}关闭{{/ if }}</a>
   </div>
 </div>
 </script>

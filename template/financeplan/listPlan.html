@@ -11,12 +11,12 @@
 <div id="surplus-amount-helper" data-overplusAmount="" data-buyInRate="0.0" data-alreadyDepositAmount="" style="display:none"></div>
 <script id="dialog2-message" type="text/x-handlebars-template">
 <div class="ui-message-content-new">
-    {{# if title }}
+    {{@ if title }}
     <h3>{{ title }}</h3>
     {{/ if}}
     
     <div class="ui-message-button text-center">
-        <a class="ui-button ui-button-blue ui-button-mid ui-message-close-button" {{# if button }}href="{{ button.link }}"{{/ if }}>{{# if button }}{{ button.text }}{{ else }}关闭{{/ if }}</a>
+        <a class="ui-button ui-button-blue ui-button-mid ui-message-close-button" {{@ if button }}href="{{ button.link }}"{{/ if }}>{{@ if button }}{{ button.text }}{{ else }}关闭{{/ if }}</a>
     </div>
 </div>
 </script>
@@ -29,17 +29,17 @@
   <span class="ui-list-title fn-left color-gray-text w150 text-left-imp">预定时间</span>
   <span class="ui-list-title fn-left color-gray-text w80 last text-left-imp">状态</span>
 </li>
-{{# each rsvList }}
+{{@ each rsvList }}
 <li class="ui-list-item fn-clear {{ itemStyle }}">
   <span class="ui-list-field fn-left color-gray-text w80 fn-text-overflow">&nbsp;&nbsp;{{ id }}</span>
-  <span class="ui-list-field fn-left color-gray-text w160 text-left-imp fn-text-overflow"><span class="list-ul-name" style="width:100%">{{ investor }}{{#if ucodeUsed }}<a title="U-code预定" target="_blank" href="/help/terms/terms!terms.action#ucode"><i class="list-u-code"></i></a>{{/ if }}{{#if mobileUsed }}<a title="手机预定" target="_blank" href="http://www.renrendai.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span></span>
+  <span class="ui-list-field fn-left color-gray-text w160 text-left-imp fn-text-overflow"><span class="list-ul-name" style="width:100%">{{ investor }}{{@if ucodeUsed }}<a title="U-code预定" target="_blank" href="/help/terms/terms!terms.action#ucode"><i class="list-u-code"></i></a>{{/ if }}{{@if mobileUsed }}<a title="手机预定" target="_blank" href="http://www.renrendai.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span></span>
   <span class="ui-list-field fn-left color-gray-text w120 num-s text-left-imp fn-text-overflow"><em>{{ planAmount }}</em>元</span>
   <span class="ui-list-field fn-left color-gray-text w150 text-left-imp fn-text-overflow">{{ date }}</span>
   <span class="ui-list-field fn-left color-gray-text w80 last text-left-imp fn-text-overflow">{{ status }}</span>
 </li>
 {{ else }}
 <li class="ui-list-status">
-  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}无预定记录{{/ if }}</p>
+  <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}无预定记录{{/ if }}</p>
 </li>
 {{/ each }}
 </script>
@@ -50,16 +50,16 @@
   <span class="ui-list-title fn-left color-gray-text w200 text-left">加入金额</span>
   <span class="ui-list-title fn-left color-gray-text w150 last text-left">加入时间</span>
 </li>
-{{# each jsonList }}
+{{@ each jsonList }}
 <li class="ui-list-item fn-clear {{ itemStyle }}">
   <span class="ui-list-field fn-left w80 color-gray-text fn-text-overflow">&nbsp;&nbsp;{{ id }}</span>
-  <span class="ui-list-field fn-left w150 ph10 color-gray-text fn-text-overflow">{{ investor }}{{#if mobileUsed }}<a title="手机加入" target="_blank" href="http://www.renrendai.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span>
+  <span class="ui-list-field fn-left w150 ph10 color-gray-text fn-text-overflow">{{ investor }}{{@if mobileUsed }}<a title="手机加入" target="_blank" href="http://www.renrendai.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span>
   <span class="ui-list-field fn-left color-gray-text num-s  w150 pr50"><em>{{ amount }}</em>元</span>
   <span class="ui-list-field fn-left color-gray-text w150 last">{{ date }}</span>
 </li>
 {{ else }}
 <li class="ui-list-status">
-  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}无加入记录{{/ if }}</p>
+  <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}无加入记录{{/ if }}</p>
 </li>
 {{/ each }}
 </script>
@@ -74,7 +74,7 @@
         <li><span>锁定期限</span>12</em>个月</li>
         <li><span>加入费用</span>{{ fee }}</em>元</li>
         <li><span>加入金额</span>{{ amount }}</em>元</li>
-        {{# if isAppend }}
+        {{@ if isAppend }}
         <li class="fn-clear">
           <span class="fn-left">验证码&nbsp;&nbsp;&nbsp;&nbsp;</span>
           <span class="fn-left ui-confirm-value last" id="captcha">
@@ -125,8 +125,8 @@
         <li><span>锁定期限</span>12个月</li>
         <li><span>加入费用</span>{{ fee }}元</li>
         <li><span>加入金额</span>{{ amount }}元</li>
-        <li><span>收益处理方式</span>{{ gainText }} {{# if intoBank }}<em>{{ bankText }}</em>{{/ if }}</li>
-        {{# if intoBank }}
+        <li><span>收益处理方式</span>{{ gainText }} {{@ if intoBank }}<em>{{ bankText }}</em>{{/ if }}</li>
+        {{@ if intoBank }}
         <li class="fn-clear">
           <span class="fn-left">提现密码</span>
           <span class="fn-left ui-confirm-value last ui-form-item ui-form-item-nolabel">
@@ -350,10 +350,10 @@
     </div>
   </div>
   <script id="plan-basic-products-template" type="text/x-handlebars-template">
-  {{# each products }}<span class="fn-left ui-loantype {{ product }}" title="{{ productName }}"></span>{{/ each }}
+  {{@ each products }}<span class="fn-left ui-loantype {{ product }}" title="{{ productName }}"></span>{{/ each }}
   </script>
   <script id="select-bank-accounts-template" type="text/x-handlebars-template">
-  {{# each accounts }}<option value="{{ userBankId }}">{{ bankType }} {{ dealCardId }}</option>{{ else }}<option value="">请先添加银行卡</option>{{/ each }}
+  {{@ each accounts }}<option value="{{ userBankId }}">{{ bankType }} {{ dealCardId }}</option>{{ else }}<option value="">请先添加银行卡</option>{{/ each }}
   </script>
 <div id="buyType"></div>
 </div>

@@ -154,7 +154,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w100 fn-left">状态</span>
     <span class="ui-list-title w100 fn-left last"></span>
   </li>
-  {{# each data }}
+  {{@ each data }}
   <li class="ui-list-item fn-clear {{ itemStyle }}">
     <span class="ui-list-field w240 ph10 fn-text-overflow fn-left"><a href="{{ loanLink }}" target="_blank">{{ title }}</a></span>
     <span class="ui-list-field num-s text-right w110 pr10 fn-left"><em class="value-small">{{ amount }}</em></span>
@@ -165,7 +165,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
   </li>
   {{/ each }}
   </script>

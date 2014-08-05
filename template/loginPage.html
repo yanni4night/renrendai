@@ -1,7 +1,7 @@
 {%extends "parent.tpl"%}
 
 {%block title%}
-注册 -
+登录 -
 {%endblock%}
 
 {%block script%}
@@ -84,10 +84,10 @@
         </div>
         <script id="email-suggest-template" type="text/x-handlebars-template">
         <ul>
-          {{#if remove}}
+          {{@if remove}}
           <li>{{inputs}}</li>
           {{/if}}
-          {{#each lists}}
+          {{@each lists}}
           <li>{{email}}</li>
           {{/each}}
         </ul>
@@ -95,6 +95,7 @@
         <script>
         seajs.use(['jquery'],function($){
         $('.no-nav-text').html('登录').show();
+         $('.grid_7 .ui-nav').addClass('fn-hide');
         });
         </script>
 {%endblock%}

@@ -190,7 +190,7 @@ seajs.use(['components/components'], function(Components) {
 
 {%block after%}
   <script id="repaying-list-template" type="text/x-handlebars-template">
-  {{# each data }}
+  {{@ each data }}
   <li class="ui-list-item {{ itemLast }}" data-name="repaying-item" data-loan-id="{{ loanId }}">
     <div class="p10">
       <div class="fn-clear">
@@ -300,7 +300,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
   </li>
   {{/ each }}
   </script>
@@ -314,7 +314,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w120 fn-left date">还清日期</span>
     <span class="ui-list-title w40 fn-left contract">合同</span>
   </li>
-  {{# each data }}
+  {{@ each data }}
   <li class="ui-list-item fn-clear {{ itemStyle }}">
     <span class="ui-list-field w160 ph10 fn-left fn-text-overflow"><a href="{{ loanLink }}" target="_blank">{{ title }}</a></span>
     <span class="ui-list-field num-s text-right w100 pr10 fn-left"><em>{{ amount }}</em></span>
@@ -328,7 +328,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
   </li>
   {{/ each }}
   </script>
@@ -343,9 +343,9 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w90 fn-left">逾期费用</span>
     <span class="ui-list-title w90 fn-left last">状态</span>
   </li>
-  {{# each data }}
+  {{@ each data }}
   <li class="ui-list-item fn-clear {{ itemStyle }} {{ itemLast }} repayment-record">
-    <span class="ui-list-field text-center w40 fn-left">{{# if shouldRepay }}<input type="checkbox" value="{{ termId }}" data-name="repay-term-checking" />{{/ if }}</span>
+    <span class="ui-list-field text-center w40 fn-left">{{@ if shouldRepay }}<input type="checkbox" value="{{ termId }}" data-name="repay-term-checking" />{{/ if }}</span>
     <span class="ui-list-field text-center w100 fn-left">{{ repaymentDate }}</span>
     <span class="ui-list-field num-s text-right w90 pr10 fn-left to-repay-amount"><em>{{ toRepayAmount }}</em></span>
     <span class="ui-list-field num-s text-right w90 pr10 fn-left"><em>{{ toRepayPrincipal }}</em></span>
@@ -356,7 +356,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
   </li>
   {{/ each }}
   </script>

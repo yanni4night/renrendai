@@ -227,7 +227,7 @@ seajs.use(['components/components'], function(Components) {
 
 {%block after%}
 <script id="account-info-template" type="text/x-handlebars-template">
-{{# each accounts }}<option value="{{ userBankId }}">{{ bankType }} {{ dealCardId }}</option>{{ else }}<option value="">请先添加银行卡</option>{{/ each }}
+{{@ each accounts }}<option value="{{ userBankId }}">{{ bankType }} {{ dealCardId }}</option>{{ else }}<option value="">请先添加银行卡</option>{{/ each }}
 </script>
 <script id="confirm-plan-exit-template" type="text/x-handlebars-template">
 <div class="ui-confirm" id="confirm-plan-exit">
@@ -315,7 +315,7 @@ seajs.use(['components/components'], function(Components) {
         </li>
         <li class="fn-clear">
           <span class="fn-left ui-confirm-label">回款处理方式</span>
-          <span class="fn-left ui-confirm-value last">{{ quitTypeName }}{{# if quitBankAccount }} {{ quitBankAccount }}{{/ if }}<!-- <a class="back">更换其他处理方式</a>--></span>
+          <span class="fn-left ui-confirm-value last">{{ quitTypeName }}{{@ if quitBankAccount }} {{ quitBankAccount }}{{/ if }}<!-- <a class="back">更换其他处理方式</a>--></span>
         </li>
         <li class="fn-clear">
           <span class="fn-left ui-confirm-label">提现密码</span>
@@ -327,7 +327,7 @@ seajs.use(['components/components'], function(Components) {
         <input type="hidden" name="planId" value="{{ planId }}" />
         <input type="hidden" name="subPointId" value="{{ subPointId }}" />
         <input type="hidden" name="quitType" value="{{ quitType }}" />
-        {{# if quitBankId }}<input type="hidden" name="quitBankId" value="{{ quitBankId }}" />{{/ if }}
+        {{@ if quitBankId }}<input type="hidden" name="quitBankId" value="{{ quitBankId }}" />{{/ if }}
         <div class="fn-clear w170 ui-confirm-submit-box">
           <button class="fn-left ui-button ui-button-mid ui-button-blue" id="submit-plan-exit-execution" type="submit" data-name="cfm-submit">确认退出</button>
           <a class="fn-left last ui-confirm-cancel-link" id="cancel-plan-exit-execution">取消</a>
@@ -347,7 +347,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w80 fn-left">可用资金</span>
     <span class="ui-list-title w100 fn-left last">状态</span>
   </li>
-  {{# each financePlanList }}
+  {{@ each financePlanList }}
   <li class="ui-list-item fn-clear {{ itemStyle }}" data-plan-name="{{ name }}" data-final-amount="{{ amount }}" data-sub-point-id="{{ subPointId }}">
     <span class="ui-list-field w150 ph5 fn-left name"><a href="{{ link }}">{{ name }}</a></span>
     <span class="ui-list-field num-s text-right w120 pr10 fn-left ui-final-amount">
@@ -378,13 +378,13 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-field num-s text-right w55 pr25 fn-left"><a href="{{ link }}"><em>{{ loans }}</em>次</a></span>
     <span class="ui-list-field num-s text-right w70 pr10 fn-left"><em>{{ available }}</em></span>
     <span class="ui-list-field num-s text-center w100 fn-left last"><em>{{ status }}</em><!--
-    -->{{# if leftLockingDays }}（{{ leftLockingDays }}天）{{/ if }}<!--
-    -->{{# if hasQuitButton }}（<a class="cursor-pointer" data-name="quit">退出</a>）{{/ if }}<!--
+    -->{{@ if leftLockingDays }}（{{ leftLockingDays }}天）{{/ if }}<!--
+    -->{{@ if hasQuitButton }}（<a class="cursor-pointer" data-name="quit">退出</a>）{{/ if }}<!--
     --></span>
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有持有中的优选理财计划{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有持有中的优选理财计划{{/ if }}</p>
   </li>
   {{/ each }}
   </script>
@@ -399,7 +399,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w70 two-line fn-left">转让中<br>的债权</span>
     <span class="ui-list-title w70 two-line fn-left last">无法转让<br>的债权</span>
   </li>
-  {{# each financePlanList }}
+  {{@ each financePlanList }}
   <li class="ui-list-item fn-clear {{ itemStyle }}">
     <span class="ui-list-field w140 ph5 fn-left name"><a href="{{ link }}">{{ name }}</a></span>
     <span class="ui-list-field num-s text-right w80 pr10 fn-left"><em>{{ amount }}</em></span>
@@ -412,7 +412,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有退出中的优选理财计划{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有退出中的优选理财计划{{/ if }}</p>
   </li>
   {{/ each }}
   </script>
@@ -427,7 +427,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w80 fn-left">实际收入</span>
     <span class="ui-list-title w100 fn-left last">完成时间</span>
   </li>
-  {{# each financePlanList }}
+  {{@ each financePlanList }}
   <li class="ui-list-item fn-clear {{ itemStyle }}">
     <span class="ui-list-field w150 ph5 fn-left name"><a href="{{ link }}">{{ name }}</a></span>
     <span class="ui-list-field num-s text-right w100 pr10 fn-left ui-final-amount">
@@ -462,7 +462,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有已退出的优选理财计划{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有已退出的优选理财计划{{/ if }}</p>
   </li>
   {{/ each }}
   </script>
@@ -476,18 +476,18 @@ seajs.use(['components/components'], function(Components) {
           <span class="ui-list-title fn-left color-gray-text w140 text-left-imp">支付截止时间</span>
           <span class="ui-list-title fn-left color-gray-text w150 last text-left-imp">状态</span>
       </li>
-      {{# each financePlanList }}
+      {{@ each financePlanList }}
       <li class="ui-list-item fn-clear {{ itemStyle }}">
           <span class="ui-list-field fn-left color-gray-text w150 fn-text-overflow text-center"><a href="/financeplan/listPlan!detailPlan.action?financePlanId={{ planId }}" target="_blank">{{ name }}</a></span>
           <span class="ui-list-field fn-left color-gray-text w100 text-left-imp fn-text-overflow">{{ amount }}</span>
           <span class="ui-list-field fn-left color-gray-text w100 text-left-imp fn-text-overflow">{{ depositAmount }}</span>
           <span class="ui-list-field fn-left color-gray-text w100 text-left-imp fn-text-overflow">{{ unRepayAmount }}</span>
           <span class="ui-list-field fn-left color-gray-text w140 text-left-imp fn-text-overflow color-red">{{ endPayMentTime }}</span>
-          <span class="ui-list-field fn-left color-gray-text w150 last text-left-imp fn-text-overflow">{{ rsvStatus }}<a onclick="javascript:window.showModalDialog('/financeplan/getFinancePlanContract!getPlanRsvContract.action?financePlanId={{planId}}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')" href="javascript:void(0)" class="list-a-pay">合同</a> {{#if isNotOverDue}}<a class="list-a-pay J_conform_pay_a" href="#" data-id="{{ planId }}">支付</a>{{/if}}</span>
+          <span class="ui-list-field fn-left color-gray-text w150 last text-left-imp fn-text-overflow">{{ rsvStatus }}<a onclick="javascript:window.showModalDialog('/financeplan/getFinancePlanContract!getPlanRsvContract.action?financePlanId={{planId}}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')" href="javascript:void(0)" class="list-a-pay">合同</a> {{@if isNotOverDue}}<a class="list-a-pay J_conform_pay_a" href="#" data-id="{{ planId }}">支付</a>{{/if}}</span>
       </li>
       {{ else }}
       <li class="ui-list-status">
-          <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有预定中的优选理财计划{{/ if }}</p>
+          <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有预定中的优选理财计划{{/ if }}</p>
       </li>
       {{/ each }}
   </script>
@@ -533,7 +533,7 @@ seajs.use(['components/components'], function(Components) {
       </div>
   </script>
   <script id="bank-accounts-template" type="text/x-handlebars-template">
-      {{# each accounts }}
+      {{@ each accounts }}
    <option value="{{ userBankId }}">{{ bankType }} {{ dealCardId }}</option>   
       {{ else }}
       <option value="-1">请先添加银行卡</option>

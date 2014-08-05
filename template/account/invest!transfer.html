@@ -530,7 +530,7 @@ seajs.use(['components/components'], function(Components) {
   <span class="ui-list-title w70 fn-left">转让盈亏</span>
   <span class="ui-list-title w80 fn-left last"></span>
 </li>
-{{# each transferList }}
+{{@ each transferList }}
 <li class="ui-list-item fn-clear {{ itemStyle }}" data-name="transferred-out-item" data-loan-id="{{ loanId }}" data-transfer-id="{{ transferId }}">
   <div class="ui-list-item-row">
     <span class="ui-list-field w80 ph5 fn-left"><em class="ui-loantype-s {{ loanType }}" title="{{ loanTypeName }}"></em><a href="{{ loanLink }}" target="_blank">{{ loanId }}</a></span>
@@ -550,7 +550,7 @@ seajs.use(['components/components'], function(Components) {
 </li>
 {{ else }}
 <li class="ui-list-status">
-  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有已转出的债权{{/ if }}</p>
+  <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有已转出的债权{{/ if }}</p>
 </li>
 {{/ each }}
 </script>
@@ -566,11 +566,11 @@ seajs.use(['components/components'], function(Components) {
   <span class="ui-list-title w100 fn-left">成交时间</span>
   <span class="ui-list-title w40 fn-left last"></span>
 </li>
-{{# each transferLogList }}
+{{@ each transferLogList }}
 <li class="ui-list-item dark fn-clear">
-  <span class="ui-list-field w90 ph5 fn-left fn-text-overflow" title="{{ user }}{{# if isPlan }}（理{{ planId }}）{{/ if }}">
+  <span class="ui-list-field w90 ph5 fn-left fn-text-overflow" title="{{ user }}{{@ if isPlan }}（理{{ planId }}）{{/ if }}">
     <a href="{{ userLink }}" target="_blank">{{ user }}</a>
-    {{# if isPlan }}（<a href="{{ planLink }}">理{{ planId }}</a>）{{/ if }}
+    {{@ if isPlan }}（<a href="{{ planLink }}">理{{ planId }}</a>）{{/ if }}
   </span>
   <span class="ui-list-field num-s text-right w75 pr5 fn-left"><em>{{ value }}</em>/份</span>
   <span class="ui-list-field num-s text-right w75 pr5 fn-left"><em>{{ price }}</em>/份</span>
@@ -585,7 +585,7 @@ seajs.use(['components/components'], function(Components) {
 </li>
 {{ else }}
 <li class="ui-list-status">
-  <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有债权转出记录{{/ if }}</p>
+  <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有债权转出记录{{/ if }}</p>
 </li>
 {{/ each }}
 </script>
@@ -601,7 +601,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w120 fn-left">剩余份数</span>
     <span class="ui-list-title w50 fn-left last"></span>
   </li>
-  {{# each transferList }}
+  {{@ each transferList }}
   <li class="ui-list-item fn-clear {{ itemStyle }}"
     data-name="transferring-item"
     data-transfer-id="{{ transferId }}"
@@ -621,7 +621,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有转让中的债权{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有转让中的债权{{/ if }}</p>
   </li>
   {{/ each }}
   </script>
@@ -637,7 +637,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w90 fn-left">可转份数</span>
     <span class="ui-list-title w60 fn-left last"></span>
   </li>
-  {{# each transferList }}
+  {{@ each transferList }}
   <li class="ui-list-item fn-clear {{ itemStyle }}"
     data-name="transferable-item"
     data-loan-id="{{ loanId }}"
@@ -666,7 +666,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有可转让的债权{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有可转让的债权{{/ if }}</p>
   </li>
   {{/ each }}
   </script>
@@ -682,7 +682,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w100 fn-left">转入时间</span>
     <span class="ui-list-title w50 fn-left last"></span>
   </li>
-  {{# each transferList }}
+  {{@ each transferList }}
   <li class="ui-list-item fn-clear {{ itemStyle }}" data-name="transferred-in-item" data-loan-id="{{ loanId }}">
     <span class="ui-list-field w80 ph5 fn-left"><em class="ui-loantype-s {{ loanType }}" title="{{ loanTypeName }}"></em><a href="{{ loanLink }}" target="_blank">{{ loanId }}</a></span>
     <span class="ui-list-field num-s text-right w55 pr15 fn-left"><em>{{ termsLeft }}</em>个月</span>
@@ -698,7 +698,7 @@ seajs.use(['components/components'], function(Components) {
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有已转入的债权{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有已转入的债权{{/ if }}</p>
   </li>
   {{/ each }}
   </script>

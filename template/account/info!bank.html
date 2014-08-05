@@ -146,7 +146,7 @@ seajs.use(['components/components'], function(Components) {
   </div>
 <script id="bank-list-template" type="text/x-handlebars-template">
 <ul class="fn-clear">
-{{#each userBanks}}
+{{@each userBanks}}
 <li data-bank="{{userBankId}}">
 <img  alt="{{bankType}}" title="{{bankType}}" src="/static/img/banks/code_{{bankCode}}.jpg?rrdversion=20140414"/>
 <div>{{dealCardId}}</div> 

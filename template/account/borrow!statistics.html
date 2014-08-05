@@ -254,8 +254,8 @@ seajs.use(['components/components'], function(Components) {
 
 {%block after%}
   <script id="stat-template" type="text/x-handlebars-template">
-  {{# each stats }}
-  <li class="fn-clear {{ style }}" {{# if data }} data-name="category" data-category="{{ label }}" data-value="{{ value }}" {{/ if }}>
+  {{@ each stats }}
+  <li class="fn-clear {{ style }}" {{@ if data }} data-name="category" data-category="{{ label }}" data-value="{{ value }}" {{/ if }}>
     <span class="fn-left w160 pl20">{{ label }}</span>
     <span class="fn-left w125 text-right">{{ formattedValue }}</span>
   </li>

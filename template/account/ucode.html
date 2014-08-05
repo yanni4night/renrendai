@@ -214,7 +214,7 @@ seajs.use(['components/components'], function(Components) {
                     <span class="ui-list-title w80 fn-left text-right last">加入费用</span>
                 </li>
 
-                {{# each financePlanList }}
+                {{@ each financePlanList }}
                 <li class="ui-list-item fn-clear">
                     <span class="ui-list-field w240 ph10 fn-text-overflow fn-left"><a target="_blank" href="/financeplan/listPlan!detailPlan.action?financePlanId={{ id }}">{{ name }}</a></span>
                     <span class="ui-list-field  text-right w120 fn-left">{{expectedRate}}每年</span>
@@ -224,7 +224,7 @@ seajs.use(['components/components'], function(Components) {
                 </li>
                 {{ else }}
                 <li class="ui-list-status">
-                    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有兑换期数{{/ if }}</p>
+                    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有兑换期数{{/ if }}</p>
                 </li>
                 {{/ each }}
             </ul>

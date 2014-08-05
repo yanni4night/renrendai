@@ -228,7 +228,7 @@ seajs.use(['components/components'], function(Components) {
   </div>
 <script id="withdraw-list-template" type="text/x-handlebars-template">
 <ul class="fn-clear">
-{{#each userBanks}}
+{{@each userBanks}}
 <li class="bankli" data-bank="{{userBankId}}"><img  alt="{{bankType}}" title="{{bankType}}" src="/static/img/banks/code_{{bankCode}}.jpg"/><div class="card">{{dealCardId}}</div><em></em> </li>
 {{ else }}
 <li><a href="/account/userBank!toAdd.action" class="openLink addBank"><img src="/static/img/banks/add.jpg"></a><div class="card"><a href="/account/userBank!toAdd.action" class="openLink addBank">新增银行卡</a></div></li>

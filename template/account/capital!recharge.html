@@ -250,7 +250,7 @@ seajs.use(['components/components'], function(Components) {
   </div>
  <script id="rechargeBank-list-template" type="text/x-handlebars-template">
 <dt>{{title}}</dt>
-{{#each rows}}
+{{@each rows}}
 <dd>
   <input type="radio" name="bank" data-type="{{payChannelStr}}" value="{{code}}" id="bank_{{bankInfoId}}"/><label for="bank_{{bankInfoId}}"><img alt="{{fullName}}" title="{{fullName}}" src="{{logo}}" /></label>
 </dd>

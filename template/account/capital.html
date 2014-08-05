@@ -250,18 +250,18 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-title w110 fn-left balance">结余</span>
     <span class="ui-list-title w180 fn-left note last">备注</span>
   </li>
-  {{# each pointLogs }}
+  {{@ each pointLogs }}
   <li class="ui-list-item fn-clear {{ itemStyle }}">
     <span class="ui-list-field text-center w100 fn-left">{{ time }}</span>
-    <span class="ui-list-field w160 ph5 fn-left fn-text-overflow">{{ type }}{{# if loanId }}<em class="text-small">（<a href="{{ loanLink }}" target="_blank">{{ loanId }}</a>）</em>{{/ if }}</span>
-    <span class="ui-list-field text-right num-s w80 pr10 fn-left">{{# if credit }}<em class="value-small">{{ credit }}</em>{{/ if }}</span>
-    <span class="ui-list-field text-right num-s w80 pr10 fn-left">{{# if debit }}<em class="value-small">{{ debit }}</em>{{/ if }}</span>
+    <span class="ui-list-field w160 ph5 fn-left fn-text-overflow">{{ type }}{{@ if loanId }}<em class="text-small">（<a href="{{ loanLink }}" target="_blank">{{ loanId }}</a>）</em>{{/ if }}</span>
+    <span class="ui-list-field text-right num-s w80 pr10 fn-left">{{@ if credit }}<em class="value-small">{{ credit }}</em>{{/ if }}</span>
+    <span class="ui-list-field text-right num-s w80 pr10 fn-left">{{@ if debit }}<em class="value-small">{{ debit }}</em>{{/ if }}</span>
     <span class="ui-list-field text-right num-s w100 pr10 fn-left"><em class="value-small">{{ balance }}</em></span>
     <span class="ui-list-field text-small w160 ph10 fn-left fn-text-overflow last" title="{{ note }}">{{ note }}</span>
   </li>
   {{ else }}
   <li class="ui-list-status">
-    <p class="color-gray-text">{{# if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
+    <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有记录{{/ if }}</p>
   </li>
   {{/ each }}
   </script>
