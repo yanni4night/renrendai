@@ -101,12 +101,27 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
             }
         }
     });*/
+    
+    $('#yn-getsms').click(function(e){
+        e.preventDefault();
+         Form.sendPhoneCode("phone", "yn-getsms", /*"/sendPhoneCode!voiceCode.action?&checkCode=reg&phone="*/"/account/sendsms?mobile=", {
+                onStart: function() {
+                    console.log('start');
+                    //e($("#getMobileCode"), false);
+                },
+                onClear: function() {
+                    console.log('clear');
+                    //e($("#getMobileCode"), true);
+                }
+            });
+    });
+
     //注册表单
     Form.validate({
         target: "#reg",
         showTip: $("#reg").data("showtip") === true,
         before: function() {
-
+/*
             i = Form.sendPhoneCode("phone", "getVoiceCode", "/sendPhoneCode!voiceCode.action?&checkCode=reg&phone=", {
                 onStart: function() {
                     e($("#getMobileCode"), false);
@@ -123,7 +138,7 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
                 onClear: function() {
                     e($("#getVoiceCode"), true);
                 }
-            })
+            })*/
             /*, Form.randImage(),$("#refreshCode").click(function() {
                 $("#randImage").trigger("click")
             })*/

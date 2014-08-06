@@ -1,5 +1,6 @@
 node_modules
 *.swp
+*.dump
 build
 *DS_Store
 ._*

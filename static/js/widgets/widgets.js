@@ -180,12 +180,16 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                     isNickName: true,
                     isHasUnderlineFrontEnd: true,
                     isNickNameLength: true,
-                    isHasYX: true,
+                    isHasYX: true//,
                     //remote: "/checkUserNickname!checkNickname.action"
                 },
                 username: {
                     required: true,
                     isMobile: true,
+                    remote:{
+                        url:'/account/checkusername',
+                        name:'userid'
+                    }
                     //remote: "/checkEmail.action"
                 },
                 password: {

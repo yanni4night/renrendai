@@ -1142,7 +1142,7 @@ $.extend($.validator, {
 			var validator = this;
 			this.startRequest(element);
 			var data = {};
-			data[element.name] = value;
+			data[param.name||element.name] = value;
 			$.ajax($.extend(true, {
 				url: param,
 				mode: "abort",
