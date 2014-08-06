@@ -109,6 +109,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
     e.err = {
         required: "不能为空",
         remoteCode: "验证码输入错误",
+        mobileCode: "验证码输入错误",
         isEmail: "请输入有效的邮箱地址",
         equalPsw: "您输入的密码不一致",
         length: "字数超过限制",
@@ -161,7 +162,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 data: a.data,
                 dataFilter: function(b) {
                     var c = jQuery.parseJSON(b);
-                    return "true" == c.result ? (a.success && "function" == typeof a.success && a.success.call(this, b), !0) : (a.failed && "function" == typeof a.failed && a.failed.call(this, b), !1)
+                    return "true" == c.result ? (a.success && "function" == typeof a.success && a.success.call(this, b), true) : (a.failed && "function" == typeof a.failed && a.failed.call(this, b), false)
                 }
             },
             messages: {
@@ -175,221 +176,221 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         rules: {
             register: {
                 nickName: {
-                    required: !0,
-                    isNickName: !0,
-                    isHasUnderlineFrontEnd: !0,
-                    isNickNameLength: !0,
-                    isHasYX: !0,
-                    remote: "/checkUserNickname!checkNickname.action"
+                    required: true,
+                    isNickName: true,
+                    isHasUnderlineFrontEnd: true,
+                    isNickNameLength: true,
+                    isHasYX: true,
+                    //remote: "/checkUserNickname!checkNickname.action"
                 },
                 username: {
-                    required: !0,
-                    isMobile: !0,
-                    remote: "/checkEmail.action"
+                    required: true,
+                    isMobile: true,
+                    //remote: "/checkEmail.action"
                 },
                 password: {
-                    required: !0,
+                    required: true,
                     minlength: 6,
                     maxlength: 16,
-                    isPassWord: !0,
-                    isPassNotAllNum: !0,
-                    isPassNotRepeat: !0
+                    isPassWord: true,
+                    isPassNotAllNum: true,
+                    isPassNotRepeat: true
                 },
                 confirm_password: {
-                    required: !0,
+                    required: true,
                     equalTo: "#password"
                 },
-                randCode: {
-                    required: !0,
+                mobileCode: {
+                    required: true,
                     minlength: 4,
                     maxlength: 4
                 },
                 agree: {
-                    required: !0
+                    required: true
                 },
                 intention: {
-                    required: !0
+                    required: true
                 }
             },
             mobileCodeForReg: {
                 mobileCode: {
-                    required: !0,
+                    required: true,
                     minlength: 4,
                     maxlength: 4
                 }
             },
             login: {
                 j_username: {
-                    required: !0,
-                    isMobileOrEmail: !0
+                    required: true,
+                    isMobileOrEmail: true
                 },
                 username: {
-                    required: !0,
-                    isMobileOrEmail: !0
+                    required: true,
+                    isMobileOrEmail: true
                 },
                 j_password: {
-                    required: !0
+                    required: true
                 },
                 password: {
-                    required: !0
+                    required: true
                 },
                 j_code: {
-                    required: !0
+                    required: true
                 }
             },
             loaninfo: {
                 borrowTitle: {
-                    required: !0,
+                    required: true,
                     maxlength: 14
                 },
                 borrowAmount: {
-                    required: !0,
-                    isBorrowAmount: !0
+                    required: true,
+                    isBorrowAmount: true
                 },
                 apr: {
-                    required: !0,
-                    isOneDecimal: !0,
-                    isRateOver: !0
+                    required: true,
+                    isOneDecimal: true,
+                    isRateOver: true
                 },
                 repayTime: {
-                    required: !0
+                    required: true
                 },
                 endDate: {
-                    required: !0
+                    required: true
                 },
                 borrowDesc: {
-                    required: !0,
+                    required: true,
                     minlength: 20,
                     maxlength: 500
                 },
                 agree_contract: {
-                    required: !0
+                    required: true
                 }
             },
             borrowerinfo: {
                 realName: {
-                    required: !0,
+                    required: true,
                     minlength: 2,
                     maxlength: 32
                 },
                 idNo: {
-                    required: !0,
-                    isIDNum: !0
+                    required: true,
+                    isIDNum: true
                 },
                 graduation: {
-                    required: !0
+                    required: true
                 },
                 university: {
                     maxlength: 20
                 },
                 homeProvince: {
-                    required: !0
+                    required: true
                 },
                 homeCity: {
-                    required: !0
+                    required: true
                 },
                 liveProvince: {
-                    required: !0
+                    required: true
                 },
                 liveCity: {
-                    required: !0
+                    required: true
                 },
                 address: {
-                    required: !0,
+                    required: true,
                     maxlength: 30
                 },
                 postCode: {
-                    required: !0,
-                    isPostCode: !0
+                    required: true,
+                    isPostCode: true
                 },
                 phone: {
-                    isPhone: !0
+                    isPhone: true
                 },
                 marriage: {
-                    required: !0
+                    required: true
                 },
                 hasChild: {
-                    required: !0
+                    required: true
                 },
                 urgentContact: {
-                    required: !0,
+                    required: true,
                     maxlength: 32
                 },
                 urgentRelation: {
-                    required: !0,
+                    required: true,
                     maxlength: 10
                 },
                 urgentMobile: {
-                    required: !0,
-                    isMobile: !0
+                    required: true,
+                    isMobile: true
                 },
                 urgentContact2: {
-                    required: !0,
+                    required: true,
                     maxlength: 32
                 },
                 urgentRelation2: {
-                    required: !0,
+                    required: true,
                     maxlength: 10
                 },
                 urgentMobile2: {
-                    required: !0,
-                    isMobile: !0
+                    required: true,
+                    isMobile: true
                 },
                 office: {
-                    required: !0,
+                    required: true,
                     maxlength: 32
                 },
                 jobType: {
-                    required: !0
+                    required: true
                 },
                 position: {
-                    required: !0,
+                    required: true,
                     maxlength: 10
                 },
                 province: {
-                    required: !0
+                    required: true
                 },
                 city: {
-                    required: !0
+                    required: true
                 },
                 officeType: {
-                    required: !0
+                    required: true
                 },
                 officeDomain: {
-                    required: !0
+                    required: true
                 },
                 officeScale: {
-                    required: !0
+                    required: true
                 },
                 workYears: {
-                    required: !0
+                    required: true
                 },
                 salary: {
-                    required: !0
+                    required: true
                 },
                 workPhone: {
-                    required: !0,
-                    isPhone: !0
+                    required: true,
+                    isPhone: true
                 },
                 workEmail: {
-                    required: !0,
-                    isEmail: !0
+                    required: true,
+                    isEmail: true
                 },
                 officeAddress: {
-                    required: !0,
+                    required: true,
                     maxlength: 32
                 },
                 hasHouse: {
-                    required: !0
+                    required: true
                 },
                 hasLoan: {
-                    required: !0
+                    required: true
                 },
                 hasCar: {
-                    required: !0
+                    required: true
                 },
                 carLoan: {
-                    required: !0
+                    required: true
                 },
                 carBrand: {
                     maxlength: 15
@@ -400,97 +401,97 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             },
             userbasic: {
                 graduation: {
-                    required: !0
+                    required: true
                 },
                 university: {
                     maxlength: 20
                 },
                 marriage: {
-                    required: !0
+                    required: true
                 },
                 address: {
-                    required: !0,
+                    required: true,
                     maxlength: 30
                 },
                 officeDomain: {
-                    required: !0
+                    required: true
                 },
                 officeScale: {
-                    required: !0
+                    required: true
                 },
                 position: {
-                    required: !0,
+                    required: true,
                     maxlength: 10
                 },
                 salary: {
-                    required: !0
+                    required: true
                 }
             },
             recharge: {
                 bank: {
-                    required: !0
+                    required: true
                 },
                 free: {
-                    required: !1
+                    required: false
                 },
                 amount: {
-                    required: !0,
-                    isAmount: !0,
+                    required: true,
+                    isAmount: true,
                     min: 1,
                     max: 3e5
                 }
             },
             withdraw: {
                 amount: {
-                    required: !0,
-                    isAmount: !0,
+                    required: true,
+                    isAmount: true,
                     min: 1,
-                    isEnough: !0
+                    isEnough: true
                 },
                 cashPassword: {
-                    required: !0,
-                    isPassWord: !0
+                    required: true,
+                    isPassWord: true
                 },
                 userBankId: {
-                    required: !0
+                    required: true
                 }
             },
             addcard: {
                 bankDataId: {
-                    required: !0
+                    required: true
                 },
                 address: {
-                    required: !0
+                    required: true
                 },
                 deposit: {
-                    required: !0
+                    required: true
                 },
                 cardId: {
-                    required: !0,
+                    required: true,
                     minlength: 12,
                     maxlength: 19,
-                    isBankCard: !0
+                    isBankCard: true
                 },
                 reBankCard: {
-                    required: !0,
+                    required: true,
                     equalTo: "#cardId",
-                    isBankCard: !0
+                    isBankCard: true
                 }
             },
             modpsw: {
                 oldPassword: {
-                    required: !0,
+                    required: true,
                     minlength: 6,
                     maxlength: 16
                 },
                 newPassword: {
-                    required: !0,
-                    isPassWord: !0,
+                    required: true,
+                    isPassWord: true,
                     minlength: 6,
                     maxlength: 16
                 },
                 newPassword2: {
-                    required: !0,
+                    required: true,
                     minlength: 6,
                     maxlength: 16,
                     equalTo: "#newPassword"
@@ -498,18 +499,18 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             },
             modCashPsw: {
                 cashPassword: {
-                    required: !0,
+                    required: true,
                     minlength: 6,
                     maxlength: 16
                 },
                 newCashPwd: {
-                    required: !0,
-                    isPassWord: !0,
+                    required: true,
+                    isPassWord: true,
                     minlength: 6,
                     maxlength: 16
                 },
                 newCashPwd2: {
-                    required: !0,
+                    required: true,
                     minlength: 6,
                     maxlength: 16,
                     equalTo: "#newCashPwd"
@@ -517,18 +518,18 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             },
             findCashPswStepOne: {
                 validateCode: {
-                    required: !0
+                    required: true
                 }
             },
             findCashPswStepTwo: {
                 newCashPwd: {
-                    required: !0,
-                    isPassWord: !0,
+                    required: true,
+                    isPassWord: true,
                     minlength: 6,
                     maxlength: 16
                 },
                 newCashPwd2: {
-                    required: !0,
+                    required: true,
                     minlength: 6,
                     maxlength: 16,
                     equalTo: "#newCashPwd"
@@ -536,197 +537,197 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             },
             modMobileByPhoneStepOne: {
                 validateCode: {
-                    required: !0
+                    required: true
                 },
                 cashPassword: {
-                    required: !0
+                    required: true
                 }
             },
             modMobileByPhoneStepTwo: {
                 phone: {
-                    required: !0,
-                    isMobile: !0
+                    required: true,
+                    isMobile: true
                 },
                 validateCode: {
-                    required: !0
+                    required: true
                 }
             },
             modMobileByIdStepOne: {
                 idNo: {
-                    required: !0,
-                    isIDNum: !0
+                    required: true,
+                    isIDNum: true
                 },
                 cashPassword: {
-                    required: !0
+                    required: true
                 }
             },
             modMobileByIdStepTwo: {
                 phone: {
-                    required: !0,
-                    isMobile: !0
+                    required: true,
+                    isMobile: true
                 },
                 validateCode: {
-                    required: !0
+                    required: true
                 }
             },
             emailUpdateByOldStepOne: {
                 code: {
-                    required: !0,
+                    required: true,
                     remote: {
                         url: "/account/checkCode.action",
                         dataFilter: function(a) {
                             var b = jQuery.parseJSON(a);
-                            return "true" == b.result ? !0 : !1
+                            return "true" == b.result ? true : false
                         }
                     }
                 }
             },
             emailUpdateByOldStepTwo: {
                 email: {
-                    required: !0,
-                    isEmail: !0
+                    required: true,
+                    isEmail: true
                 }
             },
             emailUpdateByMobileStepOne: {
                 code: {
-                    required: !0
+                    required: true
                 },
                 idCard: {
-                    required: !0,
-                    isIDNum: !0
+                    required: true,
+                    isIDNum: true
                 }
             },
             setId: {
                 realName: {
-                    required: !0,
-                    isRealName: !0
+                    required: true,
+                    isRealName: true
                 },
                 idNo: {
-                    required: !0,
-                    isIDNum: !0
+                    required: true,
+                    isIDNum: true
                 }
             },
             setEmail: {
                 email: {
-                    required: !0,
-                    isEmail: !0
+                    required: true,
+                    isEmail: true
                 }
             },
             setMobile: {
                 mobile: {
-                    required: !0,
-                    isMobile: !0
+                    required: true,
+                    isMobile: true
                 },
                 validCode: {
-                    required: !0
+                    required: true
                 }
             },
             setCashPwd: {
                 cashPwd: {
-                    required: !0,
-                    isPassWord: !0
+                    required: true,
+                    isPassWord: true
                 },
                 cashPwd2: {
-                    required: !0,
+                    required: true,
                     equalTo: "#cashPwd"
                 }
             },
             setNickName: {
                 nickName: {
-                    required: !0,
-                    isNickName: !0,
-                    isHasUnderlineFrontEnd: !0,
-                    isNickNameLength: !0,
-                    isHasYX: !0,
+                    required: true,
+                    isNickName: true,
+                    isHasUnderlineFrontEnd: true,
+                    isNickNameLength: true,
+                    isHasYX: true,
                     remote: "/checkUserNickname!checkNickname.action"
                 }
             },
             creditWeibo: {
                 credit_web: {
-                    required: !0
+                    required: true
                 }
             },
             creditVideo: {
                 usemail: {
-                    required: !0
+                    required: true
                 }
             },
             creditGraduation: {
                 validCode: {
-                    required: !0,
-                    isEducationCode: !0
+                    required: true,
+                    isEducationCode: true
                 }
             },
             notLoginFindPswByEmail: {
                 email: {
-                    required: !0,
-                    isEmail: !0
+                    required: true,
+                    isEmail: true
                 },
                 randCode: {
-                    required: !0
+                    required: true
                 }
             },
             notLoginFindPswByMobile: {
                 mobile: {
-                    required: !0,
-                    isMobile: !0
+                    required: true,
+                    isMobile: true
                 },
                 randCode: {
-                    required: !0
+                    required: true
                 }
             },
             notLoginFindPswByEmailCode: {
                 validCode: {
-                    required: !0
+                    required: true
                 }
             },
             notLoginFindPswByMobileCode: {
                 validCode: {
-                    required: !0
+                    required: true
                 }
             },
             notLoginFindPswResetPsw: {
                 password: {
-                    required: !0,
-                    isPassWord: !0,
+                    required: true,
+                    isPassWord: true,
                     minlength: 6,
                     maxlength: 16
                 },
                 password2: {
-                    required: !0,
+                    required: true,
                     equalTo: "#password"
                 }
             },
             calculator: {
                 borrowAmount: {
-                    required: !0,
-                    isBorrowAmount: !0
+                    required: true,
+                    isBorrowAmount: true
                 },
                 yearRate: {
-                    required: !0,
-                    isOneDecimal: !0,
-                    isRateOver: !0
+                    required: true,
+                    isOneDecimal: true,
+                    isRateOver: true
                 }
             },
             ucode: {
                 ucodeSerial: {
-                    required: !0
+                    required: true
                 }
             },
             accontRsvConfirm: {
                 contract: {
-                    required: !0
+                    required: true
                 }
             },
             confirmReserve: {
                 randCode: {
-                    required: !0
+                    required: true
                 },
                 joinContract: {
-                    required: !0
+                    required: true
                 },
                 reserveContract: {
-                    required: !0
+                    required: true
                 }
             }
         },
@@ -757,7 +758,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                     required: e.err.required,
                     equalTo: e.err.equalTo
                 },
-                randCode: {
+                mobileCode: {
                     required: e.err.required,
                     minlength: e.err.codeLength,
                     maxlength: e.err.codeLength
@@ -1320,13 +1321,13 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                     encoding: "multipart/form-data",
                     enctype: "multipart/form-data"
                 }), h.timeout && (q = setTimeout(function() {
-                    p = !0, g(t)
+                    p = true, g(t)
                 }, h.timeout));
                 var m = [];
                 try {
                     if (h.extraData)
                         for (var n in h.extraData) h.extraData.hasOwnProperty(n) && m.push(d.isPlainObject(h.extraData[n]) && h.extraData[n].hasOwnProperty("name") && h.extraData[n].hasOwnProperty("value") ? d('<input type="hidden" name="' + h.extraData[n].name + '">').val(h.extraData[n].value).appendTo(r)[0] : d('<input type="hidden" name="' + n + '">').val(h.extraData[n]).appendTo(r)[0]);
-                    h.iframeTarget || (k.appendTo("body"), l.attachEvent ? l.attachEvent("onload", g) : l.addEventListener("load", g, !1)), setTimeout(b, 15);
+                    h.iframeTarget || (k.appendTo("body"), l.attachEvent ? l.attachEvent("onload", g) : l.addEventListener("load", g, false)), setTimeout(b, 15);
                     try {
                         r.submit()
                     } catch (o) {
@@ -1343,7 +1344,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                     if (y = c(l), y || (a = u), a === t && m) return m.abort("timeout"), void s.reject(m, "timeout");
                     if (a == u && m) return m.abort("server abort"), void s.reject(m, "error", "server abort");
                     if (y && y.location.href != h.iframeSrc || p) {
-                        l.detachEvent ? l.detachEvent("onload", g) : l.removeEventListener("load", g, !1);
+                        l.detachEvent ? l.detachEvent("onload", g) : l.removeEventListener("load", g, false);
                         var b, e = "success";
                         try {
                             if (p) throw "timeout";
@@ -1375,7 +1376,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                         } catch (C) {
                             e = "error", m.error = b = C || e
                         }
-                        m.aborted && (e = null), m.status && (e = m.status >= 200 && m.status < 300 || 304 === m.status ? "success" : "error"), "success" === e ? (h.success && h.success.call(h.context, x, "success", m), s.resolve(m.responseText, "success", m), i && d.event.trigger("ajaxSuccess", [m, h])) : e && (void 0 === b && (b = m.statusText), h.error && h.error.call(h.context, m, e, b), s.reject(m, "error", b), i && d.event.trigger("ajaxError", [m, h, b])), i && d.event.trigger("ajaxComplete", [m, h]), i && !--d.active && d.event.trigger("ajaxStop"), h.complete && h.complete.call(h.context, m, e), z = !0, h.timeout && clearTimeout(q), setTimeout(function() {
+                        m.aborted && (e = null), m.status && (e = m.status >= 200 && m.status < 300 || 304 === m.status ? "success" : "error"), "success" === e ? (h.success && h.success.call(h.context, x, "success", m), s.resolve(m.responseText, "success", m), i && d.event.trigger("ajaxSuccess", [m, h])) : e && (void 0 === b && (b = m.statusText), h.error && h.error.call(h.context, m, e, b), s.reject(m, "error", b), i && d.event.trigger("ajaxError", [m, h, b])), i && d.event.trigger("ajaxComplete", [m, h]), i && !--d.active && d.event.trigger("ajaxStop"), h.complete && h.complete.call(h.context, m, e), z = true, h.timeout && clearTimeout(q), setTimeout(function() {
                             h.iframeTarget || k.remove(), m.responseXML = null
                         }, 100)
                     }
@@ -1383,7 +1384,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             }
             var h, i, j, k, l, m, n, o, p, q, r = a[0],
                 s = d.Deferred();
-            if (h = d.extend(!0, {}, d.ajaxSettings, b), h.context = h.context || h, j = "jqFormIO" + (new Date).getTime(), h.iframeTarget ? (k = d(h.iframeTarget), o = k.attr2("name"), o ? j = o : k.attr2("name", j)) : (k = d('<iframe name="' + j + '" src="' + h.iframeSrc + '" />'), k.css({
+            if (h = d.extend(true, {}, d.ajaxSettings, b), h.context = h.context || h, j = "jqFormIO" + (new Date).getTime(), h.iframeTarget ? (k = d(h.iframeTarget), o = k.attr2("name"), o ? j = o : k.attr2("name", j)) : (k = d('<iframe name="' + j + '" src="' + h.iframeSrc + '" />'), k.css({
                 position: "absolute",
                 top: "-1000px",
                 left: "-1000px"
@@ -1404,7 +1405,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                     } catch (c) {}
                     k.attr("src", h.iframeSrc), m.error = b, h.error && h.error.call(h.context, m, b, a), i && d.event.trigger("ajaxError", [m, h, b]), h.complete && h.complete.call(h.context, m, b)
                 }
-            }, i = h.global, i && 0 === d.active++ && d.event.trigger("ajaxStart"), i && d.event.trigger("ajaxSend", [m, h]), h.beforeSend && h.beforeSend.call(h.context, m, h) === !1) return h.global && d.active--, s.reject(), s;
+            }, i = h.global, i && 0 === d.active++ && d.event.trigger("ajaxStart"), i && d.event.trigger("ajaxSend", [m, h]), h.beforeSend && h.beforeSend.call(h.context, m, h) === false) return h.global && d.active--, s.reject(), s;
             if (m.aborted) return s.reject(), s;
             n = r.clk, n && (o = n.name, o && !n.disabled && (h.extraData = h.extraData || {}, h.extraData[o] = n.value, "image" == n.type && (h.extraData[o + ".x"] = r.clk_x, h.extraData[o + ".y"] = r.clk_y)));
             var t = 1,
@@ -1433,7 +1434,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 success: b
             } : void 0 === b && (b = {}), b.msg = function(a, c) {
                 e.msg(b.msgafter, a, c)
-            }, f = b.type || a.attr("method"), g = b.url || a.attr("action"), h = "string" == typeof g ? d.trim(g) : "", h && (h = (h.match(/^([^#]+)/) || [])[1]), b.extraData && (d.isPlainObject(b.extraData) || "array" == d.type(b.extraData)) && (j = d.param(b.extraData)), i = b.data ? b.data : a.serialize(), i = j ? i + "&" + j : i, b.debug && e.log(i), b = d.extend(!0, {
+            }, f = b.type || a.attr("method"), g = b.url || a.attr("action"), h = "string" == typeof g ? d.trim(g) : "", h && (h = (h.match(/^([^#]+)/) || [])[1]), b.extraData && (d.isPlainObject(b.extraData) || "array" == d.type(b.extraData)) && (j = d.param(b.extraData)), i = b.data ? b.data : a.serialize(), i = j ? i + "&" + j : i, b.debug && e.log(i), b = d.extend(true, {
                 url: h,
                 success: d.ajaxSettings.success,
                 type: f || "GET",
@@ -1464,23 +1465,23 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         }
     }, e.is = {
         isDate: function(a, b, c) {
-            if (isNaN(a) || isNaN(b) || isNaN(c)) return !1;
-            if (b > 12 || 1 > b) return !1;
-            if (1 > c || c > 31) return !1;
-            if ((4 == b || 6 == b || 9 == b || 11 == b) && c > 30) return !1;
+            if (isNaN(a) || isNaN(b) || isNaN(c)) return false;
+            if (b > 12 || 1 > b) return false;
+            if (1 > c || c > 31) return false;
+            if ((4 == b || 6 == b || 9 == b || 11 == b) && c > 30) return false;
             if (2 == b) {
-                if (c > 29) return !1;
-                if ((a % 100 === 0 && a % 400 !== 0 || a % 4 !== 0) && c > 28) return !1
+                if (c > 29) return false;
+                if ((a % 100 === 0 && a % 400 !== 0 || a % 4 !== 0) && c > 28) return false
             }
-            return !0
+            return true
         },
         isIDNum: function(a) {
             var b;
-            if (18 != a.length) return !1;
-            if (b = /^\d{17}(\d|x|X)$/, !b.exec(a)) return !1;
-            if (!e.is.isDate(a.substring(6, 10), a.substring(10, 12), a.substring(12, 14))) return !1;
+            if (18 != a.length) return false;
+            if (b = /^\d{17}(\d|x|X)$/, !b.exec(a)) return false;
+            if (!e.is.isDate(a.substring(6, 10), a.substring(10, 12), a.substring(12, 14))) return false;
             for (var c = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"], d = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1], f = 0, g = 0; g < a.length - 1; g++) f += a.substring(g, g + 1) * d[g];
-            return f %= 11, a.substring(a.length - 1, a.length).toUpperCase() != c[f] ? !1 : !0
+            return f %= 11, a.substring(a.length - 1, a.length).toUpperCase() != c[f] ? false : true
         },
         isUserName: function(a) {
             var b = /^\w+(@)\w+(\.\w+)(\.\w+|)$/,
@@ -1549,10 +1550,10 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             return /^(([1-9]{1}\d*)|([0]{1}))(\.(\d){1})?$/.test(a)
         },
         isLuhn: function(a) {
-            if (/[^0-9-\s]+/.test(a)) return !1;
+            if (/[^0-9-\s]+/.test(a)) return false;
             var b = 0,
                 c = 0,
-                d = !1;
+                d = false;
             a = a.replace(/\D/g, "");
             for (var e = a.length - 1; e >= 0; e--) {
                 var f = a.charAt(e);
@@ -1561,11 +1562,11 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             return b % 10 === 0
         }
     }, e.isEmptyObj = function(a) {
-        var b = !0;
+        var b = true;
         if ("[object Array]" === Object.prototype.toString.call(a)) b = !a.length;
         else {
             a = new Object(a);
-            for (var c in a) return !1
+            for (var c in a) return false
         }
         return b
     }, e.comma = function(a, b) {
@@ -1746,8 +1747,8 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             validateMethodArr: [],
             validateData: {},
             tip: {},
-            showTip: !1,
-            inputTheme: !1,
+            showTip: false,
+            inputTheme: false,
             before: function() {}
         };
         var j = function(a, b, c) {
@@ -1770,17 +1771,17 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 g = {};
             if (b && (b = d.trim(b).split(/\s+/)), b && b.length)
                 for (var h = 0, i = b.length; i > h; h++) c.validateMethodArr.push(b[h]);
-            f && (g.name = f, "false" == a.data("required") ? g.required = !1 : "true" == a.data("required") && (g.required = !0), g.label = a.parent().children(".ui-label").text().replace("*", ""), c.fieldArr.push(g)), c.showTip && d.each(c.tip, function(b, c) {
+            f && (g.name = f, "false" == a.data("required") ? g.required = false : "true" == a.data("required") && (g.required = true), g.label = a.parent().children(".ui-label").text().replace("*", ""), c.fieldArr.push(g)), c.showTip && d.each(c.tip, function(b, c) {
                 return c && f == b ? (a.focus(function() {
                     e.tipfocus(a, c)
                 }).blur(function() {
                     e.tipblur(a)
-                }), !1) : void 0
+                }), false) : void 0
             })
         }), h = c.fieldArr.length, !h) throw "fieldArr is empty";
         return c.validateData = d.extend(e.validateData, c.validateData), d.each(c.validateData, function(a, b) {
             i[a] = "rules" == a ? j(b[c.name], c.fieldArr, function(a, b, c) {
-                return (c.required || c.required === !1) && (b.required = !!c.required), b
+                return (c.required || c.required === false) && (b.required = !!c.required), b
             }) : "messages" == a ? j(b[c.name], c.fieldArr, function(a, b, c) {
                 return b.required == e.err.required && (b.required = c.label + e.err.required), b
             }) : b
@@ -1800,7 +1801,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         c.on("click", function() {
             return d("body,html").animate({
                 scrollTop: 0
-            }, 800), !1
+            }, 800), false
         }).hide(), d(window).scroll(function() {
             d(this).scrollTop() > 200 ? c.fadeIn() : c.fadeOut()
         }).resize(function() {
@@ -1819,7 +1820,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             delay: a.delay || DEFAULT_DELAY,
             container: a.container,
             checkboxTrigger: a.checkboxTrigger,
-            isMultiterm: a.isMultiterm || !1,
+            isMultiterm: a.isMultiterm || false,
             categoryTag: a.categoryTag || ".category-tag",
             changed: a.changed,
             switcher: ".ui-filter-switcher",
@@ -1859,7 +1860,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         initSwitcher: function() {
             var a = this;
             d(a.switcher).click(function() {
-                a.isMultiterm ? (d(this).removeClass("active"), a.isMultiterm = !1, a.container.find("li.all").click()) : (d(this).addClass("active"), a.isMultiterm = !0)
+                a.isMultiterm ? (d(this).removeClass("active"), a.isMultiterm = false, a.container.find("li.all").click()) : (d(this).addClass("active"), a.isMultiterm = true)
             })
         },
         activate: function(a) {
@@ -1943,7 +1944,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 f = this._ui.sortable;
             for (a = 0; a < f.length; a++) b = d(f[a]), c = b.data("name"), b.hasClass("asc") ? (e.orderBy = c, e.order = "ASC") : b.hasClass("desc") && (e.orderBy = c, e.order = "DESC");
             var g = this._ui.filterable;
-            for (a = 0; a < g.length; a++) b = d(g[a]), c = b.data("name"), b.hasClass("checked") && (e[c] = !0);
+            for (a = 0; a < g.length; a++) b = d(g[a]), c = b.data("name"), b.hasClass("checked") && (e[c] = true);
             return e
         }
     });
@@ -1991,7 +1992,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             _params: a.params || {},
             _filter: null,
             _header: null,
-            _isLoading: !1
+            _isLoading: false
         })
     };
     d.extend(j.prototype, {
@@ -2008,7 +2009,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             "boolean" == typeof this.hasFilter && (a = {
                 container: d("#" + this.name + "-filter"),
                 changed: function(a, b) {
-                    var c = a.getParams(!0);
+                    var c = a.getParams(true);
                     d.extend(c, b), a._update(c)
                 }
             }), this._filter = new g(a, this).init()
@@ -2045,7 +2046,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             }
         },
         getParams: function(a, b) {
-            var c = jQuery.extend(!0, {}, this._params);
+            var c = jQuery.extend(true, {}, this._params);
             return this.hasFilter && !a && d.extend(c, this._filter.getParams()), this.hasHeader && !b && d.extend(c, this._header.getParams()), c
         },
         render: function(a) {
@@ -2074,10 +2075,10 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             i.length > 0 && i.remove()
         },
         startLoading: function() {
-            this._isLoading = !0, 0 === this.container.children("li.ui-list-loading").length && this.container.append('<li class="ui-list-loading" style="display: none;"></li>'), this.container.children("li.ui-list-loading").show()
+            this._isLoading = true, 0 === this.container.children("li.ui-list-loading").length && this.container.append('<li class="ui-list-loading" style="display: none;"></li>'), this.container.children("li.ui-list-loading").show()
         },
         stopLoading: function() {
-            this._isLoading = !1, this.container.children("li.ui-list-loading").hide()
+            this._isLoading = false, this.container.children("li.ui-list-loading").hide()
         }
     }), c.exports = j
 }), define("widgets/pswLevel", [], function(a, b, c) {
@@ -2091,13 +2092,13 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             i = d ? d.length : 0,
             j = e ? e.length : 0,
             k = f ? f.length : 0,
-            l = !1,
-            m = !1,
-            n = !1,
-            o = !1,
+            l = false,
+            m = false,
+            n = false,
+            o = false,
             p = 0,
             q = {};
-        return 6 >= g && g >= 8 ? p += 10 : g > 8 && (p += 25), i > 0 && j > 0 ? (m = !0, l = !0, p += 20) : (i || j) && (l = !0, p += 10), h >= 1 && 2 >= h ? (n = !0, p += 10) : h >= 3 && (n = !0, p += 20), 1 == k ? (o = !0, p += 10) : k > 1 && (o = !0, p += 25), m && n && o ? p += 10 : l && n && o ? p += 5 : l && n && (p += 2), b = p > 80 ? "强" : p >= 50 && 80 >= p ? "中" : "弱", q.score = p, q.level = b, q
+        return 6 >= g && g >= 8 ? p += 10 : g > 8 && (p += 25), i > 0 && j > 0 ? (m = true, l = true, p += 20) : (i || j) && (l = true, p += 10), h >= 1 && 2 >= h ? (n = true, p += 10) : h >= 3 && (n = true, p += 20), 1 == k ? (o = true, p += 10) : k > 1 && (o = true, p += 25), m && n && o ? p += 10 : l && n && o ? p += 5 : l && n && (p += 2), b = p > 80 ? "强" : p >= 50 && 80 >= p ? "中" : "弱", q.score = p, q.level = b, q
     };
     c.exports = d
 }), define("widgets/slider", ["jquery"], function(a, b, c) {
@@ -2146,7 +2147,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             var b = this;
             d.each(this.tabItems, function(a, c) {
                 var e = d(c);
-                name = e.data("name"), b.ui[name] || (b.ui[name] = {}), b.ui[name].tab = e, b.ui[name].initialized = !1
+                name = e.data("name"), b.ui[name] || (b.ui[name] = {}), b.ui[name].tab = e, b.ui[name].initialized = false
             }), d.each(this.contentItems, function(a, c) {
                 var e = d(c);
                 name = e.data("name"), b.ui[name].content = e
@@ -2154,7 +2155,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         };
     d.extend(e.prototype, {
         init: function() {
-            this._current = this.getName(this.tabs.find(".ui-tab-item-current")), this.ui[this._current].initialized = !0;
+            this._current = this.getName(this.tabs.find(".ui-tab-item-current")), this.ui[this._current].initialized = true;
             var a = this;
             this.tabItems.click(function() {
                 var b = a._current,
