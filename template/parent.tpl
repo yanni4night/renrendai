@@ -28,11 +28,11 @@
             <div class="grid_12 fn-clear">
               <div class="ui-nav fn-right">
                 <a class="ui-nav-item fn-left" href="/">首页</a>
-                <a class="ui-nav-item fn-left" href="/event/app.action" target="_blank"><i class="icon icon-app mr5"></i>移动客户端</a>
+                <!-- <a class="ui-nav-item fn-left" href="/event/app.action" target="_blank"><i class="icon icon-app mr5"></i>移动客户端</a> -->
                 <a class="ui-nav-item fn-left" href="/account/index.action">我的多网</a>
                 
                 <a class="ui-nav-item fn-left" href="/help/index.action" target="_blank">帮助</a>
-                <a class="ui-nav-item fn-left" href="http://bbs.duonet.com" target="_blank">论坛</a>
+               <!--  <a class="ui-nav-item fn-left" href="http://bbs.duonet.cn" target="_blank">论坛</a> -->
               </div>
             </div>
           </div>
@@ -232,35 +232,35 @@
                   </li>
                 </ul>
                 <ul class="fn-clear icons">
-                  <li class="fn-left">
+                  <!-- <li class="fn-left">
                     <h4 class="color-gray-text text-big">客户服务</h4>
-                  </li>
-                  <li class="fn-left"><a class="ui-footer-img-link weibo" target="_blank" href="http://e.weibo.com/duonet?ref=http%3A%2F%2Fwww.duonet.com%2F">多网新浪微博</a></li>
+                  </li> -->
+                  <!-- <li class="fn-left"><a class="ui-footer-img-link weibo" target="_blank" href="http://e.weibo.com/duonet?ref=http%3A%2F%2Fwww.duonet.cn%2F">多网新浪微博</a></li>
                   <li class="fn-left"><a class="ui-footer-img-link qq-weibo" target="_blank" href="http://t.qq.com/duonet">多网腾讯微博</a></li>
                   <li class="fn-left"><a class="ui-footer-img-link we-chat" tabindex="-1" href="#">多网微信</a></li>
-                  <li class="fn-left"><a class="ui-footer-img-link online-customer-service cursor-pointer" target="_blank" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4000278080&eid=218808P8z8p8R8y8q8y8Q&o=www.duonet.com&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">多网在线客服</a></li>
+                  <li class="fn-left"><a class="ui-footer-img-link online-customer-service cursor-pointer" target="_blank" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4000278080&eid=218808P8z8p8R8y8q8y8Q&o=www.duonet.cn&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">多网在线客服</a></li> -->
                 </ul>
               </div>
               <div class="grid_3 omega">
                 <p class="color-gray-text text-right">客服电话</p>
-                <h4 class="color-gray-text text-right ui-footer-phone-number">400-027-8080</h4>
+                <h4 class="color-gray-text text-right ui-footer-phone-number">010-52429020</h4>
                 <p class="color-gray-text text-right">9:00 - 21:00</p>
               </div>
             </div>
             <div class="ui-footer-section last">
               <div class="ui-footer-copyright">
                 <span class="ui-footer-contact-link color-gray-text">© 2014 多网 All rights reserved</span>
-                <span class="ui-footer-contact-link color-gray-text has-separator">多网商务顾问(北京)有限公司</span>
-                <span class="ui-footer-contact-link color-gray-text has-separator last"><a class="gray" target="_blank" href="/icp/icp.html">京ICP证 100953号</a></span>
+                <span class="ui-footer-contact-link color-gray-text has-separator">多网金融服务中心</span>
+                <span class="ui-footer-contact-link color-gray-text has-separator last"><a class="gray" target="_blank" href="/icp/icp.html">京ICP备 12026471号</a></span>
               </div>
-              <div class="ui-footer-verification ui-footer-narrow-hide fn-clear">
+             <!--  <div class="ui-footer-verification ui-footer-narrow-hide fn-clear">
                 <a class="ui-footer-verification-item fn-left credibility" title="多网荣获中国电子商务协会“诚信网站”认证殊荣" href="https://search.szfw.org/cert/l/CX20140315003612003651" target="_blank"></a>
                 <a class="ui-footer-verification-item fn-left trust" title="多网已通过中网权威数据库对比，获得“可信网站”身份验证，您可放心使用。" href="https://ss.knet.cn/verifyseal.dll?sn=e13042311010040288j4wq000000&ct=df&a=1&pa=931969" target="_blank"></a>
                 <a class="ui-footer-verification-item fn-left itrust" title="多网已经成为中国互联网信用评价中心网络诚信联盟成员，并且完成企业信用评级 " href="http://www.itrust.org.cn/yz/pjwx.asp?wm=2554879344" target="_blank"></a>
-                <a class="ui-footer-verification-item fn-left norton" title="多网已引入VeriSign SSL加密技术，您的隐私及个人资料安全已受最高级别的保护。" href="https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=www.duonet.com&lang=zh_cn" target="_blank"></a>
+                <a class="ui-footer-verification-item fn-left norton" title="多网已引入VeriSign SSL加密技术，您的隐私及个人资料安全已受最高级别的保护。" href="https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=www.duonet.cn&lang=zh_cn" target="_blank"></a>
                 <a class="ui-footer-verification-item fn-left police" title="多网已经完成在公安机关的信息备案，您可了解网站相关备案信息。" href="http://gawa.bjchy.gov.cn/websearch/" target="_blank"></a>
                 <a class="ui-footer-verification-item fn-left gongshang" title="多网已经完成在北京市工商局网站备案，您可了解网站相关备案信息。" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202013052900002" target="_blank"></a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -318,7 +318,7 @@
     <textarea style="display:none" id="J_stat_js_1">
     var _agt=_agt||[];
     _agt.push(['_atscu','AG_148085_IKDD']);
-    _agt.push(['_atsdomain','duonet.com']);
+    _agt.push(['_atsdomain','duonet.cn']);
     (function(){
     var ag=document.createElement('script');
     ag.type='text/javascript';

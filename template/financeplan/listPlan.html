@@ -32,7 +32,7 @@
 {{@ each rsvList }}
 <li class="ui-list-item fn-clear {{ itemStyle }}">
   <span class="ui-list-field fn-left color-gray-text w80 fn-text-overflow">&nbsp;&nbsp;{{ id }}</span>
-  <span class="ui-list-field fn-left color-gray-text w160 text-left-imp fn-text-overflow"><span class="list-ul-name" style="width:100%">{{ investor }}{{@if ucodeUsed }}<a title="U-code预定" target="_blank" href="/help/terms/terms!terms.action#ucode"><i class="list-u-code"></i></a>{{/ if }}{{@if mobileUsed }}<a title="手机预定" target="_blank" href="http://www.duonet.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span></span>
+  <span class="ui-list-field fn-left color-gray-text w160 text-left-imp fn-text-overflow"><span class="list-ul-name" style="width:100%">{{ investor }}{{@if ucodeUsed }}<a title="U-code预定" target="_blank" href="/help/terms/terms!terms.action#ucode"><i class="list-u-code"></i></a>{{/ if }}{{@if mobileUsed }}<a title="手机预定" target="_blank" href="http://www.duonet.cn/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span></span>
   <span class="ui-list-field fn-left color-gray-text w120 num-s text-left-imp fn-text-overflow"><em>{{ planAmount }}</em>元</span>
   <span class="ui-list-field fn-left color-gray-text w150 text-left-imp fn-text-overflow">{{ date }}</span>
   <span class="ui-list-field fn-left color-gray-text w80 last text-left-imp fn-text-overflow">{{ status }}</span>
@@ -53,7 +53,7 @@
 {{@ each jsonList }}
 <li class="ui-list-item fn-clear {{ itemStyle }}">
   <span class="ui-list-field fn-left w80 color-gray-text fn-text-overflow">&nbsp;&nbsp;{{ id }}</span>
-  <span class="ui-list-field fn-left w150 ph10 color-gray-text fn-text-overflow">{{ investor }}{{@if mobileUsed }}<a title="手机加入" target="_blank" href="http://www.duonet.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span>
+  <span class="ui-list-field fn-left w150 ph10 color-gray-text fn-text-overflow">{{ investor }}{{@if mobileUsed }}<a title="手机加入" target="_blank" href="http://www.duonet.cn/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span>
   <span class="ui-list-field fn-left color-gray-text num-s  w150 pr50"><em>{{ amount }}</em>元</span>
   <span class="ui-list-field fn-left color-gray-text w150 last">{{ date }}</span>
 </li>
