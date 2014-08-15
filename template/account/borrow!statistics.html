@@ -1,7 +1,7 @@
 {%extends "parent.tpl"%}
 
 {%block title%}
-借款统计 - 借款管理 - 我的人人贷帐户中心 -
+借款统计 - 借款管理 - 我的多网帐户中心 -
 {%endblock%}
 
 {%block script%}{%endblock%}
@@ -15,7 +15,7 @@
             <div class="container_12 mt10">
           <ul class="ui-breadcrumb grid_12 fn-clear">
             <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
-              <a href="/account/index.action">我的人人贷</a>
+              <a href="/account/index.action">我的多网</a>
             </li>
             <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
             <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text">
@@ -34,7 +34,7 @@
 <div class="ui-side ui-side-withicon" id="sidebar">
   <ul class="ui-side-list nav nav-list bs-docs-sidenav affix">
     <li class="ui-side-item ">
-      <a class="ui-side-item-link" href="/account/index.action"><i class="fn-left ui-icon-mid index"></i>我的人人贷</a>
+      <a class="ui-side-item-link" href="/account/index.action"><i class="fn-left ui-icon-mid index"></i>我的多网</a>
     </li>
     <li class="ui-side-item ">
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid capital"></i>资金管理</a>
@@ -122,7 +122,7 @@
      </li>
   </ul>
   <div class="ui-side-ad mt20">
-        <a  style="display: block; width:140px;overflow:hidden;"><img style="width:140px;" src="http://www.renrendai.com/upload/cms/advertising/accountIndexRight/2960ccda-628c-42b4-addc-c4a391ba847d.jpg?20140401a" alt="微信扫描"></a>
+        <a  style="display: block; width:140px;overflow:hidden;"><img style="width:140px;" src="http://www.duonet.com/upload/cms/advertising/accountIndexRight/2960ccda-628c-42b4-addc-c4a391ba847d.jpg?20140401a" alt="微信扫描"></a>
 </div>
 </div>
 <script>
@@ -139,7 +139,7 @@ seajs.use(['components/components'], function(Components) {
                             <h3 class="text-xl">借款账户统计</h3>
                             
                             <div class="mt10">
-                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您在人人贷总计借款<em class="ph10">0.00</em>元，总计需支付<em class="ph10">0.00</em>元的利息和费用</h4>
+                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您在多网总计借款<em class="ph10">0.00</em>元，总计需支付<em class="ph10">0.00</em>元的利息和费用</h4>
                                 <div class="fn-clear">
                                 <ul class="fn-left stat" id="overall-data">
                                     <li class="fn-clear rrdcolor-paleblue3-bg" data-name="category" data-category="借款利息" data-value="0.00">
@@ -163,12 +163,12 @@ seajs.use(['components/components'], function(Components) {
                                         <span class="fn-left w125 text-right">0.00</span>
                                     </li>
                                 </ul>
-                  <div class="fn-left chart" id="overall-chart" data-title="借款账户总览" data-empty="您在人人贷还没有借款"></div>
+                  <div class="fn-left chart" id="overall-chart" data-title="借款账户总览" data-empty="您在多网还没有借款"></div>
                 </div>
                             </div>
 
                             <div class="mt20">
-                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您在人人贷的借款待还总额为<em class="ph10">0.00</em>元</h4>
+                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您在多网的借款待还总额为<em class="ph10">0.00</em>元</h4>
                 <div class="fn-clear">
                                 <ul class="fn-left stat" id="to-repay-data">
                                     <li class="fn-clear rrdcolor-paleblue3-bg" data-name="category" data-category="待还本金" data-value="0.00">
@@ -197,7 +197,7 @@ seajs.use(['components/components'], function(Components) {
                             </div>
 
                             <div class="mt20">
-                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您在人人贷的借款已还总额为<em class="ph10">0.00</em>元</h4>
+                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您在多网的借款已还总额为<em class="ph10">0.00</em>元</h4>
                                 <div class="fn-clear">
                   <ul class="fn-left stat" id="repaid-data">
                                     <li class="fn-clear rrdcolor-paleblue3-bg" data-name="category" data-category="已还本金" data-value="0.00">
@@ -230,7 +230,7 @@ seajs.use(['components/components'], function(Components) {
                             </div>
 
                             <div class="mt20">
-                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">最近一年您在人人贷成功借款<em class="ph10">0.00</em>元</h4>
+                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">最近一年您在多网成功借款<em class="ph10">0.00</em>元</h4>
                 <div class="fn-clear">
                   <ul class="fn-left stat" id="succeeded-data"></ul>
                   <div class="fn-left chart" id="succeeded-chart" data-title="最近一年成功借款金额分布"></div>
@@ -238,7 +238,7 @@ seajs.use(['components/components'], function(Components) {
                             </div>
 
                             <div class="mt20">
-                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">最近六个月您在人人贷还款总计为<em class="ph10">0.00</em>元</h4>
+                                <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">最近六个月您在多网还款总计为<em class="ph10">0.00</em>元</h4>
                 <div class="fn-clear">
                   <ul class="fn-left stat" id="half-year-data"></ul>
                   <div class="fn-left chart" id="half-year-chart" data-title="最近六个月还款金额分布"></div>

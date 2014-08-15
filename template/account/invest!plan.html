@@ -1,7 +1,7 @@
 {%extends "parent.tpl"%}
 
 {%block title%}
-优选理财计划 - 理财管理 - 我的人人贷帐户中心 -
+优选理财计划 - 理财管理 - 我的多网帐户中心 -
 {%endblock%}
 
 {%block script%}{%endblock%}
@@ -15,7 +15,7 @@
     <div class="container_12 mt10">
       <ul class="ui-breadcrumb grid_12 fn-clear">
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
-          <a href="/account/index.action">我的人人贷</a>
+          <a href="/account/index.action">我的多网</a>
         </li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text">
@@ -34,7 +34,7 @@
 <div class="ui-side ui-side-withicon" id="sidebar">
   <ul class="ui-side-list nav nav-list bs-docs-sidenav affix">
     <li class="ui-side-item ">
-      <a class="ui-side-item-link" href="/account/index.action"><i class="fn-left ui-icon-mid index"></i>我的人人贷</a>
+      <a class="ui-side-item-link" href="/account/index.action"><i class="fn-left ui-icon-mid index"></i>我的多网</a>
     </li>
     <li class="ui-side-item ">
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid capital"></i>资金管理</a>
@@ -122,7 +122,7 @@
      </li>
   </ul>
   <div class="ui-side-ad mt20">
-        <a  style="display: block; width:140px;overflow:hidden;"><img style="width:140px;" src="http://www.renrendai.com/upload/cms/advertising/accountIndexRight/2960ccda-628c-42b4-addc-c4a391ba847d.jpg?20140401a" alt="微信扫描"></a>
+        <a  style="display: block; width:140px;overflow:hidden;"><img style="width:140px;" src="http://www.duonet.com/upload/cms/advertising/accountIndexRight/2960ccda-628c-42b4-addc-c4a391ba847d.jpg?20140401a" alt="微信扫描"></a>
 </div>
 </div>
 <script>
@@ -239,8 +239,8 @@ seajs.use(['components/components'], function(Components) {
     <div class="mt20 fn-clear">
       <div class="fn-left w100">退出回款方式</div>
       <div class="fn-left">
-        <div data-name="to-renrendai">
-          <input type="radio" checked="checked" /> 提取至人人贷主账户（推荐）
+        <div data-name="to-duonet">
+          <input type="radio" checked="checked" /> 提取至多网主账户（推荐）
         </div>
         <div data-name="to-bank" style="display: none;">
           <input type="radio" checked="checked" /> 提取至银行卡
@@ -253,8 +253,8 @@ seajs.use(['components/components'], function(Components) {
       </div>
     </div>
     <div class="mt10 fn-clear">
-      <p data-name="to-renrendai-hint">
-        温馨提示：退出回款方式一经选定无法修改。提取至人人贷主账户的回款方式：每日系统定时将可转出资金转至理财人的主账户内，由理财人自由支配。
+      <p data-name="to-duonet-hint">
+        温馨提示：退出回款方式一经选定无法修改。提取至多网主账户的回款方式：每日系统定时将可转出资金转至理财人的主账户内，由理财人自由支配。
       </p>
       <p data-name="to-bank-hint" style="display: none;">
         温馨提示：退出回款方式一经选定无法修改。提取至银行卡的回款方式：若优选理财计划持有的债权全部转让完成，系统将发起一次提现操作；若没有将全部债权转出，则系统将每 7 天发起一次提现操作，资金具体到账时间与一般提现相同。

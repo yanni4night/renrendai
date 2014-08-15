@@ -1,7 +1,7 @@
 {%extends "parent.tpl"%}
 
 {%block title%}
-理财统计 - 理财管理 - 我的人人贷帐户中心 -
+理财统计 - 理财管理 - 我的多网帐户中心 -
 {%endblock%}
 
 {%block script%}{%endblock%}
@@ -15,7 +15,7 @@
             <div class="container_12 mt10">
           <ul class="ui-breadcrumb grid_12 fn-clear">
             <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-first">
-              <a href="/account/index.action">我的人人贷</a>
+              <a href="/account/index.action">我的多网</a>
             </li>
             <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
             <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text">
@@ -34,7 +34,7 @@
 <div class="ui-side ui-side-withicon" id="sidebar">
   <ul class="ui-side-list nav nav-list bs-docs-sidenav affix">
     <li class="ui-side-item ">
-      <a class="ui-side-item-link" href="/account/index.action"><i class="fn-left ui-icon-mid index"></i>我的人人贷</a>
+      <a class="ui-side-item-link" href="/account/index.action"><i class="fn-left ui-icon-mid index"></i>我的多网</a>
     </li>
     <li class="ui-side-item ">
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid capital"></i>资金管理</a>
@@ -122,7 +122,7 @@
      </li>
   </ul>
   <div class="ui-side-ad mt20">
-        <a  style="display: block; width:140px;overflow:hidden;"><img style="width:140px;" src="http://www.renrendai.com/upload/cms/advertising/accountIndexRight/2960ccda-628c-42b4-addc-c4a391ba847d.jpg?20140401a" alt="微信扫描"></a>
+        <a  style="display: block; width:140px;overflow:hidden;"><img style="width:140px;" src="http://www.duonet.com/upload/cms/advertising/accountIndexRight/2960ccda-628c-42b4-addc-c4a391ba847d.jpg?20140401a" alt="微信扫描"></a>
 </div>
 </div>
 <script>
@@ -138,7 +138,7 @@ seajs.use(['components/components'], function(Components) {
                         <h3 class="text-xl">理财账户统计</h3>
                         
             <div class="mt10">
-                            <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您通过人人贷平台已赚取<em class="ph10">0.00</em>元</h4>
+                            <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您通过多网平台已赚取<em class="ph10">0.00</em>元</h4>
                             <div class="fn-clear mt10">
                                 <ul class="fn-left stat" id="gained-data">
                                     <li class="fn-clear rrdcolor-paleblue3-bg" data-name="category" data-category="优选理财计划收益" data-value="0.00">
@@ -180,7 +180,7 @@ seajs.use(['components/components'], function(Components) {
                         </div>
 
                         <div class="mt20">
-                            <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您通过人人贷平台累计投资<em class="ph10">0.00</em>元</h4>
+                            <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您通过多网平台累计投资<em class="ph10">0.00</em>元</h4>
               <div class="fn-clear mt10">
                             <ul class="fn-left stat" id="total-invest-data">
                                 <li class="fn-clear rrdcolor-paleblue3-bg" data-name="category" data-category="优选理财计划" data-value="0.00">
@@ -217,12 +217,12 @@ seajs.use(['components/components'], function(Components) {
                                     <span class="fn-left w125 text-right">0.00</span>
                                 </li>
                             </ul>
-                <div class="fn-left chart" id="total-invest-chart" data-empty="您在人人贷没有投资"></div>
+                <div class="fn-left chart" id="total-invest-chart" data-empty="您在多网没有投资"></div>
               </div>
                         </div>
 
                         <div class="mt20">
-                            <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您当前在人人贷的理财账户资产为<em class="ph10">0.00</em>元</h4>
+                            <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您当前在多网的理财账户资产为<em class="ph10">0.00</em>元</h4>
               <div class="fn-clear mt10">
                             <ul class="fn-left stat" id="current-invest-data">
                                 <li class="fn-clear rrdcolor-paleblue3-bg" data-name="category" data-category="优选理财计划" data-value="0.00">
@@ -259,12 +259,12 @@ seajs.use(['components/components'], function(Components) {
                                     <span class="fn-left w125 text-right">0.00</span>
                                 </li>
                             </ul>
-                            <div class="fn-left chart" id="current-invest-chart" data-empty="您当前在人人贷没有投资"></div>
+                            <div class="fn-left chart" id="current-invest-chart" data-empty="您当前在多网没有投资"></div>
               </div>
                         </div>
 
                         <div class="mt20">
-                            <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您当前在人人贷投资的债权待收收益为<em class="ph10">0.00</em>元</h4>
+                            <h4 class="rrdcolor-paleblue-bg color-white-text p10 ph20">您当前在多网投资的债权待收收益为<em class="ph10">0.00</em>元</h4>
               <div class="fn-clear mt10">
                             <ul class="fn-left stat" id="to-gain-data">
                                 <li class="fn-clear rrdcolor-paleblue3-bg" data-name="category" data-category="信用认证标" data-value="0.00">
@@ -288,7 +288,7 @@ seajs.use(['components/components'], function(Components) {
                                     <span class="fn-left w125 text-right">0.00</span>
                                 </li>
                             </ul>
-                <div class="fn-left chart" id="to-gain-chart" data-empty="您在人人贷没有债权待收收益"></div>
+                <div class="fn-left chart" id="to-gain-chart" data-empty="您在多网没有债权待收收益"></div>
               </div>
                         </div>
 

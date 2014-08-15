@@ -657,7 +657,7 @@ define("components/calculator", ["jquery", "protocol"], function(a, b, c) {
                 return d(".ui-confirm").find('[data-name="' + a + '"]')
             });
             var b = this._ui;
-            "exit" == a ? (b.exitRRD = this._elem("to-renrendai"), b.exitRRDHint = this._elem("to-renrendai-hint"), b.exitBank = this._elem("to-bank"), b.exitBankHint = this._elem("to-bank-hint"), b.exitBankAccount = this._elem("bank-account"), b.exitQuitType = this._elem("change-manner"), b.exitDialog = d("#confirm-plan-exit"), b.exitSubmit = d("#submit-plan-exit"), b.exitCancel = d("#cancel-plan-exit")) : (b.confirmDialog = d("#confirm-plan-exit-execution"), b.confirmSubmit = d("#submit-plan-exit-execution"), b.confirmCancel = d("#cancel-plan-exit-execution"), b.confirmForm = d("#form-quit"))
+            "exit" == a ? (b.exitRRD = this._elem("to-duonet"), b.exitRRDHint = this._elem("to-duonet-hint"), b.exitBank = this._elem("to-bank"), b.exitBankHint = this._elem("to-bank-hint"), b.exitBankAccount = this._elem("bank-account"), b.exitQuitType = this._elem("change-manner"), b.exitDialog = d("#confirm-plan-exit"), b.exitSubmit = d("#submit-plan-exit"), b.exitCancel = d("#cancel-plan-exit")) : (b.confirmDialog = d("#confirm-plan-exit-execution"), b.confirmSubmit = d("#submit-plan-exit-execution"), b.confirmCancel = d("#cancel-plan-exit-execution"), b.confirmForm = d("#form-quit"))
         },
         dataUI: function(a) {
             if ("exit" == a) return {
@@ -668,7 +668,7 @@ define("components/calculator", ["jquery", "protocol"], function(a, b, c) {
                     name: this.planName,
                     amount: this.finalAmount
                 };
-            return "RRD" == this.quitType ? (c.quitType = "RRD", c.quitTypeName = "提取至人人贷主账户") : (c.quitType = "BANK", c.quitTypeName = "提取至银行卡", c.quitBankId = b.exitBankAccount.val(), c.quitBankAccount = b.exitBankAccount.find('[value="' + c.quitBankId + '"]').text()), c
+            return "RRD" == this.quitType ? (c.quitType = "RRD", c.quitTypeName = "提取至多网主账户") : (c.quitType = "BANK", c.quitTypeName = "提取至银行卡", c.quitBankId = b.exitBankAccount.val(), c.quitBankAccount = b.exitBankAccount.find('[value="' + c.quitBankId + '"]').text()), c
         },
         updateQuitType: function() {
             var a = this._ui;

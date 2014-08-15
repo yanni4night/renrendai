@@ -32,7 +32,7 @@
 {{@ each rsvList }}
 <li class="ui-list-item fn-clear {{ itemStyle }}">
   <span class="ui-list-field fn-left color-gray-text w80 fn-text-overflow">&nbsp;&nbsp;{{ id }}</span>
-  <span class="ui-list-field fn-left color-gray-text w160 text-left-imp fn-text-overflow"><span class="list-ul-name" style="width:100%">{{ investor }}{{@if ucodeUsed }}<a title="U-code预定" target="_blank" href="/help/terms/terms!terms.action#ucode"><i class="list-u-code"></i></a>{{/ if }}{{@if mobileUsed }}<a title="手机预定" target="_blank" href="http://www.renrendai.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span></span>
+  <span class="ui-list-field fn-left color-gray-text w160 text-left-imp fn-text-overflow"><span class="list-ul-name" style="width:100%">{{ investor }}{{@if ucodeUsed }}<a title="U-code预定" target="_blank" href="/help/terms/terms!terms.action#ucode"><i class="list-u-code"></i></a>{{/ if }}{{@if mobileUsed }}<a title="手机预定" target="_blank" href="http://www.duonet.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span></span>
   <span class="ui-list-field fn-left color-gray-text w120 num-s text-left-imp fn-text-overflow"><em>{{ planAmount }}</em>元</span>
   <span class="ui-list-field fn-left color-gray-text w150 text-left-imp fn-text-overflow">{{ date }}</span>
   <span class="ui-list-field fn-left color-gray-text w80 last text-left-imp fn-text-overflow">{{ status }}</span>
@@ -53,7 +53,7 @@
 {{@ each jsonList }}
 <li class="ui-list-item fn-clear {{ itemStyle }}">
   <span class="ui-list-field fn-left w80 color-gray-text fn-text-overflow">&nbsp;&nbsp;{{ id }}</span>
-  <span class="ui-list-field fn-left w150 ph10 color-gray-text fn-text-overflow">{{ investor }}{{@if mobileUsed }}<a title="手机加入" target="_blank" href="http://www.renrendai.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span>
+  <span class="ui-list-field fn-left w150 ph10 color-gray-text fn-text-overflow">{{ investor }}{{@if mobileUsed }}<a title="手机加入" target="_blank" href="http://www.duonet.com/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span>
   <span class="ui-list-field fn-left color-gray-text num-s  w150 pr50"><em>{{ amount }}</em>元</span>
   <span class="ui-list-field fn-left color-gray-text w150 last">{{ date }}</span>
 </li>
@@ -244,7 +244,7 @@
           <li class="fn-clear">
             <div class="fn-left basic-extra plan-profit-handling">
               <div class="basic-extra-row color-dimgray-text text-small option"><em class="fn-left ui-icon ui-icon-small ui-icon-check-checked"></em>收益再投资</div>
-              <div class="basic-extra-row color-dimgray-text text-small option"><em class="fn-left ui-icon ui-icon-small ui-icon-check-checked"></em>提至人人贷账户</div>
+              <div class="basic-extra-row color-dimgray-text text-small option"><em class="fn-left ui-icon ui-icon-small ui-icon-check-checked"></em>提至多网账户</div>
               <div class="basic-extra-row color-dimgray-text text-small option"><em class="fn-left ui-icon ui-icon-small ui-icon-check-checked"></em>每月15日提至银行卡（提现费用 <a class="iconfont text" id="tips" target="_blank">&#xF046;</a>）</div>
               <div class="ui-poptip ui-poptip-blue fn-hide" id="tipCon">
                 <div class="ui-poptip-shadow">
@@ -268,7 +268,7 @@
                   <div class="ui-poptip-shadow">
                     <div class="ui-poptip-container">        
                       <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
-                      <div class="ui-poptip-content">期初额外收取加入计划金额的0.00%作为加入费用归人人贷所有</div>
+                      <div class="ui-poptip-content">期初额外收取加入计划金额的0.00%作为加入费用归多网所有</div>
                     </div>
                   </div>
                 </div>
@@ -279,7 +279,7 @@
                   <div class="ui-poptip-shadow">
                     <div class="ui-poptip-container">        
                       <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
-                      <div class="ui-poptip-content">计划中收取投标所得利息收入的0.00%作为服务费用归人人贷所有</div>
+                      <div class="ui-poptip-content">计划中收取投标所得利息收入的0.00%作为服务费用归多网所有</div>
                     </div>
                   </div>
                 </div>
@@ -290,7 +290,7 @@
                   <div class="ui-poptip-shadow">
                     <div class="ui-poptip-container">        
                       <div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div>
-                      <div class="ui-poptip-content">退出计划时收取退出计划金额的0.00%作为退出费用归人人贷所有</div>
+                      <div class="ui-poptip-content">退出计划时收取退出计划金额的0.00%作为退出费用归多网所有</div>
                     </div>
                   </div>
                 </div>
@@ -396,7 +396,7 @@
       <div class="p20bs color-white-bg fn-clear">
         <div class="fn-left">
           <h4>计划介绍</h4>
-          <p class="mt10">优选理财计划是人人贷推出的，以投资人人贷平台现有信贷产品（机构担保标、实地认证标等）为基础的稳健、安全、便捷性好，透明度高的投标计划。加入理财计划的资金将优先于平台普通用户的资金，根据计划设定的分散投资原则对人人贷平台产品进行优先投资。投资标的所产生的收益可以选择自动提取或随每月回款的本金部分用于再投资，资金利用率高。</p>
+          <p class="mt10">优选理财计划是多网推出的，以投资多网平台现有信贷产品（机构担保标、实地认证标等）为基础的稳健、安全、便捷性好，透明度高的投标计划。加入理财计划的资金将优先于平台普通用户的资金，根据计划设定的分散投资原则对多网平台产品进行优先投资。投资标的所产生的收益可以选择自动提取或随每月回款的本金部分用于再投资，资金利用率高。</p>
           <p class="mt10 text-right"><a href="/static/misc/financial-plan-intro.pdf" target="_blank">点此查看计划说明书</a></p>
         </div>
     </div>
@@ -428,7 +428,7 @@
                         <p>优选理财计划的收益最终由您加入优选理财计划资金所投借款的利息决定。理想情况下，假设投资借款的年利率均为12%，且每月等额本息回款可立即投出无资金闲置，那么选择利息再投资的情况下一年后10000元初始投资变为：10000*（1+12%/12）^12=11268.3元。</p>
                     </li>
                     <li class="pd10">2. 优选理财计划安全吗？
-                        <p>优选理财计划所投借款100%适用人人贷本金保障计划。</p>
+                        <p>优选理财计划所投借款100%适用多网本金保障计划。</p>
                     </li>
                     <li class="pd10">3. 我有10000元，该如何加入优选理财计划？
                         <p>（1）预定加入<br/>
@@ -436,14 +436,14 @@
                         </p>
                         <p>（2）开放加入<br/>
                             若预定加入期间该期优选理财计划未满额，则进入开放加入阶段，您可直接加入10000元。
-                            <br/>注：您可以通过关注人人贷官方微信、微博获取理财计划发布信息。
+                            <br/>注：您可以通过关注多网官方微信、微博获取理财计划发布信息。
                         </p>
                     </li>
                     <li class="pd10">4. 12个月的锁定期结束后，我该如何拿回本息？
                         <p>12个月后，您可根据需要，随时进行债权转让收回本金和利息。</p>
                     </li>
                     <li class="pd10">5. 预定成功后如何完成剩余金额的支付?
-                        <p>在预定成功后的限定时间内, 您可以通过“我的人人贷—理财管理—优选理财计划—预定中”选择该期优选理财计划进行支付。若您预定追加该计划，则若干次预定时产生的未支付剩余金额将合并为一笔，支付时须一次性足额完成。</p>
+                        <p>在预定成功后的限定时间内, 您可以通过“我的多网—理财管理—优选理财计划—预定中”选择该期优选理财计划进行支付。若您预定追加该计划，则若干次预定时产生的未支付剩余金额将合并为一笔，支付时须一次性足额完成。</p>
                     </li>
                     <li class="pd10">6. 定金将如何处理？
                         <p>若您在预定成功后的限定时间内完成剩余金额的支付, 定金将视同加入该期优选理财计划; 若您未能在限定时间内完成剩余金额的支付, 则视为您主动放弃加入该期优选理财计划, 定金将不予返还。
@@ -457,7 +457,7 @@
     <!-- 提示信息条 -->
     <div class="ui-alert alert-point">
       <div class="ui-alert-bg"></div>
-      <p>招商银行正式托管人人贷风险备用金账户，投资理财更放心。<a href="/about/about.action?flag=supervise" target="_blank">查看《资金托管报告》</a></p>
+      <p>招商银行正式托管多网风险备用金账户，投资理财更放心。<a href="/about/about.action?flag=supervise" target="_blank">查看《资金托管报告》</a></p>
     </div>
 
     <div id="pg-helper" style="display: none;">
