@@ -90,14 +90,34 @@
             <div class="grid_3 ui-header-grid">
               <ul class="ui-nav fn-right  ">
                 
+            #if($isLogined)
+            <li class="ui-nav-item ui-nav-item-x">
+            <a class="ui-nav-item-link rrd-dimgray ui-nav-username fn-text-overflow" href="/account/index.action">
+              <span>您好，${uniqname}</span>
+              <span class="arrow-down"></span>
+            </a>
+            <ul class="ui-nav-dropdown ui-nav-dropdown-account" style="display: none;">
+              <li class="ui-nav-dropdown-angle"><span></span></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!recharge.action">充值</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!withdraw.action">提现</a></li>
+              <li class="ui-nav-dropdown-separator"></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital.action">资金管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/invest!loan.action">理财管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/borrow!toMyLoans.action">借款管理</a></li>
+              <li class="ui-nav-dropdown-separator"></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/j_spring_security_logout">退出</a></li>
+            </ul>
+          </li>
+
+                  #else
                 
-                <li class="ui-nav-item ">
+                 <li class="ui-nav-item ">
                   <a class="ui-nav-item-link reg-link" href="/regPage.action">注册</a>
                 </li>
                 <li class="ui-nav-item ">
                   <a class="ui-nav-item-link gray login-link" href="/loginPage.action">登录</a>
-                </li>
-                
+                </li> 
+              #end
               </ul>
               <!--
               <ul class="ui-nav fn-right fn-hide">
