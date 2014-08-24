@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>
-    {%block title%}{%endblock%}  多网金融（$isLogined） - 中国最大最安全的P2P网络投资理财、网络贷款平台
+    {%block title%}{%endblock%}  多网金融 - 中国最大最安全的P2P网络投资理财、网络贷款平台
     </title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="content-type" content="text/html" charset="utf-8">
@@ -106,7 +106,7 @@
               <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/invest!loan.action">理财管理</a></li>
               <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/borrow!toMyLoans.action">借款管理</a></li>
               <li class="ui-nav-dropdown-separator"></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/j_spring_security_logout">退出</a></li>
+              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/logout_redirect">退出</a></li>
             </ul>
           </li>
 

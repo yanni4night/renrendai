@@ -180,8 +180,11 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                     isNickName: true,
                     isHasUnderlineFrontEnd: true,
                     isNickNameLength: true,
-                    isHasYX: true//,
-                    //remote: "/checkUserNickname!checkNickname.action"
+                    isHasYX: true,
+                    remote: {
+                        url:"/userinfo/checknickname",
+                        name:'nickname'
+                    }
                 },
                 username: {
                     required: true,
@@ -1641,7 +1644,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 0 >= k ? (m.removeAttr("disabled").removeClass("ui-button-disabled").html(n), clearInterval(i), k = j, f && f.onClear && d.isFunction(f.onClear) && f.onClear()) : (m.html(k + "秒重新获取"), k--)
             }, 1e3), void d.ajax({
                 url: o + a,
-                type: "POST",
+                type: "GET",
                 success: function(a) {
                     f && f.onSuccess && d.isFunction(f.onSuccess) && f.onSuccess(), a.result ? e.msg("#" + b, a.result, "warn") : a.message && e.msg("#" + b, a.message, "warn")
                 }
