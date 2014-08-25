@@ -94,7 +94,7 @@
             #if($isLogined)
             <li class="ui-nav-item ui-nav-item-x">
             <a class="ui-nav-item-link rrd-dimgray ui-nav-username fn-text-overflow" href="/account/index.action">
-              <span>您好，${uniqname}</span>
+              <span>您好，$nickname</span>
               <span class="arrow-down"></span>
             </a>
             <ul class="ui-nav-dropdown ui-nav-dropdown-account" style="display: none;">

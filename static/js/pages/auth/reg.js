@@ -52,8 +52,8 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
     $("#usertype").on("click", "li", function() {
         var idx = $(this).index();
         $(this).addClass("cur").siblings().removeClass("cur");
-        $("input[name = 'intention']").eq(idx).trigger("click");
-        $("label[for='intention']").addClass("valid").empty();
+        $("input[name = 'role']").eq(idx).trigger("click");
+        $("label[for='role']").addClass("valid").empty();
     });
 
     //回第一步
@@ -104,7 +104,7 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
     
     $('#yn-getsms').click(function(e){
         e.preventDefault();
-         Form.sendPhoneCode("phone", "yn-getsms", /*"/sendPhoneCode!voiceCode.action?&checkCode=reg&phone="*/"/account/sendsms?mobile=", {
+         Form.sendPhoneCode("phone", "yn-getsms", /*"/sendPhoneCode!voiceCode.action?&checkCode=reg&phone="*/"/sendsms?mobile=", {
                 onStart: function() {
                     console.log('start');
                     //e($("#getMobileCode"), false);
@@ -148,13 +148,15 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
         showSingleError: true,
         validateData: {
             ignore: ".ignore",
-            debug:true,
+            debug:false,
+            onsubmit:true,
             success: function(a) {
                 "nickName" == a.attr("for") && a.html("此昵称将用作展示，一旦注册成功不能修改");
-                "phone" == a.attr("for") && a.html("请保持手机畅通，以便完成手机信息验证");
+                "username" == a.attr("for") && a.html("请保持手机畅通，以便完成手机信息验证");
                 a.addClass("valid");
             },
             submitHandler: function(a) {
+                console.log('submitHandler');
                 Form.ajaxSubmit($(a), {
                     msgafter: "#" + $(a).find("input[type='submit']").attr('id'),
                     success: function(a) {

@@ -152,9 +152,9 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         isBankCard: "银行卡号输入错误",
         isEducationCode: "学历在线验证码须为12位数字",
         isIntNum: "请输入正整数",
-        codeLength: "请输入4位验证码",
+        codeLength: "请输入5位验证码",
         minCachLength: "提现金额不能小于1元",
-        intention: "请选择角色"
+        role: "请选择角色"
     }, e.tip = {}, e.checkCode = function(a) {
         a.ele.rules("add", {
             remote: {
@@ -209,21 +209,21 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 },
                 mobileCode: {
                     required: true,
-                    minlength: 4,
-                    maxlength: 4
+                    minlength: 5,
+                    maxlength: 5
                 },
                 agree: {
                     required: true
                 },
-                intention: {
+                role: {
                     required: true
                 }
             },
             mobileCodeForReg: {
                 mobileCode: {
                     required: true,
-                    minlength: 4,
-                    maxlength: 4
+                    minlength: 5,
+                    maxlength: 5
                 }
             },
             login: {
@@ -773,8 +773,8 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 agree: {
                     required: e.err.agree
                 },
-                intention: {
-                    required: e.err.intention
+                role: {
+                    required: e.err.role
                 }
             },
             mobileCodeForReg: {
