@@ -101,19 +101,19 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
             }
         }
     });*/
-    
-    $('#yn-getsms').click(function(e){
+
+    $('#yn-getsms').click(function(e) {
         e.preventDefault();
-         Form.sendPhoneCode("phone", "yn-getsms", /*"/sendPhoneCode!voiceCode.action?&checkCode=reg&phone="*/"/sendsms?mobile=", {
-                onStart: function() {
-                    console.log('start');
-                    //e($("#getMobileCode"), false);
-                },
-                onClear: function() {
-                    console.log('clear');
-                    //e($("#getMobileCode"), true);
-                }
-            });
+        Form.sendPhoneCode("phone", "yn-getsms", /*"/sendPhoneCode!voiceCode.action?&checkCode=reg&phone="*/ "/sendsms?mobile=", {
+            onStart: function() {
+                console.log('start');
+                //e($("#getMobileCode"), false);
+            },
+            onClear: function() {
+                console.log('clear');
+                //e($("#getMobileCode"), true);
+            }
+        });
     });
 
     //注册表单
@@ -121,7 +121,7 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
         target: "#reg",
         showTip: $("#reg").data("showtip") === true,
         before: function() {
-/*
+            /*
             i = Form.sendPhoneCode("phone", "getVoiceCode", "/sendPhoneCode!voiceCode.action?&checkCode=reg&phone=", {
                 onStart: function() {
                     e($("#getMobileCode"), false);
@@ -148,8 +148,8 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
         showSingleError: true,
         validateData: {
             ignore: ".ignore",
-            debug:false,
-            onsubmit:true,
+            debug: false,
+            onsubmit: true,
             success: function(a) {
                 "nickName" == a.attr("for") && a.html("此昵称将用作展示，一旦注册成功不能修改");
                 "username" == a.attr("for") && a.html("请保持手机畅通，以便完成手机信息验证");
@@ -188,7 +188,7 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
                 b(".validCode").hide()
             }
         }),*/
-/*        Form.checkCode({
+        /*        Form.checkCode({
             ele: $("#mobileCode"),
             data: {
                 code: function() {
@@ -206,12 +206,12 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
 */
     };
 
-    /*    $("#reg-tab").length && new f.Tab({
+    $("#reg-tab").length && new Widgets.Tab({
         name: "reg",
         switched: function(a, b) {
             return true;
         }
-    }).init();*/
+    }).init();
 
     $("body")[0].scrollTop = 0;
 });
