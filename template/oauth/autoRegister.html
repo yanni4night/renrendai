@@ -32,7 +32,7 @@
           <p class="go-login">
           
           </p>
-          <form data-name="register" data-showtip="true" class="ui-form left" method="post" action='/oauth/autoRegister!beforeThirdRegist.action' id="reg" onsubmit="return false;">
+          <form data-name="register" data-showtip="true" class="ui-form left" method="post" action='/register' id="reg" onsubmit="return false;">
             <input id="inviteCode" type="hidden" name="inviteCode" value="" />
             <input id="utmSource" type="hidden" name="utmSource" value="" />
 
@@ -64,6 +64,16 @@
                 <span class="icon input-icon-phone-gray"></span>
                 <p class="placeholder">输入手机号码</p>
               </div>
+              <!--yanni4night@gmail.com BEGIN-->
+                  <div class="ui-form-item" style="height:55px;">
+                      <label class="ui-label"><span class="ui-form-required">*</span>验证码</label>
+                      <input class="ui-input code" type="text" name="mobileCode" id="mobileCode" data-is="mobileCode"/>
+                      <label id="code-label" for="mobileCode" class="error" style="display: none">验证码输入错误</label>
+                  </div>
+                  <div class="ui-form-item" style="height:40px;">
+                    <button class="ui-button-blue-new ui-button-blue-new-large" type="button" id="yn-getsms">获取验证码</button>
+                  </div>
+              <!--yanni4night@gmail.com END-->
               <div class="ui-form-item">
                 <label class="ui-label"><span class="ui-form-required">*</span>登录密码</label>
                 <input id="password" class="ui-input input-icon input-bg-gray" type="password" name="password" data-is="isPassWord isPassNotAllNum isPassNotRepeat" autocomplete="off" onpaste="return false">
@@ -91,15 +101,15 @@
                   <label for="role" class="error" style="display: none">请选择角色</label>
                 </div>
               </div>
-              <div class="ui-form-item code-item">
+<!--               <div class="ui-form-item code-item">
                 <label class="ui-label"><span class="ui-form-required">*</span>验证码</label>
                 <input class="ui-input input-icon code" type="text" name="randCode" id="randCode">
-                <a href="javascript:void(0)" class="code-box"><img id="randImage" border="0" align="absmiddle" src="/image.jsp" name="randImage" alt="验证码" /></a>
+                <a href="javascript:void(0)" class="code-box"><img id="randImage" border="0" align="absmiddle" src="/captcha" name="randImage" alt="验证码" /></a>
                 <a href="javascript:void(0)" class="refresh-box"><img id="refreshCode" border="0" align="absmiddle" src="/static/img/refresh.png" alt="刷新验证码" /></a>
                 <label for="randCode" class="error fn-hide" id="code-error" style="display: none"></label>
                 <i class="validCode fn-hide"></i>
                 <p class="placeholder">验证码</p>
-              </div>
+              </div> -->
               <div class="ui-form-item" style="height: 40px">
                 <input id="agree" name="agree" checked="checked" type="checkbox"> 我已阅读并同意<a href="/agreement/rv_webservice.html" target="_blank">《人人贷网站服务协议》</a>
                 <label id="label-agree" for="agree" class="error" style="display: none"></label>
@@ -142,6 +152,7 @@
               </div>
               
               <input type="hidden" name="oAuthUserId" value="$oAuthUserId" />
+              <input type="hidden" name="providerStr" value="$providerStr" />
               
               <div class="ui-form-item">
                 <input id="J_test_yzsj" type="submit" class="ui-button-rrd-blue ui-button-rrd-blue-large" value="验 证">
@@ -187,6 +198,7 @@
             </div>
             
             <input type="hidden" name="oAuthUserId" value="$oAuthUserId" />
+            <input type="hidden" name="providerStr" value="$providerStr" />
             
             <div class="ui-form-item">
               <p class="bottom-msg"><label></label></p>
