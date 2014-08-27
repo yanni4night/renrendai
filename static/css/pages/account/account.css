@@ -871,7 +871,7 @@ cursor:text
 padding:0 15px;
 height:30px;
 line-height:30px;
-background:#00a8e8;
+background:#4177DC;
 margin-left:-1px;
 color:#fff;
 cursor:pointer
@@ -1879,7 +1879,7 @@ color:#7fd4f3
 }
 
 #pg-account-plan a.iconfont:hover {
-color:#00a8e8
+color:#4177DC
 }
 
 #pg-account-plan .fee-summary {
@@ -1950,7 +1950,7 @@ color:#7fd4f3
 }
 
 #pg-account-plans a.iconfont:hover {
-color:#00a8e8
+color:#4177DC
 }
 
 #pg-account-plans a.quit-disabled,#pg-account-plans a.quit-disabled:hover {
@@ -2081,7 +2081,7 @@ margin:30px 0 0 155px
 }
 
 .ucode-use-div .duihua-a a {
-background-color:#00A8E8;
+background-color:#4177DC;
 border-radius:5px;
 color:#FFF;
 display:inline-block;

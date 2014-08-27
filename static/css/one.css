@@ -653,11 +653,11 @@ background-color:#0697da
 }
 
 .rrdcolor-lightblue-text {
-color:#00a8e8
+color:#4177DC
 }
 
 .rrdcolor-lightblue-bg {
-background-color:#00a8e8
+background-color:#4177DC
 }
 
 .rrdcolor-paleblue-text {
@@ -862,7 +862,7 @@ word-wrap:break-word
 }
 
 a {
-color:#00a8e8;
+color:#4177DC;
 text-decoration:none
 }
 
@@ -883,7 +883,7 @@ color:#a9a9a9
 }
 
 a:hover,a.gray:hover,a.darkgray:hover,a.rrd-dimgray:hover,a.black:hover {
-color:#0697da;
+color:#4177DC;
 text-decoration:none
 }
 
@@ -1658,11 +1658,11 @@ text-align:center
 .ui-button-blue {
 border:0;
 color:#fff;
-background-color:#0697da
+background-color:#4177DC
 }
 
 .ui-button-blue:hover {
-background-color:#0697da
+background-color:#4177DC
 }
 
 a.ui-button-blue,a.ui-button-blue:active,a.ui-button-blue:hover {
@@ -1699,8 +1699,8 @@ color:#0697da
 }
 
 a.ui-button-transparent:hover {
-border:1px solid #00a8e8;
-color:#00a8e8
+border:1px solid #4177DC;
+color:#4177DC
 }
 
 .ui-button-red {
@@ -1744,7 +1744,7 @@ color:#fff
 a.ui-button-rrd-blue,.ui-button-rrd-blue {
 height:40px;
 line-height:40px;
-background:#0697DA;
+background:#4177DC;
 border:0;
 border-radius:2px;
 color:#fff;
@@ -1765,12 +1765,12 @@ font-size:18px
 a.ui-button-blue-new,.ui-button-blue-new {
 height:40px;
 line-height:40px;
-background:#51c2e8;
+background:#4177DC;
 border:0;
 border-radius:2px;
 color:#fff;
 text-align:center;
-cursor:pointer
+cursor:pointer;
 }
 
 .ui-button-blue-new-large {
@@ -2182,7 +2182,13 @@ padding:0
 }
 
 .ui-form-item input {
-vertical-align:middle
+vertical-align:middle;
+}
+.ui-form-item input[type=text],.ui-form-item input[type=password] {
+-webkit-box-shadow: 3px 3px 3px silver inset;
+-moz-box-shadow: 3px 3px 3px silver inset;
+-ms-box-shadow: 3px 3px 3px silver inset;
+box-shadow: 3px 3px 3px silver inset;
 }
 
 .ui-form-item textarea {
@@ -2280,7 +2286,8 @@ background-position:0 -127px
 }
 
 .ui-form input.error,.ui-form textarea.error {
-border:1px solid #dd4a38
+border:1px solid #dd4a38;
+color:#dd4a38;
 }
 
 .ui-form label.error {
@@ -2303,11 +2310,12 @@ border:1px solid #c5c5c5
 }
 
 .ui-input:hover,.ui-textarea:hover,.ui-input:focus,.ui-textarea:focus,.ui-input-hover {
-border:1px solid #0697da
+border:1px solid #4177DC
 }
 
 .ui-input:focus,.ui-textarea:focus,.ui-input-focus,input:focus,select:focus,button:focus {
-outline:0
+outline:0;
+color:#4177DC;
 }
 
 .ui-label {
@@ -2411,7 +2419,7 @@ color:#fff
 }
 
 .ui-filter-tag.active {
-background:#00a8e8;
+background:#4177DC;
 color:#fff
 }
 
@@ -4475,8 +4483,8 @@ color:gray
 
 .ui-pagination li a.page-link:hover {
 color:#fff;
-border:1px solid #00a8e8;
-background:#00a8e8
+border:1px solid #4177DC;
+background:#4177DC
 }
 
 .ui-pagination li span {
@@ -4747,7 +4755,7 @@ font-weight:400
 
 .ui-tab-transparent .ui-tab-item-current,.ui-tab-transparent .ui-tab-item:hover {
 background:#fff;
-border-top:4px solid #00a8e8
+border-top:4px solid #4177DC
 }
 
 .ui-tab-transparent .ui-tab-item-current a,.ui-tab-transparent .ui-tab-item:hover a {
@@ -5044,7 +5052,7 @@ z-index:1
 }
 
 .ui-header-main .ui-nav-item-link:hover .arrow-down {
-border-top:4px solid #00a8e8
+border-top:4px solid #4177DC
 }
 
 .ui-header-main .ui-nav-dropdown {
@@ -5097,7 +5105,7 @@ display:block
 }
 
 .ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item:hover {
-background:#00a8e8
+background:#4177DC
 }
 
 .ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item:hover a,.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item:hover a:hover,.ui-header-main .ui-nav-dropdown .ui-nav-dropdown-item:hover a:active {
@@ -5420,7 +5428,7 @@ background:url(/static/img/sidebar-icons.png) no-repeat -20px -118px
 .ui-side-item.active .ui-side-item-link,.ui-side-item.active .ui-side-item-link:hover {
 cursor:default;
 color:#fff;
-background:#00a8e8
+background:#4177DC
 }
 
 .ui-side-item .ui-side-item-link:hover {
@@ -5731,7 +5739,7 @@ cursor:pointer
 }
 
 #confirm-plan-exit-execution a.iconfont:hover {
-color:#00a8e8
+color:#4177DC
 }
 
 #confirm-plan-exit-execution .expected-exit-amount-tip,#confirm-plan-exit-execution .expected-total-amount-tip {

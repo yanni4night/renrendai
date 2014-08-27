@@ -133,13 +133,13 @@ background:url(/static/img/ie-more-notices-button.png) no-repeat center 0
 
 .notice-more.ui-button-transparent:active {
 border:0;
-color:#00a8e8;
+color:#4177DC;
 background:url(/static/img/ie-more-notices-button.png) no-repeat center -25px
 }
 
 .notice-more.ui-button-transparent:hover {
 border:0;
-color:#00a8e8;
+color:#4177DC;
 background:url(/static/img/ie-more-notices-button.png) no-repeat center -25px
 }
 
