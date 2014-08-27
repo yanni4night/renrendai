@@ -1,7 +1,7 @@
 define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require) {
     var $ = require("jquery");
     if (window.parent != window) {
-        window.top.location.href = location.href
+        window.top.location.href = location.href;
     }
 
     /* function toFirstStep() {
@@ -102,20 +102,11 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
         }
     });*/
 
-    $('#yn-getsms').click(function(e) {
+/*    $('#yn-getsms').click(function(e) {
         e.preventDefault();
-        Form.sendPhoneCode("phone", "yn-getsms", /*"/sendPhoneCode!voiceCode.action?&checkCode=reg&phone="*/ "/sendsms?mobile=", {
-            onStart: function() {
-                console.log('start');
-                //e($("#getMobileCode"), false);
-            },
-            onClear: function() {
-                console.log('clear');
-                //e($("#getMobileCode"), true);
-            }
-        });
+       
     });
-
+*/    Form.sendPhoneCode("phone", "yn-getsms");
     //注册表单
     Form.validate({
         target: "#reg",
@@ -156,16 +147,16 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
                 a.addClass("valid");
             },
             submitHandler: function(a) {
-                console.log('submitHandler');
                 Form.ajaxSubmit($(a), {
                     msgafter: "#" + $(a).find("input[type='submit']").attr('id'),
                     success: function(a) {
                         if (0 === a.status) {
                             //TODO
-                            console.warn('注册成功');
+                            alert('注册成功');
+                            location.href = '/loginPage';
                             //(b("#userMobile").html(a.data.username), d())
                         } else {
-                            this.msg(a.message, "warn");
+                            this.msg(a.message||"注册失败", "warn");
                         }
                     }
                 })

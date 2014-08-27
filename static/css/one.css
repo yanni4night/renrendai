@@ -2315,9 +2315,10 @@ border:1px solid #4177DC
 
 .ui-input:focus,.ui-textarea:focus,.ui-input-focus,input:focus,select:focus,button:focus {
 outline:0;
+}
+.ui-input:focus,.ui-textarea:focus,.ui-input-focus{
 color:#4177DC;
 }
-
 .ui-label {
 float:left;
 width:170px;

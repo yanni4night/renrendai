@@ -182,16 +182,16 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                     isNickNameLength: true,
                     isHasYX: true,
                     remote: {
-                        url:"/userinfo/checknickname",
-                        name:'nickname'
+                        url: "/userinfo/checknickname",
+                        name: 'nickname'
                     }
                 },
                 username: {
                     required: true,
                     isMobile: true,
-                    remote:{
-                        url:'/account/checkusername',
-                        name:'userid'
+                    remote: {
+                        url: '/account/checkusername',
+                        name: 'userid'
                     }
                     //remote: "/checkEmail.action"
                 },
@@ -1637,18 +1637,35 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             width: "0px",
             border: "1px dashed #fff"
         }).show().keyup()
-    }, e.sendPhoneCode = function(a, b, c, f) {
+    };
+
+    e.sendPhoneCode = function(a, b, c, f) {
         function g() {
             var a = l.length ? l.val() : "";
-            return l.length && !e.is.isMobile(l.val()) ? void e.msg("#" + b, "请正确填写您的手机号码", "warn") : (m.attr("disabled", "disabled").addClass("ui-button-disabled"), i = setInterval(function() {
-                0 >= k ? (m.removeAttr("disabled").removeClass("ui-button-disabled").html(n), clearInterval(i), k = j, f && f.onClear && d.isFunction(f.onClear) && f.onClear()) : (m.html(k + "秒重新获取"), k--)
-            }, 1e3), void d.ajax({
-                url: o + a,
-                type: "GET",
-                success: function(a) {
-                    f && f.onSuccess && d.isFunction(f.onSuccess) && f.onSuccess(), a.result ? e.msg("#" + b, a.result, "warn") : a.message && e.msg("#" + b, a.message, "warn")
-                }
-            }))
+            if (l.length && !e.is.isMobile(l.val())) {
+                e.msg("#" + b, "请正确填写您的手机号码", "warn");
+            } else {
+                m.attr("disabled", "disabled").addClass("ui-button-disabled");
+
+                i = setInterval(function() {
+                    0 >= k ? (m.removeAttr("disabled").removeClass("ui-button-disabled").html(n), clearInterval(i), k = j, f && f.onClear && d.isFunction(f.onClear) && f.onClear()) : (m.html(k + "秒重新获取"), k--)
+                }, 1e3);
+
+                d.ajax({
+                    url: o + a,
+                    type: "GET",
+                    cache: false,
+                    dataType:'json',
+                    success: function(a) {
+                        f && f.onSuccess && d.isFunction(f.onSuccess) && f.onSuccess();
+                        if (a.statusText) {
+                            e.msg("#" + b, a.statusText, "warn");
+                        } /*else {
+                            a.message && e.msg("#" + b, a.message, "warn");
+                        }*/
+                    }
+                })
+            };
         }
 
         function h() {
@@ -1660,14 +1677,17 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         b = "undefined" == typeof b ? "getMobileCode" : b;
         var m = d("#" + b),
             n = m.html(),
-            o = "undefined" == typeof c ? "/sendPhoneCode.action?phone=" : c;
+            o = "undefined" == typeof c ? "/sendsms?mobile=" : c;
         return m.removeAttr("disabled").html(n).unbind("click").bind("click", function(a) {
-            a.preventDefault(), f && f.onStart && d.isFunction(f.onStart) && f.onStart(), g()
+            a.preventDefault();
+            f && f.onStart && d.isFunction(f.onStart) && f.onStart();
+            g();
         }), {
             send: g,
             clear: h
-        }
-    }, e.notRequired = function(a) {
+        };
+    };
+    e.notRequired = function(a) {
         a.find(":text,[type='password'],[type='checkbox'],[type='radio'],[type='file'],select,textarea").each(function() {
             d(this).data("required", "false")
         })
