@@ -175,7 +175,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         },
         rules: {
             register: {
-                nickName: {
+                nickname: {
                     required: true,
                     isNickName: true,
                     isHasUnderlineFrontEnd: true,
@@ -186,14 +186,13 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                         name: 'nickname'
                     }
                 },
-                username: {
+                userid: {
                     required: true,
                     isMobile: true,
                     remote: {
                         url: '/account/checkusername',
                         name: 'userid'
                     }
-                    //remote: "/checkEmail.action"
                 },
                 password: {
                     required: true,
@@ -640,13 +639,16 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 }
             },
             setNickName: {
-                nickName: {
+                nickname: {
                     required: true,
                     isNickName: true,
                     isHasUnderlineFrontEnd: true,
                     isNickNameLength: true,
                     isHasYX: true,
-                    remote: "/checkUserNickname!checkNickname.action"
+                    remote: {
+                        url:'/userinfo/checknickname',
+                        name:'nickname'
+                    }
                 }
             },
             creditWeibo: {
@@ -740,7 +742,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         },
         messages: {
             register: {
-                nickName: {
+                nickname: {
                     required: e.err.required,
                     isNickName: e.err.isNickName,
                     isHasUnderlineFrontEnd: e.err.isHasUnderlineFrontEnd,
@@ -748,7 +750,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                     isHasYX: e.err.isHasYX,
                     remote: e.err.nickNameRemote
                 },
-                username: {
+                userid: {
                     required: e.err.required,
                     isMobile: e.err.isMobile,
                     remote: e.err.userNameRemote
