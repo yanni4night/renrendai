@@ -52,8 +52,8 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
     $("#usertype").on("click", "li", function() {
         var idx = $(this).index();
         $(this).addClass("cur").siblings().removeClass("cur");
-        $("input[name = 'role']").eq(idx).trigger("click");
-        $("label[for='role']").addClass("valid").empty();
+        $("input[name = 'usertype']").eq(idx).trigger("click");
+        $("label[for='usertype']").addClass("valid").empty();
     });
 
     //回第一步
@@ -150,13 +150,13 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
                 Form.ajaxSubmit($(a), {
                     msgafter: "#" + $(a).find("input[type='submit']").attr('id'),
                     success: function(a) {
-                        if (0 === a.status) {
+                        if (0 == a.status) {
                             //TODO
                             alert('注册成功');
                             location.href = '/loginPage';
                             //(b("#userMobile").html(a.data.username), d())
                         } else {
-                            this.msg(a.message||"注册失败", "warn");
+                            this.msg(a.statusText||"注册失败", "warn");
                         }
                     }
                 })

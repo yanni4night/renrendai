@@ -154,7 +154,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         isIntNum: "请输入正整数",
         codeLength: "请输入5位验证码",
         minCachLength: "提现金额不能小于1元",
-        role: "请选择角色"
+        usertype: "请选择角色"
     }, e.tip = {}, e.checkCode = function(a) {
         a.ele.rules("add", {
             remote: {
@@ -214,7 +214,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 agree: {
                     required: true
                 },
-                role: {
+                usertype: {
                     required: true
                 }
             },
@@ -775,8 +775,8 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 agree: {
                     required: e.err.agree
                 },
-                role: {
-                    required: e.err.role
+                usertype: {
+                    required: e.err.usertype
                 }
             },
             mobileCodeForReg: {
