@@ -150,6 +150,7 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
                 Form.ajaxSubmit($(a), {
                     msgafter: "#" + $(a).find("input[type='submit']").attr('id'),
                     success: function(a) {
+                        a = 'string' === typeof a?$.parseJSON(a):a;
                         if (0 == a.status) {
                             //TODO
                             alert('注册成功');
@@ -159,7 +160,7 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
                             this.msg(a.statusText||"注册失败", "warn");
                         }
                     }
-                })
+                });
             }
         }
     });

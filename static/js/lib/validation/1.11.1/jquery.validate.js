@@ -1151,7 +1151,7 @@ $.extend($.validator, {
 				data: data,
 				success: function( response ) {
 					validator.settings.messages[element.name].remote = previous.originalMessage;
-					response = $.parseJSON(response);
+					response = 'string'===typeof response?$.parseJSON(response):response;
 					var valid = response&&(response.status==0);//response === true || response === "true";
 					if ( valid ) {
 						var submitted = validator.formSubmitted;
@@ -1162,7 +1162,7 @@ $.extend($.validator, {
 						validator.showErrors();
 					} else {
 						var errors = {};
-						var message = response || validator.defaultMessage( element, "remote" );
+						var message = response.statusText || validator.defaultMessage( element, "remote" );
 						errors[element.name] = previous.message = $.isFunction(message) ? message(value) : message;
 						validator.invalid[element.name] = true;
 						validator.showErrors(errors);

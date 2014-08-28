@@ -1326,7 +1326,10 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 }
                 var e = a.attr2("target"),
                     i = a.attr2("action");
-                r.setAttribute("target", j), f || r.setAttribute("method", "POST"), i != h.url && r.setAttribute("action", h.url), h.skipEncodingOverride || f && !/post/i.test(f) || a.attr({
+                r.setAttribute("target", j);
+                 f || r.setAttribute("method", "POST");
+                  i != h.url && r.setAttribute("action", h.url);
+                   h.skipEncodingOverride || f && !/post/i.test(f) || a.attr({
                     encoding: "multipart/form-data",
                     enctype: "multipart/form-data"
                 }), h.timeout && (q = setTimeout(function() {
@@ -1460,6 +1463,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
             b = d.extend({
                 url: h,
                 data: i,
+                dataType:'json',
                 beforeSend: function() {
                     this.msg("Loading...")
                 },
