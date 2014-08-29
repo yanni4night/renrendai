@@ -1,0 +1,24 @@
+{%extends "parent.tpl"%}
+
+{%block title%}
+出错 - 
+{%endblock%}
+
+{%block link%}
+<link rel="stylesheet" href="/static/css/pages/error.css">
+{%endblock%}
+
+{%block content%}
+  <div class="pg-error-content">
+    <div class="container_12">
+      <div class="grid_12 fn-clear mt80">
+        <img class="fn-left" src="/static/img/maintain.png" alt="$err">
+        <div class="fn-left error-info last">
+          <h1 class="h3 mb10">$err</h1>
+          <p>$msg</p>
+          <p>去 <a href="/loginPage.action">登录</a> 页面重新尝试</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock%}
