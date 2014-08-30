@@ -226,23 +226,23 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 }
             },
             login: {
-                j_username: {
+                /*j_username: {
+                    required: true,
+                    isMobileOrEmail: true
+                },*/
+                userid: {
                     required: true,
                     isMobileOrEmail: true
                 },
-                username: {
-                    required: true,
-                    isMobileOrEmail: true
-                },
-                j_password: {
+                /*j_password: {
                     required: true
-                },
+                },*/
                 password: {
                     required: true
-                },
+                }/*,
                 j_code: {
                     required: true
-                }
+                }*/
             },
             loaninfo: {
                 borrowTitle: {
@@ -787,23 +787,23 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 }
             },
             login: {
-                j_password: {
+                /*j_password: {
                     required: e.err.required
-                },
+                },*/
                 password: {
                     required: e.err.required
                 },
-                j_username: {
+                /*j_username: {
                     required: e.err.required,
                     isMobileOrEmail: e.err.isMobileOrEmail
-                },
-                username: {
+                },*/
+                userid: {
                     required: e.err.required,
                     isMobileOrEmail: e.err.isMobileOrEmail
-                },
+                }/*,
                 j_code: {
                     required: e.err.required
-                }
+                }*/
             },
             loaninfo: {
                 borrowTitle: {

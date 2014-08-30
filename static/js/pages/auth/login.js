@@ -8,7 +8,7 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
         var c = $("#j_username"),
             d = {};
         d.left = c.offset().left;
-        d.top = 215;
+        d.top = 245;
         a.css({
             left: d.left,
             top: d.top,
@@ -27,7 +27,7 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
     var Form = Widgets.Form,
         h = new e,
         i = $("#j_username"),
-        $suggest = $('<div class="suggest" id="suggest"></div>').appendTo($("body"));
+        j=$suggest = $('<div class="suggest" id="suggest"></div>').appendTo($("body"));
 
     $("#rememberme").length && Form.ui.init();
 
@@ -41,7 +41,7 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
         before: function() {
             Form.randImage();
 
-             $("#refreshCode").click(function() {
+            $("#refreshCode").click(function() {
                 $("#randImage").trigger("click");
             })
         },
@@ -51,12 +51,30 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
             onkeyup: false,
             showErrors: function(a, c) {
                 var d = $("#allError");
-                d.length ? ($("#login").find("input").each(function() {
-                    $(this).removeClass("error")
-                }), d.html(""), c.length && (d.html(c[0].message), $(c[0].element).addClass("error"))) : this.defaultShowErrors()
+                if (d.length) {
+                    $("#login").find("input").each(function() {
+                        $(this).removeClass("error")
+                    });
+                    d.html("");
+                    c.length && (d.html(c[0].message), $(c[0].element).addClass("error"));
+                } else {
+                    this.defaultShowErrors()
+                }
             },
             submitHandler: function(a) {
-                a.submit()
+                Form.ajaxSubmit($(a), {
+                    msgafter: "#" + $(a).find("input[type='submit']").attr('id'),
+                    success: function(data) {
+                        console.log(data);
+                        data = 'string' === typeof data?$.parseJSON(data):data;
+
+                        if (0 == data.status) {
+                            return location.href = '/account/index';
+                        }
+
+                        //todo
+                    }
+                });
             }
         }
     });

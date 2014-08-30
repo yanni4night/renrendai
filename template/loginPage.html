@@ -5,7 +5,9 @@
 {%endblock%}
 
 {%block script%}
-<script type="text/javascript">seajs.use(['pages/auth/login']);</script>
+<script type="text/javascript">
+  seajs.use(['pages/auth/login']);
+</script>
 {%endblock%}
 
 {%block link%}
@@ -19,29 +21,22 @@
               <div class="right-con">
                 <div class="loginbox ui-box-white-bg">
                   <h3 class="fn-hide">请登录您的多网账户</h3>
-                  <form data-name="login" class="ui-form" method="post" action='j_spring_security_check' id="login">
+                  <form data-name="login" class="ui-form" method="post" action='/login' id="login">
                     <fieldset>
-                      
-                      
                       <legend>登录</legend>
-                      
                       <div class="top-msg mb10">
-                        
-                        
                         <label class="error" id="allError"></label>
-                        
                       </div>
                       <div class="ui-form-item">
                         <label class="ui-label">手机号/邮箱</label>
-                        
-                        <input class="ui-input input-icon input-bg-gray" type="text" name='j_username' id="j_username" data-is="isMobileOrEmail" autocomplete="off">
+                        <input class="ui-input input-icon input-bg-gray" type="text" name='userid' id="j_username" data-is="isMobileOrEmail" autocomplete="off">
                         
                         <p class="placeholder" >请输入手机号/邮箱</p>
                         <span class="icon input-icon-head-gray"></span>
                       </div>
                       <div class="ui-form-item">
                         <label class="ui-label">密码</label>
-                        <input class="ui-input input-icon input-bg-gray" id="J_pass_input" type="password" name='j_password' data-is="isEmail">
+                        <input class="ui-input input-icon input-bg-gray" id="J_pass_input" type="password" name='password' data-is="isEmail">
                         <p class="placeholder">请输入密码</p>
                         <span class="icon input-icon-lock-gray"></span>
                       </div>
@@ -58,7 +53,7 @@
                       
                       <div class="ui-form-item text-center">
                         <p class="bottom-msg mb10"></p>
-                        <input type="submit" class="ui-button-rrd-blue ui-button-rrd-blue-large" value='立即登录'>
+                        <input type="submit" class="ui-button-rrd-blue ui-button-rrd-blue-large" value='立即登录' id="loginbtn">
                       </div>
                       <div class="ui-form-item text-center">
                         <p class="go-reg">没有账号？ <a href="/regPage.action">免费注册</a></p>

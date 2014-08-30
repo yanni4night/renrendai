@@ -45,7 +45,7 @@
             </div>
             <div class="grid_7 ui-header-grid">
               <div class="fn-hide no-nav-text"></div>
-              <ul class="ui-nav ">
+              <ul class="ui-nav {%if hideNav%}fn-hide{%endif%}">
                 <li class="ui-nav-item ui-nav-item-x">
                   <a class="ui-nav-item-link rrd-dimgray" href="/lend/index.action">
                     <span>我要理财</span>
@@ -89,7 +89,7 @@
               </ul>
             </div>
             <div class="grid_3 ui-header-grid">
-              <ul class="ui-nav fn-right  ">
+              <ul class="ui-nav fn-right {%if hideNav%}fn-hide{%endif%}">
             
             #if($isLogined)
             <li class="ui-nav-item ui-nav-item-x">
