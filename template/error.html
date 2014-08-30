@@ -14,8 +14,14 @@
       <div class="grid_12 fn-clear mt80">
         <img class="fn-left" src="/static/img/maintain.png" alt="$err">
         <div class="fn-left error-info last">
-          <h1 class="h3 mb10">$err</h1>
-          <p>$msg</p>
+          <h1 class="h3 mb10">
+            #if($err)
+              $err
+            #else
+              系统出错
+            #end
+          </h1>
+          <p>$!msg</p>
           <p>去 <a href="/loginPage.action">登录</a> 页面重新尝试</p>
         </div>
       </div>
