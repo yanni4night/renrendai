@@ -27,7 +27,7 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
     var Form = Widgets.Form,
         h = new e,
         i = $("#j_username"),
-        j=$suggest = $('<div class="suggest" id="suggest"></div>').appendTo($("body"));
+        j = $suggest = $('<div class="suggest" id="suggest"></div>').appendTo($("body"));
 
     $("#rememberme").length && Form.ui.init();
 
@@ -63,16 +63,16 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
             },
             submitHandler: function(a) {
                 Form.ajaxSubmit($(a), {
-                    msgafter: "#" + $(a).find("input[type='submit']").attr('id'),
+                    msgafter: "#allError",
                     success: function(data) {
                         console.log(data);
-                        data = 'string' === typeof data?$.parseJSON(data):data;
-
+                        data = 'string' === typeof data ? $.parseJSON(data) : data;
                         if (0 == data.status) {
                             return location.href = '/account/index';
+                        } else {
+                            this.msg(data.statusText||"操作异常",'warn');
+                            $('#captcha-wra').toggleClass('fn-hide', !(data.data && data.data.needCaptcha));
                         }
-
-                        //todo
                     }
                 });
             }
@@ -99,12 +99,18 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
                 var g = l(e);
                 $suggest.html(g).show().find("li").eq(0).addClass("cur")
         }
+
     }).on("keydown", function(a) {
         13 == a.keyCode && a.preventDefault();
     }).on("focusout", function() {
         setTimeout(function() {
             $suggest.hide();
-        }, 500)
+        }, 500);
+        var d = $(this).val();
+        $.getJSON('/login/checkNeedCaptcha?userid=' + $.trim(d)).done(function(ret) {
+            ret = 'string' === typeof ret ? $.parseJSON(ret) : ret;
+            $('#captcha-wra').toggleClass('fn-hide', !(ret && ret.data & ret.data.needCaptcha));
+        });
     });
 
     $(window).on("resize", function() {
@@ -119,12 +125,12 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
         f(i, "enter"), $("#J_pass_input").trigger("focus")
     });
 
-    $("#randCode").keyup(function() {
+    /*   $("#randCode").keyup(function() {
         var a = $(this).val();
         a.length && b.get("/account/checkCode.action?j_code=" + a + "&code=" + a, function(a) {
             "true" == a.result ? ($(".validCode").show(), $("#allError").hide()) : ($(".validCode").hide(), $("#allError").show())
         })
-    });
+    });*/
 
     $(".partner").length && $(".partner").hover(function() {
         $(this).addClass("hover")

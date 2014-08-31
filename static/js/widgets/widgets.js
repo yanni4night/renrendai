@@ -239,10 +239,10 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 },*/
                 password: {
                     required: true
-                }/*,
-                j_code: {
+                },
+                captcha: {
                     required: true
-                }*/
+                }
             },
             loaninfo: {
                 borrowTitle: {
@@ -1465,7 +1465,7 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
                 data: i,
                 dataType:'json',
                 beforeSend: function() {
-                    this.msg("Loading...")
+                    this.msg("加载中...")
                 },
                 success: function() {
                     this.msg("提交成功！")
@@ -1616,7 +1616,9 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
     }, e.randImage = function(a) {
         var b = d("undefined" == typeof a ? "#randImage" : a);
         b.length > 0 && b.click(function() {
-            d(this).attr("src", "/captcha?" + Math.random())
+            var r =  Number(Math.round(Math.random()*1e16)).toString(16);
+            d(this).attr("src", "/captcha?token=" +r);
+            $('input[name=token]').val(r);
         })
     }, e.tipfocus = function(a, b) {
         var c = a[0].offsetWidth + a.parent().children(".ui-label").width() + 10,

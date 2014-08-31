@@ -40,7 +40,14 @@
                         <p class="placeholder">请输入密码</p>
                         <span class="icon input-icon-lock-gray"></span>
                       </div>
-                      
+
+<div class="ui-form-item fn-hide" id="captcha-wra">
+  <label class="ui-label">验证码</label>
+  <input class="ui-input code" type="text" name="captcha" id="randCode">
+  <a href="javascript:void(0)" class="code-box"><img id="randImage" border="0" align="absmiddle" src="/captcha" name="randImage" alt="验证码" /></a>
+  <a href="javascript:void(0)" class="refresh-box"><img id="refreshCode" border="0" align="absmiddle" src="/static/img/refresh.png" alt="刷新验证码" /></a>
+  <i class="validCode fn-hide"></i>
+</div>
                       
                       <div class="ui-form-item">
                         
