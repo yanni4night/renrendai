@@ -12,6 +12,9 @@
  */
 
 var swig = require('swig');
+var dateFormat = require('dateformat');
+var now = new Date();
+
 swig.setDefaults({
     varControls: ['<{', '}>'],
     cache: false,
@@ -110,12 +113,20 @@ module.exports = function(grunt) {
         },
         "regex-replace": {
             action: {
-                src: [BUILD + '**/*.{vm,js}'],
+                src: [BUILD + 'static/js/config.js'],
                 actions: [{
                     name: 'action',
                     search: /\.\baction\b/img,
                     replace: '',
                     flags: 'img'
+                }]
+            },
+            version:{
+                src:[BUILD + '**/*.{vm,js}'],
+                actions:[{
+                    name:'version',
+                    search:/@seaversion@/mg,
+                    replace:dateFormat(now, "yyyymmddhhMMss")
                 }]
             }
         },
