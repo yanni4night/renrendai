@@ -1,5 +1,6 @@
 define("components/calculator", ["jquery", "protocol"], function(a, b, c) {
     var d = a("jquery"),
+        $ = d,
         e = a("protocol"),
         f = function(a) {
             return a && d.isPlainObject(a) ? new f.calculator(a) : void 0
@@ -120,9 +121,11 @@ define("components/calculator", ["jquery", "protocol"], function(a, b, c) {
             })
         }
     }), c.exports = f
-}), define("components/header", ["jquery", "protocol"], function(a, b, c) {
+}), define("components/header", ["jquery", "protocol", "handlebars"], function(a, b, c) {
     var d = a("jquery"),
+        $ = d,
         e = a("protocol"),
+        handlebars = a("handlebars"),
         f = function() {};
     d.extend(f.prototype, {
         init: function() {
@@ -134,11 +137,23 @@ define("components/calculator", ["jquery", "protocol"], function(a, b, c) {
                     b.text(e), 0 === e ? b.addClass("ui-nav-msgcount-nomsg") : b.removeClass("ui-nav-msgcount-nomsg")
                 })
             }
-            d("#header .ui-nav-item-x").hover(function() {
-                d(this).children(".ui-nav-dropdown").show()
-            }, function() {
-                d(this).children(".ui-nav-dropdown").hide()
-            })
+            var initSlideDownMenu = function() {
+                $("#header .ui-nav-item-x").hover(function() {
+                    d(this).children(".ui-nav-dropdown").show()
+                }, function() {
+                    d(this).children(".ui-nav-dropdown").hide()
+                });
+            };
+
+            if (d('#login-status-menu').length) {
+                d.getJSON('/login/checkLogin').done(function(data) {
+                    data = 'string' === d.type(data) ? d.parseJSON(data) : data;
+                    if (data && data.data && data.data.isLogined) {
+                        d('#login-status-menu').html(handlebars.compile(d('#login-status-tpl').html())(data.data));
+                    }
+                }).complete(initSlideDownMenu);
+            }
+
         }
     }), c.exports = f
 }), define("components/investment-terminal", ["jquery", "dialog", "common", "protocol", "widgets/widgets"], function(a, b, c) {

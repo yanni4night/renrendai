@@ -89,12 +89,12 @@
               </ul>
             </div>
             <div class="grid_3 ui-header-grid">
-              <ul class="ui-nav fn-right {%if hideNav%}fn-hide{%endif%}">
+              <ul id="login-status-menu" class="ui-nav fn-right {%if hideNav%}fn-hide{%endif%}">
             
-            #if($isLogined)
+             <script id="login-status-tpl" type="text/x-handlebars-template">
             <li class="ui-nav-item ui-nav-item-x">
             <a class="ui-nav-item-link rrd-dimgray ui-nav-username fn-text-overflow" href="/account/index.action">
-              <span>您好，$nickname</span>
+              <span>您好，{{nickname}}</span>
               <span class="arrow-down"></span>
             </a>
             <ul class="ui-nav-dropdown ui-nav-dropdown-account" style="display: none;">
@@ -110,7 +110,7 @@
             </ul>
           </li>
 
-                  #else
+                  </script>
                 
                  <li class="ui-nav-item ">
                   <a class="ui-nav-item-link reg-link" href="/regPage.action">注册</a>
@@ -118,7 +118,7 @@
                 <li class="ui-nav-item ">
                   <a class="ui-nav-item-link gray login-link" href="/loginPage.action">登录</a>
                 </li> 
-              #end
+
               </ul>
               <!--
               <ul class="ui-nav fn-right fn-hide">

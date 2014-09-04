@@ -1,6 +1,6 @@
-var version = '20140414';
+var version = '201409';
 
-var versionJS = '20140414';
+var versionJS = '@seaversion@';
 
 versionJS = versionJS === '' ? version : versionJS;
 
