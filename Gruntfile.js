@@ -113,7 +113,7 @@ module.exports = function(grunt) {
         },
         "regex-replace": {
             action: {
-                src: [BUILD + 'static/js/config.js'],
+                src: [BUILD + '**/*.{vm,js}'],
                 actions: [{
                     name: 'action',
                     search: /\.\baction\b/img,
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
                 }]
             },
             version:{
-                src:[BUILD + '**/*.{vm,js}'],
+                src:[BUILD + 'static/js/config.js'],
                 actions:[{
                     name:'version',
                     search:/@seaversion@/mg,
