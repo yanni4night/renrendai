@@ -65,11 +65,12 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
                 Form.ajaxSubmit($(a), {
                     msgafter: "#allError",
                     success: function(data) {
-                        console.log(data);
                         data = 'string' === typeof data ? $.parseJSON(data) : data;
                         if (0 == data.status) {
                             return location.href = '/account/index';
                         } else {
+                            Form.refreshImage();
+                            $('#randCode').val('');
                             this.msg(data.statusText||"操作异常",'warn');
                             $('#captcha-wra').toggleClass('fn-hide', !(data.data && data.data.needCaptcha));
                         }

@@ -1613,14 +1613,21 @@ define("widgets/captcha", ["jquery"], function(a, b, c) {
         }).on("blur", "input", function() {
             this.value || d(this).parent().children(".placeholder").show()
         }).find("input").trigger("focus")
-    }, e.randImage = function(a) {
+    };
+    var randCode = Number(Math.round(Math.random()*1e16)).toString(16);
+    e.refreshImage = function(a){
         var b = d("undefined" == typeof a ? "#randImage" : a);
+        d(b).attr("src", "/captcha?token=" + randCode + '&_=' + (+new Date()));
+        d('input[name=token]').val(randCode);
+    };
+    e.randImage = function(a) {
+        var b = d("undefined" == typeof a ? "#randImage" : a);
+        d('input[name=token]').val(randCode);
         b.length > 0 && b.click(function() {
-            var r =  Number(Math.round(Math.random()*1e16)).toString(16);
-            d(this).attr("src", "/captcha?token=" +r);
-            $('input[name=token]').val(r);
+            e.refreshImage(a)
         })
-    }, e.tipfocus = function(a, b) {
+    };
+    e.tipfocus = function(a, b) {
         var c = a[0].offsetWidth + a.parent().children(".ui-label").width() + 10,
             e = 2;
         return $poptip = a.parent().children(".ui-poptip"), /code/.test(a[0].className) && (c += a.nextAll("button")[0].offsetWidth), $poptip.length ? void $poptip.show() : void d('<div class="ui-poptip ui-poptip-orange" style="z-index: 99; position: absolute; left: ' + c + "px; top:" + e + 'px;"><div class="ui-poptip-container"><div class="ui-poptip-arrow ui-poptip-arrow-10"><em></em><span></span></div><div data-role="content" class="ui-poptip-content" style="width: auto; height: auto;"></div></div></div>').appendTo(a.parent("div")).find(".ui-poptip-content").html(b)
