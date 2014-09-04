@@ -155,7 +155,7 @@ seajs.use(['components/components'], function(Components) {
             
           </div>
           <div class="user-info-container">
-            <h3 title="yanni4night">yanni4night</h3>
+            <h3 title="$nickname">$nickname</h3>
             <div class="fn-clear">
               <div class="fn-left user-security-container mr10" id="info-box">
                 <div class="safe fn-clear">
@@ -181,7 +181,7 @@ seajs.use(['components/components'], function(Components) {
                 <div class="surplus fn-clear">
                   <span class="fn-left text-l mr10">账户余额</span>
                   <span class="fn-left num-xl color-orange-text">
-                    <em>0.00</em>元
+                    <em>$remaining</em>元
                   </span>
                   <a class="fn-left ui-button ui-button-green ui-button-mid mr4" href="/account/capital!recharge.action">充值</a>
                   <a class="fn-left ui-button ui-button-blue ui-button-mid last" href="/account/capital!withdraw.action">提现</a>
@@ -190,13 +190,13 @@ seajs.use(['components/components'], function(Components) {
                   <div class="fn-left mr40">
                     <span class="fn-left text mr10">冻结金额</span>
                     <span class="fn-left num last">
-                      <em>0.00</em>元
+                      <em>$freezing</em>元
                     </span>
                   </div>
                   <div class="fn-left last">
                     <span class="fn-left text mr10">可用金额</span>
                     <span class="fn-left num last">
-                      <em>0.00</em>元
+                      <em>$avaliable</em>元
                     </span>
                   </div>
                 </div>
@@ -215,28 +215,28 @@ seajs.use(['components/components'], function(Components) {
             <div class="fn-left text-center">
               <h5>账户净资产</h5>
               <p class="num-l">
-                <em>0.00</em>元
+                <em>$total</em>元
               </p>
             </div>
             <div class="fn-left symbol">=</div>
             <div class="fn-left text-center">
               <h5>理财资产<i id="tips_1" class="iconfont tips">&#xF046;</i></h5>
               <p class="num-l">
-                <em>0.00</em>元
+                <em>$financing</em>元
               </p>
             </div>
             <div class="fn-left symbol">+</div>
             <div class="fn-left text-center">
               <h5>借款负债</h5>
               <p class="num-l rrdcolor-red-text">
-                <em>-0.00</em>元
+                <em>-$liability</em>元
               </p>
             </div>
             <div class="fn-left symbol">+</div>
             <div class="fn-left text-center">
               <h5>账户余额</h5>
               <p class="num-l">
-                <em>0.00</em>元
+                <em>$left</em>元
               </p>
             </div>
           </div>
@@ -244,7 +244,7 @@ seajs.use(['components/components'], function(Components) {
             <div class="fn-clear summary">
               <a class="fn-left text mr30" href="/account/invest!loan.action">理财账户</a>
               <p class="fn-left text mr10">已赚总金额</p>
-              <p class="fn-left num"><em>0.00</em>元</p>
+              <p class="fn-left num"><em>$made</em>元</p>
               <a class="fn-right text mr30" href="/account/invest!backAccount.action">回账查询</a>
             </div>
             <ul class="ui-list ui-list-s">
