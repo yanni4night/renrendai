@@ -32,7 +32,7 @@
 {{@ each rsvList }}
 <li class="ui-list-item fn-clear {{ itemStyle }}">
   <span class="ui-list-field fn-left color-gray-text w80 fn-text-overflow">&nbsp;&nbsp;{{ id }}</span>
-  <span class="ui-list-field fn-left color-gray-text w160 text-left-imp fn-text-overflow"><span class="list-ul-name" style="width:100%">{{ investor }}{{@if ucodeUsed }}<a title="U-code预定" target="_blank" href="/help/terms/terms!terms.action#ucode"><i class="list-u-code"></i></a>{{/ if }}{{@if mobileUsed }}<a title="手机预定" target="_blank" href="http://www.duonet.cn/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span></span>
+  <span class="ui-list-field fn-left color-gray-text w160 text-left-imp fn-text-overflow"><span class="list-ul-name" style="width:100%">{{ investor }}{{@if ucodeUsed }}<a title="U-code预定" target="_blank" href="/help/terms/terms/terms.action#ucode"><i class="list-u-code"></i></a>{{/ if }}{{@if mobileUsed }}<a title="手机预定" target="_blank" href="http://www.duonet.cn/event/app.action"><i class="list-u-mobile"></i></a>{{/ if }}</span></span>
   <span class="ui-list-field fn-left color-gray-text w120 num-s text-left-imp fn-text-overflow"><em>{{ planAmount }}</em>元</span>
   <span class="ui-list-field fn-left color-gray-text w150 text-left-imp fn-text-overflow">{{ date }}</span>
   <span class="ui-list-field fn-left color-gray-text w80 last text-left-imp fn-text-overflow">{{ status }}</span>
@@ -92,7 +92,7 @@
 
       <p style="line-height: normal"><input type="checkbox" checked="checked" name="joinContract" id="joinContract">我已阅读 <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('/financeplan/getDemoFinancePlanContract.action?financePlanId=67','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">《优选理财计划0067期协议》</a><label for="joinContract" class="error"></label></p>
 
-      <p style="line-height: normal"><input type="checkbox" checked="checked" name="reserveContract" id="reserveContract">我已阅读并同意签署 <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('/financeplan/getFinancePlanContract!getPlanRsvContract.action?financePlanId=67','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">《优选理财计划0067期预定协议》</a><label for="reserveContract" class="error" style="display: none"></label></p>
+      <p style="line-height: normal"><input type="checkbox" checked="checked" name="reserveContract" id="reserveContract">我已阅读并同意签署 <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('/financeplan/getFinancePlanContract/getPlanRsvContract.action?financePlanId=67','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">《优选理财计划0067期预定协议》</a><label for="reserveContract" class="error" style="display: none"></label></p>
 
       <div class="ui-info-box ml10 mr10 mt20">
         <div class="mb10"><i class="icon icon-info mr10"></i>温馨提示：</div>
@@ -263,7 +263,7 @@
             <span class="fn-left basic-label">投标范围</span>
             <span class="fn-left basic-value" id="plan-basic-products" data-products="机构担保标,实地认证标"></span>
             <span class="fn-left basic-label">保障方式</span>
-            <span class="fn-left basic-value last">参见 <a href="/help/security/security!detail.action?flag=bjbz" target="_blank">本金保障计划</a></span>
+            <span class="fn-left basic-value last">参见 <a href="/help/security/security/detail.action?flag=bjbz" target="_blank">本金保障计划</a></span>
           </li>
           <li class="fn-clear basic-row">
             
@@ -312,7 +312,7 @@
             </div>
             <div class="fn-left basic-extra plan-fee">
               <div class="basic-extra-row color-dimgray-text text-small" id="buy-in-rate" data-br="0.0">
-                <span>加入费率 0.00% <a class="iconfont text" data-ui-name="ui-poptip-trigger" data-ui-poptip-ancestor=".basic-extra-row" href="/help/invest/invest!income.action#financialPlanCosts" target="_blank">&#xF046;</a></span>
+                <span>加入费率 0.00% <a class="iconfont text" data-ui-name="ui-poptip-trigger" data-ui-poptip-ancestor=".basic-extra-row" href="/help/invest/invest/income.action#financialPlanCosts" target="_blank">&#xF046;</a></span>
                 <div class="ui-poptip ui-poptip-blue" data-ui-name="ui-poptip" style="display: none;">
                   <div class="ui-poptip-shadow">
                     <div class="ui-poptip-container">        
@@ -323,7 +323,7 @@
                 </div>
               </div>
               <div class="basic-extra-row color-dimgray-text text-small" id="interest-rate" data-ir="0.0">
-                <span>服务费率 0.00% <a class="iconfont text" data-ui-name="ui-poptip-trigger" data-ui-poptip-ancestor=".basic-extra-row" href="/help/invest/invest!income.action#financialPlanCosts" target="_blank">&#xF046;</a></span>
+                <span>服务费率 0.00% <a class="iconfont text" data-ui-name="ui-poptip-trigger" data-ui-poptip-ancestor=".basic-extra-row" href="/help/invest/invest/income.action#financialPlanCosts" target="_blank">&#xF046;</a></span>
                 <div class="ui-poptip ui-poptip-blue" data-ui-name="ui-poptip" style="display: none;">
                   <div class="ui-poptip-shadow">
                     <div class="ui-poptip-container">        
@@ -334,7 +334,7 @@
                 </div>
               </div>
               <div class="basic-extra-row color-dimgray-text text-small" id="quit-rate" data-qr="0.0">
-                <span>退出费率 0.00% <a class="iconfont text" data-ui-name="ui-poptip-trigger" data-ui-poptip-ancestor=".basic-extra-row" href="/help/invest/invest!income.action#financialPlanCosts" target="_blank">&#xF046;</a></span>
+                <span>退出费率 0.00% <a class="iconfont text" data-ui-name="ui-poptip-trigger" data-ui-poptip-ancestor=".basic-extra-row" href="/help/invest/invest/income.action#financialPlanCosts" target="_blank">&#xF046;</a></span>
                 <div class="ui-poptip ui-poptip-blue" data-ui-name="ui-poptip" style="display: none;">
                   <div class="ui-poptip-shadow">
                     <div class="ui-poptip-container">        
@@ -429,7 +429,7 @@
           <a class="ui-tab-item-link">计划表现</a>
         </li>
       </ul>
-      <a class="plan-list-link" href="/financeplan/listPlan!listPlan.action" target="_blank">查看往期优选理财计划</a>
+      <a class="plan-list-link" href="/financeplan/listPlan/listPlan.action" target="_blank">查看往期优选理财计划</a>
     </div>
   </div>
   <div class="container_12" id="plan-tab-content">
