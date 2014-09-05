@@ -24,7 +24,7 @@
     <p>
         您可以通过&ldquo;账户管理&rdquo;&mdash;&ldquo;认证信息&rdquo;查看相关信息。</p>
     <p>
-        点击 <a href="/account/info!verification.action">这里</a> 查看您的信用状况。</p>
+        点击 <a href="/account/info/verification.action">这里</a> 查看您的信用状况。</p>
     <p>
         感谢您对我们的关注和支持！</p>
     <p>
@@ -50,7 +50,7 @@
     <p>
         您可以通过&ldquo;账户管理&rdquo;&mdash;&ldquo;认证信息&rdquo;查看相关信息。</p>
     <p>
-        点击 <a href="/account/info!verification.action">这里</a> 查看您的信用状况。</p>
+        点击 <a href="/account/info/verification.action">这里</a> 查看您的信用状况。</p>
     <p>
         感谢您对我们的关注和支持！</p>
     <p>
@@ -174,7 +174,7 @@
         var r = window.confirm("此操作将删除本次对话，确认要提交吗?");
         if(r){
              $.ajax({
-                 url:"/account/comm!delInnerMailForUser.action?senderId="+senderId+"&type="+type,
+                 url:"/account/comm/delInnerMailForUser.action?senderId="+senderId+"&type="+type,
                  timeout: 100000,
                  error: function(){
                      alert('删除失败，请重试');

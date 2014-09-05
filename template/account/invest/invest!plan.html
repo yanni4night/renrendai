@@ -19,7 +19,7 @@
         </li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text">
-          <a href="/account/invest!loan.action">理财管理</a>
+          <a href="/account/invest/loan.action">理财管理</a>
         </li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-current">
@@ -43,10 +43,10 @@
           <a class="ui-side-sub-item-link" href="/account/capital.action">交易记录</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/capital!recharge.action">充值</a>
+          <a class="ui-side-sub-item-link" href="/account/capital/recharge.action">充值</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/capital!withdraw.action">提现</a>
+          <a class="ui-side-sub-item-link last" href="/account/capital/withdraw.action">提现</a>
         </li>
       </ul>
     </li>
@@ -54,19 +54,19 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid invest"></i>理财管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!loan.action">我的债权</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/loan.action">我的债权</a>
         </li>
         <li class="ui-side-sub-item active">
-          <a class="ui-side-sub-item-link" href="/account/invest!plan.action">优选理财计划</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/plan.action">优选理财计划</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!transfer.action">债权转让</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/transfer.action">债权转让</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!statistics.action">理财统计</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/statistics.action">理财统计</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/invest!tool.action">自动投标工具</a>
+          <a class="ui-side-sub-item-link last" href="/account/invest/tool.action">自动投标工具</a>
         </li>
       </ul>
     </li>
@@ -74,13 +74,13 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid borrow"></i>借款管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!toMyLoans.action">我的借款</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/toMyLoans.action">我的借款</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!applications.action">借款申请查询</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/applications.action">借款申请查询</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/borrow!statistics.action">借款统计</a>
+          <a class="ui-side-sub-item-link last" href="/account/borrow/statistics.action">借款统计</a>
         </li>
       </ul>
     </li>
@@ -88,16 +88,16 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid account"></i>账户管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!basicInfo.action">个人基础信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/basicInfo.action">个人基础信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!verification.action">认证信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/verification.action">认证信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!security.action">安全信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/security.action">安全信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/info!bank.action">银行卡信息</a>
+          <a class="ui-side-sub-item-link last" href="/account/info/bank.action">银行卡信息</a>
         </li>
       </ul>
     </li>
@@ -105,10 +105,10 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid comm"></i>互动管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link" href="/account/comm!mail.action">站内消息</a>
+          <a  class="ui-side-sub-item-link" href="/account/comm/mail.action">站内消息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link last" href="/account/comm!settings.action">通知设置</a>
+          <a  class="ui-side-sub-item-link last" href="/account/comm/settings.action">通知设置</a>
         </li>
       </ul>
     </li>
@@ -246,7 +246,7 @@ seajs.use(['components/components'], function(Components) {
           <input type="radio" checked="checked" /> 提取至银行卡
           <div>
             <select id="account-info" data-name="bank-account"></select>
-            <a href="/account/info!bank.action">添加</a>
+            <a href="/account/info/bank.action">添加</a>
           </div>
         </div>
         <a class="cursor-pointer text-small" data-name="change-manner">其他回款处理方式</a>
@@ -478,12 +478,12 @@ seajs.use(['components/components'], function(Components) {
       </li>
       {{@ each financePlanList }}
       <li class="ui-list-item fn-clear {{ itemStyle }}">
-          <span class="ui-list-field fn-left color-gray-text w150 fn-text-overflow text-center"><a href="/financeplan/listPlan!detailPlan.action?financePlanId={{ planId }}" target="_blank">{{ name }}</a></span>
+          <span class="ui-list-field fn-left color-gray-text w150 fn-text-overflow text-center"><a href="/financeplan/listPlan/detailPlan.action?financePlanId={{ planId }}" target="_blank">{{ name }}</a></span>
           <span class="ui-list-field fn-left color-gray-text w100 text-left-imp fn-text-overflow">{{ amount }}</span>
           <span class="ui-list-field fn-left color-gray-text w100 text-left-imp fn-text-overflow">{{ depositAmount }}</span>
           <span class="ui-list-field fn-left color-gray-text w100 text-left-imp fn-text-overflow">{{ unRepayAmount }}</span>
           <span class="ui-list-field fn-left color-gray-text w140 text-left-imp fn-text-overflow color-red">{{ endPayMentTime }}</span>
-          <span class="ui-list-field fn-left color-gray-text w150 last text-left-imp fn-text-overflow">{{ rsvStatus }}<a onclick="javascript:window.showModalDialog('/financeplan/getFinancePlanContract!getPlanRsvContract.action?financePlanId={{planId}}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')" href="javascript:void(0)" class="list-a-pay">合同</a> {{@if isNotOverDue}}<a class="list-a-pay J_conform_pay_a" href="#" data-id="{{ planId }}">支付</a>{{/if}}</span>
+          <span class="ui-list-field fn-left color-gray-text w150 last text-left-imp fn-text-overflow">{{ rsvStatus }}<a onclick="javascript:window.showModalDialog('/financeplan/getFinancePlanContract/getPlanRsvContract.action?financePlanId={{planId}}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')" href="javascript:void(0)" class="list-a-pay">合同</a> {{@if isNotOverDue}}<a class="list-a-pay J_conform_pay_a" href="#" data-id="{{ planId }}">支付</a>{{/if}}</span>
       </li>
       {{ else }}
       <li class="ui-list-status">
@@ -507,13 +507,13 @@ seajs.use(['components/components'], function(Components) {
           </ul>
           <div class="money-div">
               <p><span>应付金额</span><em data1="{{ unRepayAmountComma }}" data2="{{ buyInAmount}}"> {{ unRepayAmountComma }}</em>元</p>
-              <p><span>账户余额</span>{{ availablePoints }}元<a href="/account/capital!recharge.action">充值</a></p>
+              <p><span>账户余额</span>{{ availablePoints }}元<a href="/account/capital/recharge.action">充值</a></p>
           </div>
           <p><span>收益处理方式</span>
               <label><input type="radio" name="cashTypeStr" value="INVEST" checked="checked"/>收益再投</label>
               <label><input type="radio" name="cashTypeStr" value="RRD" />提至账户</label>
               <label><input type="radio" name="cashTypeStr" value="BANK" />提至银行卡</label>
-              <select name="bankIdStr" id="bank-accounts" class="fn-hide"></select> <span id="J_TX_pass" class="fn-hide">&nbsp;&nbsp;提现密码:&nbsp;&nbsp;<input type="password" name="cashPassword" id="txPsw"/></span><a id="J_a_addbank" href="/account/info!bank.action" class="fn-hide">添加</a>
+              <select name="bankIdStr" id="bank-accounts" class="fn-hide"></select> <span id="J_TX_pass" class="fn-hide">&nbsp;&nbsp;提现密码:&nbsp;&nbsp;<input type="password" name="cashPassword" id="txPsw"/></span><a id="J_a_addbank" href="/account/info/bank.action" class="fn-hide">添加</a>
               <div id="pswMsg" style="color: red;padding-left: 350px;height: 20px;"></div>
           </p>
           <p style="line-height: normal"><input id="contract" type="checkbox" checked="checked"  name="contract">我已阅读并同意签署    <a class="text" href="javascript:void(0)" onclick="javascript:window.showModalDialog('/financeplan/getDemoFinancePlanContract.action?financePlanId={{id }}','','dialogWidth=1024px;dialogHeight=768px,status=0,toolbar=no,menubar=no,location=no,scrollbars=yes,top=20,left=20,resizable=no')">《{{ name }}协议》</a><label for="contract" class="error"></label></p>

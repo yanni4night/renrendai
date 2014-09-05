@@ -39,10 +39,10 @@
           <a class="ui-side-sub-item-link" href="/account/capital.action">交易记录</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/capital!recharge.action">充值</a>
+          <a class="ui-side-sub-item-link" href="/account/capital/recharge.action">充值</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/capital!withdraw.action">提现</a>
+          <a class="ui-side-sub-item-link last" href="/account/capital/withdraw.action">提现</a>
         </li>
       </ul>
     </li>
@@ -50,19 +50,19 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid invest"></i>理财管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!loan.action">我的债权</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/loan.action">我的债权</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!plan.action">优选理财计划</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/plan.action">优选理财计划</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!transfer.action">债权转让</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/transfer.action">债权转让</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!statistics.action">理财统计</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/statistics.action">理财统计</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/invest!tool.action">自动投标工具</a>
+          <a class="ui-side-sub-item-link last" href="/account/invest/tool.action">自动投标工具</a>
         </li>
       </ul>
     </li>
@@ -70,13 +70,13 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid borrow"></i>借款管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!toMyLoans.action">我的借款</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/toMyLoans.action">我的借款</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!applications.action">借款申请查询</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/applications.action">借款申请查询</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/borrow!statistics.action">借款统计</a>
+          <a class="ui-side-sub-item-link last" href="/account/borrow/statistics.action">借款统计</a>
         </li>
       </ul>
     </li>
@@ -84,16 +84,16 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid account"></i>账户管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!basicInfo.action">个人基础信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/basicInfo.action">个人基础信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!verification.action">认证信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/verification.action">认证信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!security.action">安全信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/security.action">安全信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/info!bank.action">银行卡信息</a>
+          <a class="ui-side-sub-item-link last" href="/account/info/bank.action">银行卡信息</a>
         </li>
       </ul>
     </li>
@@ -101,10 +101,10 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid comm"></i>互动管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link" href="/account/comm!mail.action">站内消息</a>
+          <a  class="ui-side-sub-item-link" href="/account/comm/mail.action">站内消息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link last" href="/account/comm!settings.action">通知设置</a>
+          <a  class="ui-side-sub-item-link last" href="/account/comm/settings.action">通知设置</a>
         </li>
       </ul>
     </li>
@@ -150,7 +150,7 @@ seajs.use(['components/components'], function(Components) {
         <div class="box box-user-info">
           <div class="user-avatar-container">
             
-            <a href="/account/info!basicInfo.action"><img width="96" height="96" src="/static/img/account/default-avatar-96.png" /></a>
+            <a href="/account/info/basicInfo.action"><img width="96" height="96" src="/static/img/account/default-avatar-96.png" /></a>
             
             
           </div>
@@ -164,16 +164,16 @@ seajs.use(['components/components'], function(Components) {
                 </div>
                 <div class="icons fn-clear mt5">
                   <div class="fn-left icon-box light">
-                    <a data-txt="为了您的账户更安全，请您绑定手机号。||立即绑定" title="绑定手机，已绑定" href="/account/info!security.action" class="fn-left safe-rank cellphone light"></a>
+                    <a data-txt="为了您的账户更安全，请您绑定手机号。||立即绑定" title="绑定手机，已绑定" href="/account/info/security.action" class="fn-left safe-rank cellphone light"></a>
                   </div>
                   <div class="fn-left icon-box light">
-                    <a data-txt="进行实名认证后，您才可以进行投资、借款。||立即认证" title="实名认证，已设置" href="/account/info!security.action" class="fn-left safe-rank man light"></a>
+                    <a data-txt="进行实名认证后，您才可以进行投资、借款。||立即认证" title="实名认证，已设置" href="/account/info/security.action" class="fn-left safe-rank man light"></a>
                   </div>
                   <div class="fn-left icon-box ">
-                    <a data-txt="为了您的资金更加安全，请您设置提现密码。||立即设置" title="提现密码，未设置" href="/account/info!security.action" class="fn-left safe-rank lock "></a>
+                    <a data-txt="为了您的资金更加安全，请您设置提现密码。||立即设置" title="提现密码，未设置" href="/account/info/security.action" class="fn-left safe-rank lock "></a>
                   </div>
                   <div class="fn-left icon-box ">
-                    <a data-txt="为了使您的账户有更多的安全保障，请您绑定邮箱。||立即绑定" title="绑定邮箱，未绑定" href="/account/info!security.action" class="fn-left safe-rank mail "></a>
+                    <a data-txt="为了使您的账户有更多的安全保障，请您绑定邮箱。||立即绑定" title="绑定邮箱，未绑定" href="/account/info/security.action" class="fn-left safe-rank mail "></a>
                   </div>
                 </div>
               </div>
@@ -183,8 +183,8 @@ seajs.use(['components/components'], function(Components) {
                   <span class="fn-left num-xl color-orange-text">
                     <em>$remaining</em>元
                   </span>
-                  <a class="fn-left ui-button ui-button-green ui-button-mid mr4" href="/account/capital!recharge.action">充值</a>
-                  <a class="fn-left ui-button ui-button-blue ui-button-mid last" href="/account/capital!withdraw.action">提现</a>
+                  <a class="fn-left ui-button ui-button-green ui-button-mid mr4" href="/account/capital/recharge.action">充值</a>
+                  <a class="fn-left ui-button ui-button-blue ui-button-mid last" href="/account/capital/withdraw.action">提现</a>
                 </div>
                 <div class="surplus-detail fn-clear">
                   <div class="fn-left mr40">
@@ -242,10 +242,10 @@ seajs.use(['components/components'], function(Components) {
           </div>
           <div>
             <div class="fn-clear summary">
-              <a class="fn-left text mr30" href="/account/invest!loan.action">理财账户</a>
+              <a class="fn-left text mr30" href="/account/invest/loan.action">理财账户</a>
               <p class="fn-left text mr10">已赚总金额</p>
               <p class="fn-left num"><em>$made</em>元</p>
-              <a class="fn-right text mr30" href="/account/invest!backAccount.action">回账查询</a>
+              <a class="fn-right text mr30" href="/account/invest/backAccount.action">回账查询</a>
             </div>
             <ul class="ui-list ui-list-s">
               <li class="ui-list-header fn-clear">
@@ -262,7 +262,7 @@ seajs.use(['components/components'], function(Components) {
                 <span class="ui-list-field fn-left num-s text-right w140 pr20"><em>0.00</em>元</span>
                 <span class="ui-list-field fn-left num-s text-right w90 pr30"><em>0.0</em>%</span>
                 <span class="ui-list-field fn-left text-center w80"><em>0</em></span>
-                <span class="ui-list-field fn-left text-center w80 last"><a href="/account/invest!loan.action">查看</a></span>
+                <span class="ui-list-field fn-left text-center w80 last"><a href="/account/invest/loan.action">查看</a></span>
               </li>
               <li class="ui-list-item fn-clear last">
                 <span class="ui-list-field fn-left w100 ph10">优选理财计划</span>
@@ -270,16 +270,16 @@ seajs.use(['components/components'], function(Components) {
                 <span class="ui-list-field fn-left num-s text-right w140 pr20"><em>0.00</em>元</span>
                 <span class="ui-list-field fn-left num-s text-right w90 pr30"><em>0.0</em>%</span>
                 <span class="ui-list-field fn-left text-center w80"><em>0</em></span>
-                <span class="ui-list-field fn-left text-center w80 last"><a href="/account/invest!plan.action">查看</a></span>
+                <span class="ui-list-field fn-left text-center w80 last"><a href="/account/invest/plan.action">查看</a></span>
               </li>
             </ul>
           </div>
           <div class="mt20 mb20">
             <div class="fn-clear summary">
-              <a class="fn-left text mr30" href="/account/borrow!toMyLoans.action">借款账户</a>
+              <a class="fn-left text mr30" href="/account/borrow/toMyLoans.action">借款账户</a>
               <p class="fn-left text mr10">待还总金额</p>
               <p class="fn-left num"><em>0.00</em>元</p>
-              <a class="fn-right text mr30" href="/account/borrow!applications.action">申请查询</a>
+              <a class="fn-right text mr30" href="/account/borrow/applications.action">申请查询</a>
             </div>
             <ul class="ui-list ui-list-s" id="borrowing"></ul>
           </div>
@@ -290,7 +290,7 @@ seajs.use(['components/components'], function(Components) {
           <div class="plan mt10 ph10 fn-clear">
             <div class="fn-left w230 mr20">
               <h4 class="plan-title w250 fn-text-overflow">
-                <a href="/financeplan/listPlan!detailPlan.action?financePlanId=68" target="_blank">优选理财计划0068期</a>
+                <a href="/financeplan/listPlan/detailPlan.action?financePlanId=68" target="_blank">优选理财计划0068期</a>
               </h4>
               <p class="fn-clear">
                 <span class="fn-left mr10">加入条件</span>
@@ -405,7 +405,7 @@ seajs.use(['components/components'], function(Components) {
     <span class="ui-list-field fn-left num-s text-right w140 pr20"><em>{{ notPayPrincipal }}</em>元</span>
     <span class="ui-list-field fn-left num-s text-right w120 pr40"><em>{{ notPayInterestAndMgmtFee }}</em>元</span>
     <span class="ui-list-field fn-left num-s text-right w80 pr20"><em>{{ overdueAmount }}</em>元</span>
-    <span class="ui-list-field fn-left text-center w110 last"><a href="/account/borrow!toMyLoans.action">去还款</a></span>
+    <span class="ui-list-field fn-left text-center w110 last"><a href="/account/borrow/toMyLoans.action">去还款</a></span>
   {{ else }}
   <li class="ui-list-status">
     <p class="color-gray-text">{{@ if _message }}{{ _message }}{{ else }}没有借款记录{{/ if }}</p>

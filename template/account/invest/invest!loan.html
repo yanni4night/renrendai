@@ -19,7 +19,7 @@
         </li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text">
-          <a href="/account/invest!loan.action">理财管理</a>
+          <a href="/account/invest/loan.action">理财管理</a>
         </li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-separator"></li>
         <li class="fn-left ui-breadcrumb-item ui-breadcrumb-text ui-breadcrumb-text-current">
@@ -43,10 +43,10 @@
           <a class="ui-side-sub-item-link" href="/account/capital.action">交易记录</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/capital!recharge.action">充值</a>
+          <a class="ui-side-sub-item-link" href="/account/capital/recharge.action">充值</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/capital!withdraw.action">提现</a>
+          <a class="ui-side-sub-item-link last" href="/account/capital/withdraw.action">提现</a>
         </li>
       </ul>
     </li>
@@ -54,19 +54,19 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid invest"></i>理财管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item active">
-          <a class="ui-side-sub-item-link" href="/account/invest!loan.action">我的债权</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/loan.action">我的债权</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!plan.action">优选理财计划</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/plan.action">优选理财计划</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!transfer.action">债权转让</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/transfer.action">债权转让</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!statistics.action">理财统计</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/statistics.action">理财统计</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/invest!tool.action">自动投标工具</a>
+          <a class="ui-side-sub-item-link last" href="/account/invest/tool.action">自动投标工具</a>
         </li>
       </ul>
     </li>
@@ -74,13 +74,13 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid borrow"></i>借款管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!toMyLoans.action">我的借款</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/toMyLoans.action">我的借款</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!applications.action">借款申请查询</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/applications.action">借款申请查询</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/borrow!statistics.action">借款统计</a>
+          <a class="ui-side-sub-item-link last" href="/account/borrow/statistics.action">借款统计</a>
         </li>
       </ul>
     </li>
@@ -88,16 +88,16 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid account"></i>账户管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!basicInfo.action">个人基础信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/basicInfo.action">个人基础信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!verification.action">认证信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/verification.action">认证信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!security.action">安全信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/security.action">安全信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/info!bank.action">银行卡信息</a>
+          <a class="ui-side-sub-item-link last" href="/account/info/bank.action">银行卡信息</a>
         </li>
       </ul>
     </li>
@@ -105,10 +105,10 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid comm"></i>互动管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link" href="/account/comm!mail.action">站内消息</a>
+          <a  class="ui-side-sub-item-link" href="/account/comm/mail.action">站内消息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link last" href="/account/comm!settings.action">通知设置</a>
+          <a  class="ui-side-sub-item-link last" href="/account/comm/settings.action">通知设置</a>
         </li>
       </ul>
     </li>
@@ -160,13 +160,13 @@ seajs.use(['components/components'], function(Components) {
             </div>
             <div class="mt10 fn-clear">
               <span>没时间亲自投标？试试多网自动投标功能吧。</span>
-              <a class="ui-button ui-button-small ui-button-blue" href="/account/invest!tool.action">自动投标</a>
+              <a class="ui-button ui-button-small ui-button-blue" href="/account/invest/tool.action">自动投标</a>
             </div>
           </div>
         </div>
         
         <div class="mt20">
-          <a class="loans-return-link" href="/account/invest!backAccount.action">回帐查询</a>
+          <a class="loans-return-link" href="/account/invest/backAccount.action">回帐查询</a>
           <div class="ui-tab ui-tab-transparent" id="loans-tab">
             <ul class="ui-tab-items">
               <li class="ui-tab-item ui-tab-item-current" data-name="repaying">
@@ -276,7 +276,7 @@ seajs.use(['components/components'], function(Components) {
         </li>
         <li class="ui-confirm-item-note text-small color-gray-text">
           一般为转让时的待回收本金与应计利息之和。
-          <a href="/help/invest/invest!transfer.action#transferValue" target="_blank">查看详细</a>
+          <a href="/help/invest/invest/transfer.action#transferValue" target="_blank">查看详细</a>
         </li>
         <li class="fn-clear">
           <span class="fn-left ui-confirm-label">转让系数</span>
@@ -329,14 +329,14 @@ seajs.use(['components/components'], function(Components) {
         </li>
         <li class="ui-confirm-item-note text-small color-gray-text">
           由于债权价值会发生变动，最终收入金额可能发生变动。
-          <a href="/help/invest/invest!transfer.action#loan-value-changed" target="_blank">查看详细</a>
+          <a href="/help/invest/invest/transfer.action#loan-value-changed" target="_blank">查看详细</a>
         </li>
         <li class="fn-clear">
           <span class="fn-left ui-confirm-label">提现密码</span>
           <span class="fn-left ui-confirm-value last" id="captcha">
             <input id="captcha-input" type="password" name="cashPassword" value="" />
             <!--<img class="cursor-pointer" id="captcha-img" src="/image_https.jsp" />-->
-            <a id="findPsw" class="fin" href="/account/info!security.action">忘记密码</a>
+            <a id="findPsw" class="fin" href="/account/info/security.action">忘记密码</a>
           </span>
           <p class='color-red hide J_error_msg_p'>请输入提现密码</p>
         </li>
@@ -416,7 +416,7 @@ seajs.use(['components/components'], function(Components) {
           <span class="fn-left ui-confirm-value last" id="captcha">
               <input id="captcha-input" type="password" name="cashPassword" value="" />
             <!--<img class="cursor-pointer" id="captcha-img" src="/image_https.jsp" />-->
-            <a id="findPsw" class="findPsw" href="/account/info!security.action">忘记密码</a>
+            <a id="findPsw" class="findPsw" href="/account/info/security.action">忘记密码</a>
           </span>
        <p class='color-red hide J_error_msg_p'>请输入提现密码</p>
         </li>
@@ -441,7 +441,7 @@ seajs.use(['components/components'], function(Components) {
 <div class="ui-confirm" id="confirm-transfer-cancel">
   <h3 class="ui-confirm-title">撤销债权转让 <span class="text">ID {{ transferId }}</span></h3>
   <div class="ui-confirm-content">
-    <form class="ui-confirm-form" action="/account/invest!cancelTranfsfer.action" method="post">
+    <form class="ui-confirm-form" action="/account/invest/cancelTranfsfer.action" method="post">
       <ul>
         <li class="fn-clear">
           <span class="fn-left ui-confirm-label">已转出份数</span>

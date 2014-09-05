@@ -47,10 +47,10 @@ U-code兑换 - 优惠券管理 - 我的多网帐户中心 -
           <a class="ui-side-sub-item-link" href="/account/capital.action">交易记录</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/capital!recharge.action">充值</a>
+          <a class="ui-side-sub-item-link" href="/account/capital/recharge.action">充值</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/capital!withdraw.action">提现</a>
+          <a class="ui-side-sub-item-link last" href="/account/capital/withdraw.action">提现</a>
         </li>
       </ul>
     </li>
@@ -58,19 +58,19 @@ U-code兑换 - 优惠券管理 - 我的多网帐户中心 -
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid invest"></i>理财管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!loan.action">我的债权</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/loan.action">我的债权</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!plan.action">优选理财计划</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/plan.action">优选理财计划</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!transfer.action">债权转让</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/transfer.action">债权转让</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!statistics.action">理财统计</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/statistics.action">理财统计</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/invest!tool.action">自动投标工具</a>
+          <a class="ui-side-sub-item-link last" href="/account/invest/tool.action">自动投标工具</a>
         </li>
       </ul>
     </li>
@@ -78,13 +78,13 @@ U-code兑换 - 优惠券管理 - 我的多网帐户中心 -
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid borrow"></i>借款管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!toMyLoans.action">我的借款</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/toMyLoans.action">我的借款</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!applications.action">借款申请查询</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/applications.action">借款申请查询</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/borrow!statistics.action">借款统计</a>
+          <a class="ui-side-sub-item-link last" href="/account/borrow/statistics.action">借款统计</a>
         </li>
       </ul>
     </li>
@@ -92,16 +92,16 @@ U-code兑换 - 优惠券管理 - 我的多网帐户中心 -
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid account"></i>账户管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!basicInfo.action">个人基础信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/basicInfo.action">个人基础信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!verification.action">认证信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/verification.action">认证信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!security.action">安全信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/security.action">安全信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/info!bank.action">银行卡信息</a>
+          <a class="ui-side-sub-item-link last" href="/account/info/bank.action">银行卡信息</a>
         </li>
       </ul>
     </li>
@@ -109,10 +109,10 @@ U-code兑换 - 优惠券管理 - 我的多网帐户中心 -
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid comm"></i>互动管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link" href="/account/comm!mail.action">站内消息</a>
+          <a  class="ui-side-sub-item-link" href="/account/comm/mail.action">站内消息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link last" href="/account/comm!settings.action">通知设置</a>
+          <a  class="ui-side-sub-item-link last" href="/account/comm/settings.action">通知设置</a>
         </li>
       </ul>
     </li>
@@ -140,7 +140,7 @@ seajs.use(['components/components'], function(Components) {
                 <div class="grid_10">
                     <div class="color-white-bg fn-clear  ucode-use-div">
                         <h3 class="text-xl">U-code抢优选的得力助手</h3>
-                        <p class="info mar-top">0定金，抢先预定优选理财计划加入金额！<a target="_blank" href="/help/invest/invest!financial.action#useUcode">了解更多</a></p>
+                        <p class="info mar-top">0定金，抢先预定优选理财计划加入金额！<a target="_blank" href="/help/invest/invest/financial.action#useUcode">了解更多</a></p>
                         <p class="info">关注多网官方微信、微博，抢先了解优选发布动态！</p>
                         <div class="img-div">
                             <h4>如何使用U-code</h4>
@@ -153,7 +153,7 @@ seajs.use(['components/components'], function(Components) {
                     <div class="ucode-use-div">
                         <div class="color-white-bg fn-clear">
                             <h3 class="text-xl">U-code兑换</h3>
-                            <form data-name="ucode" enctype="multipart/form-data" class="ui-form" method="get" id="ucodeForm" action="/account/ucode!doUcodeReserve.action">
+                            <form data-name="ucode" enctype="multipart/form-data" class="ui-form" method="get" id="ucodeForm" action="/account/ucode/doUcodeReserve.action">
                                 <div class="inputs mt20">
                                     <div class="ui-form-item">
                                         <label class="ui-label">昵称</label>
@@ -216,11 +216,11 @@ seajs.use(['components/components'], function(Components) {
 
                 {{@ each financePlanList }}
                 <li class="ui-list-item fn-clear">
-                    <span class="ui-list-field w240 ph10 fn-text-overflow fn-left"><a target="_blank" href="/financeplan/listPlan!detailPlan.action?financePlanId={{ id }}">{{ name }}</a></span>
+                    <span class="ui-list-field w240 ph10 fn-text-overflow fn-left"><a target="_blank" href="/financeplan/listPlan/detailPlan.action?financePlanId={{ id }}">{{ name }}</a></span>
                     <span class="ui-list-field  text-right w120 fn-left">{{expectedRate}}每年</span>
                     <span class="ui-list-field  text-right w80  fn-left">{{ lockPeriod }}个月</span>
                     <span class="ui-list-field  text-right w80  fn-left">{{ buyInRate }}元</span>
-                    <span class="ui-list-field text-center w100 fn-left last"><a target="_blank" class="linkRsv" href="/account/ucode!toReserveDetailPage.action?ucodeSerial={{ ucodeSerial }}&financePlanId={{ id }}" data-plan-id="{{ id }}" data-loan-id="172730">去预定</a></span>
+                    <span class="ui-list-field text-center w100 fn-left last"><a target="_blank" class="linkRsv" href="/account/ucode/toReserveDetailPage.action?ucodeSerial={{ ucodeSerial }}&financePlanId={{ id }}" data-plan-id="{{ id }}" data-loan-id="172730">去预定</a></span>
                 </li>
                 {{ else }}
                 <li class="ui-list-status">

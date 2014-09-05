@@ -43,10 +43,10 @@
           <a class="ui-side-sub-item-link" href="/account/capital.action">交易记录</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/capital!recharge.action">充值</a>
+          <a class="ui-side-sub-item-link" href="/account/capital/recharge.action">充值</a>
         </li>
         <li class="ui-side-sub-item active">
-          <a class="ui-side-sub-item-link last" href="/account/capital!withdraw.action">提现</a>
+          <a class="ui-side-sub-item-link last" href="/account/capital/withdraw.action">提现</a>
         </li>
       </ul>
     </li>
@@ -54,19 +54,19 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid invest"></i>理财管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!loan.action">我的债权</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/loan.action">我的债权</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!plan.action">优选理财计划</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/plan.action">优选理财计划</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!transfer.action">债权转让</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/transfer.action">债权转让</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/invest!statistics.action">理财统计</a>
+          <a class="ui-side-sub-item-link" href="/account/invest/statistics.action">理财统计</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/invest!tool.action">自动投标工具</a>
+          <a class="ui-side-sub-item-link last" href="/account/invest/tool.action">自动投标工具</a>
         </li>
       </ul>
     </li>
@@ -74,13 +74,13 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid borrow"></i>借款管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!toMyLoans.action">我的借款</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/toMyLoans.action">我的借款</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/borrow!applications.action">借款申请查询</a>
+          <a class="ui-side-sub-item-link" href="/account/borrow/applications.action">借款申请查询</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/borrow!statistics.action">借款统计</a>
+          <a class="ui-side-sub-item-link last" href="/account/borrow/statistics.action">借款统计</a>
         </li>
       </ul>
     </li>
@@ -88,16 +88,16 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid account"></i>账户管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!basicInfo.action">个人基础信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/basicInfo.action">个人基础信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!verification.action">认证信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/verification.action">认证信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link" href="/account/info!security.action">安全信息</a>
+          <a class="ui-side-sub-item-link" href="/account/info/security.action">安全信息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a class="ui-side-sub-item-link last" href="/account/info!bank.action">银行卡信息</a>
+          <a class="ui-side-sub-item-link last" href="/account/info/bank.action">银行卡信息</a>
         </li>
       </ul>
     </li>
@@ -105,10 +105,10 @@
       <a class="ui-side-item-link"><i class="fn-left ui-icon-mid comm"></i>互动管理</a>
       <ul class="ui-side-sub-list">
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link" href="/account/comm!mail.action">站内消息</a>
+          <a  class="ui-side-sub-item-link" href="/account/comm/mail.action">站内消息</a>
         </li>
         <li class="ui-side-sub-item ">
-          <a  class="ui-side-sub-item-link last" href="/account/comm!settings.action">通知设置</a>
+          <a  class="ui-side-sub-item-link last" href="/account/comm/settings.action">通知设置</a>
         </li>
       </ul>
     </li>
@@ -143,8 +143,8 @@ seajs.use(['components/components'], function(Components) {
               <div class="fn-clear invisiblediv"><input class="fn-left invisible" type="text" name="userBankId" id="userBankId" /></div>
               <div class="operateBank fn-clear">
                 <a class="more-hide fn-left"  id="moreBank" data-toggle="更多银行卡 隐藏部分银行卡">更多银行卡</a>
-                <a class="mgmtBank fn-right" id="mgmtBank" href="/account/info!bank.action">管理银行卡</a>
-                <a class="addBank fn-right" href="/account/userBank!toAdd.action">添加银行卡</a>
+                <a class="mgmtBank fn-right" id="mgmtBank" href="/account/info/bank.action">管理银行卡</a>
+                <a class="addBank fn-right" href="/account/userBank/toAdd.action">添加银行卡</a>
               </div>
             </div>
            <div class="withdrawInputs mt20">
@@ -203,7 +203,7 @@ seajs.use(['components/components'], function(Components) {
                 <div class="ui-form-item">
                   <label class="ui-label"><span class="ui-form-required">*</span>提现密码</label>
                   <input class="ui-input" type="password" name="cashPassword" id="cashPassword" data-is="isPassWord">
-                  <a href="/account/info!security.action" class="findPsw" id="findPsw">忘记密码</a>
+                  <a href="/account/info/security.action" class="findPsw" id="findPsw">忘记密码</a>
                 </div>
                 <div class="ui-form-item widthdrawBtBox">
                     <input type="submit" id="subWithdraw" class="ui-button ui-button-mid ui-button-green" value="提 现">
@@ -231,7 +231,7 @@ seajs.use(['components/components'], function(Components) {
 {{@each userBanks}}
 <li class="bankli" data-bank="{{userBankId}}"><img  alt="{{bankType}}" title="{{bankType}}" src="/static/img/banks/code_{{bankCode}}.jpg"/><div class="card">{{dealCardId}}</div><em></em> </li>
 {{ else }}
-<li><a href="/account/userBank!toAdd.action" class="openLink addBank"><img src="/static/img/banks/add.jpg"></a><div class="card"><a href="/account/userBank!toAdd.action" class="openLink addBank">新增银行卡</a></div></li>
+<li><a href="/account/userBank/toAdd.action" class="openLink addBank"><img src="/static/img/banks/add.jpg"></a><div class="card"><a href="/account/userBank/toAdd.action" class="openLink addBank">新增银行卡</a></div></li>
 {{/each}}
 </ul>
 </script> 
