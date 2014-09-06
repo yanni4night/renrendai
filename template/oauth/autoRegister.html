@@ -1,13 +1,10 @@
 {%extends "parent.tpl"%}
-
 {%block script%}
 <script type="text/javascript">seajs.use(['pages/auth/reg']);</script>
 {%endblock%}
-
 {%block link%}
 <link rel="stylesheet" href="/static/css/pages/auth/reg.css">
 {%endblock%}
-
 {%block content%}
 <sec:authorize access="anonymous">
 <div id="pg-reg">
@@ -35,7 +32,6 @@
           <form data-name="register" data-showtip="true" class="ui-form left" method="post" action='/register' id="reg" onsubmit="return false;">
             <input id="inviteCode" type="hidden" name="inviteCode" value="" />
             <input id="utmSource" type="hidden" name="utmSource" value="" />
-
             <input id="inviteUser" type="hidden" name="inviteUser" value="" />
             <fieldset>
               <div class="ui-poptip custip" id="cusTip0">
@@ -46,7 +42,7 @@
                       <span></span>
                     </div>
                     <div class="ui-poptip-content" data-role="content">
-                      $nickname，您好，请完善一下信息，以后你也可以用该手机号/密码登录多网啦！
+                      $!nickname 您好，请完善一下信息，以后你也可以用该手机号/密码登录多网啦！
                     </div>
                   </div>
                 </div>
@@ -65,14 +61,14 @@
                 <p class="placeholder">输入手机号码</p>
               </div>
               <!--yanni4night@gmail.com BEGIN-->
-                  <div class="ui-form-item" style="height:55px;">
-                      <label class="ui-label"><span class="ui-form-required">*</span>验证码</label>
-                      <input class="ui-input code" type="text" name="mobileCode" id="mobileCode" data-is="mobileCode"/>
-                      <label id="code-label" for="mobileCode" class="error" style="display: none">验证码输入错误</label>
-                  </div>
-                  <div class="ui-form-item" style="height:40px;">
-                    <button class="ui-button-blue-new ui-button-blue-new-large" type="button" id="yn-getsms">获取验证码</button>
-                  </div>
+              <div class="ui-form-item" style="height:55px;">
+                <label class="ui-label"><span class="ui-form-required">*</span>验证码</label>
+                <input class="ui-input code" type="text" name="mobileCode" id="mobileCode" data-is="mobileCode"/>
+                <label id="code-label" for="mobileCode" class="error" style="display: none">验证码输入错误</label>
+              </div>
+              <div class="ui-form-item" style="height:40px;">
+                <button class="ui-button-blue-new ui-button-blue-new-large" type="button" id="yn-getsms">获取验证码</button>
+              </div>
               <!--yanni4night@gmail.com END-->
               <div class="ui-form-item">
                 <label class="ui-label"><span class="ui-form-required">*</span>登录密码</label>
@@ -101,7 +97,7 @@
                   <label for="usertype" class="error" style="display: none">请选择角色</label>
                 </div>
               </div>
-<!--               <div class="ui-form-item code-item">
+              <!--               <div class="ui-form-item code-item">
                 <label class="ui-label"><span class="ui-form-required">*</span>验证码</label>
                 <input class="ui-input input-icon code" type="text" name="randCode" id="randCode">
                 <a href="javascript:void(0)" class="code-box"><img id="randImage" border="0" align="absmiddle" src="/captcha" name="randImage" alt="验证码" /></a>
@@ -181,20 +177,28 @@
                     <span></span>
                   </div>
                   <div class="ui-poptip-content" data-role="content">
-                    $nickname，您好，请输入已在多网注册的账号及密码，与第三方账号关联！
+                    $!nickname 您好，请输入已在多网注册的账号及密码，与第三方账号关联！
                   </div>
                 </div>
+              </div>
+            </div>
+            
+            <div class="ui-form-item" style="height:40px">
+              <div class="top-msg">
+                <label class="error" id="allError" style="background:none"></label>
               </div>
             </div>
             <div class="ui-form-item">
               <label class="ui-label">手机号/邮箱</label>
               <input class="ui-input input-icon input-bg-gray" type="text" name='userid' id="j_username" data-is="isMobileOrEmail" autocomplete="off">
               <span class="icon input-icon-head-gray"></span>
+              <p class="placeholder">手机号/邮箱</p>
             </div>
             <div class="ui-form-item">
               <label class="ui-label">密码</label>
               <input class="ui-input input-icon input-bg-gray" type="password" name='password' data-is="isEmail" autocomplete="off">
               <span class="icon input-icon-lock-gray"></span>
+              <p class="placeholder">输入密码</p>
             </div>
             
             <input type="hidden" name="oAuthUserId" value="$oAuthUserId" />

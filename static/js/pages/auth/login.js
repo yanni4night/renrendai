@@ -8,7 +8,7 @@ define("pages/auth/login", ["jquery", "widgets/widgets", "handlebars", "mailSugg
         var c = $("#j_username"),
             d = {};
         d.left = c.offset().left;
-        d.top = 245;
+        d.top = c.offset().top + 44;//245;
         a.css({
             left: d.left,
             top: d.top,

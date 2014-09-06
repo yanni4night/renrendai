@@ -52,7 +52,7 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
     $("#usertype").on("click", "li", function() {
         var idx = $(this).index();
         $(this).addClass("cur").siblings().removeClass("cur");
-        $("input[name = 'usertype']").eq(idx).trigger("click");
+        $("input[name='usertype']").eq(idx).trigger("click");
         $("label[for='usertype']").addClass("valid").empty();
     });
 
@@ -142,8 +142,8 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
             debug: false,
             onsubmit: true,
             success: function(a) {
-                "nickName" == a.attr("for") && a.html("此昵称将用作展示，一旦注册成功不能修改");
-                "username" == a.attr("for") && a.html("请保持手机畅通，以便完成手机信息验证");
+                "nickname" == a.attr("for") && a.html("此昵称将用作展示，一旦注册成功不能修改");
+                "userid" == a.attr("for") && a.html("请保持手机畅通，以便完成手机信息验证");
                 a.addClass("valid");
             },
             submitHandler: function(a) {
