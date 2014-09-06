@@ -104,7 +104,7 @@ define("pages/account/invest/plans", ["jquery", "common", "protocol", "widgets/w
             }).init()._update(), !0)
         }
     }).init(), d("body").on("click", ".list-a-pay", function(a) {
-        a.preventDefault(), d.get("/account/invest!detailPlanRsv.action?financeId=" + d(this).data("id"), function(a) {
+        a.preventDefault(), d.get("/account/invest/detailPlanRsv.action?financeId=" + d(this).data("id"), function(a) {
             if (1 === a.status) return void alert(a.message);
             var c = a.data.financePayDetail;
             c.joinFee = c.joinFee ? c.joinFee : 0, c.expectedRate = c.expectedRate, c.planAmount = f.translator._commaFloat(c.planAmount), c.unRepayAmountComma = f.translator._commaFloat(c.unRepayAmount), c.unRepayAmountNotComma = c.unRepayAmount, c.availablePoints = f.translator._commaFloat(c.availablePoints), b(c)

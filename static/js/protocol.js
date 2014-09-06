@@ -7,25 +7,25 @@ define("protocol", ["jquery"], function(a, b, c) {
         },
         g = {
             getNews: {
-                url: "/about/about!json.action?flag=news",
+                url: "/about/about/json.action?flag=news",
                 type: "GET",
                 dataType: "json",
                 _list: "news"
             },
             getNotices: {
-                url: "/about/about!json.action?flag=notices",
+                url: "/about/about/json.action?flag=notices",
                 type: "GET",
                 dataType: "json",
                 _list: "notices"
             },
             getLoans: {
-                url: "/lend/loanList!json.action",
+                url: "/lend/loanList/json.action",
                 type: "GET",
                 dataType: "json",
                 _list: "loans"
             },
             getLoansTransfer: {
-                url: "/transfer/transferList!json.action",
+                url: "/transfer/transferList/json.action",
                 type: "GET",
                 dataType: "json",
                 _list: "transferList"
@@ -105,13 +105,13 @@ define("protocol", ["jquery"], function(a, b, c) {
                 }
             },
             getPlans: {
-                url: "/financeplan/listPlan!listPlanJson.action",
+                url: "/financeplan/listPlan/listPlanJson.action",
                 type: "GET",
                 dataType: "json",
                 _list: "plans"
             },
             getPlanReserveRecords: {
-                url: "/financeplan/getFinancePlanLenders!reserveRecord.action",
+                url: "/financeplan/getFinancePlanLenders/reserveRecord.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -129,7 +129,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "jsonList"
             },
             getPlanPerformance: {
-                url: "/financeplan/listPlan!planResults.action",
+                url: "/financeplan/listPlan/planResults.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -143,7 +143,7 @@ define("protocol", ["jquery"], function(a, b, c) {
             },
             getUserBankInfo: null,
             getUserTransactions: {
-                url: "/account/capital!transactionJson.action",
+                url: "/account/capital/transactionJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -156,7 +156,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "pointLogs"
             },
             getUserRepayingRecords: {
-                url: "/account/borrow!listInProgress.action",
+                url: "/account/borrow/listInProgress.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -165,7 +165,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "data"
             },
             getUserRepaidRecords: {
-                url: "/account/borrow!listDoneLoans.action",
+                url: "/account/borrow/listDoneLoans.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -174,7 +174,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "data"
             },
             getUserLoanRepaymentRecords: {
-                url: "/account/borrow!listRecord.action",
+                url: "/account/borrow/listRecord.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -182,7 +182,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 }
             },
             getUserLoanApplicationRecords: {
-                url: "/account/borrow!listAll.action",
+                url: "/account/borrow/listAll.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -191,7 +191,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "data"
             },
             getUserLoansRepaying: {
-                url: "/account/invest!loanPreJson.action",
+                url: "/account/invest/loanPreJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -203,7 +203,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "loanList"
             },
             getUserLoansRepaid: {
-                url: "/account/invest!loanJson.action",
+                url: "/account/invest/loanJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -215,7 +215,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "loanList"
             },
             getUserLoansInProgress: {
-                url: "/account/invest!loanJson.action",
+                url: "/account/invest/loanJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -227,7 +227,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "loanList"
             },
             getUserLoansReturnRecords: {
-                url: "/account/invest!backAccountJson.action",
+                url: "/account/invest/backAccountJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -239,7 +239,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "backAccountVo"
             },
             getUserTransferringLoans: {
-                url: "/account/invest!transferJson.action",
+                url: "/account/invest/transferJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -251,7 +251,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "transferList"
             },
             getUserTransferableLoans: {
-                url: "/account/invest!transferJson.action",
+                url: "/account/invest/transferJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -263,7 +263,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "transferList"
             },
             getUserTransferredInLoans: {
-                url: "/account/invest!transferJson.action",
+                url: "/account/invest/transferJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -275,7 +275,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "transferList"
             },
             getUserTransferredOutLoans: {
-                url: "/account/invest!transferJson.action",
+                url: "/account/invest/transferJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -287,7 +287,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "transferList"
             },
             getUserTransferredOutRecords: {
-                url: "/account/invest!getTranfsferLogJson.action",
+                url: "/account/invest/getTranfsferLogJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -297,7 +297,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "transferLogList"
             },
             getUserHoldingPlans: {
-                url: "/account/invest!planJson.action",
+                url: "/account/invest/planJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -309,7 +309,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "financePlanList"
             },
             getUserExitingPlans: {
-                url: "/account/invest!planJson.action",
+                url: "/account/invest/planJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -321,7 +321,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "financePlanList"
             },
             getUserExitedPlans: {
-                url: "/account/invest!planJson.action",
+                url: "/account/invest/planJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -333,7 +333,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "financePlanList"
             },
             getUserReservePlans: {
-                url: "/account/invest!planJson.action",
+                url: "/account/invest/planJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -345,7 +345,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "financePlanList"
             },
             getUserPlanRecords: {
-                url: "/account/invest!planInfoJson.action",
+                url: "/account/invest/planInfoJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -356,7 +356,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "financePlanList"
             },
             getUserInfo: {
-                url: "/account/myInfo!userDetailLoanList.action",
+                url: "/account/myInfo/userDetailLoanList.action",
                 type: "GET",
                 params: {
                     userId: e.REQ
@@ -365,7 +365,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 _list: "loanList"
             },
             getExpectedAmountsForPlanExiting: {
-                url: "/account/invest!planInfoForExitingJson.action",
+                url: "/account/invest/planInfoForExitingJson.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -373,7 +373,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 }
             },
             getUserReversPlanPay: {
-                url: "/account/invest!detailPlanRsv.action",
+                url: "/account/invest/detailPlanRsv.action",
                 type: "GET",
                 dataType: "json",
                 params: {
@@ -434,11 +434,11 @@ define("protocol", ["jquery"], function(a, b, c) {
                 }],
                 URL: {
                     userHome: "/account/myInfo.action?userId=",
-                    planDetails: "/financeplan/listPlan!detailPlan.action?financePlanId=",
+                    planDetails: "/financeplan/listPlan/detailPlan.action?financePlanId=",
                     loanDetails: "/lend/detailPage.action?loanId=",
                     loanApplication: "/borrow/borrow.action",
                     loanTransferDetails: "/transfer/loanTransferDetail.action?transferId=",
-                    userPlan: "/account/invest!planInfo.action?financeId=",
+                    userPlan: "/account/invest/planInfo.action?financeId=",
                     helpForBorrower: "/help/borrow.action#"
                 },
                 protocol: a

@@ -113,7 +113,7 @@ define("pages/auth/reg", ["jquery", "widgets/widgets", "tip"], function(require)
         showTip: $("#reg").data("showtip") === true,
         before: function() {
             /*
-            i = Form.sendPhoneCode("phone", "getVoiceCode", "/sendPhoneCode!voiceCode.action?&checkCode=reg&phone=", {
+            i = Form.sendPhoneCode("phone", "getVoiceCode", "/sendPhoneCode/voiceCode.action?&checkCode=reg&phone=", {
                 onStart: function() {
                     e($("#getMobileCode"), false);
                 },
