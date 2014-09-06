@@ -74,8 +74,8 @@ module.exports = function(grunt) {
         stamp: {
             options: {
                 baseDir: BUILD,
-                stampName: 'dn',
-                ignoreMissing: true
+                stampName: 'dnversion',
+                ignoreMissing: false
             },
             html: {
                 expand: true,
