@@ -61,43 +61,43 @@
         <div class="fn-hide no-nav-text"></div>
         <ul class="ui-nav ">
           <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray" href="/lend/index.action">
+            <a class="ui-nav-item-link dw-dimgray" href="/lend/index.action">
               <span>我要理财</span>
               <span class="arrow-down"></span>
             </a>
             <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
               <li class="ui-nav-dropdown-angle"><span></span></li>
               
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
             </ul>
           </li>
           <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray" href="/borrow/index.action">
+            <a class="ui-nav-item-link dw-dimgray" href="/borrow/index.action">
               <span>我要借款</span>
               <span class="arrow-down"></span>
             </a>
             <ul class="ui-nav-dropdown ui-nav-dropdown-borrow" style="display: none;">
               <li class="ui-nav-dropdown-angle"><span></span></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
             </ul>
           </li>
           <li class="ui-nav-item">
-            <a class="ui-nav-item-link rrd-dimgray" href="/guide/invest.action">新手指引</a>
+            <a class="ui-nav-item-link dw-dimgray" href="/guide/invest.action">新手指引</a>
           </li>
           <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray" href="/about/about.action?flag=intro">
+            <a class="ui-nav-item-link dw-dimgray" href="/about/about.action?flag=intro">
               <span>关于我们</span>
               <span class="arrow-down"></span>
             </a>
             <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
               <li class="ui-nav-dropdown-angle"><span></span></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
             </ul>
           </li>
         </ul>
@@ -374,7 +374,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>等额本息还款法是一种被广泛采用的还款方式。在还款期内，每月偿还同等数额的借款(包括本金和利息)。借款人每月还款额中的本金比重逐月递增、利息比重逐月递减。</dd><dd>具体计算公式如下：</dd><dd><img src="/static/img/help/formula/terms-14.png?20140401a" alt="每月还款额=[借款本金×月利率×（1+月利率）^还款总期数]÷[（1+月利率）^还款总期数-1]"></dd><dd class="text-small"><i class="icon-P"></i>: 每月还款额<br /><i class="icon-A"></i>: 借款本金<br /><i class="icon-b"></i>: 月利率<br /><i class="icon-n"></i>: 还款总期数</dd><dd>因计算中存在四舍五入，最后一期还款金额与之前略有不同。</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>等额本息还款法是一种被广泛采用的还款方式。在还款期内，每月偿还同等数额的借款(包括本金和利息)。借款人每月还款额中的本金比重逐月递增、利息比重逐月递减。</dd><dd>具体计算公式如下：</dd><dd><img src="/static/img/help/formula/terms-14.png" alt="每月还款额=[借款本金×月利率×（1+月利率）^还款总期数]÷[（1+月利率）^还款总期数-1]"></dd><dd class="text-small"><i class="icon-P"></i>: 每月还款额<br /><i class="icon-A"></i>: 借款本金<br /><i class="icon-b"></i>: 月利率<br /><i class="icon-n"></i>: 还款总期数</dd><dd>因计算中存在四舍五入，最后一期还款金额与之前略有不同。</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -520,7 +520,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>等额本息还款法是一种被广泛采用的还款方式。在还款期内，每月偿还同等数额的借款(包括本金和利息)。借款人每月还款额中的本金比重逐月递增、利息比重逐月递减。</dd><dd>具体计算公式如下：</dd><dd><img src="/static/img/help/formula/terms-14.png?20140401a" alt="每月还款额=[借款本金×月利率×（1+月利率）^还款总期数]÷[（1+月利率）^还款总期数-1]"></dd><dd class="text-small"><i class="icon-P"></i>: 每月还款额<br /><i class="icon-A"></i>: 借款本金<br /><i class="icon-b"></i>: 月利率<br /><i class="icon-n"></i>: 还款总期数</dd><dd>因计算中存在四舍五入，最后一期还款金额与之前略有不同。</dd><dd>相关阅读：<a href="/help/invest/invest!tiro.action#testInvest">借出1万元，期限1年，年利率12%，我共收到的利息是10000 x 12% =1200元吗？</a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>等额本息还款法是一种被广泛采用的还款方式。在还款期内，每月偿还同等数额的借款(包括本金和利息)。借款人每月还款额中的本金比重逐月递增、利息比重逐月递减。</dd><dd>具体计算公式如下：</dd><dd><img src="/static/img/help/formula/terms-14.png" alt="每月还款额=[借款本金×月利率×（1+月利率）^还款总期数]÷[（1+月利率）^还款总期数-1]"></dd><dd class="text-small"><i class="icon-P"></i>: 每月还款额<br /><i class="icon-A"></i>: 借款本金<br /><i class="icon-b"></i>: 月利率<br /><i class="icon-n"></i>: 还款总期数</dd><dd>因计算中存在四舍五入，最后一期还款金额与之前略有不同。</dd><dd>相关阅读：<a href="/help/invest/invest!tiro.action#testInvest">借出1万元，期限1年，年利率12%，我共收到的利息是10000 x 12% =1200元吗？</a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -593,7 +593,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>优选理财计划的发布时间通常是每周一的上午10点，如遇到假期或者特殊情况，多网会调整优选发布时间。</dd><dd>您可以通过优选理财计划倒计时或关注多网官方微信获取最新一期优选理财计划发布时间。</dd><dd><img width="150" height="150" src="/static/img/weixin.jpg?20140401a" alt="微信二维码"></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>优选理财计划的发布时间通常是每周一的上午10点，如遇到假期或者特殊情况，多网会调整优选发布时间。</dd><dd>您可以通过优选理财计划倒计时或关注多网官方微信获取最新一期优选理财计划发布时间。</dd><dd><img width="150" height="150" src="/static/img/weixin.jpg" alt="微信二维码"></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -908,7 +908,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>自逾期开始之后，正常利息停止计算。按照下面公式计算罚息：</dd><dd><img src="/static/img/help/formula/invest-3.png?20140401a" alt="罚息总额 = 逾期本息×对应罚息利率×逾期天数。"></dd><dd class="text-small"><i class="icon-P-over"></i>: 罚息总额<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-p"></i>: 对应罚息利率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table width="100%" class="pg-help-table"><tr class="border-bt"><td width="36%">逾期天数</div></td><td width="28%">1—30天 </div></td><td width="36%">31天以上 </div></td></tr><tr><td><div class="ui-td-bg">罚息利率 </div></td><td><div class="ui-td-bg">0.05% </div></td><td><div class="ui-td-bg">0.1% </div></td></tr></table></dd><dd>多网有一套完善的催收机制，通过电话短信提醒、上门拜访、法律诉讼等多种方式，有效的保证了平台上绝大部分借款人的及时还款。延迟还款的借款人需按约定交纳罚息和违约金。</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>自逾期开始之后，正常利息停止计算。按照下面公式计算罚息：</dd><dd><img src="/static/img/help/formula/invest-3.png" alt="罚息总额 = 逾期本息×对应罚息利率×逾期天数。"></dd><dd class="text-small"><i class="icon-P-over"></i>: 罚息总额<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-p"></i>: 对应罚息利率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table width="100%" class="pg-help-table"><tr class="border-bt"><td width="36%">逾期天数</div></td><td width="28%">1—30天 </div></td><td width="36%">31天以上 </div></td></tr><tr><td><div class="ui-td-bg">罚息利率 </div></td><td><div class="ui-td-bg">0.05% </div></td><td><div class="ui-td-bg">0.1% </div></td></tr></table></dd><dd>多网有一套完善的催收机制，通过电话短信提醒、上门拜访、法律诉讼等多种方式，有效的保证了平台上绝大部分借款人的及时还款。延迟还款的借款人需按约定交纳罚息和违约金。</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -919,7 +919,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>借款人可以提前偿还借款，如果借款人提前偿还全部借款，需要额外支付给理财人借款剩余本金的1%作为违约金，不用再支付后续的利息及管理费用。</dd><dd>注：部分借款标的违约金费率为0%。</dd><dd>具体计算公式如下：</dd><dd><img src="/static/img/help/formula/invest-2.png?20140401a" alt="提前还款应还金额=剩余本金+当期本息及账户管理费+提前还款违约金"></dd><dd class="text-small"><i class="icon-P-inrepay"></i>: 提前还款应还金额<br /><i class="icon-Ar"></i>: 剩余本金<br /><i class="icon-M-1"></i>: 当期本息及账户管理费<br /><i class="icon-M-2"></i>: 提前还款违约金</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>借款人可以提前偿还借款，如果借款人提前偿还全部借款，需要额外支付给理财人借款剩余本金的1%作为违约金，不用再支付后续的利息及管理费用。</dd><dd>注：部分借款标的违约金费率为0%。</dd><dd>具体计算公式如下：</dd><dd><img src="/static/img/help/formula/invest-2.png" alt="提前还款应还金额=剩余本金+当期本息及账户管理费+提前还款违约金"></dd><dd class="text-small"><i class="icon-P-inrepay"></i>: 提前还款应还金额<br /><i class="icon-Ar"></i>: 剩余本金<br /><i class="icon-M-1"></i>: 当期本息及账户管理费<br /><i class="icon-M-2"></i>: 提前还款违约金</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -1058,7 +1058,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dt>1. 转让时，当期还款处于未还款状态</dt><dd><img src="/static/img/help/formula/invest-4-1.png?20140401a" alt="债权公允价值=债权的待收本金+应计利息天数/30*当期利息*产品保障类型参数"></dd><dd class="text-small"><i class="icon-F"></i>: 债权公允价值<br><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-D"></i>: 应计利息天数<br><i class="icon-b"></i>: 月利率<br><i class="icon-x"></i>: 产品折让参数, 本息保障类产品为1，本金保障类产品为0</dd><dd><img src="/static/img/help/formula/invest-4-2.png?20140401a" alt="债权公允价值=债权的待收本金+应计利息天数/30*当期利息*产品保障类型参数"></dd><dd class="text-small"><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 上期还款对应的应还款日期</dd><dd>注：应计利息天数超过30天按30天计算</dd> <dd>注：产品保障类型参数：本金保障的债权为0，本息保障的债权为1。</dd></dl><dl class="mb10"><dt>2. 转让时，当期还款处于已还款状态，但下一期处于未还款状态</dt><dd><img src="/static/img/help/formula/invest-4-3.png?20140401a" alt="债权公允价值=债权的待收本金-债权的待收本金*利息补偿天数/30*月利率*产品保障类型参数"></dd><dd class="text-small"><i class="icon-F"></i>: 债权公允价值<br><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-DD"></i>: 利息补偿天数<br><i class="icon-b"></i>: 月利率</dd><dd>注：应计利息天数超过30天按30天计算</dd> <dd>注：产品保障类型参数：本金保障的债权为0，本息保障的债权为1。</dd><dd><img src="/static/img/help/formula/invest-4-6.png?20140401a" alt=""></dd><dd class="text-small"><i class="icon-DD"></i>: 利息补偿天数<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 成交日期所在期的应还款日期</dd></dl><dl><dt>3. 转让时，当期还款处于已还款状态，且下面的N期处于已还款状态，但还未完全还清</dt><dd><img src="/static/img/help/formula/invest-4-4.png?20140401a" alt=""></dd><dd class="text-small"><i class="icon-F"></i>: 债权公允价值<br><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-DD"></i>: 利息补偿天数<br><i class="icon-b"></i>: 月利率</dd><dd><img src="/static/img/help/formula/invest-4-5.png?20140401a" alt=""></dd><dd class="text-small"><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 成交日期所在期的应还款日期<br><i class="icon-t"></i>: 最后还款所在期数与成交日期所在期数之差</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dt>1. 转让时，当期还款处于未还款状态</dt><dd><img src="/static/img/help/formula/invest-4-1.png" alt="债权公允价值=债权的待收本金+应计利息天数/30*当期利息*产品保障类型参数"></dd><dd class="text-small"><i class="icon-F"></i>: 债权公允价值<br><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-D"></i>: 应计利息天数<br><i class="icon-b"></i>: 月利率<br><i class="icon-x"></i>: 产品折让参数, 本息保障类产品为1，本金保障类产品为0</dd><dd><img src="/static/img/help/formula/invest-4-2.png" alt="债权公允价值=债权的待收本金+应计利息天数/30*当期利息*产品保障类型参数"></dd><dd class="text-small"><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 上期还款对应的应还款日期</dd><dd>注：应计利息天数超过30天按30天计算</dd> <dd>注：产品保障类型参数：本金保障的债权为0，本息保障的债权为1。</dd></dl><dl class="mb10"><dt>2. 转让时，当期还款处于已还款状态，但下一期处于未还款状态</dt><dd><img src="/static/img/help/formula/invest-4-3.png" alt="债权公允价值=债权的待收本金-债权的待收本金*利息补偿天数/30*月利率*产品保障类型参数"></dd><dd class="text-small"><i class="icon-F"></i>: 债权公允价值<br><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-DD"></i>: 利息补偿天数<br><i class="icon-b"></i>: 月利率</dd><dd>注：应计利息天数超过30天按30天计算</dd> <dd>注：产品保障类型参数：本金保障的债权为0，本息保障的债权为1。</dd><dd><img src="/static/img/help/formula/invest-4-6.png" alt=""></dd><dd class="text-small"><i class="icon-DD"></i>: 利息补偿天数<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 成交日期所在期的应还款日期</dd></dl><dl><dt>3. 转让时，当期还款处于已还款状态，且下面的N期处于已还款状态，但还未完全还清</dt><dd><img src="/static/img/help/formula/invest-4-4.png" alt=""></dd><dd class="text-small"><i class="icon-F"></i>: 债权公允价值<br><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-DD"></i>: 利息补偿天数<br><i class="icon-b"></i>: 月利率</dd><dd><img src="/static/img/help/formula/invest-4-5.png" alt=""></dd><dd class="text-small"><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 成交日期所在期的应还款日期<br><i class="icon-t"></i>: 最后还款所在期数与成交日期所在期数之差</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -1069,7 +1069,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd><img src="/static/img/help/formula/invest-5-1.png?20140401a" alt="债权价格=债权中剩余本金*转让系数+待收利息部分（或-补偿利息）"></dd></dl><dl class="mb10"><dt>1. 转让时，当期还款处于未还款状态。</dt><dd><img src="/static/img/help/formula/invest-5-2.png?20140401a" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-3.png?20140401a" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-4.png?20140401a" alt=""></dd><dd class="text-small"><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-R"></i>: 转让系数<br><i class="icon-b"></i>: 月利率<br><i class="icon-x"></i>: 产品折让参数, 本息保障类产品为1，本金保障类产品为0<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 上期还款对应的应还款日期</dd></dl><dl class="mb10"><dt>2. 转让时，当期还款处于已还款状态，但下一期处于未还款状态。</dt><dd><img src="/static/img/help/formula/invest-5-5.png?20140401a" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-6.png?20140401a" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-7.png?20140401a" alt=""></dd><dd class="text-small"><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-b"></i>: 月利率<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 成交日期所在期的应还款日期</dd></dl><dl><dt>3. 转让时，当期还款处于已还款状态，且下面的N期处于已还款状态，但还未完全还清。</dt><dd><img src="/static/img/help/formula/invest-5-8.png?20140401a" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-9.png?20140401a" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-10.png?20140401a" alt=""></dd><dd class="text-small"><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-b"></i>: 月利率<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 成交日期所在期的应还款日期<br><i class="icon-t"></i>: 最后还款所在期数与成交日期所在期数之差</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd><img src="/static/img/help/formula/invest-5-1.png" alt="债权价格=债权中剩余本金*转让系数+待收利息部分（或-补偿利息）"></dd></dl><dl class="mb10"><dt>1. 转让时，当期还款处于未还款状态。</dt><dd><img src="/static/img/help/formula/invest-5-2.png" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-3.png" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-4.png" alt=""></dd><dd class="text-small"><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-R"></i>: 转让系数<br><i class="icon-b"></i>: 月利率<br><i class="icon-x"></i>: 产品折让参数, 本息保障类产品为1，本金保障类产品为0<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 上期还款对应的应还款日期</dd></dl><dl class="mb10"><dt>2. 转让时，当期还款处于已还款状态，但下一期处于未还款状态。</dt><dd><img src="/static/img/help/formula/invest-5-5.png" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-6.png" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-7.png" alt=""></dd><dd class="text-small"><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-b"></i>: 月利率<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 成交日期所在期的应还款日期</dd></dl><dl><dt>3. 转让时，当期还款处于已还款状态，且下面的N期处于已还款状态，但还未完全还清。</dt><dd><img src="/static/img/help/formula/invest-5-8.png" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-9.png" alt=""></dd><dd><img src="/static/img/help/formula/invest-5-10.png" alt=""></dd><dd class="text-small"><i class="icon-Ar"></i>: 剩余未还本金<br><i class="icon-b"></i>: 月利率<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 成交日期所在期的应还款日期<br><i class="icon-t"></i>: 最后还款所在期数与成交日期所在期数之差</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -1080,7 +1080,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>应计利息：在债权转让过程中，在还款日前售出债权，利息不归转出人所有，不过购买债权的人必须依据上一次还款日至交易日的持有时间按比例给转出人相应的补偿，此补偿的利息称为应计利息。即实际上转出人通过应计利息获得该还款期内其持有此债权的利息，而转入人获得之后持有期的利息。</dd><dd><img src="/static/img/help/formula/invest-11-1.png?20140401a" alt="应计利息=剩余本金*月利率*持有天数/30"></dd><dd><img src="/static/img/help/formula/invest-11-2.png?20140401a" alt="持有天数=min（成交日期-上一还款日，30）"></dd><dd class="text-small"><i class="icon-Ar"></i>: 剩余本金<br><i class="icon-b"></i>: 月利率<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 上一还款日</dd><dd>举例：假如A持有一份剩余未还本金为20元的实地认证标，年利率为12%，还款日为每月8号，在6号以100%的转让系数挂出转让（即平价转让）。B在6号成功购买，成交价格包括两部分，即未还本金20元和应计利息20*1%*28/30=0.19元，共计20.19元。成交后</dd><dd>A回收本金20元，收到应计利息0.19元并计入已赚利息，债权转移至B名下，资产减少20元；</dd><dd>B支出20.19元获得此债权，其中债权的待收本金为20元，债权记为资产，同时0.19元为应计利息的支出，记（-0.19）元为已赚利息。等到8号，借款人支付该月还款时，B获得利息收入0.2元，与之前的应计利息支出合计为 0.2+(-0.19)=0.01元；此合计利息即为B于6号购买债权后，持有此债权2天所应获得的利息。</dd><dd>总结：通过债权转让和应计利息的计算，假设该持有期有30天，A获得了28天的利息，B获得了2天的利息。</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>应计利息：在债权转让过程中，在还款日前售出债权，利息不归转出人所有，不过购买债权的人必须依据上一次还款日至交易日的持有时间按比例给转出人相应的补偿，此补偿的利息称为应计利息。即实际上转出人通过应计利息获得该还款期内其持有此债权的利息，而转入人获得之后持有期的利息。</dd><dd><img src="/static/img/help/formula/invest-11-1.png" alt="应计利息=剩余本金*月利率*持有天数/30"></dd><dd><img src="/static/img/help/formula/invest-11-2.png" alt="持有天数=min（成交日期-上一还款日，30）"></dd><dd class="text-small"><i class="icon-Ar"></i>: 剩余本金<br><i class="icon-b"></i>: 月利率<br><i class="icon-d-now"></i>: 成交日期<br><i class="icon-d-due"></i>: 上一还款日</dd><dd>举例：假如A持有一份剩余未还本金为20元的实地认证标，年利率为12%，还款日为每月8号，在6号以100%的转让系数挂出转让（即平价转让）。B在6号成功购买，成交价格包括两部分，即未还本金20元和应计利息20*1%*28/30=0.19元，共计20.19元。成交后</dd><dd>A回收本金20元，收到应计利息0.19元并计入已赚利息，债权转移至B名下，资产减少20元；</dd><dd>B支出20.19元获得此债权，其中债权的待收本金为20元，债权记为资产，同时0.19元为应计利息的支出，记（-0.19）元为已赚利息。等到8号，借款人支付该月还款时，B获得利息收入0.2元，与之前的应计利息支出合计为 0.2+(-0.19)=0.01元；此合计利息即为B于6号购买债权后，持有此债权2天所应获得的利息。</dd><dd>总结：通过债权转让和应计利息的计算，假设该持有期有30天，A获得了28天的利息，B获得了2天的利息。</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>

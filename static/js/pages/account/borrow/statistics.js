@@ -19,7 +19,7 @@ define("pages/account/borrow/statistics", ["jquery", "common", "protocol", "high
         l = 0;
     b.each(j, function(a, b) {
         var c = {};
-        "total" == a ? a = "总计" : c.data = !0, c.label = a, c.value = e._fixedFloat2(b), c.formattedValue = e._commaFloat(b), l += 1, c.style = l % 2 == 1 ? "rrdcolor-paleblue3-bg" : "rrdcolor-paleblue2-bg", k.stats.push(c)
+        "total" == a ? a = "总计" : c.data = !0, c.label = a, c.value = e._fixedFloat2(b), c.formattedValue = e._commaFloat(b), l += 1, c.style = l % 2 == 1 ? "dwcolor-paleblue3-bg" : "dwcolor-paleblue2-bg", k.stats.push(c)
     }), c.fillTemplate({
         container: b("#succeeded-data"),
         template: b("#stat-template"),
@@ -31,7 +31,7 @@ define("pages/account/borrow/statistics", ["jquery", "common", "protocol", "high
         };
     l = 0, b.each(m, function(a, b) {
         var c = {};
-        "total" == a ? a = "总计" : (a = a.replace("-", "年") + "月", c.data = !0), c.label = a, c.value = e._fixedFloat2(b), c.formattedValue = e._commaFloat(b), l += 1, c.style = l % 2 == 1 ? "rrdcolor-paleblue3-bg" : "rrdcolor-paleblue2-bg", n.stats.push(c)
+        "total" == a ? a = "总计" : (a = a.replace("-", "年") + "月", c.data = !0), c.label = a, c.value = e._fixedFloat2(b), c.formattedValue = e._commaFloat(b), l += 1, c.style = l % 2 == 1 ? "dwcolor-paleblue3-bg" : "dwcolor-paleblue2-bg", n.stats.push(c)
     }), c.fillTemplate({
         container: b("#half-year-data"),
         template: b("#stat-template"),

@@ -658,7 +658,7 @@ define("components/calculator", ["jquery", "protocol"], function(a, b, c) {
             var b = this,
                 c = this._ui;
             c.exitQuitType.click(function() {
-                c.exitRRD.toggle(), c.exitRRDHint.toggle(), c.exitBank.toggle(), c.exitBankHint.toggle(), b.updateQuitType()
+                c.exitdw.toggle(), c.exitdwHint.toggle(), c.exitBank.toggle(), c.exitBankHint.toggle(), b.updateQuitType()
             }), c.exitSubmit.click(function() {
                 c.exitSubmit.hasClass("ui-button-disabled") || (c.exitSubmit.addClass("ui-button-disabled"), b.showLoading(c.exitDialog, h), f.getExpectedAmountsForPlanExiting({
                     subPointId: b.subPointId
@@ -672,7 +672,7 @@ define("components/calculator", ["jquery", "protocol"], function(a, b, c) {
                 return d(".ui-confirm").find('[data-name="' + a + '"]')
             });
             var b = this._ui;
-            "exit" == a ? (b.exitRRD = this._elem("to-duonet"), b.exitRRDHint = this._elem("to-duonet-hint"), b.exitBank = this._elem("to-bank"), b.exitBankHint = this._elem("to-bank-hint"), b.exitBankAccount = this._elem("bank-account"), b.exitQuitType = this._elem("change-manner"), b.exitDialog = d("#confirm-plan-exit"), b.exitSubmit = d("#submit-plan-exit"), b.exitCancel = d("#cancel-plan-exit")) : (b.confirmDialog = d("#confirm-plan-exit-execution"), b.confirmSubmit = d("#submit-plan-exit-execution"), b.confirmCancel = d("#cancel-plan-exit-execution"), b.confirmForm = d("#form-quit"))
+            "exit" == a ? (b.exitdw = this._elem("to-duonet"), b.exitdwHint = this._elem("to-duonet-hint"), b.exitBank = this._elem("to-bank"), b.exitBankHint = this._elem("to-bank-hint"), b.exitBankAccount = this._elem("bank-account"), b.exitQuitType = this._elem("change-manner"), b.exitDialog = d("#confirm-plan-exit"), b.exitSubmit = d("#submit-plan-exit"), b.exitCancel = d("#cancel-plan-exit")) : (b.confirmDialog = d("#confirm-plan-exit-execution"), b.confirmSubmit = d("#submit-plan-exit-execution"), b.confirmCancel = d("#cancel-plan-exit-execution"), b.confirmForm = d("#form-quit"))
         },
         dataUI: function(a) {
             if ("exit" == a) return {
@@ -683,11 +683,11 @@ define("components/calculator", ["jquery", "protocol"], function(a, b, c) {
                     name: this.planName,
                     amount: this.finalAmount
                 };
-            return "RRD" == this.quitType ? (c.quitType = "RRD", c.quitTypeName = "提取至多网主账户") : (c.quitType = "BANK", c.quitTypeName = "提取至银行卡", c.quitBankId = b.exitBankAccount.val(), c.quitBankAccount = b.exitBankAccount.find('[value="' + c.quitBankId + '"]').text()), c
+            return "DW" == this.quitType ? (c.quitType = "DW", c.quitTypeName = "提取至多网主账户") : (c.quitType = "BANK", c.quitTypeName = "提取至银行卡", c.quitBankId = b.exitBankAccount.val(), c.quitBankAccount = b.exitBankAccount.find('[value="' + c.quitBankId + '"]').text()), c
         },
         updateQuitType: function() {
             var a = this._ui;
-            this.quitType = a.exitRRD.is(":visible") ? "RRD" : "BANK"
+            this.quitType = a.exitdw.is(":visible") ? "DW" : "BANK"
         },
         showLoading: function(a, b) {
             a.append('<div class="ui-confirm-loading-text"></div>');

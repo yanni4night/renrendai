@@ -21,16 +21,16 @@ min-height:300px
 word-wrap:break-word
 }
 
-.rrdcolor-blue-text {
+.dwcolor-blue-text {
 font-size:18px
 }
 
-h1.rrdcolor-blue-text {
+h1.dwcolor-blue-text {
 margin-bottom:10px;
 font-size:24px
 }
 
-h1.rrdcolor-black-text {
+h1.dwcolor-black-text {
 margin-bottom:10px;
 font-size:24px;
 color:#333

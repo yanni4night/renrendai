@@ -47,43 +47,43 @@
               <div class="fn-hide no-nav-text"></div>
               <ul class="ui-nav {%if hideNav%}fn-hide{%endif%}">
                 <li class="ui-nav-item ui-nav-item-x">
-                  <a class="ui-nav-item-link rrd-dimgray" href="/lend/index.action">
+                  <a class="ui-nav-item-link dw-dimgray" href="/lend/index.action">
                     <span>我要理财</span>
                     <span class="arrow-down"></span>
                   </a>
                   <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
                     <li class="ui-nav-dropdown-angle"><span></span></li>
                     
-                    <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
-                    <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
-                    <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
+                    <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
+                    <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
+                    <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
                   </ul>
                 </li>
                 <li class="ui-nav-item ui-nav-item-x">
-                  <a class="ui-nav-item-link rrd-dimgray" href="/borrow/index.action">
+                  <a class="ui-nav-item-link dw-dimgray" href="/borrow/index.action">
                     <span>我要借款</span>
                     <span class="arrow-down"></span>
                   </a>
                   <ul class="ui-nav-dropdown ui-nav-dropdown-borrow" style="display: none;">
                     <li class="ui-nav-dropdown-angle"><span></span></li>
-                    <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
-                    <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
-                    <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
+                    <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
+                    <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
+                    <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
                   </ul>
                 </li>
                 <li class="ui-nav-item">
-                  <a class="ui-nav-item-link rrd-dimgray" href="/guide/invest.action">新手指引</a>
+                  <a class="ui-nav-item-link dw-dimgray" href="/guide/invest.action">新手指引</a>
                 </li>
                 <li class="ui-nav-item ui-nav-item-x">
-                  <a class="ui-nav-item-link rrd-dimgray" href="/about/about.action?flag=intro">
+                  <a class="ui-nav-item-link dw-dimgray" href="/about/about.action?flag=intro">
                     <span>关于我们</span>
                     <span class="arrow-down"></span>
                   </a>
                   <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
                     <li class="ui-nav-dropdown-angle"><span></span></li>
-                    <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
-                    <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
-                    <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
+                    <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
+                    <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
+                    <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
                   </ul>
                 </li>
               </ul>
@@ -93,20 +93,20 @@
             
              <script id="login-status-tpl" type="text/x-handlebars-template">
             <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray ui-nav-username fn-text-overflow" href="/account/index.action">
+            <a class="ui-nav-item-link dw-dimgray ui-nav-username fn-text-overflow" href="/account/index.action">
               <span>您好，{{nickname}}</span>
               <span class="arrow-down"></span>
             </a>
             <ul class="ui-nav-dropdown ui-nav-dropdown-account" style="display: none;">
               <li class="ui-nav-dropdown-angle"><span></span></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!recharge.action">充值</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital!withdraw.action">提现</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/account/capital!recharge.action">充值</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/account/capital!withdraw.action">提现</a></li>
               <li class="ui-nav-dropdown-separator"></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/capital.action">资金管理</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/invest!loan.action">理财管理</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/account/borrow!toMyLoans.action">借款管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/account/capital.action">资金管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/account/invest!loan.action">理财管理</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/account/borrow!toMyLoans.action">借款管理</a></li>
               <li class="ui-nav-dropdown-separator"></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/logout_redirect">退出</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/logout_redirect">退出</a></li>
             </ul>
           </li>
 

@@ -61,43 +61,43 @@
         <div class="fn-hide no-nav-text"></div>
         <ul class="ui-nav ">
           <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray" href="/lend/index.action">
+            <a class="ui-nav-item-link dw-dimgray" href="/lend/index.action">
               <span>我要理财</span>
               <span class="arrow-down"></span>
             </a>
             <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
               <li class="ui-nav-dropdown-angle"><span></span></li>
               
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/financeplan/listPlan.action">优选理财计划</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/lend/loanList.action">散标投资列表</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/transfer/transferList.action">债权转让列表</a></li>
             </ul>
           </li>
           <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray" href="/borrow/index.action">
+            <a class="ui-nav-item-link dw-dimgray" href="/borrow/index.action">
               <span>我要借款</span>
               <span class="arrow-down"></span>
             </a>
             <ul class="ui-nav-dropdown ui-nav-dropdown-borrow" style="display: none;">
               <li class="ui-nav-dropdown-angle"><span></span></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/borrow/prodWork.action">工薪贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/borrow/prodBiz.action">生意贷</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/borrow/prodEcomm.action">网商贷</a></li>
             </ul>
           </li>
           <li class="ui-nav-item">
-            <a class="ui-nav-item-link rrd-dimgray" href="/guide/invest.action">新手指引</a>
+            <a class="ui-nav-item-link dw-dimgray" href="/guide/invest.action">新手指引</a>
           </li>
           <li class="ui-nav-item ui-nav-item-x">
-            <a class="ui-nav-item-link rrd-dimgray" href="/about/about.action?flag=intro">
+            <a class="ui-nav-item-link dw-dimgray" href="/about/about.action?flag=intro">
               <span>关于我们</span>
               <span class="arrow-down"></span>
             </a>
             <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display: none;">
               <li class="ui-nav-dropdown-angle"><span></span></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
-              <li class="ui-nav-dropdown-item"><a class="rrd-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/about/about.action?flag=team">管理团队</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/about/about.action?flag=news">最新动态</a></li>
+              <li class="ui-nav-dropdown-item"><a class="dw-dimgray" href="/about/about.action?flag=invite">招贤纳士</a></li>
             </ul>
           </li>
         </ul>
@@ -371,7 +371,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>当用户的借款发生逾期时，正常利息停止计算。按照下面公式计算罚息：</dd><dd><img src="/static/img/help/formula/invest-3.png?20140401a" alt="罚息总额 = 逾期本息×对应罚息利率×逾期天数。"></dd><dd class="text-small"><i class="icon-P-over"></i>: 罚息总额<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-p"></i>: 对应罚息利率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table width="100%" class="pg-help-table"><tr class="border-bt"><th width="36%">逾期天数</th><td width="28%">1—30天 </td><td width="36%">31天以上</td></tr><tr><td>罚息利率</td><td>0.05%</td><td>0.1% </td></tr></table></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>当用户的借款发生逾期时，正常利息停止计算。按照下面公式计算罚息：</dd><dd><img src="/static/img/help/formula/invest-3.png" alt="罚息总额 = 逾期本息×对应罚息利率×逾期天数。"></dd><dd class="text-small"><i class="icon-P-over"></i>: 罚息总额<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-p"></i>: 对应罚息利率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table width="100%" class="pg-help-table"><tr class="border-bt"><th width="36%">逾期天数</th><td width="28%">1—30天 </td><td width="36%">31天以上</td></tr><tr><td>罚息利率</td><td>0.05%</td><td>0.1% </td></tr></table></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -382,12 +382,12 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>用户的借款发生逾期时，正常借款管理费用停止计算。按照下面公式计算：</dd><dd><img src="/static/img/help/formula/borrow-4.png?20140401a" alt="逾期后管理费总额=逾期本息×对应逾期管理费率×逾期天数；"></dd><dd class="text-small"><i class="icon-P-mgmt"></i>: 逾期管理费<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-m"></i>: 逾期管理费率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table class="pg-help-table" width="100%"><tr class="border-bt"><td width="33%">逾期天数</td><td width="33%">1-30天</td><td width="34%">31天以上</td></tr><tr><td>逾期管理费率</td><td>0.1%</td><td>0.5%</td></tr></table></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>用户的借款发生逾期时，正常借款管理费用停止计算。按照下面公式计算：</dd><dd><img src="/static/img/help/formula/borrow-4.png" alt="逾期后管理费总额=逾期本息×对应逾期管理费率×逾期天数；"></dd><dd class="text-small"><i class="icon-P-mgmt"></i>: 逾期管理费<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-m"></i>: 逾期管理费率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table class="pg-help-table" width="100%"><tr class="border-bt"><td width="33%">逾期天数</td><td width="33%">1-30天</td><td width="34%">31天以上</td></tr><tr><td>逾期管理费率</td><td>0.1%</td><td>0.5%</td></tr></table></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
     <h5 class="color-dark-text fn-clear">
-      <p class="fn-left title color-dark-text fn-text-overflow" id="rrdInterestRateRange" >多网年利率范围</p>
+      <p class="fn-left title color-dark-text fn-text-overflow" id="dwInterestRateRange" >多网年利率范围</p>
       <p class="fn-right mr10">
         <i class="icon icon-snow-down"></i>
       </p>
@@ -495,7 +495,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>您上传的身份证照片需和您绑定的身份证一致，否则将无法通过认证。</dd></dl><dl class="mb10"><dt>请同时提供下面两项资料：</dt><dd>1. 本人身份证原件的正、反两面照片。</dd><dd>2. 本人手持身份证正面头部照，（确保身份证上的信息没有被遮挡，避免证件与头部重叠）。</dd></dl><dl class="mb10"><dt>认证示例：</dt><dd><a href="/static/img/help/shengfenzheng.jpg?20140401a" target="_blank">身份证正反面照片</a></dd><dd><a href="/static/img/help/id_example_girl.jpg?20140401a"target="_blank">本人手持身份证正面头部照片</a></dd></dl><dl><dt>认证有效期：</dt><dd>永久</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd>您上传的身份证照片需和您绑定的身份证一致，否则将无法通过认证。</dd></dl><dl class="mb10"><dt>请同时提供下面两项资料：</dt><dd>1. 本人身份证原件的正、反两面照片。</dd><dd>2. 本人手持身份证正面头部照，（确保身份证上的信息没有被遮挡，避免证件与头部重叠）。</dd></dl><dl class="mb10"><dt>认证示例：</dt><dd><a href="/static/img/help/shengfenzheng.jpg" target="_blank">身份证正反面照片</a></dd><dd><a href="/static/img/help/id_example_girl.jpg"target="_blank">本人手持身份证正面头部照片</a></dd></dl><dl><dt>认证有效期：</dt><dd>永久</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -506,7 +506,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>个人信用报告是由中国人民银行出具，全面记录个人信用活动，反映个人信用基本状况的文件。本报告是多网了解您信用状况的一个重要参考资料。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>个人信用报告需15日内开具。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>信用记录良好。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl class="mb10"><dt>认证示例：</dt><dd><a href="/static/img/help/xinyongbaogao.jpg?20140401a" target="_blank">个人信用报告</a></dd></dl><dl><dt>如何办理：</dt><dd>可去当地人民银行打印，部分地区可登录个人信用信息服务平台。</dd><dd><a href="http://www.pbccrc.org.cn/zxzx/lxfs/lxfs.shtml" target="_blank">全国各地征信中心联系方式查询</a></dd>
+      <dl class="mb10"><dd>个人信用报告是由中国人民银行出具，全面记录个人信用活动，反映个人信用基本状况的文件。本报告是多网了解您信用状况的一个重要参考资料。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>个人信用报告需15日内开具。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>信用记录良好。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl class="mb10"><dt>认证示例：</dt><dd><a href="/static/img/help/xinyongbaogao.jpg" target="_blank">个人信用报告</a></dd></dl><dl><dt>如何办理：</dt><dd>可去当地人民银行打印，部分地区可登录个人信用信息服务平台。</dd><dd><a href="http://www.pbccrc.org.cn/zxzx/lxfs/lxfs.shtml" target="_blank">全国各地征信中心联系方式查询</a></dd>
 <dd><a href="https://ipcrs.pbccrc.org.cn" target="_blank">个人信用信息服务平台 </a></dd><dd><a href="/about/detail.action?notices_id=notices_331" target="_blank">关于个人查询本人信用报告实施收费的公告</a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
@@ -518,7 +518,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>您的工作状况是多网评估您信用状况的主要依据之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请提供下面任意一项资料：</dd><dd>1. 加盖单位公章（或劳动合同专用章）的劳动合同。</dd><dd>2. 最近1个月内开具的加盖单位公章（或人力章、财务章）的机打（手写无效）在职证明。</dd><dd>3. 带有姓名、照片、工作单位名称的工作证。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>本人需在现单位工作满3个月。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/laodonghetong.jpg?20140401a" target="_blank">劳动合同</a></dd><dd><a href="/static/img/help/zaizhizhengming.jpg?20140401a" target="_blank">在职证明</a></dd><dd><a href="/static/img/help/gongzuozheng.jpg?20140401a" target="_blank">工作证</a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd>您的工作状况是多网评估您信用状况的主要依据之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请提供下面任意一项资料：</dd><dd>1. 加盖单位公章（或劳动合同专用章）的劳动合同。</dd><dd>2. 最近1个月内开具的加盖单位公章（或人力章、财务章）的机打（手写无效）在职证明。</dd><dd>3. 带有姓名、照片、工作单位名称的工作证。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>本人需在现单位工作满3个月。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/laodonghetong.jpg" target="_blank">劳动合同</a></dd><dd><a href="/static/img/help/zaizhizhengming.jpg" target="_blank">在职证明</a></dd><dd><a href="/static/img/help/gongzuozheng.jpg" target="_blank">工作证</a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -529,7 +529,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>您的工作状况是多网评估您信用状况的主要依据之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请同时提供下面两项资料：</dd><dd>1. 注册满1年的营业执照正、副本。</dd><dd>2. 经营场地租赁合同＋90天内的租金发票或水电单据。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>本人名下的企业经营时间需满1年。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/yingyezhizhao.jpg?20140401a" target="_blank">营业执照正、副本</a></dd><dd><a href="/static/img/help/zulinhetong.jpg?20140401a" target="_blank">租赁合同和水电发票 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd>您的工作状况是多网评估您信用状况的主要依据之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请同时提供下面两项资料：</dd><dd>1. 注册满1年的营业执照正、副本。</dd><dd>2. 经营场地租赁合同＋90天内的租金发票或水电单据。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>本人名下的企业经营时间需满1年。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/yingyezhizhao.jpg" target="_blank">营业执照正、副本</a></dd><dd><a href="/static/img/help/zulinhetong.jpg" target="_blank">租赁合同和水电发票 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -551,7 +551,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>您的银行流水单是多网评估您收入状况的主要依据之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请提供下面任意一项资料：</dd><dd>1. 可体现工资项的最近3个月的工资卡银行流水单。</dd><dd>2. 可体现工资项的最近3个月的网银电脑截屏。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>本人名下近3个月的月收入均在2000以上。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/yinhangliushui.jpg?20140401a" target="_blank">银行卡流水</a></dd><dd><a href="/static/img/help/wangyinjietu.jpg?20140401a" target="_blank">网银电脑截图 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd>您的银行流水单是多网评估您收入状况的主要依据之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请提供下面任意一项资料：</dd><dd>1. 可体现工资项的最近3个月的工资卡银行流水单。</dd><dd>2. 可体现工资项的最近3个月的网银电脑截屏。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>本人名下近3个月的月收入均在2000以上。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/yinhangliushui.jpg" target="_blank">银行卡流水</a></dd><dd><a href="/static/img/help/wangyinjietu.jpg" target="_blank">网银电脑截图 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -562,7 +562,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>您的银行流水单是多网评估您收入状况的主要依据之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请提供下面任意一项资料：</dd><dd>1. 可体现经营情况的最近6个月的个人银行卡流水单，或网银电脑截屏。</dd><dd>2. 可体现经营情况的最近6个月的企业银行卡流水单，或网银电脑截屏。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>本人提交的流水可反应真实有效的经营情况。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/yinhangliushui.jpg?20140401a" target="_blank">银行卡流水</a></dd><dd><a href="/static/img/help/wangyinjietu.jpg?20140401a" target="_blank">网银电脑截图 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd>您的银行流水单是多网评估您收入状况的主要依据之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请提供下面任意一项资料：</dd><dd>1. 可体现经营情况的最近6个月的个人银行卡流水单，或网银电脑截屏。</dd><dd>2. 可体现经营情况的最近6个月的企业银行卡流水单，或网银电脑截屏。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>本人提交的流水可反应真实有效的经营情况。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>6个月</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/yinhangliushui.jpg" target="_blank">银行卡流水</a></dd><dd><a href="/static/img/help/wangyinjietu.jpg" target="_blank">网银电脑截图 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -573,7 +573,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>房产认证是证明借入者资产及还款能力的重要凭证之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请提供下面任意一项资料：</dd><dd>1. 房屋产权证明。</dd><dd>2. 购房合同 + 近3个月的还贷流水。</dd><dd>3. 购房发票 + 近3个月的还贷流水。</dd><dd>4. 按揭合同 + 近3个月的还贷流水。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>必须是商品房，且房产是本人名下所有或共有的。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>永久</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/fangchanzheng.jpg?20140401a" target="_blank">房产证</a></dd><dd><a href="/static/img/help/goufangfapiao.jpg?20140401a" target="_blank">购房发票 </a></dd><dd><a href="/static/img/help/goufanghetong.jpg?20140401a" target="_blank">购房合同 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd>房产认证是证明借入者资产及还款能力的重要凭证之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请提供下面任意一项资料：</dd><dd>1. 房屋产权证明。</dd><dd>2. 购房合同 + 近3个月的还贷流水。</dd><dd>3. 购房发票 + 近3个月的还贷流水。</dd><dd>4. 按揭合同 + 近3个月的还贷流水。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>必须是商品房，且房产是本人名下所有或共有的。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>永久</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/fangchanzheng.jpg" target="_blank">房产证</a></dd><dd><a href="/static/img/help/goufangfapiao.jpg" target="_blank">购房发票 </a></dd><dd><a href="/static/img/help/goufanghetong.jpg" target="_blank">购房合同 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -584,7 +584,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>购车认证是证明借入者资产及还款能力的重要凭证之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请同时提供下面两项资料：</dd><dd>1. 车辆行驶证的原件照片。</dd><dd>2. 本人和车辆的合影（照片需露出车牌号码）。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>车辆必须是本人名下所有。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>永久</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/xingshizheng.jpg?20140401a" target="_blank">车辆行驶证</a></dd><dd><a href="/static/img/help/rencheheying.jpg?20140401a" target="_blank">与车辆合影 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd>购车认证是证明借入者资产及还款能力的重要凭证之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请同时提供下面两项资料：</dd><dd>1. 车辆行驶证的原件照片。</dd><dd>2. 本人和车辆的合影（照片需露出车牌号码）。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>车辆必须是本人名下所有。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>永久</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/xingshizheng.jpg" target="_blank">车辆行驶证</a></dd><dd><a href="/static/img/help/rencheheying.jpg" target="_blank">与车辆合影 </a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -595,7 +595,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>借入者婚姻状况的稳定性，是多网考核借款人信用的评估因素之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请同时提供下面三项资料：</dd><dd>1. 结婚证书的原件照片。</dd><dd>2. 配偶身份证原件的正、反两面照片。</dd><dd>3. 本人和配偶的近照合影一张。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>永久</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/jiehunzheng.jpg?20140401a" target="_blank">结婚证</a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd>借入者婚姻状况的稳定性，是多网考核借款人信用的评估因素之一。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>请同时提供下面三项资料：</dd><dd>1. 结婚证书的原件照片。</dd><dd>2. 配偶身份证原件的正、反两面照片。</dd><dd>3. 本人和配偶的近照合影一张。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>永久</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/jiehunzheng.jpg" target="_blank">结婚证</a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -606,7 +606,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl class="mb10"><dd>借出者在选择借款申请投标时，借入者的学历也是一个重要的参考因素。为了让借出者更好、更快地相信您的学历是真实的，建议您对学历进行在线验证。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>2001年至今获得学历，需学历证书编号：</dd><dd>1. 访问<a href="http://www.chsi.com.cn/xlcx/" target="_blank">学信网</a>，找到“零散查询”信息，点击【查询】；</dd><dd>2. 输入证书编号、姓名、查询码（通过手机短信获得，为12位学历查询码）、验证码，进行查询；</dd><dd>3. 查询成功后，您将查获得《教育部学历证书电子注册备案表》；</dd><dd>4. 将该表右下角的12位在线验证码（见<a href="/static/img/help/yangbentu1.jpg?20140401a" target="_blank">学历认证1</a>）输入文本框，点击【提交审核】。</dd><dd>1991年至今获得学历，无需学历证书编号：</dd><dd>1. 访问<a href="http://www.chsi.com.cn/xlcx/" target="_blank">学信网</a>，找到“本人查询”信息，点击【查询】；</dd><dd>2. 注册学信网账号，登录<a href="http://www.chsi.com.cn/xlcx/" target="_blank">学信网</a>，访问【学历信息】页面；</dd><dd>3. 选择您的最高学历，点击【申请验证报告】（通过手机短信获得12位学历查询码，此查询码与多网所需验证码不同）；</dd><dd>4. 申请成功后，您将获得12位在线验证码（<a href="/static/img/help/yangbentu2.jpg?20140401a" target="_blank">见学历认证2</a>）；</dd><dd>5. 将12位在线验证码输入文本框，点击【提交审核】。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>大专或以上学历（普通全日制）。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>永久</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/yangbentu1.jpg?20140401a" target="_blank">学历认证1</a></dd><dd><a href="/static/img/help/yangbentu2.jpg?20140401a" target="_blank">学历认证2</a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl class="mb10"><dd>借出者在选择借款申请投标时，借入者的学历也是一个重要的参考因素。为了让借出者更好、更快地相信您的学历是真实的，建议您对学历进行在线验证。</dd></dl><dl class="mb10"><dt>认证说明：</dt><dd>2001年至今获得学历，需学历证书编号：</dd><dd>1. 访问<a href="http://www.chsi.com.cn/xlcx/" target="_blank">学信网</a>，找到“零散查询”信息，点击【查询】；</dd><dd>2. 输入证书编号、姓名、查询码（通过手机短信获得，为12位学历查询码）、验证码，进行查询；</dd><dd>3. 查询成功后，您将查获得《教育部学历证书电子注册备案表》；</dd><dd>4. 将该表右下角的12位在线验证码（见<a href="/static/img/help/yangbentu1.jpg" target="_blank">学历认证1</a>）输入文本框，点击【提交审核】。</dd><dd>1991年至今获得学历，无需学历证书编号：</dd><dd>1. 访问<a href="http://www.chsi.com.cn/xlcx/" target="_blank">学信网</a>，找到“本人查询”信息，点击【查询】；</dd><dd>2. 注册学信网账号，登录<a href="http://www.chsi.com.cn/xlcx/" target="_blank">学信网</a>，访问【学历信息】页面；</dd><dd>3. 选择您的最高学历，点击【申请验证报告】（通过手机短信获得12位学历查询码，此查询码与多网所需验证码不同）；</dd><dd>4. 申请成功后，您将获得12位在线验证码（<a href="/static/img/help/yangbentu2.jpg" target="_blank">见学历认证2</a>）；</dd><dd>5. 将12位在线验证码输入文本框，点击【提交审核】。</dd></dl><dl class="mb10"><dt>认证条件：</dt><dd>大专或以上学历（普通全日制）。</dd></dl><dl class="mb10"><dt>认证有效期：</dt><dd>永久</dd></dl><dl><dt>认证示例：</dt><dd><a href="/static/img/help/yangbentu1.jpg" target="_blank">学历认证1</a></dd><dd><a href="/static/img/help/yangbentu2.jpg" target="_blank">学历认证2</a></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -727,7 +727,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>要求银行流水有连续月份，内容包括交易日期、交易金额、余额、交易地点、交易摘要等。（点击<a href="/static/img/help/yinhangliushui.jpg?20140401a" target="_blank">银行卡流水</a>，查看示例图片） </dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>要求银行流水有连续月份，内容包括交易日期、交易金额、余额、交易地点、交易摘要等。（点击<a href="/static/img/help/yinhangliushui.jpg" target="_blank">银行卡流水</a>，查看示例图片） </dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -1019,7 +1019,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>您可以随时进行提前还款。</dd><dd>登陆多网网站，打开【我的多网】--【借款管理】--【我的借款】页面，点击【提前还款】进行提前还款操作（与还款操作类似）。</dd><dd>提前还款的用户需要支付给理财人借款剩余本金的1%作为违约金，不用再支付后续的利息及管理费用。提前还款金额公式如下： </dd><dd><img src="/static/img/help/formula/borrow-2.png?20140401a" alt="提前还款应还金额= 剩余本金+当期本息及账户管理费+提前还款违约金"></dd><dd class="text-small"><i class="icon-P-inrepay"></i>: 提前还款应还金额<br /><i class="icon-Ar"></i>: 剩余本金<br /><i class="icon-M-1"></i>: 当期本息及账户管理费<br /><i class="icon-M-2"></i>: 提前还款违约金</dd><dd>注：提前归还部分借款不视为提前还款，仍需支付全部借款利息及账户管理费。</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>您可以随时进行提前还款。</dd><dd>登陆多网网站，打开【我的多网】--【借款管理】--【我的借款】页面，点击【提前还款】进行提前还款操作（与还款操作类似）。</dd><dd>提前还款的用户需要支付给理财人借款剩余本金的1%作为违约金，不用再支付后续的利息及管理费用。提前还款金额公式如下： </dd><dd><img src="/static/img/help/formula/borrow-2.png" alt="提前还款应还金额= 剩余本金+当期本息及账户管理费+提前还款违约金"></dd><dd class="text-small"><i class="icon-P-inrepay"></i>: 提前还款应还金额<br /><i class="icon-Ar"></i>: 剩余本金<br /><i class="icon-M-1"></i>: 当期本息及账户管理费<br /><i class="icon-M-2"></i>: 提前还款违约金</dd><dd>注：提前归还部分借款不视为提前还款，仍需支付全部借款利息及账户管理费。</dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
   <li>
@@ -1041,7 +1041,7 @@ seajs.use(['components/components'], function(Components) {
       </p>
     </h5>
     <div class="color-lightgray-bg help-list-item">
-      <dl><dd>如果逾期还款，您要承担罚息与逾期后的管理费用，并会被扣去相应的信用分数。多网强烈建议您避免逾期还款，一旦发生逾期请尽快还清借款。</dd><dd><img src="/static/img/help/formula/borrow-3.png?20140401a" alt="罚息总额 = 逾期本息×对应罚息利率×逾期天数；"></dd><dd class="text-small"><i class="icon-P-over"></i>: 罚息总额<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-p"></i>: 对应罚息利率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table class="pg-help-table" width="100%"><tbody><tr class="border-bt"><th width="33%">逾期天数</th><td width="33%">1-30天</td><td width="34%">31天以上</td></tr><tr><th>罚息利率</th><td>0.05%</td><td>0.1%</td></tr></tbody></table></dd><dd>逾期管理费计算方法如下：</dd><dd><img src="/static/img/help/formula/borrow-4.png?20140401a" alt="逾期后管理费总额=逾期本息×对应逾期管理费率×逾期天数；"></dd><dd class="text-small"><i class="icon-P-mgmt"></i>: 逾期管理费<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-m"></i>: 逾期管理费率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table class="pg-help-table" width="100%"><tbody><tr class="border-bt"><th width="33%">逾期天数</th><td width="33%">1-30天</td><td width="34%">31天以上</td></tr><tr><th>逾期管理费率</th><td>0.1%</td><td>0.5%</td></tr></tbody></table></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
+      <dl><dd>如果逾期还款，您要承担罚息与逾期后的管理费用，并会被扣去相应的信用分数。多网强烈建议您避免逾期还款，一旦发生逾期请尽快还清借款。</dd><dd><img src="/static/img/help/formula/borrow-3.png" alt="罚息总额 = 逾期本息×对应罚息利率×逾期天数；"></dd><dd class="text-small"><i class="icon-P-over"></i>: 罚息总额<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-p"></i>: 对应罚息利率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table class="pg-help-table" width="100%"><tbody><tr class="border-bt"><th width="33%">逾期天数</th><td width="33%">1-30天</td><td width="34%">31天以上</td></tr><tr><th>罚息利率</th><td>0.05%</td><td>0.1%</td></tr></tbody></table></dd><dd>逾期管理费计算方法如下：</dd><dd><img src="/static/img/help/formula/borrow-4.png" alt="逾期后管理费总额=逾期本息×对应逾期管理费率×逾期天数；"></dd><dd class="text-small"><i class="icon-P-mgmt"></i>: 逾期管理费<br /><i class="icon-A-over"></i>: 逾期本息<br /><i class="icon-R-m"></i>: 逾期管理费率<br /><i class="icon-D-over"></i>: 逾期天数</dd><dd><table class="pg-help-table" width="100%"><tbody><tr class="border-bt"><th width="33%">逾期天数</th><td width="33%">1-30天</td><td width="34%">31天以上</td></tr><tr><th>逾期管理费率</th><td>0.1%</td><td>0.5%</td></tr></tbody></table></dd></dl><p class="text-right"><i class="icon icon-snow-top"></i></p>
     </div>
   </li>
 </ul>

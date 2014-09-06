@@ -19,7 +19,7 @@ define("pages/index", ["jquery", "common", "protocol", "widgets/widgets", "dialo
         })
     }), b("#notice-title").length > 0 && b("#notice-title").click(function(a) {
         var c = b("#notice-content");
-        c.is(":visible") ? (b(this).removeClass("rrdcolor-blue-text"), c.slideUp(200)) : (b(this).addClass("rrdcolor-blue-text"), c.slideDown(200)), a.preventDefault()
+        c.is(":visible") ? (b(this).removeClass("dwcolor-blue-text"), c.slideUp(200)) : (b(this).addClass("dwcolor-blue-text"), c.slideDown(200)), a.preventDefault()
     }), new e.List({
         name: "loan-list",
         api: d.API.getLoans,

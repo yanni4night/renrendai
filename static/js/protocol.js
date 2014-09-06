@@ -953,7 +953,7 @@ define("protocol", ["jquery"], function(a, b, c) {
                 principalPerShare: this._fixedFloat2(a.loanVo.principalPerShareNow),
                 fee: a.fee || .01,
                 itemStyle: b % 2 === 0 ? "dark" : ""
-            }, ret.status = a.transferShare > 0 ? "转让中" : ret.status, ret.operationType = "TRANSFER_DISABLED", "0" == a.isTransferable && (ret.operationType = "TRANSFER"), "逾期" == ret.status && (ret.statusStyle = "rrdcolor-red-text"), ret
+            }, ret.status = a.transferShare > 0 ? "转让中" : ret.status, ret.operationType = "TRANSFER_DISABLED", "0" == a.isTransferable && (ret.operationType = "TRANSFER"), "逾期" == ret.status && (ret.statusStyle = "dwcolor-red-text"), ret
         },
         userLoansRepaid: function(a, b) {
             var c;

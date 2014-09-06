@@ -620,99 +620,99 @@ color:#414A4C
 background-color:#414A4C
 }
 
-.rrdcolor-whitesmoke-text {
+.dwcolor-whitesmoke-text {
 color:#f9f9f9
 }
 
-.rrdcolor-whitesmoke-bg {
+.dwcolor-whitesmoke-bg {
 background-color:#f9f9f9
 }
 
-.rrdcolor-outerspace-text {
+.dwcolor-outerspace-text {
 color:#464646
 }
 
-.rrdcolor-outerspace-bg {
+.dwcolor-outerspace-bg {
 background-color:#464646
 }
 
-.rrdcolor-dimgray-text {
+.dwcolor-dimgray-text {
 color:#555
 }
 
-.rrdcolor-dimgray-bg {
+.dwcolor-dimgray-bg {
 background-color:#555
 }
 
-.rrdcolor-blue-text {
+.dwcolor-blue-text {
 color:#0697da
 }
 
-.rrdcolor-blue-bg {
+.dwcolor-blue-bg {
 background-color:#0697da
 }
 
-.rrdcolor-lightblue-text {
+.dwcolor-lightblue-text {
 color:#4177DC
 }
 
-.rrdcolor-lightblue-bg {
+.dwcolor-lightblue-bg {
 background-color:#4177DC
 }
 
-.rrdcolor-paleblue-text {
+.dwcolor-paleblue-text {
 color:#7fd4f3
 }
 
-.rrdcolor-paleblue-bg {
+.dwcolor-paleblue-bg {
 background-color:#7fd4f3
 }
 
-.rrdcolor-paleblue2-bg {
+.dwcolor-paleblue2-bg {
 background:#f6fbfd
 }
 
-.rrdcolor-paleblue3-bg {
+.dwcolor-paleblue3-bg {
 background:#e8f6fa
 }
 
-.rrdcolor-green-text {
+.dwcolor-green-text {
 color:#83a700
 }
 
-.rrdcolor-green-bg {
+.dwcolor-green-bg {
 background-color:#83a700
 }
 
-.rrdcolor-lightgreen-text {
+.dwcolor-lightgreen-text {
 color:#f8f7e0
 }
 
-.rrdcolor-lightgreen-bg {
+.dwcolor-lightgreen-bg {
 background-color:#f8f7e0
 }
 
-.rrdcolor-limegreen-text {
+.dwcolor-limegreen-text {
 color:#c7d78c
 }
 
-.rrdcolor-limegreen-bg {
+.dwcolor-limegreen-bg {
 background-color:#c7d78c
 }
 
-.rrdcolor-orange-text {
+.dwcolor-orange-text {
 color:#fa0
 }
 
-.rrdcolor-orange-bg {
+.dwcolor-orange-bg {
 background-color:#fa0
 }
 
-.rrdcolor-red-text {
+.dwcolor-red-text {
 color:#c82e25
 }
 
-.rrdcolor-red-bg {
+.dwcolor-red-bg {
 background-color:#c82e25
 }
 
@@ -870,7 +870,7 @@ a.black {
 color:#000
 }
 
-a.rrd-dimgray,a.rrd-dimgray:link {
+a.dw-dimgray,a.dw-dimgray:link {
 color:#555
 }
 
@@ -882,7 +882,7 @@ a.darkgray,a.darkgray:link {
 color:#a9a9a9
 }
 
-a:hover,a.gray:hover,a.darkgray:hover,a.rrd-dimgray:hover,a.black:hover {
+a:hover,a.gray:hover,a.darkgray:hover,a.dw-dimgray:hover,a.black:hover {
 color:#4177DC;
 text-decoration:none
 }
@@ -1741,7 +1741,7 @@ a.ui-button-litgray,a.ui-button-litgray:active,a.ui-button-litgray:hover {
 color:#fff
 }
 
-a.ui-button-rrd-blue,.ui-button-rrd-blue {
+a.ui-button-dw-blue,.ui-button-dw-blue {
 height:40px;
 line-height:40px;
 background:#4177DC;
@@ -1752,12 +1752,12 @@ text-align:center;
 cursor:pointer
 }
 
-.ui-button-rrd-blue-large {
+.ui-button-dw-blue-large {
 width:165px;
 font-size:18px
 }
 
-.ui-button-rrd-blue-mid {
+.ui-button-dw-blue-mid {
 width:85px;
 font-size:18px
 }
